@@ -1,65 +1,92 @@
-import Image from "next/image";
+import Link from "next/link";
+import Container from "@/components/Container";
+import ThemeCard from "@/components/ThemeCard";
+import PublicationCard from "@/components/PublicationCard";
+import { hero, keyNumbers, researchThemes, identity } from "@/content/site";
+import { getFeaturedPublications } from "@/lib/publications";
 
 export default function Home() {
+  const featured = getFeaturedPublications().slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="border-b border-border">
+        <Container width="max-w-5xl" className="py-20">
+          <p className="text-sm uppercase tracking-widest text-muted">
+            {identity.affiliation}
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <h1 className="mt-4 max-w-2xl font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+            {hero.statement}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            {hero.subheading}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4 text-sm">
+            <Link
+              href="/publications"
+              className="rounded-full bg-foreground px-5 py-2.5 text-background transition-opacity hover:opacity-85"
+            >
+              View publications
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-full border border-border px-5 py-2.5 text-foreground transition-colors hover:border-accent hover:text-accent"
+            >
+              About me
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-border">
+        <Container width="max-w-5xl" className="py-14">
+          <dl className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+            {keyNumbers.map((item) => (
+              <div key={item.label}>
+                <dt className="sr-only">{item.label}</dt>
+                <dd className="font-serif text-3xl text-foreground">
+                  {item.value}
+                </dd>
+                <p className="mt-1 text-sm text-muted">{item.label}</p>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      <section className="border-b border-border">
+        <Container width="max-w-5xl" className="py-16">
+          <h2 className="font-serif text-2xl text-foreground">
+            Research themes
+          </h2>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {researchThemes.map((theme) => (
+              <ThemeCard key={theme.slug} theme={theme} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container width="max-w-5xl" className="py-16">
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-serif text-2xl text-foreground">
+              Featured publications
+            </h2>
+            <Link
+              href="/publications"
+              className="text-sm text-accent hover:opacity-70"
+            >
+              All publications →
+            </Link>
+          </div>
+          <div className="mt-6">
+            {featured.map((pub) => (
+              <PublicationCard key={pub.slug} pub={pub} />
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
