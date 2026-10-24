@@ -12,8 +12,9 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+// The Ihsan Initiative site: leave href empty until its real domain is live (nav link is hidden while empty).
 export const externalNav = {
-  href: "https://ihsaninitiative.org", // placeholder domain — swap once purchased
+  href: "",
   label: "The Ihsan Initiative",
 };
 
@@ -21,7 +22,7 @@ export const socials = {
   scholar: "https://scholar.google.com/citations?user=EdPPQToAAAAJ&hl=en",
   researchgate: "https://www.researchgate.net/profile/Junaid-Qadir-2",
   youtube: "https://www.youtube.com/@JunaidQadir",
-  linkedin: "https://www.linkedin.com/in/junaidq/",
+  linkedin: "https://qa.linkedin.com/in/junaidq",
   orcid: "https://orcid.org/0000-0001-9466-2475",
   email: "jqadir@qu.edu.qa",
 };

@@ -23,14 +23,14 @@ export default function Nav() {
                 {item.label}
               </Link>
             ))}
-            <Link
+            {externalNav.href && (<Link
               href={externalNav.href}
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent transition-opacity hover:opacity-70"
             >
               {externalNav.label} ↗
-            </Link>
+            </Link>)}
           </nav>
         </div>
       </Container>
