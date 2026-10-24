@@ -86,7 +86,7 @@ export default function Home() {
         </Container>
         <div className="relative border-t border-border bg-surface/70">
           <Container width="max-w-6xl" className="py-8">
-            <dl className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
               {keyNumbers.map((item) => (
                 <div key={item.label}>
                   <dt className="sr-only">{item.label}</dt>

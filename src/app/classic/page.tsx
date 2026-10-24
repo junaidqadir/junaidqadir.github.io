@@ -50,7 +50,7 @@ export default function ClassicHome() {
 
       <section className="border-b border-border">
         <Container width="max-w-5xl" className="py-14">
-          <dl className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {keyNumbers.map((item) => (
               <div key={item.label}>
                 <dt className="sr-only">{item.label}</dt>

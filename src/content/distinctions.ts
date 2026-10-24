@@ -11,5 +11,4 @@ export const distinctions: Distinction[] = [
   { key: "acm-ds", match: /ACM.s Distinguished Speaker|ACM Distinguished Speaker/i, label: (t) => `ACM Distinguished Speaker ${yearOrRange(t)}`.trim() },
   { key: "ieee-sm", match: /IEEE Senior Member/i, label: () => "IEEE Senior Member" },
   { key: "acm-sm", match: /ACM Senior Member/i, label: () => "ACM Senior Member" },
-  { key: "stanford", match: /top scientists|Top 2%/i, label: () => "Stanford/Elsevier Top 2% Scientist" },
 ];

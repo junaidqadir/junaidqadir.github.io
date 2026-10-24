@@ -20,11 +20,9 @@ export function getKeyNumbers() {
   const pubs = getAllPublications();
   const papers = pubs.filter((p) => p.section === "journal" || p.section === "conference").length;
   const sc = scholarNumbers();
-  const years = new Date().getFullYear() - cvMeta.career_start_year;
   return [
     { value: `${Math.floor(papers / 10) * 10}+`, label: "journal & conference papers" },
     { value: sc.citations ?? "—", label: `citations${sc.h ? ` (h-index ${sc.h})` : ""}` },
-    { value: `${years}+`, label: "years teaching & research" },
     { value: String(supervisedCount()), label: "PhD/MS students supervised" },
   ];
 }
