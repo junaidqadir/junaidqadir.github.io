@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { getAwards, humbleHtml } from "@/lib/cv";
 import Distinctions from "@/components/Distinctions";
+import RetryImg from "@/components/RetryImg";
+import { asset } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Awards & Honors — Junaid Qadir",
@@ -31,8 +33,7 @@ export default function AwardsPage() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         {photos.map((p, i) => (
           <figure key={p.src} className={i === 0 ? "sm:col-span-2" : ""}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.src} alt={p.alt} loading={i === 0 ? "eager" : "lazy"} className="w-full rounded-sm object-cover" />
+            <RetryImg src={asset(p.src.replace(".jpg", "-800.jpg"))} srcSet={`${asset(p.src.replace(".jpg", "-800.jpg"))} 800w, ${asset(p.src)} 1600w`} sizes={i === 0 ? "(max-width: 900px) 94vw, 880px" : "(max-width: 640px) 94vw, 430px"} alt={p.alt} priority={i === 0} className="w-full rounded-sm object-cover" />
             <figcaption className="mt-2 text-sm text-muted">{p.caption}</figcaption>
           </figure>
         ))}

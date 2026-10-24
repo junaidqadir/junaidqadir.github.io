@@ -5,6 +5,8 @@ import StudentNote from "@/components/StudentNote";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
 import VideoCard from "@/components/VideoCard";
 import Distinctions from "@/components/Distinctions";
+import RetryImg from "@/components/RetryImg";
+import { asset } from "@/lib/assets";
 import { getVideos } from "@/lib/videos";
 import GeoArt from "@/components/GeoArt";
 import ThemeCard from "@/components/ThemeCard";
@@ -77,8 +79,7 @@ export default function Home() {
             </div>
             <figure className="mx-auto w-full max-w-[300px]">
               <div className="overflow-hidden rounded-sm border border-gold/70 p-2">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/headshot.jpg" alt="Portrait of Junaid Qadir" width={300} height={340} className="aspect-[4/5] w-full rounded-sm object-cover object-top" />
+                <RetryImg src={asset("/headshot-480.jpg")} srcSet={`${asset("/headshot-480.jpg")} 480w, ${asset("/headshot.jpg")} 781w`} sizes="(max-width: 768px) 80vw, 300px" alt="Portrait of Junaid Qadir" width={300} height={340} priority fallback="JQ" className="aspect-[4/5] w-full rounded-sm object-cover object-top" />
               </div>
               <figcaption className="mt-3 text-center text-xs text-muted">Doha, Qatar</figcaption>
             </figure>

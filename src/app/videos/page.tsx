@@ -6,6 +6,8 @@ import IhsanMark from "@/components/IhsanMark";
 import VideosExplorer from "@/components/VideosExplorer";
 import { getVideos, getPlaylistCards } from "@/lib/videos";
 import { socials } from "@/content/site";
+import RetryImg from "@/components/RetryImg";
+import { asset } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Videos — Junaid Qadir",
@@ -52,7 +54,7 @@ export default function VideosPage() {
             {lists.map((l) => (
               <a key={l.id} href={l.url} target="_blank" rel="noopener noreferrer" className="card-ornate group block overflow-hidden">
                 <div className="relative aspect-video bg-foreground/10">
-                  {l.thumb && /* eslint-disable-next-line @next/next/no-img-element */ <img src={l.thumb} alt="" loading="lazy" className="h-full w-full object-cover" />}
+                  {l.thumb && <RetryImg src={asset(l.thumb)} alt="" className="h-full w-full object-cover" />}
                   <span className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/35" />
                   <span className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-xs text-white">▶ {l.count} videos</span>
                   <span className="absolute left-2 top-2 flex h-12 w-12 items-center justify-center rounded-full bg-background/90">
