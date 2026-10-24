@@ -4,6 +4,7 @@ import Link from "next/link";
 import PublicationCard from "@/components/PublicationCard";
 import GeoArt from "@/components/GeoArt";
 import { researchThemes } from "@/content/site";
+import { playlistsForTheme, playlistUrl } from "@/content/playlists";
 import { getPublicationsByTheme } from "@/lib/publications";
 import type { Theme } from "@/types/publication";
 
@@ -35,6 +36,14 @@ export default function ResearchPage() {
               <p className="mt-2 max-w-xl leading-relaxed text-muted">
                 {theme.blurb}
               </p>
+              {playlistsForTheme(theme.slug).length > 0 && (
+                <p className="mt-4 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-sm">
+                  <span className="text-xs font-medium uppercase tracking-wide text-muted">Lectures</span>
+                  {playlistsForTheme(theme.slug).map((l) => (
+                    <a key={l.id} href={playlistUrl(l.id)} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">{l.title.replace(/\s*\(.*$/, "")} ↗</a>
+                  ))}
+                </p>
+              )}
               {pubs.length > 0 ? (
                 <div className="mt-6">
                   {pubs.map((pub) => (

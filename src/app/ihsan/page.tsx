@@ -18,7 +18,7 @@ const H2 = ({ children }: { children: React.ReactNode }) => <h2 className="font-
 const btn = "inline-flex items-center rounded-sm px-4 py-2.5 text-sm transition-opacity hover:opacity-85";
 
 export default function IhsanPage() {
-  const lead = getPublicationBySlug("2019-qadir-spiritual-excellence-ihsan-professionals");
+  const lead = getPublicationBySlug("2020-qadir-spiritual-excellence-ihsan-professionals");
   const rest = getPublicationsByTheme("ihsan-ethics").filter((p) => p.slug !== lead?.slug);
   return (
     <>
@@ -77,6 +77,20 @@ export default function IhsanPage() {
           </p>
           <p className="mt-4">
             <a href={playlistUrl("PL4AueLFeEG0BhWMBqH4FKeYMgel5wUxh7")} target="_blank" rel="noopener noreferrer" className={`${btn} bg-foreground text-background`}>Understand Quran, The Easy Way ↗</a>
+          </p>
+        </section>
+
+        <Ornament />
+
+        <section>
+          <H2>Islamic ethics and AI: a conference</H2>
+          <p className="mt-3 max-w-2xl text-muted">
+            The International Conference on Islamic Ethics and AI (Lahore, December 2021), which we organized, brought together researchers and practitioners on Islamic perspectives
+            on AI ethics. The session videos are on YouTube.
+          </p>
+          <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href={playlistUrl("PL4AueLFeEG0DNu6Y3xjDtRivNtWn_pI_9")} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Conference videos ↗</a>
+            <a href="https://www.islamicaiethics.info/" target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Conference website ↗</a>
           </p>
         </section>
 
