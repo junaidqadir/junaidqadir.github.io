@@ -11,12 +11,13 @@ export default function PublicationsPage() {
   const publications = getAllPublications();
   const allTags = getAllTags();
   const yearRange = getYearRange();
+  const count = (section: string) => publications.filter((p) => p.section === section).length;
 
   return (
     <Container width="max-w-4xl" className="py-16">
       <h1 className="font-serif text-3xl text-foreground">Publications</h1>
       <p className="mt-3 max-w-xl text-muted">
-        {publications.length} publications (2006–present), searchable by
+        {publications.length} publications (2006–present): {count("journal")} journal papers, {count("conference")} conference papers, {count("book-chapter")} book chapters and {publications.length - count("journal") - count("conference") - count("book-chapter")} other writing. Searchable by
         title, co-author, venue, tag, and year. Sourced from my CV — see{" "}
         <a
           href={socials.scholar}

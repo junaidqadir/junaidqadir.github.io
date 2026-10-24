@@ -18,10 +18,9 @@ function scholarNumbers() {
 /** Headline numbers, derived from the CV + publications data so they never go stale. */
 export function getKeyNumbers() {
   const pubs = getAllPublications();
-  const papers = pubs.filter((p) => p.section === "journal" || p.section === "conference").length;
   const sc = scholarNumbers();
   return [
-    { value: `${Math.floor(papers / 10) * 10}+`, label: "journal & conference papers" },
+    { value: `${Math.floor(pubs.length / 10) * 10}+`, label: "publications: papers, book chapters and preprints" },
     { value: sc.citations ?? "—", label: `citations${sc.h ? ` (h-index ${sc.h})` : ""}` },
     { value: String(supervisedCount()), label: "PhD/MS students supervised" },
   ];
