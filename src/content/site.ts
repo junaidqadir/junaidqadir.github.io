@@ -9,6 +9,7 @@ export const nav = [
   { href: "/ihsan", label: "Ihsan" },
   { href: "/publications", label: "Publications" },
   { href: "/learning", label: "Learning" },
+  { href: "/students", label: "Students" },
   { href: "/talks", label: "Talks" },
   { href: "/awards", label: "Awards" },
   { href: "/cv", label: "CV" },

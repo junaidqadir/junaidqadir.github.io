@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-10-24",
+  "students": [
+    {
+      "id": "mahdi-alkaeed",
+      "name": "Mahdi Alkaeed",
+      "degree": "PhD",
+      "institution": "QU",
+      "thesis": "Sensitivity and Robustness Analysis of Large Language Models in Clinical Settings",
+      "year": 2026,
+      "expected": true
+    },
+    {
+      "id": "adnan-qayyum",
+      "name": "Adnan Qayyum",
+      "degree": "PhD",
+      "institution": "ITU",
+      "thesis": "Secure and Robust Machine Learning for Healthcare",
+      "year": 2024,
+      "expected": false
+    },
+    {
+      "id": "muhammad-usama",
+      "name": "Muhammad Usama",
+      "degree": "PhD",
+      "institution": "ITU",
+      "thesis": "Adversarial Machine Learning and Networking Applications: Attacks & Defences",
+      "year": 2020,
+      "expected": false
+    },
+    {
+      "id": "mahmoud-jardali",
+      "name": "Mahmoud Jardali",
+      "degree": "MS",
+      "institution": "Qatar University",
+      "thesis": "Data Poisoning Attacks in Medical LLMs: The Adversarial Risks of LoRA Fine-Tuning",
+      "year": 2023,
+      "expected": false
+    },
+    {
+      "id": "bayan-khalouf",
+      "name": "Bayan Khalouf",
+      "degree": "MS",
+      "institution": "Qatar University",
+      "thesis": "Transformer-Based Multi-Class Tooth Segmentation from Intraoral Image Frames Using Contrastive and Semi-Supervised Learning",
+      "year": 2023,
+      "expected": false
+    },
+    {
+      "id": "ahlam-abu-nada",
+      "name": "Ahlam Abu Nada",
+      "degree": "MS",
+      "institution": "Qatar University",
+      "thesis": "Using Embedded Machine Learning in the Physical World to Detect Toxicity and Anti-Socialness in Spoken Language",
+      "year": 2023,
+      "expected": false
+    },
+    {
+      "id": "amir-sharif",
+      "name": "Amir Sharif",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Analysis of Dark Web and Mitigation of Antisocial Activities",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "muhammad-furqan-muzammil",
+      "name": "Muhammad Furqan Muzammil",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Analysis of COVID misinformation on WhatsApp in Pakistan",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "abdullah-shahid",
+      "name": "Abdullah Shahid",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "End-to-End Multi-Speaker Emotional Speech Synthesis System",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "saamia-muntaha",
+      "name": "Saamia Muntaha",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Pedagogy of Artificial Intelligence: Systematic Review and Bibliometric Analysis",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "bilal-yousaf",
+      "name": "Bilal Yousaf",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Frequency Spectrum Analysis of Deepfake Images",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "mirza-elaaf-shuja",
+      "name": "Mirza Elaaf Shuja",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "(Mis)Information Dissemination in Pakistani Public WhatsApp Groups",
+      "year": 2021,
+      "expected": false
+    },
+    {
+      "id": "muhammad-ahtazaz-ahsan",
+      "name": "Muhammad Ahtazaz Ahsan",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "An Active Learning Method for Diabetic Retinopathy Classification using Bayesian Feature Descriptor",
+      "year": 2020,
+      "expected": false
+    },
+    {
+      "id": "khansa-rasheed",
+      "name": "Khansa Rasheed",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Epileptic Seizure Prediction Using Machine Learning and EEG Signals",
+      "year": 2020,
+      "expected": false
+    },
+    {
+      "id": "inaam-ilahi",
+      "name": "Inaam Ilahi",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Adaptive PHY-Layer Transmission Parameter Selection for LORAWAN Using Deep Reinforcement Learning",
+      "year": 2020,
+      "expected": false
+    },
+    {
+      "id": "salah-ud-din-farooq",
+      "name": "Salah-ud-din Farooq",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Adversarial Machine Learning for Self Organizing Cellular Networks",
+      "year": 2019,
+      "expected": false
+    },
+    {
+      "id": "waleed-iqbal",
+      "name": "Waleed Iqbal",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Analysis of Computer Networking Research: A Bibliometric Study",
+      "year": 2019,
+      "expected": false
+    },
+    {
+      "id": "umar-bin-farooq",
+      "name": "Umar Bin Farooq",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Utilizing Loss Tolerance and Bandwidth Expansion for Uplink Transmit Power Minimization and Energy Efficient User Association in HetNets",
+      "year": 2018,
+      "expected": false
+    },
+    {
+      "id": "ali-harris",
+      "name": "Ali Harris",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Reducing In-Vehicle Phone Usage Using Persuasive Technology",
+      "year": 2018,
+      "expected": false
+    },
+    {
+      "id": "yasir-khan",
+      "name": "Yasir Khan",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Digital TB Notification Tool: Design of a Usable Data Collection Application for Physicians",
+      "year": 2018,
+      "expected": false
+    },
+    {
+      "id": "fahid-idrees",
+      "name": "Fahid Idrees",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Information Dissemination Techniques and Methodologies for Low-Literate Users",
+      "year": 2018,
+      "expected": false
+    },
+    {
+      "id": "saif-ul-islam",
+      "name": "Saif ul Islam",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Design of Nudge Based Smartphone Application for Immunization",
+      "year": 2017,
+      "expected": false
+    },
+    {
+      "id": "zafar-iqbal",
+      "name": "Zafar Iqbal",
+      "degree": "MS",
+      "institution": "ITU",
+      "thesis": "Student Admission Criteria and Student Grade Prediction",
+      "year": 2017,
+      "expected": false
+    },
+    {
+      "id": "mohsin-khalil",
+      "name": "Mohsin Khalil",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "QoS Provisioning in a Cellular Network from a Multifaceted Perspective",
+      "year": 2019,
+      "expected": false
+    },
+    {
+      "id": "farrukh-pervez",
+      "name": "Farrukh Pervez",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Memory-Based User-Centric Backhaul-Aware User Cell Association Scheme",
+      "year": 2017,
+      "expected": false
+    },
+    {
+      "id": "siddique-latif",
+      "name": "Siddique Latif",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Deep Learning for Emotion Classification from Speech",
+      "year": 2017,
+      "expected": false
+    },
+    {
+      "id": "anwaar-ali",
+      "name": "Anwaar Ali",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Application-Layer Multicasting With Multipathing Support",
+      "year": 2015,
+      "expected": false
+    },
+    {
+      "id": "muhammad-talal-hasan",
+      "name": "Muhammad Talal Hasan",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Quantifying the Multiple Cognitive Radio Interfaces Advantage",
+      "year": 2013,
+      "expected": false
+    },
+    {
+      "id": "syed-ahmed-faran",
+      "name": "Syed Ahmed Faran",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Performance Analysis of 802.11 DCF with Limited Channels",
+      "year": 2012,
+      "expected": false
+    },
+    {
+      "id": "zeeshan-asif",
+      "name": "Zeeshan Asif",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Channel Assignment in Non-Cooperative Coexisting Collocated Independent Cognitive Radio Networks",
+      "year": 2012,
+      "expected": false
+    },
+    {
+      "id": "ain-ul-aisha",
+      "name": "Ain ul Aisha",
+      "degree": "MS",
+      "institution": "SEECS, NUST",
+      "thesis": "Detection of Transport Layer Attacks in 802.22 WRAN through Mathematical Modeling",
+      "year": 2012,
+      "expected": false
+    }
+  ]
+}
