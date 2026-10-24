@@ -147,3 +147,8 @@ html { scroll-behavior: smooth; }
 
 /* Calligraphic Arabic as real text (scrolls with the page); the gradient is clipped to the glyphs so letter joining is preserved */
 .calli { font-family: var(--font-calli), var(--font-amiri), serif; line-height: 1.25; background: linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 55%, var(--gold) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+
+/* The contact address image comes in two colours; show the one that suits the current mode. */
+.email-img-light { display: none; }
+html[data-theme="light"] .email-img-dark { display: none; }
+html[data-theme="light"] .email-img-light { display: inline-block; }

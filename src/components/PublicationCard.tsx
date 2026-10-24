@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Publication } from "@/types/publication";
 import { tagLabel } from "@/lib/tags";
 import { venueName, venueDetail } from "@/lib/venues";
@@ -136,8 +137,8 @@ export default function PublicationCard({
 
       {pub.access_note && !pdfUrl && (
         <p className="mt-2 text-xs italic leading-relaxed text-muted">
-          {pub.access_note.replace("jqadir@qu.edu.qa", "")}
-          <a href="mailto:jqadir@qu.edu.qa" className="not-italic text-accent hover:opacity-70">jqadir@qu.edu.qa</a>
+          {pub.access_note}{" "}
+          <Link href="/contact" className="not-italic text-accent hover:opacity-70">Contact page</Link>
         </p>
       )}
 

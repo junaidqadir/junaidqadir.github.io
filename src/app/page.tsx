@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
+import EmailContact from "@/components/EmailContact";
 import BookNote from "@/components/BookNote";
 import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
@@ -306,7 +307,7 @@ export default function Home() {
           <H2>Let&rsquo;s talk research.</H2>
           <p className="mt-4 max-w-xl text-muted">{contact.intro}</p>
           <StudentNote className="mt-5" />
-          <p className="mt-6"><a href={`mailto:${socials.email}`} className="font-serif text-2xl text-accent hover:opacity-70">{socials.email} ↗</a></p>
+          <EmailContact className="mt-6" />
           <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[["Google Scholar", socials.scholar], ["ORCID", socials.orcid], ["LinkedIn", socials.linkedin], ["YouTube", socials.youtube], ["ResearchGate", socials.researchgate], ["QU faculty page", "https://qufaculty.qu.edu.qa/jqadir/"]].map(([l, h]) => (
               <a key={l} className="text-accent hover:opacity-70" href={h} target="_blank" rel="noopener noreferrer">{l} ↗</a>

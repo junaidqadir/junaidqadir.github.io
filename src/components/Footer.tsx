@@ -37,7 +37,7 @@ export default function Footer() {
                 {link.label}
               </a>
             ))}
-            <a href={`mailto:${socials.email}`} className="transition-colors hover:text-accent">Email</a>
+            <Link href="/contact" className="transition-colors hover:text-accent">Email</Link>
           </div>
         </div>
       </Container>

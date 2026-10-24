@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
 import Distinctions from "@/components/Distinctions";
-import { bio, identity, socials } from "@/content/site";
+import { bio, identity } from "@/content/site";
 import { listUnder, cvMeta, getSection } from "@/lib/cv";
 import RetryImg from "@/components/RetryImg";
 import { asset } from "@/lib/assets";
@@ -109,8 +109,7 @@ export default function AboutPage() {
           {cvMeta.generatedAt ? ` (synced ${cvMeta.generatedAt})` : ""}.
         </p>
         <p className="mt-2 text-sm text-muted">
-          Contact:{" "}
-          <a href={`mailto:${socials.email}`} className="text-accent hover:opacity-70">{socials.email}</a>
+          <Link href="/contact" className="text-accent hover:opacity-70">Contact →</Link>
         </p>
       </section>
     </Container>

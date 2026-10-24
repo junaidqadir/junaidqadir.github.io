@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import StudentNote from "@/components/StudentNote";
+import EmailContact from "@/components/EmailContact";
 import { contact, socials } from "@/content/site";
 
 export const metadata: Metadata = { title: "Contact — Junaid Qadir" };
@@ -21,9 +22,7 @@ export default function ContactPage() {
         {contact.intro}
       </p>
 
-      <p className="mt-6 font-serif text-2xl text-foreground">
-        <a href={`mailto:${socials.email}`} className="text-accent hover:opacity-70">{socials.email}</a>
-      </p>
+      <EmailContact className="mt-6" />
 
       <StudentNote className="mt-8" />
 

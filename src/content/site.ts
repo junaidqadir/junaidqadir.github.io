@@ -29,7 +29,6 @@ export const socials = {
   youtube: "https://www.youtube.com/@JunaidQadir",
   linkedin: "https://qa.linkedin.com/in/junaidq",
   orcid: "https://orcid.org/0000-0001-9466-2475",
-  email: "jqadir@qu.edu.qa",
 };
 
 export const identity = {
