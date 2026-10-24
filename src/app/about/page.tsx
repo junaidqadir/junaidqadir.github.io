@@ -3,7 +3,10 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Distinctions from "@/components/Distinctions";
 import { bio, identity, socials } from "@/content/site";
-import { listUnder, cvMeta } from "@/lib/cv";
+import { listUnder, cvMeta, getSection } from "@/lib/cv";
+import RetryImg from "@/components/RetryImg";
+import { asset } from "@/lib/assets";
+import { fellowship } from "@/content/highlights";
 
 export const metadata: Metadata = { title: "About — Junaid Qadir" };
 
@@ -18,6 +21,8 @@ export default function AboutPage() {
   const interests = research.find((i) => /research experience and interest/i.test(i.text));
   const funding = research.find((i) => /funding and leadership/i.test(i.text));
   const teachingStatement = teaching.find((i) => /Recognized for quality teaching/i.test(i.text));
+
+  const degrees = getSection("education")?.blocks.flatMap((b) => b.items) ?? [];
 
   return (
     <Container className="py-16">
@@ -38,6 +43,23 @@ export default function AboutPage() {
       <section className="mt-10">
         <Label>Short bio</Label>
         <p className="mt-3 leading-relaxed text-foreground">{bio.short}</p>
+      </section>
+
+      <section className="mt-10" aria-labelledby="education">
+        <h2 id="education" className="text-sm font-medium uppercase tracking-widest text-muted">Education</h2>
+        <ul className="mt-3 space-y-2 leading-relaxed text-foreground">
+          {degrees.map((d, i) => (<li key={i} dangerouslySetInnerHTML={{ __html: d.html }} />))}
+        </ul>
+        <div className="mt-5 flex gap-5">
+          <div className="min-w-0 flex-1">
+            <p className="leading-relaxed text-foreground"><strong className="font-medium">{fellowship.title}</strong>, 2024–25</p>
+            <p className="mt-1 text-[15px] leading-relaxed text-muted">{fellowship.text}</p>
+            <p className="mt-2 text-sm"><a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">View the certificate ↗</a></p>
+          </div>
+          <a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="hidden w-24 shrink-0 self-start sm:block" aria-label={fellowship.cert.alt}>
+            <RetryImg src={asset(fellowship.cert.thumb)} alt={fellowship.cert.alt} className="w-full rounded-sm border border-border transition-opacity hover:opacity-80" />
+          </a>
+        </div>
       </section>
 
       {interests && (

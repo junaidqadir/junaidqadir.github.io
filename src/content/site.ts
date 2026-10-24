@@ -1,3 +1,5 @@
+import { getAllPublications } from "@/lib/publications";
+
 // Central site content. Long-form facts (career, awards, funding, teaching, talks, supervision)
 // are NOT written here: they are synced from the master CV into content/cv.generated.json
 // (npm run sync-cv). This file holds only what the CV does not: navigation, links and short copy.
@@ -136,9 +138,12 @@ export const researchThemes: ResearchTheme[] = [
   },
 ];
 
+// The publication count is taken from the archive so the biography never goes stale.
+const nPublications = Math.floor(getAllPublications().length / 10) * 10;
+
 export const bio = {
   short:
-    "Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than 280 papers spanning artificial intelligence, computing systems, and engineering education, and has published on generative AI in engineering education in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.",
+    `Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than ${nPublications} publications spanning artificial intelligence, computing systems, and engineering education, and has published on generative AI in engineering education in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.`,
 };
 
 export const contact = {

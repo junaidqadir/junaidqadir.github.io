@@ -5,6 +5,7 @@ import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
+import BookNote from "@/components/BookNote";
 import PublicationCard from "@/components/PublicationCard";
 import { getPublicationBySlug, getPublicationsByTheme } from "@/lib/publications";
 import { playlistUrl } from "@/content/playlists";
@@ -117,6 +118,7 @@ export default function IhsanPage() {
         <section>
           <H2>Papers on ihsan and Islamic ethics</H2>
           <p className="mt-3 max-w-2xl text-muted">Starting with the hadith-based analysis of ihsan, then the wider writing on Islamic ethics, development and technology.</p>
+          <BookNote className="mt-5 max-w-3xl" />
           <div className="mt-4">
             {lead && <PublicationCard pub={lead} />}
             {rest.map((p) => <PublicationCard key={p.slug} pub={p} />)}

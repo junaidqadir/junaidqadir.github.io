@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
-import Highlights from "@/components/Highlights";
+import BookNote from "@/components/BookNote";
 import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
@@ -103,8 +103,6 @@ export default function Home() {
           <Container width="max-w-6xl" className="py-6"><Distinctions /></Container>
         </div>
       </section>
-
-      <Highlights />
 
       {/* Where to start: one clear path per kind of visitor */}
       <section aria-labelledby="start-here" className="border-b border-border">
@@ -237,6 +235,7 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-muted">
             A short selection. The full, searchable list — filterable by theme, topic, co-author, venue and year, with open-access PDFs and BibTeX where available — follows.
           </p>
+          <BookNote className="mt-8 max-w-3xl" />
           <div className="mt-8">{featured.map((pub) => (<PublicationCard key={pub.slug} pub={pub} />))}</div>
           <Link href="/publications" className="mt-4 inline-block text-sm text-accent hover:opacity-70">Browse all publications →</Link>
         </Container>
