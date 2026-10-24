@@ -27,9 +27,9 @@ export default function Nav() {
             <span>{identity.name}</span>
           </Link>
           {/* desktop */}
-          <nav className="hidden items-center gap-x-5 text-sm lg:flex">{links}</nav>
+          <nav className="hidden items-center gap-x-5 text-sm xl:flex">{links}</nav>
           {/* mobile: no JS needed */}
-          <details className="relative lg:hidden">
+          <details className="relative xl:hidden">
             <summary className="cursor-pointer list-none rounded border border-border px-3 py-1.5 text-sm text-foreground">Menu</summary>
             <nav className="absolute right-0 mt-2 flex w-56 flex-col gap-3 rounded border border-border bg-surface p-4 text-sm shadow-lg">{links}</nav>
           </details>

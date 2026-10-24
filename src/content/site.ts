@@ -8,6 +8,7 @@ export const nav = [
   { href: "/multiplexity", label: "Multiplexity" },
   { href: "/publications", label: "Publications" },
   { href: "/courses", label: "Courses" },
+  { href: "/learning", label: "Learning" },
   { href: "/talks", label: "Talks" },
   { href: "/awards", label: "Awards" },
   { href: "/cv", label: "CV" },
@@ -142,8 +143,16 @@ export const bio = {
 
 export const contact = {
   intro: "For speaking invitations or research collaboration, email me or use the links below.",
-  studentNote: {
-    title: "Note to prospective graduate students and research assistants",
-    body: "Thank you for your interest in working with me. I receive more emails than I can answer, and I am sorry that I cannot reply individually or advise on funding. Graduate admissions at Qatar University are handled centrally, not through a faculty advisor’s recommendation, so please apply directly and follow the published deadlines and procedures. When funded PhD or research-assistant positions open in my group, I advertise them on this website and on LinkedIn, and they are filled by open competition. Please do not read a lack of reply as a judgment of your potential. I wish you every success.",
-  },
+  studentNotes: [
+    {
+      title: "Note to prospective graduate students",
+      body: "Thank you for your interest in working with me. I receive more emails than I can answer, and I am sorry that I cannot reply individually or advise on funding. Graduate admissions at Qatar University are handled centrally, not through a faculty advisor’s recommendation, so please apply directly and follow the published deadlines and procedures. Please do not read a lack of reply as a judgment of your potential. I wish you every success.",
+      linkHref: "/learning",
+      linkLabel: "While you prepare, these learning resources may help →",
+    },
+    {
+      title: "Note to prospective research assistants",
+      body: "When funded PhD or research-assistant positions open in my group, I advertise them formally on this website and on LinkedIn, and they are filled by open competition. Please watch those announcements and apply through them; unsolicited emails cannot be answered individually, and I am sorry for that. A lack of reply is not a judgment of your potential.",
+    },
+  ],
 };
