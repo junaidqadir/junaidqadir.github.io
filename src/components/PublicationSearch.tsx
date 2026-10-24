@@ -7,8 +7,15 @@ import type { Publication } from "@/types/publication";
 import { sectionLabels, tagLabel } from "@/lib/tags";
 
 const themeNames: Record<string, string> = {
-  ai: "AI ethics, safety & governance", education: "AI & engineering education", multiplexity: "Multiplexity & Systems Thinking",
-  "ihsan-ethics": "Islamic Ethics & Ihsan", "health-psychology": "AI in healthcare & mental health", "networks-ict4d": "Networks, Cybersecurity & ICT4D",
+  "ai-ethics": "AI ethics & governance",
+  "ai-security": "AI safety, security & robustness",
+  "health-psychology": "AI in healthcare & mental health",
+  education: "AI & engineering education",
+  multiplexity: "Multiplexity & systems thinking",
+  "ihsan-ethics": "Islamic ethics & ihsan",
+  ml: "Machine learning & applied AI",
+  "networks-ict4d": "Networks, IoT & ICT4D",
+  sustainability: "Smart cities & sustainability",
 };
 const csv = (p: string | null) => (p ? p.split(",").filter(Boolean) : []);
 

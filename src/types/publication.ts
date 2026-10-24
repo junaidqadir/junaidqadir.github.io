@@ -1,5 +1,9 @@
 export type Theme =
   | "ai"
+  | "ai-ethics"
+  | "ai-security"
+  | "ml"
+  | "sustainability"
   | "education"
   | "multiplexity"
   | "ihsan-ethics"

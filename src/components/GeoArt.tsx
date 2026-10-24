@@ -2,7 +2,7 @@
  * Generative Islamic-geometric ornaments (star polygons {n/k} on a circle, rosettes, lattices).
  * Pure SVG, drawn with currentColor so they follow the theme. Each research theme gets its own symmetry.
  */
-type Kind = "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic";
+type Kind = "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "star14" | "lattice";
 
 const pt = (n: number, i: number, r: number, rot = -90): [number, number] => {
   const a = ((rot + (360 / n) * i) * Math.PI) / 180;
@@ -78,6 +78,31 @@ export default function GeoArt({ kind = "star8", size = 160, className = "", tit
           <path d={star(16, 5, R * 0.75)} stroke="var(--gold)" {...common} />
           <path d={star(16, 3, R * 0.5)} stroke="var(--accent-2)" {...common} />
           <circle r={R} stroke="var(--border)" {...common} />
+        </g>
+      )}
+      {kind === "interlace" && (
+        <g>
+          {[0, 22.5, 45].map((r, i) => (
+            <rect key={r} x={-R * 0.72} y={-R * 0.72} width={R * 1.44} height={R * 1.44} transform={`rotate(${r})`} stroke={["var(--accent)", "var(--accent-2)", "var(--gold)"][i]} {...common} strokeWidth={1.3} />
+          ))}
+          <rect x={-R * 0.28} y={-R * 0.28} width={R * 0.56} height={R * 0.56} stroke="var(--foreground)" {...common} strokeWidth={1.6} />
+          <circle r={R} stroke="var(--border)" {...common} />
+        </g>
+      )}
+      {kind === "star14" && (
+        <g>
+          <path d={star(14, 5, R)} stroke="var(--accent)" {...common} strokeWidth={1.2} />
+          <path d={star(14, 3, R * 0.7)} stroke="var(--accent-2)" {...common} />
+          <circle r={R * 0.2} stroke="var(--gold)" {...common} />
+          <circle r={R} stroke="var(--border)" {...common} />
+        </g>
+      )}
+      {kind === "lattice" && (
+        <g>
+          {[[0, 0], ...Array.from({ length: 6 }, (_, i) => pt(6, i, R * 0.4, -90))].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r={R * 0.4} stroke={i === 0 ? "var(--accent)" : "var(--accent-2)"} {...common} strokeWidth={1.1} />
+          ))}
+          <circle r={R} stroke="var(--gold)" {...common} />
         </g>
       )}
       {kind === "kufic" && (

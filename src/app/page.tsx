@@ -11,7 +11,7 @@ import { getAwards, humbleHtml, listUnder, getSection } from "@/lib/cv";
 import type { Theme } from "@/types/publication";
 
 const projects = [
-  { kind: "Research group", title: "IHSAN Research Lab", text: "A research lab at Qatar University working on human-beneficial AI, the ethics of technology and engineering education.", href: "/publications?theme=ai", cta: "Related publications" },
+  { kind: "Research group", title: "IHSAN Research Lab", text: "A research lab at Qatar University working on human-beneficial AI, the ethics of technology and engineering education.", href: "/publications?theme=ai-ethics", cta: "Related publications" },
   { kind: "Non-profit foundation (in formation)", title: "The Ihsan Initiative", text: "Courses, research and community programmes on technology, education and ethics grounded in ihsan — excellence and sincerity in service.", href: null as string | null, cta: "Website coming soon" },
   { kind: "Open course", title: "Multiplex Intelligence", text: "An eight-part public course on multiplex thinking — a pluralistic, systems-aware approach to intelligence, technology and the human being.", href: "https://www.youtube.com/playlist?list=PL65UDiarzsWEzx9lBPVhuBVv_YyoLclLN", cta: "Watch the course" },
 ];

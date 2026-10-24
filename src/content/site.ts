@@ -46,7 +46,7 @@ export type ResearchTheme = {
   title: string;
   blurb: string;
   publicationTheme: string;
-  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic";
+  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "star14" | "lattice";
   keywords: string;
 };
 
@@ -54,12 +54,21 @@ export type ResearchTheme = {
 export const researchThemes: ResearchTheme[] = [
   {
     slug: "ai-ethics-governance",
-    title: "AI Ethics, Safety & Governance",
+    title: "AI Ethics & Governance",
     blurb:
-      "Making artificial intelligence and large language models safe, accountable and aligned with human flourishing — from adversarial robustness and foundation-model evaluation to governance frameworks and standards for responsible AI in universities.",
-    publicationTheme: "ai",
+      "Making artificial intelligence accountable and aligned with human flourishing — responsible and human-centred AI, ethical frameworks, and governance and standards for AI in universities and health systems.",
+    publicationTheme: "ai-ethics",
     art: "star8",
-    keywords: "Responsible AI · LLM safety · Governance & standards",
+    keywords: "Responsible AI · Governance & standards · Ethics frameworks",
+  },
+  {
+    slug: "ai-safety-security",
+    title: "AI Safety, Security & Robustness",
+    blurb:
+      "Attacks on and defences for machine-learning systems — adversarial examples, robustness and distribution shift, privacy-preserving and federated learning, LLM safety evaluation, and cybersecurity for networks, IoT and connected vehicles. A long-standing line published in computer-security and systems journals.",
+    publicationTheme: "ai-security",
+    art: "interlace",
+    keywords: "Adversarial ML · LLM safety · Cybersecurity · Privacy",
   },
   {
     slug: "ai-healthcare",
@@ -98,13 +107,31 @@ export const researchThemes: ResearchTheme[] = [
     keywords: "Ihsan · Islamic ethics · Technology & wisdom",
   },
   {
-    slug: "networks-ict4d",
-    title: "Networks, Security & ICT4D",
+    slug: "machine-learning",
+    title: "Machine Learning & Applied AI",
     blurb:
-      "Foundational work in networking, IoT, cybersecurity and information and communication technology for human development.",
+      "The technical core: deep, reinforcement and federated learning, computer vision, speech and audio, and AI-enabled cognitive networks — the methods behind the applications above.",
+    publicationTheme: "ml",
+    art: "star14",
+    keywords: "Deep learning · Reinforcement learning · Vision & speech",
+  },
+  {
+    slug: "networks-ict4d",
+    title: "Networks, IoT & ICT4D",
+    blurb:
+      "Foundational work in wireless and computer networking, mesh and software-defined networks, IoT, and information and communication technology for human development.",
     publicationTheme: "networks-ict4d",
     art: "hex6",
-    keywords: "Networking · IoT security · ICT4D",
+    keywords: "Wireless & mesh networks · IoT · ICT4D",
+  },
+  {
+    slug: "smart-cities-sustainability",
+    title: "Smart Cities & Sustainability",
+    blurb:
+      "Data-driven and AI-enabled systems for cities, energy, mobility and the Sustainable Development Goals — designed with attention to people and context.",
+    publicationTheme: "sustainability",
+    art: "lattice",
+    keywords: "Smart cities · Energy · SDGs",
   },
 ];
 
