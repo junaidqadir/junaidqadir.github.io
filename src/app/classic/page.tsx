@@ -15,7 +15,7 @@ export default function ClassicHome() {
   const keyNumbers = getKeyNumbers();
   // A modest selection of recent recognition, straight from the CV (full list on /cv#awards-and-honors)
   const recognition = getAwards()
-    .filter((a) => /[removed]|Outstanding Faculty Service|Dean.s Award|Best University Teacher|Distinguished (Lecturer|Speaker)/i.test(a.text))
+    .filter((a) => /Outstanding Faculty Service|Dean.s Award|Best University Teacher|Distinguished (Lecturer|Speaker)/i.test(a.text))
     .slice(0, 6);
 
   return (

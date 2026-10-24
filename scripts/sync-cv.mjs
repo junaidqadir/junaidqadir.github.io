@@ -148,6 +148,22 @@ for (let i = 1; i < parts.length; i += 2) {
   });
 }
 
+// ---------- embargo: keep not-yet-announced items off the public site ----------
+import { existsSync } from "node:fs";
+const embargoFile = join(root, "embargo.json");
+const embargoes = existsSync(embargoFile)
+  ? JSON.parse(readFileSync(embargoFile, "utf8")).items.filter((e) => new Date(e.until) > new Date()).map((e) => new RegExp(e.pattern, "i"))
+  : [];
+function dropEmbargoed(blocks) {
+  return blocks.map((b) => ({
+    ...b,
+    items: b.items
+      .filter((it) => !embargoes.some((re) => re.test(it.text)))
+      .map((it) => (it.children ? { ...it, children: dropEmbargoed(it.children) } : it)),
+  }));
+}
+if (embargoes.length) for (const s of sections) s.blocks = dropEmbargoed(s.blocks);
+
 // ---------- derived headline numbers (so the homepage never goes stale) ----------
 const text = toText(texToHtml(body));
 const num = (re) => (text.match(re) || [])[1] || null;

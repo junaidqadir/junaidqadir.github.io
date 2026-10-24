@@ -51,7 +51,7 @@ export default function Home() {
   const keyNumbers = getKeyNumbers();
   const featured = getFeaturedPublications().slice(0, 6);
   const recognition = getAwards()
-    .filter((a) => /[removed]|Outstanding Faculty Service|Dean.s Award|Best University Teacher|Distinguished (Lecturer|Speaker)/i.test(a.text))
+    .filter((a) => /Outstanding Faculty Service|Dean.s Award|Best University Teacher|Distinguished (Lecturer|Speaker)/i.test(a.text))
     .slice(0, 6);
   const grants = (getSection("research-funding")?.blocks.flatMap((b) => b.items) ?? []).slice(0, 4);
   const roles = [
