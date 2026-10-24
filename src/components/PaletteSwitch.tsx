@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 const PALETTES = [
   { id: "lapis", label: "Lapis", color: "#1d4f9a" },
@@ -10,13 +10,18 @@ const PALETTES = [
 ];
 
 /** Small swatches in the footer: Lapis is the default; this lets a visitor choose another. */
+const read = () => document.documentElement.getAttribute("data-palette") ?? "lapis";
+function subscribe(cb: () => void) {
+  const mo = new MutationObserver(cb);
+  mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-palette"] });
+  return () => mo.disconnect();
+}
+
 export default function PaletteSwitch() {
-  const [cur, setCur] = useState("");
-  useEffect(() => { setCur(document.documentElement.getAttribute("data-palette") ?? "lapis"); }, []);
+  const cur = useSyncExternalStore(subscribe, read, () => "lapis");
   function pick(id: string) {
     document.documentElement.setAttribute("data-palette", id);
     try { sessionStorage.setItem("jq-palette", id); } catch {}
-    setCur(id);
   }
   return (
     <div className="flex items-center gap-2" role="group" aria-label="Colour palette">

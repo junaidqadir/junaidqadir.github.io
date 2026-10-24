@@ -3,18 +3,15 @@
 // (npm run sync-cv). This file holds only what the CV does not: navigation, links and short copy.
 
 export const nav = [
-  { href: "/about", label: "About" },
-  { href: "/research", label: "Research" },
-  { href: "/multiplexity", label: "Multiplexity" },
-  { href: "/ihsan", label: "Ihsan" },
-  { href: "/publications", label: "Publications" },
-  { href: "/learning", label: "Learning" },
-  { href: "/students", label: "Students" },
-  { href: "/talks", label: "Talks" },
-  { href: "/videos", label: "Videos" },
-  { href: "/awards", label: "Awards" },
-  { href: "/cv", label: "CV" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About", also: ["/awards", "/cv"] },
+  { href: "/research", label: "Research", also: [] },
+  { href: "/publications", label: "Publications", also: [] },
+  { href: "/multiplexity", label: "Multiplexity", also: [] },
+  { href: "/ihsan", label: "Ihsan", also: ["/courses"] },
+  { href: "/learning", label: "Learning", also: ["/teaching"] },
+  { href: "/students", label: "Students", also: [] },
+  { href: "/talks", label: "Talks & Videos", also: ["/videos"] },
+  { href: "/contact", label: "Contact", also: [] },
 ] as const;
 
 // The Ihsan Initiative site: leave href empty until its real domain is live (nav link is hidden while empty).

@@ -1,23 +1,11 @@
 import Link from "next/link";
 import Container from "./Container";
 import IhsanBlock from "./IhsanBlock";
-import { nav, externalNav, identity } from "@/content/site";
+import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
+import { identity } from "@/content/site";
 
 export default function Nav() {
-  const links = (
-    <>
-      {nav.map((item) => (
-        <Link key={item.href} href={item.href} className="text-muted transition-colors hover:text-accent">
-          {item.label}
-        </Link>
-      ))}
-      {externalNav.href && (
-        <Link href={externalNav.href} target="_blank" rel="noopener noreferrer" className="text-accent transition-opacity hover:opacity-70">
-          {externalNav.label} ↗
-        </Link>
-      )}
-    </>
-  );
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
       <Container width="max-w-6xl">
@@ -27,12 +15,9 @@ export default function Nav() {
             <span>{identity.name}</span>
           </Link>
           {/* desktop */}
-          <nav className="hidden items-center gap-x-5 text-sm xl:flex">{links}</nav>
-          {/* mobile: no JS needed */}
-          <details className="relative xl:hidden">
-            <summary className="cursor-pointer list-none rounded border border-border px-3 py-1.5 text-sm text-foreground">Menu</summary>
-            <nav className="absolute right-0 mt-2 flex w-56 flex-col gap-3 rounded border border-border bg-surface p-4 text-sm shadow-lg">{links}</nav>
-          </details>
+          <nav aria-label="Main" className="hidden items-center gap-x-5 text-sm lg:flex"><NavLinks /></nav>
+          {/* phones and small tablets */}
+          <MobileMenu />
         </div>
       </Container>
     </header>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import Crumb from "@/components/Crumb";
 import CvBlocks from "@/components/CvBlocks";
 import { cvMeta, getSections, humbleHtml } from "@/lib/cv";
 import { getAllPublications } from "@/lib/publications";
@@ -20,6 +21,7 @@ export default function CvPage() {
     <Container width="max-w-5xl" className="py-16">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
+          <Crumb href="/about" label="About" />
           <h1 className="font-serif text-3xl text-foreground">Curriculum Vitae</h1>
           <p className="mt-2 max-w-xl text-sm text-muted">
             This page is generated from the master CV and re-synced regularly

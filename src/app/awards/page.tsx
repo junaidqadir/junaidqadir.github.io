@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
+import Crumb from "@/components/Crumb";
 import { getAwards, humbleHtml } from "@/lib/cv";
 import Distinctions from "@/components/Distinctions";
 import RetryImg from "@/components/RetryImg";
@@ -24,6 +25,7 @@ export default function AwardsPage() {
   const awards = getAwards();
   return (
     <Container width="max-w-4xl" className="py-16">
+      <Crumb href="/about" label="About" />
       <h1 className="font-serif text-3xl text-foreground">Awards &amp; Honors</h1>
       <p className="mt-3 max-w-xl text-muted">
         Recognition for research, teaching and service. Most of this work is shared with students and collaborators,

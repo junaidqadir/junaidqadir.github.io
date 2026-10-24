@@ -103,6 +103,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Where to start: one clear path per kind of visitor */}
+      <section aria-labelledby="start-here" className="border-b border-border">
+        <Container width="max-w-6xl" className="py-8">
+          <h2 id="start-here" className="text-xs font-medium uppercase tracking-[0.22em] text-muted">Where to start</h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { href: "/students", who: "Prospective students", what: "Supervision, current students and how to write to me" },
+              { href: "/research", who: "Collaborators and funders", what: "Research themes, projects and funded work" },
+              { href: "/talks", who: "Media and organisers", what: "Talks, slides and videos, and how to invite me" },
+              { href: "/cv", who: "Peers and evaluators", what: "Curriculum vitae, publications and awards" },
+            ].map((c) => (
+              <li key={c.href}>
+                <Link href={c.href} className="card-ornate block h-full p-4">
+                  <span className="font-serif text-lg text-foreground">{c.who}</span>
+                  <span className="mt-1 block text-sm text-muted">{c.what}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
       {/* ───────── 01 Research ───────── */}
       <section id="research" className="scroll-mt-20">
         <Container width="max-w-6xl" className="py-20">

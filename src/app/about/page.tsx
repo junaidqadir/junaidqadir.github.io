@@ -26,6 +26,13 @@ export default function AboutPage() {
         {identity.role}, {identity.affiliation}
       </p>
 
+      <p className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+        <Link href="/cv" className="text-accent hover:opacity-70">Curriculum vitae →</Link>
+        <Link href="/awards" className="text-accent hover:opacity-70">Awards &amp; honors →</Link>
+        <Link href="/students" className="text-accent hover:opacity-70">Students →</Link>
+        <Link href="/contact" className="text-accent hover:opacity-70">Contact →</Link>
+      </p>
+
       <Distinctions className="mt-8" heading={false} />
 
       <section className="mt-10">
