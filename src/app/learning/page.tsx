@@ -8,6 +8,7 @@ import { getPublicationBySlug } from "@/lib/publications";
 import { playlists, playlistUrl } from "@/content/playlists";
 import { slideDecks } from "@/content/slides";
 import type { Publication } from "@/types/publication";
+import { ethicsCourse } from "@/content/ethicsCourse";
 
 export const metadata: Metadata = {
   title: "Learning — Junaid Qadir",
@@ -27,6 +28,7 @@ const guides = pick([
   "2023-gull-robotics-primer-independent-learners",
   "2026-qadir-ai-chatbots-provide-coaching",
 ]);
+const ethicsPaper = pick([ethicsCourse.paperSlug]);
 const writing = pick(["2026-qadir-craft-ed-framework-effective"]);
 const deckFiles = ["engineering-and-computing-education", "essential-skills", "how-to-thrive", "research-writing"];
 const decks = deckFiles.map((k) => slideDecks.find((d) => d.file.includes(k))).filter((d): d is NonNullable<typeof d> => !!d);
@@ -68,6 +70,18 @@ export default function LearningPage() {
           <H2>Primers and guides</H2>
           <p className="mt-3 max-w-2xl text-muted">Longer guides on thriving in engineering education, the competencies the 2020s ask for, and learning independently.</p>
           <div className="mt-4">{guides.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
+        </section>
+
+        <section>
+          <H2>Ethics, (Islamic) values and technology</H2>
+          <p className="mt-3 max-w-2xl text-muted">
+            The course {ethicsCourse.code}, <em>{ethicsCourse.title}</em>, with its complete slide set and the paper describing its design and the experience of teaching it.
+          </p>
+          <p className="mt-4 flex flex-wrap gap-3 text-sm">
+            <a href={ethicsCourse.site} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-foreground px-4 py-2.5 text-background transition-opacity hover:opacity-85">Course website ↗</a>
+            <a href={ethicsCourse.slides} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-accent px-4 py-2.5 text-background transition-opacity hover:opacity-85">All the slides (Google Drive) ↗</a>
+          </p>
+          <div className="mt-4">{ethicsPaper.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
         </section>
 
         <section>

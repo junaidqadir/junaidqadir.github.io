@@ -4,7 +4,8 @@ import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
-import { playlists, playlistUrl, playlistsFor } from "@/content/playlists";
+import { playlists, playlistUrl } from "@/content/playlists";
+import { ethicsCourse } from "@/content/ethicsCourse";
 
 export const metadata: Metadata = {
   title: "Courses — Junaid Qadir",
@@ -105,12 +106,25 @@ export default function CoursesPage() {
           <h2 className="font-serif text-2xl text-foreground">More courses and lectures</h2>
           <p className="mt-2 max-w-2xl text-muted">Full courses and lecture series from my YouTube channel. My current teaching at Qatar University is on the <Link href="/teaching" className="text-accent hover:opacity-70">Teaching page</Link>.</p>
           <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <div className="card-ornate p-5">
+              <p className="text-xs uppercase tracking-wide text-gold">Course · {ethicsCourse.code}</p>
+              <h3 className="mt-1 font-serif text-lg text-foreground">{ethicsCourse.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-muted">Full slide set and course website, with the paper describing the course design.</p>
+              <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                <a href={ethicsCourse.site} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Course website ↗</a>
+                <a href={ethicsCourse.slides} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Slides ↗</a>
+                <a href={ethicsCourse.paperUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Paper ↗</a>
+              </p>
+            </div>
             {other.map((l) => (
-              <a key={l.id} href={playlistUrl(l.id)} target="_blank" rel="noopener noreferrer" className="card-ornate block p-5">
+              <div key={l.id} className="card-ornate p-5">
                 <p className="text-xs uppercase tracking-wide text-gold">{l.videos ? `${l.videos} videos` : "Playlist"}</p>
-                <h3 className="mt-1 font-serif text-lg text-foreground">{l.title} ↗</h3>
+                <h3 className="mt-1 font-serif text-lg text-foreground">
+                  <a href={playlistUrl(l.id)} target="_blank" rel="noopener noreferrer" className="hover:text-accent">{l.title} ↗</a>
+                </h3>
                 {l.blurb && <p className="mt-2 text-[15px] leading-relaxed text-muted">{l.blurb}</p>}
-              </a>
+                {l.site && <p className="mt-3 text-sm"><a href={l.site} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Course website ↗</a></p>}
+              </div>
             ))}
           </div>
           <p className="mt-6 text-sm text-muted">Everything is also on <a href="https://www.youtube.com/@JunaidQadir" target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">my YouTube channel ↗</a>. Slides for other talks are on the <Link href="/talks" className="text-accent hover:opacity-70">Talks page</Link> as they are released.</p>

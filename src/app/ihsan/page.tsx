@@ -7,6 +7,7 @@ import IhsanMark from "@/components/IhsanMark";
 import PublicationCard from "@/components/PublicationCard";
 import { getPublicationBySlug, getPublicationsByTheme } from "@/lib/publications";
 import { playlistUrl } from "@/content/playlists";
+import { ethicsCourse } from "@/content/ethicsCourse";
 
 export const metadata: Metadata = {
   title: "Ihsan — Junaid Qadir",
@@ -76,6 +77,20 @@ export default function IhsanPage() {
           </p>
           <p className="mt-4">
             <a href={playlistUrl("PL4AueLFeEG0BhWMBqH4FKeYMgel5wUxh7")} target="_blank" rel="noopener noreferrer" className={`${btn} bg-foreground text-background`}>Understand Quran, The Easy Way ↗</a>
+          </p>
+        </section>
+
+        <Ornament />
+
+        <section>
+          <H2>Ethics, (Islamic) values and technology</H2>
+          <p className="mt-3 max-w-2xl text-muted">
+            The university course {ethicsCourse.code}, with its complete slides and the paper on teaching it.
+          </p>
+          <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href={ethicsCourse.site} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Course website ↗</a>
+            <a href={ethicsCourse.slides} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">All the slides ↗</a>
+            <a href={ethicsCourse.paperUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Paper (IEEE Xplore) ↗</a>
           </p>
         </section>
 

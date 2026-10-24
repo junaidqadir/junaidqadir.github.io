@@ -5,6 +5,8 @@ export type Playlist = {
   title: string;
   videos?: number;
   blurb?: string;
+  /** Companion course website, if any. */
+  site?: string;
   areas: ("multiplexity" | "ai-ethics" | "education" | "teaching" | "ihsan" | "quran" | "ml-security")[];
 };
 
@@ -22,7 +24,7 @@ export const playlists: Playlist[] = [
   { id: "PL4AueLFeEG0BhWMBqH4FKeYMgel5wUxh7", title: "Understand Quran, The Easy Way (Quranic Arabic Short Course, 2021)", videos: 17, blurb: "A short course on understanding the Quran, recorded October to December 2021.", areas: ["ihsan", "quran", "teaching"] },
   { id: "PL4AueLFeEG0ANEE0ESVN-f1cNiEr_X95m", title: "Security and Robustness of Machine Learning (tutorial)", videos: 4, areas: ["ml-security"] },
   { id: "PL931370B167ED8BE7", title: "Teaching and Learning", videos: 11, areas: ["teaching", "education"] },
-  { id: "PL6B8E0C06A2002B1D", title: "CS721 — Network Performance and Evaluation (full course)", videos: 44, blurb: "A complete graduate course on the performance evaluation of computer networks: queueing, simulation and measurement.", areas: ["teaching"] },
+  { id: "PL6B8E0C06A2002B1D", title: "CS721 — Network Performance and Evaluation (full course)", videos: 44, blurb: "A complete graduate course on the performance evaluation of computer networks: queueing, simulation and measurement.", site: "https://sites.google.com/site/netperfeval", areas: ["teaching"] },
   { id: "PL54B0E89BA5BBCB3B", title: "EE362 — Computer and Communication Networks (SEECS, NUST)", videos: 14, areas: ["teaching"] },
 ];
 
