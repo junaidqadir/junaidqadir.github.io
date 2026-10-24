@@ -50,7 +50,11 @@ export function getStudents(): Student[] {
         return aa[aa.length - 1] === surname && initials.has(aa[0]?.[0]);
       }),
     ).length;
-    out.push({ ...s, institution: s.institution ? INSTITUTIONS[s.institution] ?? s.institution : null, links: l, papers, paperQuery: surname });
+    // the exact author string used in the CV (e.g. "A. Qayyum"), so the publications filter shows only this person's papers
+    const tally = new Map<string, number>();
+    pubs.forEach((p) => p.authors.forEach((a) => { const aa = clean(a).split(/\s+/); if (aa[aa.length - 1] === surname && initials.has(aa[0]?.[0])) tally.set(a, (tally.get(a) ?? 0) + 1); }));
+    const exactAuthor = [...tally.entries()].sort((x, y) => y[1] - x[1])[0]?.[0] ?? surname;
+    out.push({ ...s, institution: s.institution ? INSTITUTIONS[s.institution] ?? s.institution : null, links: l, papers, paperQuery: exactAuthor });
   }
   return out;
 }

@@ -74,32 +74,61 @@ export default function PublicationSearch({
     router.replace(pathname, { scroll: false });
   }
 
-  const tagCounts = useMemo(() => {
-    const c: Record<string, number> = {};
-    publications.forEach((p) => p.tags.forEach((t) => (c[t] = (c[t] || 0) + 1)));
-    return c;
+  type Skip = "none" | "tags" | "types" | "theme" | "pdf";
+  const authorStrings = useMemo(() => {
+    const c = new Map<string, number>();
+    publications.forEach((p) => p.authors.forEach((a) => c.set(a, (c.get(a) ?? 0) + 1)));
+    return [...c.entries()].filter(([a]) => !/^J\. Qadir$/.test(a)).sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0])).slice(0, 400);
   }, [publications]);
-  const sortedTags = useMemo(() => [...allTags].sort((a, b) => (tagCounts[b] || 0) - (tagCounts[a] || 0)), [allTags, tagCounts]);
-  const visibleTags = showAllTags ? sortedTags : sortedTags.slice(0, 14);
 
-  const filtered = useMemo(() => {
+  // A filter that is "skipped" is left out, so each facet can show the counts you would get by choosing it (faceted counts).
+  const passes = useMemo(() => {
     const qq = q.trim().toLowerCase(), aa = author.trim().toLowerCase(), vv = venue.trim().toLowerCase();
     const f = parseInt(from, 10), t = parseInt(to, 10);
-    return publications.filter((p) => {
+    const exact = aa && authorStrings.some(([a]) => a.toLowerCase() === aa);
+    const aRe = aa && !exact ? new RegExp(`(^|[^a-z])${aa.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i") : null;
+    return (p: Publication, skip: Skip = "none") => {
       if (qq && !`${p.title} ${p.authors.join(" ")} ${p.venue ?? ""}`.toLowerCase().includes(qq)) return false;
-      if (aa && !p.authors.some((x) => x.toLowerCase().includes(aa))) return false;
+      if (aa && !p.authors.some((x) => (exact ? x.toLowerCase() === aa : aRe!.test(x)))) return false;
       if (vv && !(p.venue ?? "").toLowerCase().includes(vv)) return false;
-      if (tags.length && !tags.every((x) => p.tags.includes(x))) return false;
-      if (types.length && !types.includes(p.section ?? "")) return false;
-      if (pdfOnly && !p.pdf) return false;
-      if (theme && !p.themes.includes(theme as never)) return false;
+      if (skip !== "tags" && tags.length && !tags.every((x) => p.tags.includes(x))) return false;
+      if (skip !== "types" && types.length && !types.includes(p.section ?? "")) return false;
+      if (skip !== "pdf" && pdfOnly && !p.pdf) return false;
+      if (skip !== "theme" && theme && !p.themes.includes(theme as never)) return false;
       if (p.year != null) {
         if (!Number.isNaN(f) && p.year < f) return false;
         if (!Number.isNaN(t) && p.year > t) return false;
       }
       return true;
-    });
-  }, [publications, q, author, venue, tags, types, from, to, pdfOnly, theme]);
+    };
+  }, [q, author, venue, tags, types, from, to, pdfOnly, theme, authorStrings]);
+
+  const filtered = useMemo(() => publications.filter((p) => passes(p)), [publications, passes]);
+
+  const tagCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    filtered.forEach((p) => p.tags.forEach((t) => (c[t] = (c[t] || 0) + 1)));
+    return c;
+  }, [filtered]);
+  const baseTagCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    publications.forEach((p) => p.tags.forEach((t) => (c[t] = (c[t] || 0) + 1)));
+    return c;
+  }, [publications]);
+  // stable order (by overall frequency); tags with no remaining papers are dimmed, never reshuffled under the cursor
+  const sortedTags = useMemo(() => [...allTags].sort((a, b) => (baseTagCounts[b] || 0) - (baseTagCounts[a] || 0)), [allTags, baseTagCounts]);
+  const visibleTags = showAllTags ? sortedTags : sortedTags.slice(0, 14);
+  const themeCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    publications.filter((p) => passes(p, "theme")).forEach((p) => p.themes.forEach((t) => (c[t] = (c[t] || 0) + 1)));
+    return c;
+  }, [publications, passes]);
+  const typeCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    publications.filter((p) => passes(p, "types")).forEach((p) => { const k = p.section ?? ""; c[k] = (c[k] || 0) + 1; });
+    return c;
+  }, [publications, passes]);
+  const nPdf = useMemo(() => publications.filter((p) => passes(p, "pdf") && p.pdf).length, [publications, passes]);
 
   const grouped = useMemo(() => {
     const m = new Map<string, Publication[]>();
@@ -111,7 +140,6 @@ export default function PublicationSearch({
   }, [filtered]);
 
   const active = (q ? 1 : 0) + (author ? 1 : 0) + (venue ? 1 : 0) + tags.length + types.length + (pdfOnly ? 1 : 0) + (theme ? 1 : 0) + (from !== String(minY) ? 1 : 0) + (to !== String(maxY) ? 1 : 0);
-  const nPdf = publications.filter((p) => p.pdf).length;
 
   return (
     <div>
@@ -122,7 +150,8 @@ export default function PublicationSearch({
         </div>
         <div>
           <label className={label} htmlFor="pub-author">Co-author</label>
-          <input id="pub-author" type="text" value={author} onChange={(e) => { setAuthor(e.target.value); sync({ author: e.target.value }); }} placeholder="e.g. Al-Fuqaha" className={field} />
+          <input id="pub-author" list="pub-authors" type="text" value={author} onChange={(e) => { setAuthor(e.target.value); sync({ author: e.target.value }); }} placeholder="e.g. A. Qayyum" className={field} />
+          <datalist id="pub-authors">{authorStrings.map(([a, n]) => <option key={a} value={a}>{n} papers</option>)}</datalist>
         </div>
         <div>
           <label className={label} htmlFor="pub-venue">Journal / venue</label>
@@ -135,8 +164,8 @@ export default function PublicationSearch({
         <div className="mt-2 flex flex-wrap gap-2">
           {Object.entries(themeNames).map(([k, v]) => (
             <button key={k} aria-pressed={theme === k} onClick={() => { const n = theme === k ? "" : k; setTheme(n); sync({ theme: n }); }}
-              className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${theme === k ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
-              {v}
+              className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${theme !== k && !themeCounts[k] ? "opacity-40 " : ""}${theme === k ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
+              {v} <span className="opacity-60">{themeCounts[k] ?? 0}</span>
             </button>
           ))}
         </div>
@@ -155,8 +184,8 @@ export default function PublicationSearch({
           <span className={label}>Type</span>
           <div className="mt-1 flex flex-wrap gap-1.5">
             {Object.entries(sectionLabels).filter(([k]) => publications.some((p) => p.section === k)).map(([k, v]) => (
-              <button key={k} onClick={() => toggleType(k)} aria-pressed={types.includes(k)} className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${types.includes(k) ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
-                {v}
+              <button key={k} onClick={() => toggleType(k)} aria-pressed={types.includes(k)} className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${theme !== k && !typeCounts[k] ? "opacity-40 " : ""}${types.includes(k) ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
+                {v} <span className="opacity-60">{typeCounts[k] ?? 0}</span>
               </button>
             ))}
           </div>
@@ -171,8 +200,8 @@ export default function PublicationSearch({
         <span className={label}>Tags {tags.length > 1 && "(papers matching all selected)"}</span>
         <div className="mt-2 flex flex-wrap gap-2">
           {visibleTags.map((t) => (
-            <button key={t} onClick={() => toggleTag(t)} aria-pressed={tags.includes(t)} className={`rounded-full border px-3 py-1 text-xs transition-colors ${tags.includes(t) ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
-              {tagLabel(t)} <span className="opacity-60">{tagCounts[t]}</span>
+            <button key={t} onClick={() => toggleTag(t)} aria-pressed={tags.includes(t)} className={`rounded-full border px-3 py-1 text-xs transition-colors ${!tags.includes(t) && !tagCounts[t] ? "opacity-40 " : ""}${tags.includes(t) ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
+              {tagLabel(t)} <span className="opacity-60">{tagCounts[t] ?? 0}</span>
             </button>
           ))}
           {sortedTags.length > 14 && (
