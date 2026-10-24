@@ -5,7 +5,7 @@ import RetryImg from "./RetryImg";
 import { asset } from "@/lib/assets";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export type TalkItem = { html: string; year: number | null; kind: string; topics: string[]; slides: string | null };
+export type TalkItem = { html: string; year: number | null; kind: string; topics: string[]; slides: { href: string; label?: string }[] | null };
 
 export const topicLabels: Record<string, string> = {
   "ai-ethics": "AI ethics & safety",
@@ -117,12 +117,13 @@ export default function TalksExplorer({ items }: { items: TalkItem[] }) {
       <ul className="mt-2">
         {shown.length === 0 && <li className="py-8 text-center text-sm text-muted">No talks match these filters.</li>}
         {shown.map((t, i) => {
-          const thumb = t.slides ? t.slides.replace("/slides/", "/slide-thumbs/").replace(/\.pdf$/, ".jpg") : null;
+          const first = t.slides?.[0]?.href;
+          const thumb = first ? first.replace("/slides/", "/slide-thumbs/").replace(/\.pdf$/, ".jpg") : null;
           return (
             <li key={i} className="flex gap-4 border-b border-border py-5 text-[15px] leading-relaxed text-muted sm:gap-5">
               <div className="w-28 shrink-0 sm:w-44">
-                {thumb && t.slides ? (
-                  <a href={t.slides} className="group block" aria-label="Open the slides (PDF)">
+                {thumb && first ? (
+                  <a href={first} className="group block" aria-label="Open the slides (PDF)">
                     <RetryImg src={asset(thumb)} alt="First slide of the talk" className="aspect-video w-full rounded-sm border border-border bg-[#0e0c0a] object-contain transition-opacity group-hover:opacity-80" />
                   </a>
                 ) : (
@@ -139,7 +140,9 @@ export default function TalksExplorer({ items }: { items: TalkItem[] }) {
                 </div>
                 <p className="mt-1" dangerouslySetInnerHTML={{ __html: t.html }} />
                 {t.slides && (
-                  <p className="mt-1 text-sm"><a href={t.slides} className="text-accent hover:opacity-70">Slides (PDF) ↓</a></p>
+                  <p className="mt-1 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                    {t.slides.map((sl) => (<a key={sl.href} href={sl.href} className="text-accent hover:opacity-70">{sl.label ?? "Slides (PDF)"} ↓</a>))}
+                  </p>
                 )}
               </div>
             </li>

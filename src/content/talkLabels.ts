@@ -80,7 +80,7 @@ export const talkLabels: Record<string, TalkLabel> = {
   // Plenary Speaker, 14th Excellence in Education and Learning F
   "plenaryspeaker14thexcellenceineducationandlearningforumqataruniversitycenterofexcellenceinteachingandlearningcetljune2023": { kind: "Keynote / plenary", topics: ["education"] },
   // “Augmentation Through Generative AI and ChatGPT: Hands-On Wo
-  "augmentationthroughgenerativeaiandchatgpthandsonworkshopforstudentsandresearchers4dayhandsonworkshopforstudentsandresearchersaugust7toaugust102023": { kind: "Tutorial / workshop", topics: ["education"] },
+  "augmentationthroughgenerativeaiandchatgpthandsonworkshopforstudentsandresearchers4dayhandsonworkshopforstudentsandresearchersaugust7toaugust102023": { kind: "Lecture / course", topics: ["education"] },
   // “A Holistic Education for the 21st Century Engineer Based on
   "aholisticeducationforthe21stcenturyengineerbasedonwisdomandmultiplexityte2022thefutureofengineeringconferencehostedbymitsystemdesignandmanagementcambridgemausajuly2022": { kind: "Invited / conference talk", topics: ["education", "multiplexity"] },
   // “Safe and Trustworthy Artificial Intelligence”, AI Week 2022

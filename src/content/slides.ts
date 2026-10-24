@@ -1,7 +1,7 @@
 // Slide decks published as PDF (never PPT) and matched to CV talks by title + year. Only decks for talks listed in the CV,
 // scanned for confidentiality markers; PowerPoint-only decks were converted from the latest version. To add one:
 // copy the PDF to public/slides/ and add a line here.
-export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string; aliases?: string[]; match?: string[] };
+export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string; aliases?: string[]; match?: string[]; part?: string };
 
 export const slideDecks: SlideDeck[] = [
   {
@@ -243,6 +243,7 @@ export const slideDecks: SlideDeck[] = [
     "title": "How to Thrive in Post-COVID19 Outcome Based Education",
     "year": 2020,
     "file": "2020-how-to-thrive-in-post-covid19-outcome-based-education.pdf",
+    "match": ["Outcome Based Education: International Practices"],
     "pages": 32,
     "mb": 9,
     "date": "May 2020"
@@ -334,6 +335,46 @@ export const slideDecks: SlideDeck[] = [
     "mb": 1.1,
     "date": "2016",
     "match": ["Global Internet Access: An Operator"]
+  },
+  {
+    "title": "Augmentation Through Generative AI and ChatGPT: 4-Day Hands-On Course (Day 1)",
+    "year": 2023,
+    "file": "2023-genai-itu-course-day-1.pdf",
+    "pages": 78,
+    "mb": 20.7,
+    "date": "August 2023",
+    "part": "Day 1 \u00b7 Introduction to Generative AI and ChatGPT",
+    "match": ["4-Day Hands-On Workshop for Students and Researchers"]
+  },
+  {
+    "title": "Augmentation Through Generative AI and ChatGPT: 4-Day Hands-On Course (Day 2)",
+    "year": 2023,
+    "file": "2023-genai-itu-course-day-2.pdf",
+    "pages": 59,
+    "mb": 10.9,
+    "date": "August 2023",
+    "part": "Day 2 \u00b7 The Art of Prompt Engineering",
+    "match": ["4-Day Hands-On Workshop for Students and Researchers"]
+  },
+  {
+    "title": "Augmentation Through Generative AI and ChatGPT: 4-Day Hands-On Course (Day 3)",
+    "year": 2023,
+    "file": "2023-genai-itu-course-day-3.pdf",
+    "pages": 119,
+    "mb": 13.8,
+    "date": "August 2023",
+    "part": "Day 3 \u00b7 AI-Augmented Writing: The Art of Writing in the AI Era",
+    "match": ["4-Day Hands-On Workshop for Students and Researchers"]
+  },
+  {
+    "title": "Augmentation Through Generative AI and ChatGPT: 4-Day Hands-On Course (Day 4)",
+    "year": 2023,
+    "file": "2023-genai-itu-course-day-4.pdf",
+    "pages": 54,
+    "mb": 15.5,
+    "date": "August 2023",
+    "part": "Day 4 \u00b7 Effective and Ethical Use of Generative AI",
+    "match": ["4-Day Hands-On Workshop for Students and Researchers"]
   }
 ];
 
@@ -347,13 +388,15 @@ function overlap(a: string, b: string) {
   return n / Math.max(A.size, B.size);
 }
 
-/** The deck for a CV talk entry (matched on the quoted title and year), as a site-relative URL, or null. */
-export function slidesFor(cvText: string): string | null {
+export type SlideLink = { href: string; label?: string };
+
+/** The slide deck(s) for a CV talk entry, as site-relative URLs: one deck, or several for a multi-day course (each with a label). */
+export function slidesFor(cvText: string): SlideLink[] | null {
   const quoted = (cvText.match(/“([^”]+)”/) || [])[1] ?? cvText;
   const years = [...cvText.matchAll(/\b(?:19|20)\d{2}\b/g)].map((m) => +m[0]);
   for (const m of cvText.matchAll(/['’](\d{2})\b/g)) years.push(2000 + +m[1]); // e.g. EEITC'24
   const low = cvText.toLowerCase();
-  const pinned = slideDecks.find((d) => d.match?.some((m) => low.includes(m.toLowerCase())) && years.includes(d.year)); // distinctive phrase in the CV entry
-  const hit = pinned ?? slideDecks.find((d) => [d.title, ...(d.aliases ?? [])].some((t) => overlap(quoted, t) >= 0.8) && years.includes(d.year));
-  return hit ? `/slides/${hit.file}` : null;
+  const pinned = slideDecks.filter((d) => d.match?.some((m) => low.includes(m.toLowerCase())) && years.includes(d.year)); // distinctive phrase in the CV entry
+  const hits = pinned.length ? pinned : slideDecks.filter((d) => [d.title, ...(d.aliases ?? [])].some((t) => overlap(quoted, t) >= 0.8) && years.includes(d.year)).slice(0, 1);
+  return hits.length ? hits.map((d) => ({ href: `/slides/${d.file}`, label: d.part })) : null;
 }

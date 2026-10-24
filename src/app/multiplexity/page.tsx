@@ -174,7 +174,7 @@ export default function MultiplexityPage() {
               return (
                 <li key={i} className="border-b border-border pb-3">
                   <span dangerouslySetInnerHTML={{ __html: t.item.html }} />
-                  {slides && <a href={slides} className="ml-2 whitespace-nowrap text-sm text-accent hover:opacity-70">Slides (PDF) ↓</a>}
+                  {slides?.map((sl) => <a key={sl.href} href={sl.href} className="ml-2 whitespace-nowrap text-sm text-accent hover:opacity-70">{sl.label ?? "Slides (PDF)"} ↓</a>)}
                 </li>
               );
             })}
