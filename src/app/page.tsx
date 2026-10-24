@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
+import Highlights from "@/components/Highlights";
 import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
@@ -102,6 +103,8 @@ export default function Home() {
           <Container width="max-w-6xl" className="py-6"><Distinctions /></Container>
         </div>
       </section>
+
+      <Highlights />
 
       {/* Where to start: one clear path per kind of visitor */}
       <section aria-labelledby="start-here" className="border-b border-border">

@@ -30,6 +30,11 @@ export default function PublicationsPage() {
         for citation metrics.
       </p>
 
+      <p className="mt-4 max-w-xl rounded-sm border border-border bg-surface/50 px-4 py-3 text-sm text-muted">
+        <span className="text-gold">New:</span> an English translation of <em>The Philosophy of Islamic Legislation</em> (Waliullahi school of thought), available{" "}
+        <a href="https://ssrn.com/abstract=5615292" target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">on SSRN ↗</a>.
+      </p>
+
       <div className="mt-10">
         <Suspense fallback={null}>
           <PublicationSearch publications={publications} allTags={allTags} yearRange={yearRange} />

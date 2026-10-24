@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import RetryImg from "@/components/RetryImg";
+import { asset } from "@/lib/assets";
+import { fellowship } from "@/content/highlights";
 import CoursesTabs from "@/components/CoursesTabs";
 import CvBlocks from "@/components/CvBlocks";
 import { getCourses, listUnder, supervisedCount } from "@/lib/cv";
@@ -34,6 +37,21 @@ export default function TeachingPage() {
           A recurring theme: AI can make production easier, but education must preserve the effort through which
           understanding, judgment and character are formed.
         </p>
+      </section>
+
+      <section className="mt-10">
+        <Label>Professional development</Label>
+        <div className="mt-3 flex gap-5">
+          <div className="min-w-0 flex-1">
+            <h3 className="font-serif text-lg text-foreground">{fellowship.title}</h3>
+            <p className="mt-1 text-xs uppercase tracking-wide text-gold">{fellowship.kicker}</p>
+            <p className="mt-2 text-[15px] leading-relaxed text-muted">{fellowship.text}</p>
+            <p className="mt-3 text-sm"><a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">View the certificate ↗</a></p>
+          </div>
+          <a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="hidden w-28 shrink-0 self-start sm:block" aria-label={fellowship.cert.alt}>
+            <RetryImg src={asset(fellowship.cert.thumb)} alt={fellowship.cert.alt} className="w-full rounded-sm border border-border transition-opacity hover:opacity-80" />
+          </a>
+        </div>
       </section>
 
       <section className="mt-10">
