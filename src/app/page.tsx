@@ -179,7 +179,7 @@ export default function Home() {
               </p>
             </article>
           </div>
-          <p className="mt-6 text-sm text-muted">Also: <Link href="/courses" className="text-accent hover:opacity-70">CS721 Network Performance &amp; Evaluation, EE362 Computer Networks, an AI-ethics short course and more →</Link></p>
+          <p className="mt-6 text-sm text-muted">Also: <Link href="/courses" className="text-accent hover:opacity-70">CS721 Network Performance &amp; Evaluation, an AI-ethics short course and more →</Link></p>
         </Container>
       </section>
 

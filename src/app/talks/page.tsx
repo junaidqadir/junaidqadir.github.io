@@ -20,7 +20,7 @@ function overlap(a: string, b: string) {
   return n / Math.min(A.size, B.size);
 }
 const videoUrl = (t: (typeof talks)[number]) =>
-  t.youtubeId ? `https://youtube.com/watch?v=${t.youtubeId}` : t.youtubePlaylistId ? `https://youtube.com/playlist?list=${t.youtubePlaylistId}` : (t.url ?? null);
+  t.youtubeId ? `https://youtube.com/watch?v=${t.youtubeId}${t.startSeconds ? `&t=${t.startSeconds}s` : ""}` : t.youtubePlaylistId ? `https://youtube.com/playlist?list=${t.youtubePlaylistId}` : (t.url ?? null);
 
 const TOPIC_RULES: [string, RegExp][] = [
   ["ai-ethics", /ethic|responsib|trustworth|safe|bias|harm|accountab/i],
@@ -80,7 +80,7 @@ export default function TalksPage() {
                 <div className="mt-4 space-y-6">
                   {items.map((talk) => {
                     const link = talk.youtubeId
-                      ? `https://youtube.com/watch?v=${talk.youtubeId}`
+                      ? `https://youtube.com/watch?v=${talk.youtubeId}${talk.startSeconds ? `&t=${talk.startSeconds}s` : ""}`
                       : talk.youtubePlaylistId
                         ? `https://youtube.com/playlist?list=${talk.youtubePlaylistId}`
                         : (talk.url ?? null);

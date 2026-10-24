@@ -7,6 +7,8 @@ export type Talk = {
   date: string | null;
   venue: string;
   youtubeId: string | null;
+  /** Start the video where my part begins (seconds), for long recordings of a whole symposium. */
+  startSeconds?: number;
   /** Playlist ID, for a multi-video series without one single representative video. */
   youtubePlaylistId?: string | null;
   /** Non-YouTube link (e.g. a talk hosted on the venue's own site). */
@@ -50,12 +52,24 @@ export const talks: Talk[] = [
       "On adapting outcome-based education practices to remote and post-pandemic teaching.",
   },
   {
+    slug: "islamic-spirituality-genai-mental-health-2026",
+    title: "Integrating Islamic Spirituality and Generative AI in Mental Health: Promise, Pitfalls, and Pathways Forward",
+    category: "conference-talk",
+    date: "2026-02",
+    venue: "2nd International Symposium on Islamic Psychology, HBKU College of Islamic Studies (Day 2)",
+    youtubeId: "yRNnvWLMiPU",
+    startSeconds: 470,
+    slidesUrl: null,
+    description: "On the promise and risks of generative AI in mental health care and its integration with Islamic spirituality.",
+  },
+  {
     slug: "ghazalian-project-ai-era-2024",
     title: "The Ghazalian Project for the AI Era: A Multiplex Critical AI Approach",
     category: "conference-talk",
     date: "2024-03",
     venue: "First Symposium on Comparative Education, Ghazali on Education (HBKU)",
     youtubeId: "Xz9sk3mj19I",
+    startSeconds: 21004,
     slidesUrl: null,
     description:
       "A multiplex critical-AI framework for guiding AI development, drawing on Imam Abū Ḥāmid al-Ghazālī’s philosophy of education.",

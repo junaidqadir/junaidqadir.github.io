@@ -28,7 +28,6 @@ export const playlists: Playlist[] = [
   { id: "PL4AueLFeEG0ANEE0ESVN-f1cNiEr_X95m", themes: ["ai-safety-security"], title: "Security and Robustness of Machine Learning (tutorial)", videos: 4, areas: ["ml-security"] },
   { id: "PL931370B167ED8BE7", themes: ["ai-education"], title: "Teaching and Learning", videos: 11, areas: ["teaching", "education"] },
   { id: "PL6B8E0C06A2002B1D", themes: ["networks-ict4d"], title: "CS721 — Network Performance and Evaluation (full course)", videos: 44, blurb: "A complete graduate course on the performance evaluation of computer networks: queueing, simulation and measurement.", site: "https://sites.google.com/site/netperfeval", areas: ["teaching"] },
-  { id: "PL54B0E89BA5BBCB3B", themes: ["networks-ict4d"], title: "EE362 — Computer and Communication Networks (SEECS, NUST)", videos: 14, areas: ["teaching"] },
 ];
 
 export const playlistsFor = (area: Playlist["areas"][number]) => playlists.filter((p) => p.areas.includes(area));

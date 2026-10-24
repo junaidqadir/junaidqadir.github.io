@@ -32,7 +32,7 @@ export function getVideos(): VideoItem[] {
     if (t.category === "short-course" || /\bPart \d\b/i.test(t.title)) continue;
     const text = `${t.title} ${t.venue} ${t.description}`;
     const year = (t.date?.match(/(19|20)\d{2}/) || [])[0];
-    out.set(t.youtubeId, { id: t.youtubeId, title: t.title, kind: kindOf(t.category), host: t.venue, year: year ? +year : undefined, topics: TOPIC_RULES.filter(([, re]) => re.test(text)).map(([k]) => k) });
+    out.set(t.youtubeId, { id: t.youtubeId, start: t.startSeconds, title: t.title, kind: kindOf(t.category), host: t.venue, year: year ? +year : undefined, topics: TOPIC_RULES.filter(([, re]) => re.test(text)).map(([k]) => k) });
   }
   return [...out.values()].sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (b.year ?? 0) - (a.year ?? 0));
 }

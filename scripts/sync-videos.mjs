@@ -46,5 +46,6 @@ for (const id of plIds) {
   } catch (e) { console.log("no feed for", id, e.message); }
   await sleep(250);
 }
+for (const k of Object.keys(prev.playlists)) if (!plIds.has(k)) delete prev.playlists[k]; // drop playlists removed from the site
 writeFileSync(outFile, JSON.stringify(prev, null, 2) + "\n");
 console.log(`videos: ${Object.keys(prev.videos).length}, playlists: ${Object.keys(prev.playlists).length}`);

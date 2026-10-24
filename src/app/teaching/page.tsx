@@ -39,7 +39,7 @@ export default function TeachingPage() {
         <p className="mt-3 text-sm leading-relaxed text-muted">
           Recorded short courses and lecture series are collected on{" "}
           <Link href="/courses" className="text-accent hover:opacity-70">Courses</Link> (the two IHSAN courses with slides, the full
-          CS721 <em>Network Performance &amp; Evaluation</em> lecture series, EE362 and more), and on{" "}
+          CS721 <em>Network Performance &amp; Evaluation</em> lecture series and more), and on{" "}
           <a href={socials.youtube} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">YouTube</a>.
         </p>
       </section>
