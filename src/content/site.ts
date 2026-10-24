@@ -148,7 +148,7 @@ export const bio = {
 };
 
 export const contact = {
-  intro: "You can write to me with the form below, choosing what your message is about, or email me directly.",
+  intro: "Choose what your message is about, and the form prepares an email to me with the right subject line. Or email me directly.",
   studentNotes: [
     {
       title: "Note to prospective graduate students",

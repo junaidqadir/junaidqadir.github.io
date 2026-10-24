@@ -3,10 +3,7 @@
 import { useState } from "react";
 import { socials } from "@/content/site";
 
-// Delivery: FormSubmit (formsubmit.co) forwards each submission by email to the address below; no account is needed,
-// but the address owner must confirm it once, from the first message the service sends.
-const ENDPOINT = `https://formsubmit.co/ajax/${socials.email}`;
-
+// No server and no outside service: the form prepares the email (address, subject and text) and opens the visitor's own email program.
 const TOPICS: { id: string; label: string; subject: string; hint: string }[] = [
   { id: "student", label: "Prospective student", subject: "Prospective student", hint: "Your degree level, your background, and the research topic that interests you." },
   { id: "talk", label: "Talk or workshop", subject: "Invitation to speak", hint: "The audience, the date, the format and the place." },
@@ -18,86 +15,64 @@ const TOPICS: { id: string; label: string; subject: string; hint: string }[] = [
 const field = "mt-1 w-full rounded-md border border-border bg-background px-3 py-2 text-[15px] outline-none focus:border-accent";
 const label = "text-xs font-medium uppercase tracking-wide text-muted";
 
-type State = "idle" | "sending" | "sent" | "error";
-
 export default function ContactForm() {
   const [topic, setTopic] = useState(TOPICS[0].id);
-  const [state, setState] = useState<State>("idle");
+  const [composed, setComposed] = useState<{ subject: string; body: string; href: string } | null>(null);
+  const [copied, setCopied] = useState(false);
   const t = TOPICS.find((x) => x.id === topic) ?? TOPICS[0];
 
-  async function submit(e: React.FormEvent<HTMLFormElement>) {
+  function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
-    if (f.get("_honey")) return; // a hidden field only bots fill in
-    setState("sending");
     const name = String(f.get("name") ?? "").trim();
-    try {
-      const r = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name,
-          email: String(f.get("email") ?? "").trim(),
-          topic: t.label,
-          message: String(f.get("message") ?? "").trim(),
-          _subject: `[Website] ${t.subject}: ${name}`,
-          _template: "table",
-          _captcha: "false",
-        }),
-      });
-      const j = await r.json().catch(() => ({}));
-      if (!r.ok || String(j.success) === "false") throw new Error("send failed");
-      setState("sent");
-    } catch {
-      setState("error");
-    }
+    const message = String(f.get("message") ?? "").trim();
+    const subject = `[Website] ${t.subject}: ${name}`;
+    const body = `${message}\n\n— ${name}\n(About: ${t.label})`;
+    const href = `mailto:${socials.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setComposed({ subject, body, href });
+    window.location.href = href;
   }
 
-  if (state === "sent") {
-    return (
-      <div className="max-w-xl rounded border border-border bg-surface p-5" role="status">
-        <p className="font-serif text-lg text-foreground">Thank you. Your message has been sent.</p>
-        <p className="mt-1 text-sm text-muted">I will reply by email as soon as I can.</p>
-      </div>
-    );
+  async function copy() {
+    if (!composed) return;
+    try {
+      await navigator.clipboard.writeText(`To: ${socials.email}\nSubject: ${composed.subject}\n\n${composed.body}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {}
   }
 
   return (
-    <form onSubmit={submit} className="max-w-xl space-y-4" aria-label="Contact form">
-      <div className="grid gap-4 sm:grid-cols-2">
+    <div className="max-w-xl">
+      <form onSubmit={submit} className="space-y-4" aria-label="Write an email">
         <div>
           <label htmlFor="cf-name" className={label}>Your name</label>
           <input id="cf-name" name="name" required maxLength={120} autoComplete="name" className={field} />
         </div>
         <div>
-          <label htmlFor="cf-email" className={label}>Your email</label>
-          <input id="cf-email" name="email" type="email" required maxLength={160} autoComplete="email" className={field} />
+          <label htmlFor="cf-topic" className={label}>I am writing about</label>
+          <select id="cf-topic" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} className={field}>
+            {TOPICS.map((x) => (<option key={x.id} value={x.id}>{x.label}</option>))}
+          </select>
         </div>
-      </div>
-      <div>
-        <label htmlFor="cf-topic" className={label}>I am writing about</label>
-        <select id="cf-topic" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} className={field}>
-          {TOPICS.map((x) => (<option key={x.id} value={x.id}>{x.label}</option>))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="cf-message" className={label}>Your message</label>
-        <textarea id="cf-message" name="message" required rows={6} maxLength={4000} aria-describedby="cf-hint" className={field} />
-        <p id="cf-hint" className="mt-1.5 text-sm text-muted">Please include: {t.hint}</p>
-      </div>
-      <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
-      <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" disabled={state === "sending"} className="rounded-sm bg-foreground px-5 py-2.5 text-sm text-background transition-opacity hover:opacity-85 disabled:opacity-60">
-          {state === "sending" ? "Sending…" : "Send message"}
-        </button>
-        <p className="text-xs text-muted">Sent to me by email, with the subject line filled in. It goes through a form service (FormSubmit) and is used only to reply.</p>
-      </div>
-      {state === "error" && (
-        <p role="alert" className="text-sm text-foreground">
-          The message could not be sent. Please email me directly at{" "}
-          <a href={`mailto:${socials.email}?subject=${encodeURIComponent(`[Website] ${t.subject}`)}`} className="text-accent hover:opacity-70">{socials.email}</a>.
-        </p>
+        <div>
+          <label htmlFor="cf-message" className={label}>Your message</label>
+          <textarea id="cf-message" name="message" required rows={6} maxLength={1500} aria-describedby="cf-hint" className={field} />
+          <p id="cf-hint" className="mt-1.5 text-sm text-muted">Please include: {t.hint}</p>
+        </div>
+        <div className="flex flex-wrap items-center gap-4">
+          <button type="submit" className="rounded-sm bg-foreground px-5 py-2.5 text-sm text-background transition-opacity hover:opacity-85">Prepare my email</button>
+          <p className="text-xs text-muted">This opens your own email program with the address, the subject and your message filled in. Nothing is sent through this website.</p>
+        </div>
+      </form>
+
+      {composed && (
+        <div className="mt-5 rounded border border-border bg-surface p-4 text-sm" role="status">
+          <p className="text-foreground">Your email program should open with the message ready to send. If it does not, you can copy the message, or <a href={composed.href} className="text-accent hover:opacity-70">try again</a>, or write to <a href={`mailto:${socials.email}`} className="text-accent hover:opacity-70">{socials.email}</a>.</p>
+          <p className="mt-2 text-muted"><span className="text-foreground">Subject:</span> {composed.subject}</p>
+          <button type="button" onClick={copy} className="mt-3 text-accent hover:opacity-70">{copied ? "Copied ✓" : "Copy the message"}</button>
+        </div>
       )}
-    </form>
+    </div>
   );
 }
