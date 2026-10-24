@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "./Container";
-import IhsanMark from "./IhsanMark";
+import IhsanBlock from "./IhsanBlock";
 import { nav, externalNav, identity } from "@/content/site";
 
 export default function Nav() {
@@ -23,7 +23,7 @@ export default function Nav() {
       <Container width="max-w-6xl">
         <div className="flex items-center justify-between gap-6 py-3">
           <Link href="/" className="flex items-center gap-3 font-serif text-lg tracking-tight text-foreground">
-            <IhsanMark size={30} />
+            <IhsanBlock size={32} className="rounded-[20%]" />
             <span>{identity.name}</span>
           </Link>
           {/* desktop */}
