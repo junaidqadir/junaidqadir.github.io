@@ -10,6 +10,7 @@ import { playlists, playlistUrl } from "@/content/playlists";
 import { slideDecks } from "@/content/slides";
 import type { Publication } from "@/types/publication";
 import { ethicsCourse } from "@/content/ethicsCourse";
+import { learningStartSlugs, learningGuideSlugs } from "@/content/learningPapers";
 
 export const metadata: Metadata = {
   title: "Learning — Junaid Qadir",
@@ -18,17 +19,8 @@ export const metadata: Metadata = {
 
 const pick = (slugs: string[]) => slugs.map(getPublicationBySlug).filter((p): p is Publication => !!p);
 
-const startHere = pick([
-  "2024-qadir-learning-101-reloaded-revisiting",
-  "2017-qadir-learning-101-untaught-basics",
-  "2015-qadir-every-student-should-know",
-]);
-const guides = pick([
-  "2020-qadir-student-primer-thrive-engineering",
-  "2020-qadir-engineering-education-moving-2020s",
-  "2023-gull-robotics-primer-independent-learners",
-  "2026-qadir-ai-chatbots-provide-coaching",
-]);
+const startHere = pick(learningStartSlugs);
+const guides = pick(learningGuideSlugs);
 const ethicsPaper = pick([ethicsCourse.paperSlug]);
 const writing = pick(["2026-qadir-craft-ed-framework-effective"]);
 const deckFiles = ["engineering-and-computing-education", "essential-skills", "how-to-thrive", "research-writing"];
