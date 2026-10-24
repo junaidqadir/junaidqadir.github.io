@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 
 const PALETTES = [
-  { id: "saffron", label: "Saffron", color: "#a64a0a" },
   { id: "lapis", label: "Lapis", color: "#1d4f9a" },
+  { id: "saffron", label: "Saffron", color: "#a64a0a" },
   { id: "emerald", label: "Emerald", color: "#14664d" },
   { id: "plum", label: "Plum", color: "#862850" },
 ];
 
-/** Small swatches in the footer: the site picks a palette at random each visit; this lets a visitor choose one. */
+/** Small swatches in the footer: Lapis is the default; this lets a visitor choose another. */
 export default function PaletteSwitch() {
   const [cur, setCur] = useState("");
-  useEffect(() => { setCur(document.documentElement.getAttribute("data-palette") ?? "saffron"); }, []);
+  useEffect(() => { setCur(document.documentElement.getAttribute("data-palette") ?? "lapis"); }, []);
   function pick(id: string) {
     document.documentElement.setAttribute("data-palette", id);
     try { sessionStorage.setItem("jq-palette", id); } catch {}
