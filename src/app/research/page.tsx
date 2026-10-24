@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import Link from "next/link";
 import PublicationCard from "@/components/PublicationCard";
+import GeoArt from "@/components/GeoArt";
 import { researchThemes } from "@/content/site";
 import { getPublicationsByTheme } from "@/lib/publications";
 import type { Theme } from "@/types/publication";
@@ -27,9 +28,10 @@ export default function ResearchPage() {
             .slice(0, 5);
           return (
             <section key={theme.slug} id={theme.slug} className="scroll-mt-24">
-              <h2 className="font-serif text-2xl text-foreground">
-                {theme.title}
-              </h2>
+              <div className="flex items-center gap-5">
+                <GeoArt kind={theme.art} size={72} className="shrink-0" />
+                <h2 className="font-serif text-2xl text-foreground">{theme.title}</h2>
+              </div>
               <p className="mt-2 max-w-xl leading-relaxed text-muted">
                 {theme.blurb}
               </p>

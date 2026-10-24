@@ -80,3 +80,10 @@ export function getTalks(): CvItem[] {
 export function getCourses(): CvBlock[] {
   return getSection("courses-taught")?.blocks ?? [];
 }
+
+/** Every CV item (at any depth, in any section) whose text matches `re` — used for topic pages. */
+export function findCvItems(re: RegExp): { sectionId: string; item: CvItem }[] {
+  const out: { sectionId: string; item: CvItem }[] = [];
+  for (const s of cv.sections) for (const it of walkItems(s.blocks)) if (re.test(it.text) && !it.children?.length) out.push({ sectionId: s.id, item: it });
+  return out;
+}

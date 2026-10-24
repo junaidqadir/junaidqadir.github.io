@@ -5,9 +5,11 @@
 export const nav = [
   { href: "/about", label: "About" },
   { href: "/research", label: "Research" },
+  { href: "/multiplexity", label: "Multiplexity" },
   { href: "/publications", label: "Publications" },
-  { href: "/talks", label: "Talks & Media" },
-  { href: "/teaching", label: "Teaching" },
+  { href: "/courses", label: "Courses" },
+  { href: "/talks", label: "Talks" },
+  { href: "/awards", label: "Awards" },
   { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -44,50 +46,65 @@ export type ResearchTheme = {
   title: string;
   blurb: string;
   publicationTheme: string;
+  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic";
+  keywords: string;
 };
 
+// Ordered by prominence on the site. publicationTheme keys match the theme tags in the publications archive.
 export const researchThemes: ResearchTheme[] = [
   {
-    slug: "ai",
-    title: "AI & Responsible Technology",
+    slug: "ai-ethics-governance",
+    title: "AI Ethics, Safety & Governance",
     blurb:
-      "Designing artificial intelligence and large language model systems that are safe, accountable, and aligned with human flourishing rather than narrow optimization.",
+      "Making artificial intelligence and large language models safe, accountable and aligned with human flourishing — from adversarial robustness and foundation-model evaluation to governance frameworks and standards for responsible AI in universities.",
     publicationTheme: "ai",
+    art: "star8",
+    keywords: "Responsible AI · LLM safety · Governance & standards",
   },
   {
-    slug: "education",
-    title: "Engineering Education in the AI Age",
+    slug: "ai-healthcare",
+    title: "AI in Healthcare & Mental Health",
     blurb:
-      "Rethinking teaching, assessment, and academic integrity so that AI tools support — rather than replace — the effort through which understanding and judgment are formed.",
+      "Secure, trustworthy and ethical machine learning for clinical care — surgical video, referrals, digital twins, and generative AI for mental-health support — judged as care, not only as accuracy.",
+    publicationTheme: "health-psychology",
+    art: "star10",
+    keywords: "Clinical AI · Digital twins · Mental health",
+  },
+  {
+    slug: "ai-education",
+    title: "AI in Education & Engineering Education",
+    blurb:
+      "Rethinking teaching, assessment and academic integrity so that AI tools support — rather than replace — the effort through which understanding and judgment are formed.",
     publicationTheme: "education",
+    art: "star16",
+    keywords: "GenAI in the classroom · Assessment · Curriculum",
   },
   {
     slug: "multiplexity",
     title: "Multiplexity & Systems Thinking",
     blurb:
-      "An Islamically-inspired alternative to fragmented, partial models of the human being — applied across education, psychology, healthcare, and technology design.",
+      "Holding the one and the many together: an alternative to fragmented, single-lens models of technology, education, health and the human being — with ordered levels, a shared floor of dignity, and attention to change over time.",
     publicationTheme: "multiplexity",
+    art: "rosette12",
+    keywords: "Multiplex systemics · Both-and thinking · Wisdom",
   },
   {
     slug: "ihsan-ethics",
     title: "Islamic Ethics & Ihsan",
     blurb:
-      "Spiritual excellence (ihsan) as a framework for professional and technological practice — doing things beautifully, sincerely, and in service of others.",
+      "Spiritual excellence (ihsan) as a framework for professional and technological practice — doing things beautifully, sincerely and in service of others.",
     publicationTheme: "ihsan-ethics",
-  },
-  {
-    slug: "health-psychology",
-    title: "Digital Health & Psychology",
-    blurb:
-      "Technology's role in mental health, well-being, and psychological care, and how it can be designed to support rather than erode human flourishing.",
-    publicationTheme: "health-psychology",
+    art: "kufic",
+    keywords: "Ihsan · Islamic ethics · Technology & wisdom",
   },
   {
     slug: "networks-ict4d",
-    title: "Networks, Cybersecurity & ICT4D",
+    title: "Networks, Security & ICT4D",
     blurb:
-      "Foundational work in networking, IoT, cybersecurity, and using information and communication technology for human development.",
+      "Foundational work in networking, IoT, cybersecurity and information and communication technology for human development.",
     publicationTheme: "networks-ict4d",
+    art: "hex6",
+    keywords: "Networking · IoT security · ICT4D",
   },
 ];
 

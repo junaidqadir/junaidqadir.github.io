@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { socials } from "@/content/site";
 import { talkCategories, talks } from "@/content/talks";
-import { getTalks } from "@/lib/cv";
+import { Suspense } from "react";
+import { getTalks, listUnder } from "@/lib/cv";
+import TalksExplorer, { type TalkItem } from "@/components/TalksExplorer";
+import { playlists, playlistUrl } from "@/content/playlists";
 
 export const metadata: Metadata = { title: "Talks & Media — Junaid Qadir" };
 
@@ -17,15 +20,45 @@ function overlap(a: string, b: string) {
 const videoUrl = (t: (typeof talks)[number]) =>
   t.youtubeId ? `https://youtube.com/watch?v=${t.youtubeId}` : t.youtubePlaylistId ? `https://youtube.com/playlist?list=${t.youtubePlaylistId}` : (t.url ?? null);
 
+const TOPIC_RULES: [string, RegExp][] = [
+  ["ai-ethics", /ethic|responsib|trustworth|safe|bias|harm|accountab/i],
+  ["ai-governance", /governance|regulat|polic(y|ies)|standard|P3722|compliance|law/i],
+  ["healthcare", /health|medical|clinical|surg|patient|pharma|psycho|bioethic|therap|digital twins? for/i],
+  ["education", /educat|teaching|learning|pedagog|student|classroom|curricul|writing|engineer of|GUIDES|ChatGPT/i],
+  ["multiplexity", /multiplex|wisdom|systemics|holistic|one and the many/i],
+  ["islamic", /islam|ihsan|ghazal|quran|muslim|ummat|usul|spiritual/i],
+  ["digital-twins", /digital twin/i],
+  ["networks", /network|wireless|5g|iot|adversarial|security|cyber|vehicular|cognitive|machine learning|deep learning/i],
+];
+const KIND_RULES: [string, RegExp][] = [
+  ["Keynote / plenary", /keynote|plenary|distinguished (invited )?talk/i],
+  ["Tutorial / workshop", /tutorial|workshop|master ?class|hands-on/i],
+  ["Panel", /panel|moderator|session chair|debate|roundtable/i],
+  ["Lecture / course", /guest lectur|lecturer|lecture|short course|course/i],
+  ["Podcast / interview", /podcast|interview/i],
+];
+const classify = (text: string) => ({
+  topics: TOPIC_RULES.filter(([, re]) => re.test(text)).map(([k]) => k),
+  kind: (KIND_RULES.find(([, re]) => re.test(text)) ?? ["Invited / conference talk"])[0],
+  year: (() => { const m = [...text.matchAll(/\b(19|20)\d{2}\b/g)].map((x) => +x[0]).filter((y) => y <= 2030); return m.length ? m[m.length - 1] : null; })(),
+});
+
 export default function TalksPage() {
   // Match each CV talk to a recording we already know about (by quoted title), so the full list stays CV-driven.
-  const cvTalks = getTalks().map((it) => {
+  const source = [
+    ...getTalks(),
+    ...listUnder("professional-services", /^Invited Keynote Speaker/i),
+    ...listUnder("professional-services", /^Tutorials/i),
+    ...listUnder("professional-services", /^Session Chair/i),
+  ];
+  const seen = new Set<string>();
+  const items: TalkItem[] = source.filter((it) => (seen.has(it.text) ? false : (seen.add(it.text), true))).map((it) => {
     const quoted = (it.text.match(/“([^”]+)”/) || [])[1] ?? it.text;
     const hit = talks.find((t) => videoUrl(t) && overlap(quoted, t.title) >= 0.7);
-    return { html: it.html, video: hit ? videoUrl(hit) : null };
-  });
+    return { html: it.html, video: hit ? videoUrl(hit) : null, slides: null, ...classify(it.text) };
+  }).sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
   return (
-    <Container className="py-16">
+    <Container width="max-w-4xl" className="py-16">
       <h1 className="font-serif text-3xl text-foreground">Talks & Media</h1>
       <p className="mt-3 max-w-xl text-muted">
         Recordings of lectures, short courses, interviews and conference talks, followed by the complete
@@ -95,19 +128,19 @@ export default function TalksPage() {
         })}
       </div>
 
-      <section className="mt-16 border-t border-border pt-10" id="all-talks">
+      <section className="mt-16 border-t border-border pt-10">
         <h2 className="font-serif text-xl text-foreground">All talks &amp; presentations</h2>
-        <p className="mt-2 text-sm text-muted">Synced from my CV. A recording is linked where one exists.</p>
-        <ul className="mt-5 space-y-3">
-          {cvTalks.map((t, i) => (
-            <li key={i} className="text-[15px] leading-relaxed text-muted">
-              <span dangerouslySetInnerHTML={{ __html: t.html }} />
-              {t.video && (
-                <a href={t.video} target="_blank" rel="noopener noreferrer" className="ml-2 whitespace-nowrap text-sm text-accent hover:opacity-70">
-                  ▶ watch
-                </a>
-              )}
-            </li>
+        <p className="mt-2 text-sm text-muted">Synced from my CV — filter by topic, year or type. A recording or slides are linked where they exist.</p>
+        <div className="mt-6">
+          <Suspense fallback={null}><TalksExplorer items={items} /></Suspense>
+        </div>
+      </section>
+
+      <section className="mt-16 border-t border-border pt-10">
+        <h2 className="font-serif text-xl text-foreground">YouTube playlists</h2>
+        <ul className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2">
+          {playlists.map((l) => (
+            <li key={l.id} className="text-[15px]"><a href={playlistUrl(l.id)} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">{l.title} ↗</a>{l.videos ? <span className="text-xs text-muted"> · {l.videos}</span> : null}</li>
           ))}
         </ul>
       </section>

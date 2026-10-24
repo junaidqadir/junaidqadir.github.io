@@ -38,8 +38,8 @@ export default function TeachingPage() {
         <Label>Open courses &amp; lectures</Label>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           Recorded short courses and lecture series are collected on{" "}
-          <Link href="/talks" className="text-accent hover:opacity-70">Talks &amp; Media</Link>, with slides where
-          available, and on{" "}
+          <Link href="/courses" className="text-accent hover:opacity-70">Courses</Link> (the two IHSAN courses with slides, the full
+          CS721 <em>Network Performance &amp; Evaluation</em> lecture series, EE362 and more), and on{" "}
           <a href={socials.youtube} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">YouTube</a>.
         </p>
       </section>

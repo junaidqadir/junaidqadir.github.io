@@ -7,8 +7,8 @@ import type { Publication } from "@/types/publication";
 import { sectionLabels, tagLabel } from "@/lib/tags";
 
 const themeNames: Record<string, string> = {
-  ai: "AI & Responsible Technology", education: "Engineering Education", multiplexity: "Multiplexity & Systems Thinking",
-  "ihsan-ethics": "Islamic Ethics & Ihsan", "health-psychology": "Digital Health & Psychology", "networks-ict4d": "Networks, Cybersecurity & ICT4D",
+  ai: "AI ethics, safety & governance", education: "AI & engineering education", multiplexity: "Multiplexity & Systems Thinking",
+  "ihsan-ethics": "Islamic Ethics & Ihsan", "health-psychology": "AI in healthcare & mental health", "networks-ict4d": "Networks, Cybersecurity & ICT4D",
 };
 const csv = (p: string | null) => (p ? p.split(",").filter(Boolean) : []);
 
@@ -123,14 +123,17 @@ export default function PublicationSearch({
         </div>
       </div>
 
-      {theme && (
-        <p className="mt-4 text-sm text-muted">
-          Research theme:{" "}
-          <button onClick={() => { setTheme(""); sync({ theme: "" }); }} className="rounded-full border border-accent px-3 py-1 text-xs text-accent hover:opacity-70" title="Remove theme filter">
-            {themeNames[theme] ?? theme} ×
-          </button>
-        </p>
-      )}
+      <div className="mt-4">
+        <span className={label}>Research theme</span>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {Object.entries(themeNames).map(([k, v]) => (
+            <button key={k} aria-pressed={theme === k} onClick={() => { const n = theme === k ? "" : k; setTheme(n); sync({ theme: n }); }}
+              className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${theme === k ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>
+              {v}
+            </button>
+          ))}
+        </div>
+      </div>
 
       <div className="mt-4 flex flex-wrap items-end gap-x-6 gap-y-3">
         <div>

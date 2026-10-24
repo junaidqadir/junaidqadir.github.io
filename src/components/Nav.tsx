@@ -1,37 +1,38 @@
 import Link from "next/link";
 import Container from "./Container";
+import IhsanMark from "./IhsanMark";
 import { nav, externalNav, identity } from "@/content/site";
 
 export default function Nav() {
+  const links = (
+    <>
+      {nav.map((item) => (
+        <Link key={item.href} href={item.href} className="text-muted transition-colors hover:text-accent">
+          {item.label}
+        </Link>
+      ))}
+      {externalNav.href && (
+        <Link href={externalNav.href} target="_blank" rel="noopener noreferrer" className="text-accent transition-opacity hover:opacity-70">
+          {externalNav.label} ↗
+        </Link>
+      )}
+    </>
+  );
   return (
-    <header className="border-b border-border">
-      <Container width="max-w-5xl">
-        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
-          <Link
-            href="/"
-            className="font-serif text-lg tracking-tight text-foreground"
-          >
-            {identity.name}
+    <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
+      <Container width="max-w-6xl">
+        <div className="flex items-center justify-between gap-6 py-3">
+          <Link href="/" className="flex items-center gap-3 font-serif text-lg tracking-tight text-foreground">
+            <IhsanMark size={30} />
+            <span>{identity.name}</span>
           </Link>
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-muted transition-colors hover:text-accent"
-              >
-                {item.label}
-              </Link>
-            ))}
-            {externalNav.href && (<Link
-              href={externalNav.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent transition-opacity hover:opacity-70"
-            >
-              {externalNav.label} ↗
-            </Link>)}
-          </nav>
+          {/* desktop */}
+          <nav className="hidden items-center gap-x-5 text-sm lg:flex">{links}</nav>
+          {/* mobile: no JS needed */}
+          <details className="relative lg:hidden">
+            <summary className="cursor-pointer list-none rounded border border-border px-3 py-1.5 text-sm text-foreground">Menu</summary>
+            <nav className="absolute right-0 mt-2 flex w-56 flex-col gap-3 rounded border border-border bg-surface p-4 text-sm shadow-lg">{links}</nav>
+          </details>
         </div>
       </Container>
     </header>
