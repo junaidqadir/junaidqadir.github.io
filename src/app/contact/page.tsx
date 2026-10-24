@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import StudentNote from "@/components/StudentNote";
-import ContactForm from "@/components/ContactForm";
 import { contact, socials } from "@/content/site";
 
 export const metadata: Metadata = { title: "Contact — Junaid Qadir" };
 
 const links = [
-  { label: "Email", href: `mailto:${socials.email}` },
   { label: "Google Scholar", href: socials.scholar },
   { label: "ResearchGate", href: socials.researchgate },
   { label: "YouTube", href: socials.youtube },
@@ -23,12 +21,11 @@ export default function ContactPage() {
         {contact.intro}
       </p>
 
-      <section className="mt-8" aria-labelledby="write">
-        <h2 id="write" className="font-serif text-2xl text-foreground">Write to me</h2>
-        <div className="mt-4"><ContactForm /></div>
-      </section>
+      <p className="mt-6 font-serif text-2xl text-foreground">
+        <a href={`mailto:${socials.email}`} className="text-accent hover:opacity-70">{socials.email}</a>
+      </p>
 
-      <StudentNote className="mt-10" />
+      <StudentNote className="mt-8" />
 
 
       <ul className="mt-8 space-y-3">
