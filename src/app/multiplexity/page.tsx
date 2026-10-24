@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import { IdeasTabs, IdeasBridge } from "@/components/IdeasTabs";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import PublicationCard from "@/components/PublicationCard";
@@ -57,6 +58,7 @@ export default function MultiplexityPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative grid items-center gap-10 py-16 md:grid-cols-[1fr_320px]">
           <div>
+            <IdeasTabs current="multiplexity" />
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Research program</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-7xl">Multiplexity<span className="text-accent">.</span></h1>
             <p className="mt-6 max-w-2xl font-serif text-2xl leading-snug text-foreground">The one and the many, held together.</p>
@@ -65,6 +67,7 @@ export default function MultiplexityPage() {
               worldview of levels of reality (<em>marātib</em>) in which unity and diversity belong together, and it is offered as a framework
               for everyone.
             </p>
+            <IdeasBridge current="multiplexity" />
             <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
               <a href="#papers" className="text-accent hover:opacity-70">Papers &amp; chapters ↓</a>
               <a href="#videos" className="text-accent hover:opacity-70">Videos &amp; courses ↓</a>

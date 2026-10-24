@@ -5,6 +5,7 @@ import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
+import { IdeasTabs, IdeasBridge } from "@/components/IdeasTabs";
 import BookNote from "@/components/BookNote";
 import PublicationCard from "@/components/PublicationCard";
 import { getPublicationBySlug, getPublicationsByTheme } from "@/lib/publications";
@@ -28,12 +29,14 @@ export default function IhsanPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative flex flex-wrap items-center justify-between gap-8 py-16">
           <div className="max-w-2xl">
+            <IdeasTabs current="ihsan" />
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Spiritual excellence</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">Ihsan<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               Ihsan is excellence, beauty and sincerity in action, done in God-consciousness and for the benefit of creation. It is the thread that runs through my
               courses, my writing on technology and education, and the work of the IHSAN Research Lab.
             </p>
+            <IdeasBridge current="ihsan" />
             <blockquote className="mt-6 border-l-2 border-gold pl-4 font-serif italic text-muted">
               The Prophet Muhammad (peace be upon him) said: “Verily, Allah has prescribed excellence (<em>ihsan</em>) in all things…”{" "}
               <span className="not-italic text-sm">(Ṣaḥīḥ Muslim 1955, narrated by Shaddād ibn Aws, may Allah be pleased with him)</span>
