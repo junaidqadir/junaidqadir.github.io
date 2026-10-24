@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Publication } from "@/types/publication";
 import { tagLabel } from "@/lib/tags";
+import { venueName, venueDetail } from "@/lib/venues";
 
 const REPO = process.env.NEXT_PUBLIC_PUBLICATIONS_REPO_URL ?? "https://github.com/junaidqadir/publications";
 
@@ -33,9 +34,15 @@ function Authors({ authors }: { authors: string[] }) {
 export default function PublicationCard({
   pub,
   onTagClick,
+  onVenueClick,
+  showYear = false,
+  hideVenue = false,
 }: {
   pub: Publication;
   onTagClick?: (tag: string) => void;
+  onVenueClick?: (venue: string) => void;
+  hideVenue?: boolean; // the group heading already names the venue
+  showYear?: boolean; // the year is the group heading in the default view, so repeat it only in other views
 }) {
   const [showBib, setShowBib] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -43,13 +50,8 @@ export default function PublicationCard({
   const pdfUrl = pub.pdf ? `${REPO}/blob/main/${pub.pdf}` : null;
   const titleLink = doiUrl ?? pub.oa_url ?? pdfUrl ?? undefined;
 
-  const detail = [
-    pub.venue,
-    pub.volume ? `vol. ${pub.volume}` : null,
-    pub.issue ? `no. ${pub.issue}` : null,
-    pub.pages ? `pp. ${pub.pages}` : null,
-    pub.year ? String(pub.year) : null,
-  ].filter(Boolean);
+  const venue = hideVenue ? "" : venueName(pub.venue);
+  const tail = venueDetail(pub);
 
   const pill =
     "inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-muted transition-colors hover:border-accent hover:text-accent";
@@ -81,9 +83,15 @@ export default function PublicationCard({
       <p className="mt-1.5 text-sm leading-relaxed text-muted">
         <Authors authors={pub.authors} />
       </p>
-      <p className="mt-0.5 text-sm text-muted">
-        <em>{detail.join(", ")}</em>
-      </p>
+      {(venue || tail) && (
+        <p className="mt-0.5 text-sm text-muted">
+          {venue && (onVenueClick ? (
+            <button type="button" onClick={() => onVenueClick(venue)} className="text-left italic underline decoration-border decoration-1 underline-offset-2 transition-colors hover:text-accent hover:decoration-accent" title="Show other papers from this venue">{venue}</button>
+          ) : <em>{venue}</em>)}
+          {tail && <span>{venue ? " " : ""}{tail}</span>}
+          {showYear && pub.year ? <span> ({pub.year})</span> : null}
+        </p>
+      )}
 
       <div className="mt-3 flex flex-wrap items-center gap-2">
         {pdfUrl && (

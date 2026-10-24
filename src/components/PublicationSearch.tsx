@@ -5,6 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import PublicationCard from "./PublicationCard";
 import type { Publication } from "@/types/publication";
 import { sectionLabels, tagLabel } from "@/lib/tags";
+import { venueName } from "@/lib/venues";
 
 const themeNames: Record<string, string> = {
   "ai-ethics": "AI ethics & governance",
@@ -47,10 +48,13 @@ export default function PublicationSearch({
   const [pdfOnly, setPdfOnly] = useState(sp.get("pdf") === "1");
   const [theme, setTheme] = useState(sp.get("theme") ?? "");
   const [showAllTags, setShowAllTags] = useState(false);
+  const [by, setBy] = useState<"year" | "venue">(sp.get("by") === "venue" ? "venue" : "year");
+  // the secondary filters stay out of the way until asked for (and open themselves when one of them is in use)
+  const [more, setMore] = useState(Boolean(sp.get("author") || sp.get("venue") || sp.get("tags") || sp.get("type") || sp.get("from") || sp.get("to") || sp.get("pdf")));
 
   // keep the URL shareable: only non-default filters appear in it
-  function sync(next: Partial<{ q: string; author: string; venue: string; tags: string[]; types: string[]; from: string; to: string; pdf: boolean; theme: string }>) {
-    const v = { q, author, venue, tags, types, from, to, pdf: pdfOnly, theme, ...next };
+  function sync(next: Partial<{ q: string; author: string; venue: string; tags: string[]; types: string[]; from: string; to: string; pdf: boolean; theme: string; by: string }>) {
+    const v = { q, author, venue, tags, types, from, to, pdf: pdfOnly, theme, by, ...next };
     const p = new URLSearchParams();
     if (v.q) p.set("q", v.q);
     if (v.author) p.set("author", v.author);
@@ -61,6 +65,7 @@ export default function PublicationSearch({
     if (v.to !== String(maxY)) p.set("to", v.to);
     if (v.pdf) p.set("pdf", "1");
     if (v.theme) p.set("theme", v.theme);
+    if (v.by === "venue") p.set("by", "venue");
     const s = p.toString();
     router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
   }
@@ -70,7 +75,7 @@ export default function PublicationSearch({
   const toggleType = (t: string) => { const n = toggle(types, t); setTypes(n); sync({ types: n }); };
 
   function clearAll() {
-    setQ(""); setAuthor(""); setVenue(""); setTags([]); setTypes([]); setFrom(String(minY)); setTo(String(maxY)); setPdfOnly(false); setTheme("");
+    setQ(""); setAuthor(""); setVenue(""); setTags([]); setTypes([]); setFrom(String(minY)); setTo(String(maxY)); setPdfOnly(false); setTheme(""); setBy("year");
     router.replace(pathname, { scroll: false });
   }
 
@@ -90,7 +95,7 @@ export default function PublicationSearch({
     return (p: Publication, skip: Skip = "none") => {
       if (qq && !`${p.title} ${p.authors.join(" ")} ${p.venue ?? ""}`.toLowerCase().includes(qq)) return false;
       if (aa && !p.authors.some((x) => (exact ? x.toLowerCase() === aa : aRe!.test(x)))) return false;
-      if (vv && !(p.venue ?? "").toLowerCase().includes(vv)) return false;
+      if (vv && !(`${venueName(p.venue)} ${p.venue ?? ""}`).toLowerCase().includes(vv)) return false;
       if (skip !== "tags" && tags.length && !tags.every((x) => p.tags.includes(x))) return false;
       if (skip !== "types" && types.length && !types.includes(p.section ?? "")) return false;
       if (skip !== "pdf" && pdfOnly && !p.pdf) return false;
@@ -130,32 +135,46 @@ export default function PublicationSearch({
   }, [publications, passes]);
   const nPdf = useMemo(() => publications.filter((p) => passes(p, "pdf") && p.pdf).length, [publications, passes]);
 
+  const venueCounts = useMemo(() => {
+    const c = new Map<string, number>();
+    publications.forEach((p) => { const v = venueName(p.venue); if (v) c.set(v, (c.get(v) ?? 0) + 1); });
+    return [...c.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  }, [publications]);
+
   const grouped = useMemo(() => {
+    if (by === "venue") {
+      const m = new Map<string, Publication[]>();
+      for (const p of filtered) { const k = venueName(p.venue) || "Other"; m.set(k, [...(m.get(k) ?? []), p]); }
+      const multi = [...m.entries()].filter(([, v]) => v.length > 1).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+      const rest = [...m.entries()].filter(([, v]) => v.length === 1).flatMap(([, v]) => v).sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+      return [...multi, ...(rest.length ? [[`Venues with a single paper (${rest.length})`, rest] as [string, Publication[]]] : [])];
+    }
     const m = new Map<string, Publication[]>();
     for (const p of filtered) {
       const k = p.year ? String(p.year) : "Undated";
       m.set(k, [...(m.get(k) ?? []), p]);
     }
     return [...m.entries()];
-  }, [filtered]);
+  }, [filtered, by]);
 
+  const moreActive = (author ? 1 : 0) + (venue ? 1 : 0) + tags.length + types.length + (pdfOnly ? 1 : 0) + (from !== String(minY) ? 1 : 0) + (to !== String(maxY) ? 1 : 0);
   const active = (q ? 1 : 0) + (author ? 1 : 0) + (venue ? 1 : 0) + tags.length + types.length + (pdfOnly ? 1 : 0) + (theme ? 1 : 0) + (from !== String(minY) ? 1 : 0) + (to !== String(maxY) ? 1 : 0);
 
   return (
     <div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-2">
+      <div className="grid items-end gap-4 sm:grid-cols-[1fr_auto]">
+        <div>
           <label className={label} htmlFor="pub-q">Search</label>
           <input id="pub-q" type="search" value={q} onChange={(e) => { setQ(e.target.value); sync({ q: e.target.value }); }} placeholder="title, author or venue — e.g. federated learning" className={field} />
         </div>
-        <div>
-          <label className={label} htmlFor="pub-author">Co-author</label>
-          <input id="pub-author" list="pub-authors" type="text" value={author} onChange={(e) => { setAuthor(e.target.value); sync({ author: e.target.value }); }} placeholder="e.g. A. Qayyum" className={field} />
-          <datalist id="pub-authors">{authorStrings.map(([a, n]) => <option key={a} value={a}>{n} papers</option>)}</datalist>
-        </div>
-        <div>
-          <label className={label} htmlFor="pub-venue">Journal / venue</label>
-          <input id="pub-venue" type="text" value={venue} onChange={(e) => { setVenue(e.target.value); sync({ venue: e.target.value }); }} placeholder="e.g. IEEE Access" className={field} />
+        <div role="group" aria-label="Group papers by">
+          <span className={label}>Group by</span>
+          <div className="mt-1 flex gap-1.5">
+            {(["year", "venue"] as const).map((g) => (
+              <button key={g} type="button" aria-pressed={by === g} onClick={() => { setBy(g); sync({ by: g }); }}
+                className={`rounded-full border px-3.5 py-2 text-sm capitalize transition-colors ${by === g ? "border-accent bg-accent text-background" : "border-border text-muted hover:border-accent hover:text-accent"}`}>{g}</button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -171,6 +190,27 @@ export default function PublicationSearch({
         </div>
       </div>
 
+      <div className="mt-4">
+        <button type="button" onClick={() => setMore(!more)} aria-expanded={more} className="text-sm text-accent hover:opacity-70">
+          {more ? "− Fewer filters" : "+ More filters"}
+          <span className="text-muted"> co-author, venue, year, type, open PDF, tags{moreActive > 0 ? ` · ${moreActive} in use` : ""}</span>
+        </button>
+      </div>
+
+      {more && (
+        <div className="mt-3 rounded-md border border-border bg-surface/50 p-4">
+          <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className={label} htmlFor="pub-author">Co-author</label>
+          <input id="pub-author" list="pub-authors" type="text" value={author} onChange={(e) => { setAuthor(e.target.value); sync({ author: e.target.value }); }} placeholder="e.g. A. Qayyum" className={field} />
+          <datalist id="pub-authors">{authorStrings.map(([a, n]) => <option key={a} value={a}>{n} papers</option>)}</datalist>
+        </div>
+        <div>
+          <label className={label} htmlFor="pub-venue">Journal / venue</label>
+          <input id="pub-venue" list="pub-venues" type="text" value={venue} onChange={(e) => { setVenue(e.target.value); sync({ venue: e.target.value }); }} placeholder="e.g. IEEE Access" className={field} />
+          <datalist id="pub-venues">{venueCounts.map(([v, n]) => <option key={v} value={v}>{n} papers</option>)}</datalist>
+        </div>
+          </div>
       <div className="mt-4 flex flex-wrap items-end gap-x-6 gap-y-3">
         <div>
           <span className={label}>Year</span>
@@ -212,6 +252,9 @@ export default function PublicationSearch({
         </div>
       </div>
 
+        </div>
+      )}
+
       <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-sm text-muted" aria-live="polite">
         <span>{filtered.length} of {publications.length} publications</span>
         {active > 0 && <button onClick={clearAll} className="text-accent hover:opacity-70">Clear all filters</button>}
@@ -225,7 +268,7 @@ export default function PublicationSearch({
               {year} <span className="ml-1 text-sm text-muted">{items.length}</span>
             </h2>
             {items.map((pub) => (
-              <PublicationCard key={pub.slug} pub={pub} onTagClick={(t) => !tags.includes(t) && toggleTag(t)} />
+              <PublicationCard key={pub.slug} pub={pub} showYear={by === "venue"} hideVenue={by === "venue" && !year.startsWith("Venues with a single")} onTagClick={(t) => !tags.includes(t) && toggleTag(t)} onVenueClick={(v) => { setVenue(v); setMore(true); sync({ venue: v }); window.scrollTo({ top: 0, behavior: "smooth" }); }} />
             ))}
           </section>
         ))}
