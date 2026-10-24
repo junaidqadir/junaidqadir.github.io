@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
+import IhsanCalligraphy from "@/components/IhsanCalligraphy";
 import GeoArt from "@/components/GeoArt";
 import ThemeCard from "@/components/ThemeCard";
 import PublicationCard from "@/components/PublicationCard";
@@ -140,8 +141,13 @@ export default function Home() {
       {/* ───────── 03 Courses ───────── */}
       <section id="courses" className="scroll-mt-20 border-b border-border">
         <Container width="max-w-6xl" className="py-20">
-          <Kicker n="03">Open courses</Kicker>
-          <H2>Two IHSAN courses — lectures and slides, free to use.</H2>
+          <div className="flex flex-wrap items-center justify-between gap-6">
+            <div>
+              <Kicker n="03">Open courses</Kicker>
+              <H2>Two IHSAN courses: lectures and slides, free to watch and download.</H2>
+            </div>
+            <IhsanCalligraphy className="text-[5.5rem] sm:text-[7.5rem]" />
+          </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article className="card-ornate p-7">
               <p className="text-xs uppercase tracking-wide text-gold">IHSAN Course 2025 · 8 parts · 103 slides</p>

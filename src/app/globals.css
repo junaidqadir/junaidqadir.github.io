@@ -108,6 +108,7 @@ html[data-palette="plum"] {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-fraunces);
   --font-arabic: var(--font-amiri);
+  --font-calli: var(--font-calli);
 }
 
 body {
@@ -142,6 +143,6 @@ body {
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card-ornate { transition: none; } }
 
-/* Faint kufic Ihsan at the page edge; stronger in dark mode would glare, so it stays very quiet */
-.ihsan-backdrop { opacity: 0.055; }
-@media print { .ihsan-backdrop { display: none; } }
+
+/* Calligraphic Arabic as real text (scrolls with the page); the gradient is clipped to the glyphs so letter joining is preserved */
+.calli { font-family: var(--font-calli), var(--font-amiri), serif; line-height: 1.25; background: linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 55%, var(--gold) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }

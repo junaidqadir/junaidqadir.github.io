@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
+import IhsanCalligraphy from "@/components/IhsanCalligraphy";
 import { playlists, playlistUrl } from "@/content/playlists";
 import { ethicsCourse } from "@/content/ethicsCourse";
 
@@ -47,8 +48,8 @@ export default function CoursesPage() {
             </p>
           </div>
           <div className="flex items-center gap-6">
-            <IhsanMark size={120} />
-            <GeoArt kind="star8" size={150} className="hidden sm:block" />
+            <IhsanCalligraphy className="text-[6rem] sm:text-[8rem]" />
+            <IhsanMark size={64} className="hidden sm:block" />
           </div>
         </Container>
       </section>

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, Amiri } from "next/font/google";
+import { Inter, Fraunces, Amiri, Aref_Ruqaa } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import IhsanBackdrop from "@/components/IhsanBackdrop";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,6 +13,12 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   axes: ["opsz"],
+});
+
+const arefRuqaa = Aref_Ruqaa({
+  variable: "--font-calli",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
 });
 
 const amiri = Amiri({
@@ -42,7 +47,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${fraunces.variable} ${amiri.variable} h-full antialiased`}
+      className={`${inter.variable} ${fraunces.variable} ${amiri.variable} ${arefRuqaa.variable} h-full antialiased`}
     >
       <head>
         <script
@@ -53,7 +58,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col font-sans">
-        <IhsanBackdrop />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

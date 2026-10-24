@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
+import IhsanCalligraphy from "@/components/IhsanCalligraphy";
 import PublicationCard from "@/components/PublicationCard";
 import { getPublicationBySlug, getPublicationsByTheme } from "@/lib/publications";
 import { playlistUrl } from "@/content/playlists";
@@ -37,7 +38,10 @@ export default function IhsanPage() {
               <span className="not-italic text-sm">(Ṣaḥīḥ Muslim 1955, narrated by Shaddād ibn Aws, may Allah be pleased with him)</span>
             </blockquote>
           </div>
-          <IhsanMark size={150} />
+          <div className="flex flex-col items-center gap-2">
+            <IhsanCalligraphy className="text-[7.5rem] sm:text-[10rem]" />
+            <IhsanMark size={44} />
+          </div>
         </Container>
       </section>
 
