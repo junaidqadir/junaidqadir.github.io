@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { getTalks, listUnder } from "@/lib/cv";
 import TalksExplorer, { type TalkItem } from "@/components/TalksExplorer";
 import { playlists, playlistUrl } from "@/content/playlists";
+import { slidesFor } from "@/content/slides";
 
 export const metadata: Metadata = { title: "Talks & Media — Junaid Qadir" };
 
@@ -55,7 +56,7 @@ export default function TalksPage() {
   const items: TalkItem[] = source.filter((it) => (seen.has(it.text) ? false : (seen.add(it.text), true))).map((it) => {
     const quoted = (it.text.match(/“([^”]+)”/) || [])[1] ?? it.text;
     const hit = talks.find((t) => videoUrl(t) && overlap(quoted, t.title) >= 0.7);
-    return { html: it.html, video: hit ? videoUrl(hit) : null, slides: null, ...classify(it.text) };
+    return { html: it.html, video: hit ? videoUrl(hit) : null, slides: slidesFor(it.text), ...classify(it.text) };
   }).sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
   return (
     <Container width="max-w-4xl" className="py-16">

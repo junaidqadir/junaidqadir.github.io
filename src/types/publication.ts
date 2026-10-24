@@ -34,5 +34,7 @@ export type Publication = {
   /** Landing page of a free-to-read copy that is linked rather than hosted. */
   oa_url?: string | null;
   oa_status?: string;
+  /** Why no PDF is hosted and how to get a copy (e.g. publisher terms). */
+  access_note?: string | null;
   bibtex?: string;
 };

@@ -7,6 +7,7 @@ import PublicationCard from "@/components/PublicationCard";
 import { getPublicationsByTheme } from "@/lib/publications";
 import { findCvItems } from "@/lib/cv";
 import { playlistsFor, playlistUrl } from "@/content/playlists";
+import { slidesFor } from "@/content/slides";
 
 export const metadata: Metadata = {
   title: "Multiplexity — Junaid Qadir",
@@ -157,7 +158,15 @@ export default function MultiplexityPage() {
         <section>
           <H2 id="talks">Talks &amp; presentations</H2>
           <ul className="mt-6 space-y-3 text-[15px] leading-relaxed text-muted">
-            {talksList.map((t, i) => (<li key={i} className="border-b border-border pb-3" dangerouslySetInnerHTML={{ __html: t.item.html }} />))}
+            {talksList.map((t, i) => {
+              const slides = slidesFor(t.item.text);
+              return (
+                <li key={i} className="border-b border-border pb-3">
+                  <span dangerouslySetInnerHTML={{ __html: t.item.html }} />
+                  {slides && <a href={slides} className="ml-2 whitespace-nowrap text-sm text-accent hover:opacity-70">Slides (PDF) ↓</a>}
+                </li>
+              );
+            })}
           </ul>
           <Link href="/talks?topic=multiplexity" className="mt-4 inline-block text-sm text-accent hover:opacity-70">All talks, filterable by topic and year →</Link>
         </section>

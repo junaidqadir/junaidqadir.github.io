@@ -120,6 +120,13 @@ export default function PublicationCard({
         ))}
       </div>
 
+      {pub.access_note && !pdfUrl && (
+        <p className="mt-2 text-xs italic leading-relaxed text-muted">
+          {pub.access_note.replace("jqadir@qu.edu.qa", "")}
+          <a href="mailto:jqadir@qu.edu.qa" className="not-italic text-accent hover:opacity-70">jqadir@qu.edu.qa</a>
+        </p>
+      )}
+
       {showBib && pub.bibtex && (
         <div className="mt-3 rounded-md border border-border bg-foreground/[0.03] p-3">
           <pre className="overflow-x-auto whitespace-pre-wrap break-words text-xs leading-relaxed text-foreground">{pub.bibtex}</pre>
