@@ -11,7 +11,7 @@ export const topicLabels: Record<string, string> = {
   "ai-ethics": "AI ethics & safety",
   "ai-governance": "AI governance & policy",
   healthcare: "AI in healthcare",
-  education: "AI & engineering education",
+  education: "AI & education",
   multiplexity: "Multiplexity",
   islamic: "Islamic ethics & ihsan",
   "digital-twins": "Digital twins",

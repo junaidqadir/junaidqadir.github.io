@@ -5,31 +5,39 @@ import { Suspense } from "react";
 import { getTalks, listUnder } from "@/lib/cv";
 import TalksExplorer, { type TalkItem } from "@/components/TalksExplorer";
 import { slidesFor } from "@/content/slides";
+import { talkLabels, talkKey } from "@/content/talkLabels";
 
 export const metadata: Metadata = { title: "Talks & Slides — Junaid Qadir" };
 
+// Fallback keyword rules for talks not yet in talkLabels. They match the talk's own title (the quoted part), not the event or
+// host name, so "Machine Learning" is not education and an organiser's name is not a topic.
 const TOPIC_RULES: [string, RegExp][] = [
-  ["ai-ethics", /ethic|responsib|trustworth|safe|bias|harm|accountab/i],
-  ["ai-governance", /governance|regulat|polic(y|ies)|standard|P3722|compliance|law/i],
-  ["healthcare", /health|medical|clinical|surg|patient|pharma|psycho|bioethic|therap|digital twins? for/i],
-  ["education", /educat|teaching|learning|pedagog|student|classroom|curricul|writing|engineer of|GUIDES|ChatGPT/i],
+  ["ai-ethics", /ethic|responsib|trustworth|\bsafe\b|safety|bias|harm|accountab|authentic/i],
+  ["ai-governance", /governance|regulat|polic(y|ies)|standard|P3722|compliance|\blaw\b/i],
+  ["healthcare", /health ?care|medic|clinical|surg|patient|pharma|psycholog|mental health|bioethic|therap|covid/i],
+  ["education", /educat|teaching|pedagog|student|classroom|curricul|academic writing|research writing|GUIDES|ChatGPT|outcome.based|skills|competenc/i],
   ["multiplexity", /multiplex|wisdom|systemics|holistic|one and the many/i],
-  ["islamic", /islam|ihsan|ghazal|quran|muslim|ummat|usul|spiritual/i],
+  ["islamic", /islamic (ethic|spiritual|psycholog|vision)|ihsan|ghazal|quran|muslim|ummat|usul|maqasid/i],
   ["digital-twins", /digital twin/i],
-  ["networks", /network|wireless|5g|iot|adversarial|security|cyber|vehicular|cognitive|machine learning|deep learning/i],
+  ["networks", /wireless|5g|\biot\b|vehicular|cognitive networks|self-driving networks|network security|internet access|adversarial|cloud|big data/i],
 ];
 const KIND_RULES: [string, RegExp][] = [
-  ["Keynote / plenary", /keynote|plenary|distinguished (invited )?talk/i],
-  ["Tutorial / workshop", /tutorial|workshop|master ?class|hands-on/i],
-  ["Panel", /panel|moderator|session chair|debate|roundtable/i],
-  ["Lecture / course", /guest lectur|lecturer|lecture|short course|course/i],
+  ["Session chair", /^session chair/i],
+  ["Keynote / plenary", /keynote|plenary/i],
+  ["Tutorial / workshop", /tutorial|master ?class|hands-on|instructor|full workshop/i],
+  ["Panel", /panel|moderator|debate|roundtable/i],
+  ["Lecture / course", /guest lectur|lecturer|short course|summer course|\bcourse\b/i],
   ["Podcast / interview", /podcast|interview/i],
 ];
-const classify = (text: string) => ({
-  topics: TOPIC_RULES.filter(([, re]) => re.test(text)).map(([k]) => k),
-  kind: (KIND_RULES.find(([, re]) => re.test(text)) ?? ["Invited / conference talk"])[0],
-  year: (() => { const m = [...text.matchAll(/\b(19|20)\d{2}\b/g)].map((x) => +x[0]).filter((y) => y <= 2030); return m.length ? m[m.length - 1] : null; })(),
-});
+const classify = (text: string) => {
+  const title = (text.match(/“([^”]+)”/) || [])[1] ?? text;
+  const known = talkLabels[talkKey(text)];
+  return {
+    topics: known ? known.topics : TOPIC_RULES.filter(([, re]) => re.test(title)).map(([k]) => k),
+    kind: known ? known.kind : (KIND_RULES.find(([, re]) => re.test(text)) ?? ["Invited / conference talk"])[0],
+    year: (() => { const m = [...text.matchAll(/\b(19|20)\d{2}\b/g)].map((x) => +x[0]).filter((y) => y <= 2030); return m.length ? m[m.length - 1] : null; })(),
+  };
+};
 
 export default function TalksPage() {
   // The full list stays CV-driven; slide decks are matched by title and year (recordings live on the Videos page).
