@@ -42,11 +42,12 @@ export function getStudents(): Student[] {
     if (l?.hide) continue;
     const parts = clean(s.name).split(/\s+/);
     const surname = parts[parts.length - 1];
-    const initial = parts[0][0];
+    // papers often use only one of several given names (e.g. "A. Ahsan" for Muhammad Ahtazaz Ahsan), so accept any given-name initial
+    const initials = new Set(parts.slice(0, -1).map((x) => x[0]));
     const papers = pubs.filter((p) =>
       p.authors.some((a) => {
         const aa = clean(a).split(/\s+/);
-        return aa[aa.length - 1] === surname && aa[0]?.[0] === initial;
+        return aa[aa.length - 1] === surname && initials.has(aa[0]?.[0]);
       }),
     ).length;
     out.push({ ...s, institution: s.institution ? INSTITUTIONS[s.institution] ?? s.institution : null, links: l, papers, paperQuery: surname });

@@ -31,7 +31,7 @@ async function suggest(name, inst) {
 const rows = [];
 for (const s of students) {
   const parts = clean(s.name).split(/\s+/);
-  const papers = pubs.filter((p) => p.authors.some((a) => { const aa = clean(a).split(/\s+/); return aa.at(-1) === parts.at(-1) && aa[0]?.[0] === parts[0][0]; })).length;
+  const papers = pubs.filter((p) => p.authors.some((a) => { const aa = clean(a).split(/\s+/); return aa.at(-1) === parts.at(-1) && new Set(parts.slice(0, -1).map((x) => x[0])).has(aa[0]?.[0]); })).length;
   const sug = await suggest(s.name, s.institution);
   rows.push({ ...s, papers, ...sug });
   await sleep(400);
