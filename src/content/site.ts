@@ -47,7 +47,7 @@ export type ResearchTheme = {
   title: string;
   blurb: string;
   publicationTheme: string;
-  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "star14" | "lattice";
+  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "khatamLattice" | "arabesque";
   keywords: string;
 };
 
@@ -113,7 +113,7 @@ export const researchThemes: ResearchTheme[] = [
     blurb:
       "The technical core: deep, reinforcement and federated learning, computer vision, speech and audio, and AI-enabled cognitive networks — the methods behind the applications above.",
     publicationTheme: "ml",
-    art: "star14",
+    art: "khatamLattice",
     keywords: "Deep learning · Reinforcement learning · Vision & speech",
   },
   {
@@ -131,7 +131,7 @@ export const researchThemes: ResearchTheme[] = [
     blurb:
       "Data-driven and AI-enabled systems for cities, energy, mobility and the Sustainable Development Goals.",
     publicationTheme: "sustainability",
-    art: "lattice",
+    art: "arabesque",
     keywords: "Smart cities · Energy · SDGs",
   },
 ];
