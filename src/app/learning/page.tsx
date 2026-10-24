@@ -10,7 +10,6 @@ import { playlists, playlistUrl } from "@/content/playlists";
 import { slideDecks } from "@/content/slides";
 import type { Publication } from "@/types/publication";
 import { ethicsCourse } from "@/content/ethicsCourse";
-import { readingList } from "@/content/readingList";
 
 export const metadata: Metadata = {
   title: "Learning — Junaid Qadir",
@@ -52,7 +51,6 @@ export default function LearningPage() {
               Articles, primers, slides and lectures for students, researchers and professionals on learning, skills and personal development,
               including the three <em>Learning 101</em> articles from IEEE Potentials.
             </p>
-            <p className="mt-4 text-sm"><a href="#recommended-reading" className="text-accent hover:opacity-70">Recommended reading ↓</a></p>
           </div>
           <GeoArt kind="star16" size={170} className="hidden sm:block" />
         </Container>
@@ -66,25 +64,6 @@ export default function LearningPage() {
             basics for the generative-AI era (2024).
           </p>
           <div className="mt-4">{startHere.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
-        </section>
-
-        <Ornament />
-
-        <section id="recommended-reading" className="scroll-mt-24">
-          <H2>Recommended reading</H2>
-          <p className="mt-3 max-w-2xl text-muted">
-            Books and papers on how learning works that I cite in my slides on study skills and learning methods.
-          </p>
-          <ul className="mt-5 divide-y divide-border border-y border-border">
-            {readingList.map((r) => (
-              <li key={r.title} className="py-4">
-                <p className="text-xs uppercase tracking-wide text-gold">{r.kind}</p>
-                <p className="mt-1 font-serif text-lg leading-snug text-foreground">{r.title}</p>
-                <p className="mt-0.5 text-sm text-muted">{r.authors} · {r.detail}</p>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-muted">{r.why}</p>
-              </li>
-            ))}
-          </ul>
         </section>
 
         <Ornament />
