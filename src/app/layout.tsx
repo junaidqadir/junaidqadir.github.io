@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces, Amiri } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import IhsanBackdrop from "@/components/IhsanBackdrop";
 import "./globals.css";
 
 const inter = Inter({
@@ -40,9 +41,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${inter.variable} ${fraunces.variable} ${amiri.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(){try{var P=["saffron","lapis","emerald","plum"],k="jq-palette",q=new URLSearchParams(location.search).get("palette"),p=P.indexOf(q)>=0?q:sessionStorage.getItem(k);if(P.indexOf(p)<0){p=P[Math.floor(Math.random()*P.length)]}sessionStorage.setItem(k,p);document.documentElement.setAttribute("data-palette",p)}catch(e){}})()',
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
+        <IhsanBackdrop />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

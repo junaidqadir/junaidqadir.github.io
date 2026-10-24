@@ -2,28 +2,97 @@
 
 /* Palette drawn from the Ihsan kufic mark: warm parchment, ink, burnt orange — with a zellige teal and gold hairlines. */
 :root {
-  --background: #f5eddd;
-  --surface: #fbf6ea;
-  --foreground: #1c1710;
-  --muted: #6a5d4a;
-  --accent: #b4510d;      /* burnt orange */
-  --accent-2: #1f5566;    /* zellige teal */
-  --gold: #b58a3c;
-  --border: #dccfb5;
-  --pattern-ink: rgba(181, 138, 60, 0.20);
+    --background: #f5eddd;
+    --surface: #fbf6ea;
+    --foreground: #1c1710;
+    --muted: #6a5d4a;
+    --accent: #a64a0a;
+    --accent-2: #1f5566;
+    --gold: #8a6a1f;
+    --border: #dccfb5;
+    --pattern-ink: rgba(181, 138, 60, 0.20);
+}
+
+/* Four matched palettes (each checked for WCAG contrast: text 7:1, muted and accent 4.5:1). One is chosen at random per visit
+   by a tiny script in <head> (see layout.tsx); ?palette=lapis forces one; the footer swatches switch it. */
+html[data-palette="lapis"] {
+    --background: #f1eee4;
+    --surface: #faf8f0;
+    --foreground: #131820;
+    --muted: #4f5a6b;
+    --accent: #1d4f9a;
+    --accent-2: #a14c14;
+    --gold: #8a6a1f;
+    --border: #d6d2c0;
+    --pattern-ink: rgba(140, 120, 70, 0.18);
+}
+html[data-palette="emerald"] {
+    --background: #edf0e6;
+    --surface: #f7f9f1;
+    --foreground: #14201a;
+    --muted: #4d5c4c;
+    --accent: #14664d;
+    --accent-2: #9a4617;
+    --gold: #85691c;
+    --border: #d0d8c3;
+    --pattern-ink: rgba(140, 120, 70, 0.18);
+}
+html[data-palette="plum"] {
+    --background: #f4ecee;
+    --surface: #fbf6f7;
+    --foreground: #231820;
+    --muted: #65505b;
+    --accent: #862850;
+    --accent-2: #1d5566;
+    --gold: #8a6a1f;
+    --border: #e0ced4;
+    --pattern-ink: rgba(140, 120, 70, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --background: #15120d;
-    --surface: #1c1812;
-    --foreground: #f1e8d6;
-    --muted: #b3a58d;
-    --accent: #ee8a3a;
-    --accent-2: #6fb4c6;
-    --gold: #d2a64e;
-    --border: #3a3226;
-    --pattern-ink: rgba(210, 166, 78, 0.16);
+      --surface: #1c1812;
+      --foreground: #f1e8d6;
+      --muted: #b3a58d;
+      --accent: #ee8a3a;
+      --accent-2: #6fb4c6;
+      --gold: #d2a64e;
+      --border: #3a3226;
+      --pattern-ink: rgba(210, 166, 78, 0.16);
+  }
+  html[data-palette="lapis"]:not([data-theme="light"]) {
+    --background: #0f141c;
+      --surface: #151b25;
+      --foreground: #e9edf3;
+      --muted: #a3afc0;
+      --accent: #82aaf0;
+      --accent-2: #e3955c;
+      --gold: #d2b05a;
+      --border: #2b3442;
+      --pattern-ink: rgba(210, 190, 120, 0.14);
+  }
+  html[data-palette="emerald"]:not([data-theme="light"]) {
+    --background: #0e1611;
+      --surface: #141e18;
+      --foreground: #e5eee7;
+      --muted: #a1b3a4;
+      --accent: #5fc79f;
+      --accent-2: #e69c64;
+      --gold: #cfb35a;
+      --border: #27382d;
+      --pattern-ink: rgba(210, 190, 120, 0.14);
+  }
+  html[data-palette="plum"]:not([data-theme="light"]) {
+    --background: #1a1015;
+      --surface: #22161c;
+      --foreground: #f1e6ea;
+      --muted: #b9a3ad;
+      --accent: #ea88ab;
+      --accent-2: #72b8cb;
+      --gold: #d4ae5c;
+      --border: #3b2830;
+      --pattern-ink: rgba(210, 190, 120, 0.14);
   }
 }
 
@@ -72,3 +141,7 @@ body {
 
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card-ornate { transition: none; } }
+
+/* Faint kufic Ihsan at the page edge; stronger in dark mode would glare, so it stays very quiet */
+.ihsan-backdrop { opacity: 0.055; }
+@media print { .ihsan-backdrop { display: none; } }

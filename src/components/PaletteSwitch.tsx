@@ -1,0 +1,31 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+const PALETTES = [
+  { id: "saffron", label: "Saffron", color: "#a64a0a" },
+  { id: "lapis", label: "Lapis", color: "#1d4f9a" },
+  { id: "emerald", label: "Emerald", color: "#14664d" },
+  { id: "plum", label: "Plum", color: "#862850" },
+];
+
+/** Small swatches in the footer: the site picks a palette at random each visit; this lets a visitor choose one. */
+export default function PaletteSwitch() {
+  const [cur, setCur] = useState("");
+  useEffect(() => { setCur(document.documentElement.getAttribute("data-palette") ?? "saffron"); }, []);
+  function pick(id: string) {
+    document.documentElement.setAttribute("data-palette", id);
+    try { sessionStorage.setItem("jq-palette", id); } catch {}
+    setCur(id);
+  }
+  return (
+    <div className="flex items-center gap-2" role="group" aria-label="Colour palette">
+      <span className="text-xs text-muted">Palette</span>
+      {PALETTES.map((p) => (
+        <button key={p.id} type="button" onClick={() => pick(p.id)} aria-label={p.label} aria-pressed={cur === p.id} title={p.label}
+          className={`h-4 w-4 rounded-full border transition-transform hover:scale-110 ${cur === p.id ? "border-foreground ring-1 ring-foreground" : "border-border"}`}
+          style={{ backgroundColor: p.color }} />
+      ))}
+    </div>
+  );
+}
