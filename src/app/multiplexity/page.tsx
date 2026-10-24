@@ -62,8 +62,9 @@ export default function MultiplexityPage() {
             <p className="mt-6 max-w-2xl font-serif text-2xl leading-snug text-foreground">The one and the many, held together.</p>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
               Multiplexity is a way of thinking about technology, education, health and the human being. It rests on Islamic ideals and a
-              worldview of levels of reality (<em>marātib</em>) and unity in the many, and it is offered as a framework for everyone. I develop it
-              with Prof. Recep Şentürk (Hamad bin Khalifa University) and apply it to AI ethics, governance, healthcare and education.
+              worldview of levels of reality (<em>marātib</em>) and unity in the many, and it is offered as a framework for everyone. The framework
+              originates with Prof. Recep Şentürk (Hamad bin Khalifa University). I work with him to extend it and to apply it in new domains,
+              including AI, AI in education and AI in healthcare.
             </p>
             <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
               <a href="#papers" className="text-accent hover:opacity-70">Papers &amp; chapters ↓</a>

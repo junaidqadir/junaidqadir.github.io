@@ -67,7 +67,7 @@ export const talks: Talk[] = [
     date: null,
     venue: "Multiplex Intelligence course series",
     youtubeId: "uIcCItv1HZc",
-    youtubePlaylistId: "PL65UDiarzsWEzx9lBPVhuBVv_YyoLclLN",
+    youtubePlaylistId: "PL4AueLFeEG0AP-Qr9ZBReJRnGuMiHQd03",
     slidesUrl: null,
     description:
       "First installment of an 8-part course on cultivating multiplex intelligence in the AI era.",

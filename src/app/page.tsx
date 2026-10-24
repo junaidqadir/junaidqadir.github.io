@@ -14,7 +14,7 @@ import type { Theme } from "@/types/publication";
 const projects = [
   { kind: "Research group", title: "IHSAN Research Lab", text: "A research lab at Qatar University working on human-beneficial AI, the ethics of technology and engineering education.", href: "/publications?theme=ai-ethics", cta: "Related publications" },
   { kind: "Non-profit foundation (in formation)", title: "The Ihsan Initiative", text: "Courses, research and community programs on technology, education and ethics grounded in ihsan — excellence and sincerity in service.", href: null as string | null, cta: "Website coming soon" },
-  { kind: "Open course", title: "Multiplex Intelligence", text: "An eight-part public course on multiplex thinking — a pluralistic, systems-aware approach to intelligence, technology and the human being.", href: "https://www.youtube.com/playlist?list=PL65UDiarzsWEzx9lBPVhuBVv_YyoLclLN", cta: "Watch the course" },
+  { kind: "Open courses", title: "Ihsan: courses, papers and Quran study", text: "The two IHSAN courses with their slides, the Quran short course, and my papers on ihsan as spiritual excellence.", href: "/ihsan", cta: "Explore Ihsan" },
 ];
 
 const Kicker = ({ n, children }: { n: string; children: React.ReactNode }) => (
@@ -119,8 +119,8 @@ export default function Home() {
               <H2>The one and the many — held together.</H2>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
                 Many fields meet the problem of the one and the many: a signal is many frequencies, a network is many networks, a person is body, mind and
-                conviction. Some problems have one right answer; others stay open however long we look. Multiplexity, developed with Recep Şentürk and
-                rooted in Islamic ideals, integrates the two. It asks either-or where a single closed answer is warranted and both-and where the question is open,
+                conviction. Some problems have one right answer; others stay open however long we look. Multiplexity, a framework that originates with Recep Şentürk and is rooted in Islamic ideals,
+                integrates the two. It asks either-or where a single closed answer is warranted and both-and where the question is open,
                 and it keeps many views, levels of reality and change over time in one frame.
               </p>
               <ul className="mt-6 grid gap-3 text-[15px] text-muted sm:grid-cols-3">

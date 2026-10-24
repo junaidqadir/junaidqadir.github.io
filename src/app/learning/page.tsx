@@ -27,6 +27,7 @@ const guides = pick([
   "2023-gull-robotics-primer-independent-learners",
   "2026-qadir-ai-chatbots-provide-coaching",
 ]);
+const writing = pick(["2026-qadir-craft-ed-framework-effective"]);
 const deckFiles = ["engineering-and-computing-education", "essential-skills", "how-to-thrive", "research-writing"];
 const decks = deckFiles.map((k) => slideDecks.find((d) => d.file.includes(k))).filter((d): d is NonNullable<typeof d> => !!d);
 const lists = playlists.filter((l) => ["PL931370B167ED8BE7", "PL4AueLFeEG0ArS4nj1TuRqd2lUEdH1M5n", "PL4AueLFeEG0DAqrRgnZKQR163mvpOOkz-", "PL4AueLFeEG0BwOZkJK7_37TPVJUm55RH_"].includes(l.id));
@@ -70,6 +71,18 @@ export default function LearningPage() {
         </section>
 
         <section>
+          <H2>Writing with AI</H2>
+          <p className="mt-3 max-w-2xl text-muted">
+            A framework for writing well in the age of generative AI, with its companion lecture series and workshop slides.
+          </p>
+          <div className="mt-4">{writing.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
+          <p className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href="https://www.youtube.com/playlist?list=PL4AueLFeEG0ArS4nj1TuRqd2lUEdH1M5n" target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Writing course (YouTube) ↗</a>
+            <a href="/slides/2026-towards-ethical-and-effective-ai-augmented-research-writing.pdf" className="text-accent hover:opacity-70">AI-augmented research writing: workshop slides (PDF) ↓</a>
+          </p>
+        </section>
+
+        <section>
           <H2>Slides</H2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             {decks.map((d) => (
@@ -94,7 +107,7 @@ export default function LearningPage() {
               </a>
             ))}
           </div>
-          <p className="mt-4 text-sm text-muted">The two IHSAN courses, with slides, are on the <Link href="/courses" className="text-accent hover:opacity-70">Courses page</Link>.</p>
+          <p className="mt-4 text-sm text-muted">The IHSAN courses are on the <Link href="/ihsan" className="text-accent hover:opacity-70">Ihsan page</Link>; <Link href="/courses" className="text-accent hover:opacity-70">all open courses</Link>, including CS721 Network Performance &amp; Evaluation, are listed together.</p>
         </section>
       </Container>
     </>
