@@ -5,5 +5,5 @@ import RedirectTo from "@/components/RedirectTo";
 export const metadata: Metadata = { title: "Teaching — Junaid Qadir", robots: { index: false } };
 
 export default function TeachingMoved() {
-  return <RedirectTo href="/courses/#how-i-teach" label="Courses: how I teach" />;
+  return <RedirectTo href="/courses/#teaching-philosophy" label="Courses: teaching philosophy" />;
 }

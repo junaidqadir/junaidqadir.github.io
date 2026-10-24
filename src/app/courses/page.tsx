@@ -68,7 +68,7 @@ export default function CoursesPage() {
               <a href="#ihsan-2025" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>IHSAN courses</a>
               <a href="#genai-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Generative AI course</a>
               <a href="#course-slides" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>All course slides</a>
-              <a href="#how-i-teach" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>How I teach</a>
+              <a href="#teaching-philosophy" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Teaching philosophy</a>
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -136,9 +136,9 @@ export default function CoursesPage() {
           ))}
         </section>
 
-        <section id="how-i-teach" className="scroll-mt-24">
+        <section id="teaching-philosophy" className="scroll-mt-24">
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Approach</p>
-          <h2 className="mt-2 font-serif text-3xl text-foreground">How I teach</h2>
+          <h2 className="mt-2 font-serif text-3xl text-foreground">Teaching philosophy</h2>
           <div className="mt-4 max-w-2xl space-y-3">
             {approach.map((t, i) => (
               <p key={i} className="leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: t.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
