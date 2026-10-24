@@ -1,12 +1,5 @@
 {
-  "_comment": "Items in the CV that must not appear on the public site before a date. sync-cv.mjs drops any CV item whose text matches `pattern` until `until` (YYYY-MM-DD) has passed. Remove an entry (or let the date pass) and re-run `npm run sync-cv`.",
-  "items": [
-    {
-      "pattern": "[removed]",
-      "until": "2026-11-24",
-      "note": "to be announced publicly next month"
-    }
-  ],
+  "_comment": "Generic redaction rules applied when the CV is synced (identifiers are never published). Embargoed items and their badges live in a private file outside the repo: ../private/embargo.json (see scripts/sync-cv.mjs).",
   "redact": [
     {
       "pattern": "\\s*\\((?:Registration Number|Membership number):[^)]*\\)",

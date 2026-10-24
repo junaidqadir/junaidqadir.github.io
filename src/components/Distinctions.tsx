@@ -1,15 +1,19 @@
 import { getAwards } from "@/lib/cv";
-import { distinctions } from "@/content/distinctions";
+import { distinctions, type Distinction } from "@/content/distinctions";
 
 /** Badge row built from the CV (see content/distinctions.ts). */
 export default function Distinctions({ className = "", heading = true }: { className?: string; heading?: boolean }) {
   const items = getAwards();
-  const found = distinctions
+  const flagged: { d: Pick<Distinction, "key" | "lead" | "note">; label: string }[] = items
+    .filter((a) => a.badge)
+    .map((a) => ({ d: { key: `badge-${a.badge!.label}`, lead: !!a.badge!.lead, note: a.badge!.note }, label: a.badge!.label }));
+  const found: { d: Pick<Distinction, "key" | "lead" | "note">; label: string }[] = distinctions
     .map((d) => {
       const it = items.find((a) => d.match.test(a.text));
       return it ? { d, label: d.label(it.text) } : null;
     })
     .filter((x): x is NonNullable<typeof x> => !!x);
+  found.unshift(...flagged.filter((f) => !found.some((x) => x.label === f.label)));
   if (!found.length) return null;
   return (
     <div className={className}>

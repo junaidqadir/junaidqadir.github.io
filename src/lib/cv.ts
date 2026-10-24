@@ -1,6 +1,6 @@
 import cvData from "../../content/cv.generated.json";
 
-export type CvItem = { html: string; text: string; n?: number; children?: CvBlock[] };
+export type CvItem = { html: string; text: string; n?: number; children?: CvBlock[]; badge?: { label: string; lead?: boolean; note?: string } };
 export type CvBlock = { heading?: string; items: CvItem[] };
 export type CvSection = { id: string; title: string; blocks: CvBlock[] };
 

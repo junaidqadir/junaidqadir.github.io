@@ -150,10 +150,11 @@ for (let i = 1; i < parts.length; i += 2) {
 
 // ---------- embargo: keep not-yet-announced items off the public site ----------
 import { existsSync } from "node:fs";
-const embargoFile = join(root, "embargo.json");
-const embargoes = existsSync(embargoFile)
-  ? JSON.parse(readFileSync(embargoFile, "utf8")).items.filter((e) => new Date(e.until) > new Date()).map((e) => new RegExp(e.pattern, "i"))
-  : [];
+const embargoFile = join(root, "embargo.json");                      // generic redaction rules (in the repo)
+const privateFile = process.env.EMBARGO_FILE || join(root, "..", "private", "embargo.json"); // embargoed items + badges (NOT in the repo)
+const priv = existsSync(privateFile) ? JSON.parse(readFileSync(privateFile, "utf8")) : { items: [], badges: [] };
+const embargoes = (priv.items || []).filter((e) => new Date(e.until) > new Date()).map((e) => new RegExp(e.pattern, "i"));
+const badgeRules = (priv.badges || []).map((b) => ({ re: new RegExp(b.pattern, "i"), label: b.label, lead: !!b.lead, note: b.note }));
 function dropEmbargoed(blocks) {
   return blocks.map((b) => ({
     ...b,
@@ -163,6 +164,18 @@ function dropEmbargoed(blocks) {
   }));
 }
 if (embargoes.length) for (const s of sections) s.blocks = dropEmbargoed(s.blocks);
+// after an embargo has passed, items that match a badge rule carry a `badge` the site shows in the distinctions band
+function addBadges(blocks) {
+  return blocks.map((b) => ({
+    ...b,
+    items: b.items.map((it) => {
+      const r = badgeRules.find((x) => x.re.test(it.text));
+      const year = (it.text.match(/\b(?:19|20)\d{2}\b/) || [""])[0];
+      return { ...it, ...(r ? { badge: { label: r.label.replace("{year}", year).trim(), lead: r.lead, note: r.note } } : {}), ...(it.children ? { children: addBadges(it.children) } : {}) };
+    }),
+  }));
+}
+if (badgeRules.length) for (const s of sections) s.blocks = addBadges(s.blocks);
 // redact identifiers (registration / membership numbers) from the text that gets published
 const redactions = existsSync(embargoFile) ? (JSON.parse(readFileSync(embargoFile, "utf8")).redact || []).map((r) => new RegExp(r.pattern, "gi")) : [];
 function redactBlocks(blocks) {

@@ -1,9 +1,9 @@
 {
   "generated_at": "2026-10-24",
-  "source_sha": "45bd1d573dab",
+  "source_sha": "6029a50d634d",
   "derived": {
-    "citations_scholar": "26,500+",
-    "h_index_scholar": "80+",
+    "citations_scholar": "27,500+",
+    "h_index_scholar": "81",
     "i10_scholar": "230+",
     "citation_stats_date": "September 2026",
     "phd_main_supervisor": null,
@@ -81,8 +81,8 @@
                       "text": "Research funding and leadership: I have won competitive grants from the Qatar Research, Development, and Innovation (QRDI) Council, the Qatar National Research Fund (QNRF), Qatar University, the British Embassy Doha (Gulf Strategy Fund), Facebook Research, and the Higher Education Commission (HEC) of Pakistan. I have served as an editor for various top journals including (1) IEEE Communications Magazine; (2) Springer Nature Big Data Analytics journal; (3) IEEE Access; and currently serve as an Associate Editor of Frontiers in Communications and Networks. Finally, I have extensive experience in successfully supervising research students (both post-graduate and undergraduate)."
                     },
                     {
-                      "html": "<em><strong>Citation statistics (September 2026)</strong></em>: <a href=\"https://scholar.google.com/citations?user=EdPPQToAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Google Scholar</strong></a>: <em>Citations 26,500+; h-index 80+; i10-index 230+</em>; <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per SCOPUS</strong></a>: <em>Citations 13,450+; h-index 60+</em>; <a href=\"https://www.webofscience.com/wos/author/record/847810\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Clarivate Analytics WOS</strong></a>: <em>Citations 8,000+; h-index 47+</em>.",
-                      "text": "Citation statistics (September 2026): As per Google Scholar: Citations 26,500+; h-index 80+; i10-index 230+; As per SCOPUS: Citations 13,450+; h-index 60+; As per Clarivate Analytics WOS: Citations 8,000+; h-index 47+."
+                      "html": "<em><strong>Citation statistics (September 2026)</strong></em>: <a href=\"https://scholar.google.com/citations?user=EdPPQToAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Google Scholar</strong></a>: <em>Citations 27,500+; h-index 81; i10-index 230+</em>; <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per SCOPUS</strong></a>: <em>Citations 13,450+; h-index 60+</em>; <a href=\"https://www.webofscience.com/wos/author/record/847810\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Clarivate Analytics WOS</strong></a>: <em>Citations 8,000+; h-index 47+</em>.",
+                      "text": "Citation statistics (September 2026): As per Google Scholar: Citations 27,500+; h-index 81; i10-index 230+; As per SCOPUS: Citations 13,450+; h-index 60+; As per Clarivate Analytics WOS: Citations 8,000+; h-index 47+."
                     }
                   ]
                 }
@@ -265,12 +265,12 @@
               "text": "Paper shortlisted for the best paper award in IEEE WoWMoM 2008. My paper was one of the three finalists shortlisted for this award."
             },
             {
-              "html": "Nominated for the HEC best teacher award <em>two times</em>—first for 2011 and the second for 2012-2013. <em>(In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.)</em> Nominated for the best teacher award from the `Communication and Networks' knowledge group at SEECS, NUST in 2012.",
-              "text": "Nominated for the HEC best teacher award two times—first for 2011 and the second for 2012-2013. (In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.) Nominated for the best teacher award from the `Communication and Networks' knowledge group at SEECS, NUST in 2012."
+              "html": "Nominated for the HEC best teacher award <em>two times</em>—first for 2011 and the second for 2012-2013. <em>(In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.)</em> Nominated for the best teacher award from the “Communication and Networks” knowledge group at SEECS, NUST in 2012.",
+              "text": "Nominated for the HEC best teacher award two times—first for 2011 and the second for 2012-2013. (In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.) Nominated for the best teacher award from the “Communication and Networks” knowledge group at SEECS, NUST in 2012."
             },
             {
-              "html": "Awarded the <strong>Best Poster Award</strong> for supervising the Qatar University Annual Research Forum &amp; Exhibition (QUARFE)'25 Best Poster Award in Information and Communications Technologies discipline (Undergraduate Students).",
-              "text": "Awarded the Best Poster Award for supervising the Qatar University Annual Research Forum & Exhibition (QUARFE)'25 Best Poster Award in Information and Communications Technologies discipline (Undergraduate Students)."
+              "html": "Supervisor of the <strong>Best Poster Award</strong> winner at the Qatar University Annual Research Forum &amp; Exhibition (QUARFE'25), Information and Communications Technologies discipline (Undergraduate Students).",
+              "text": "Supervisor of the Best Poster Award winner at the Qatar University Annual Research Forum & Exhibition (QUARFE'25), Information and Communications Technologies discipline (Undergraduate Students)."
             },
             {
               "html": "Included in the list of top scientists by researchers (<strong>Top 2% of Researchers Worldwide</strong>) from Stanford University led by Dr. John PA Ioannidis in terms of productivity and impact in the years 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, and for career-long impact.",
@@ -320,8 +320,8 @@
               "text": "Electronics Workbench (Fall 2020) [ITU];"
             },
             {
-              "html": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU];",
-              "text": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU];"
+              "html": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU], course website: <a href=\"https://sites.google.com/itu.edu.pk/ethics-course/\" target=\"_blank\" rel=\"noopener noreferrer\">https://sites.google.com/itu.edu.pk/ethics-course/</a>;",
+              "text": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU], course website: https://sites.google.com/itu.edu.pk/ethics-course/;"
             },
             {
               "html": "Fundamentals of ICT (Fall 2008) [NUST];",
@@ -361,8 +361,8 @@
               "text": "Advanced Topics in Networking (Software Defined Networks, in Summer 2013) [NUST];"
             },
             {
-              "html": "Advanced Topics in Networking (Cognitive Radio Networks (Summer 2010)) [NUST];",
-              "text": "Advanced Topics in Networking (Cognitive Radio Networks (Summer 2010)) [NUST];"
+              "html": "Advanced Topics in Networking (Cognitive Radio Networks, in Summer 2010) [NUST];",
+              "text": "Advanced Topics in Networking (Cognitive Radio Networks, in Summer 2010) [NUST];"
             },
             {
               "html": "Algorithm Design and Modelling (Spring 2024) [Qatar University];",
@@ -377,8 +377,8 @@
               "text": "Embedded Computing Systems (Fall 2023; Fall 2025) [Qatar University];"
             },
             {
-              "html": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan]).",
-              "text": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan])."
+              "html": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan], course website: <a href=\"https://sites.google.com/site/netperfeval\" target=\"_blank\" rel=\"noopener noreferrer\">https://sites.google.com/site/netperfeval</a>;",
+              "text": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan], course website: https://sites.google.com/site/netperfeval;"
             },
             {
               "html": "Special Topics in Computer Science/Engineering [Embedded Artificial Intelligence] (Spring 2022) [Qatar University].",
@@ -1019,8 +1019,8 @@
                   "heading": "<em><strong>Conferences/ Workshops</strong></em>:",
                   "items": [
                     {
-                      "html": "American Society of Electrical Engineering (ASEE) Annual Conference and Exposition.",
-                      "text": "American Society of Electrical Engineering (ASEE) Annual Conference and Exposition."
+                      "html": "American Society for Engineering Education (ASEE) Annual Conference and Exposition.",
+                      "text": "American Society for Engineering Education (ASEE) Annual Conference and Exposition."
                     },
                     {
                       "html": "IEEE Global Communications Conference (GlobeCom);",
@@ -1269,8 +1269,8 @@
                       "n": 4
                     },
                     {
-                      "html": "Syed Ahmed Faran, SEECS, NUST, 2012, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
-                      "text": "Syed Ahmed Faran, SEECS, NUST, 2012, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
+                      "html": "Syed Ahmed Faran, SEECS, NUST, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
+                      "text": "Syed Ahmed Faran, SEECS, NUST, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
                       "n": 3
                     },
                     {
@@ -1556,8 +1556,8 @@
               "text": "“The Ghazalian Project for the AI Era: A Multiplex Critical AI Approach”, First Symposium on Comparative Education, Ghazali on Education, Contemporary Practical Applications from an Enduring Legacy, organized by College of Islamic Sciences (CIS), Hamad bin Khalifa University (HBKU), March 2024. Available online at https://youtu.be/Xz9sk3mj19I?t=20431."
             },
             {
-              "html": "“<em>Educating for the AI Revolution</em>”, Invited Talk at the <em>Bridging Frontiers–Advancements in AI and Social Sciences</em> workshop organized at the College of Islamic Studies, Hamad Bin Khalifa University, February 2024.",
-              "text": "“Educating for the AI Revolution”, Invited Talk at the Bridging Frontiers–Advancements in AI and Social Sciences workshop organized at the College of Islamic Studies, Hamad Bin Khalifa University, February 2024."
+              "html": "“<em>Educating for the AI Revolution</em>”, Invited Talk at the <em>Bridging Frontiers–Advancements in AI and Social Sciences</em> workshop organized at the College of Islamic Studies, Hamad bin Khalifa University, February 2024.",
+              "text": "“Educating for the AI Revolution”, Invited Talk at the Bridging Frontiers–Advancements in AI and Social Sciences workshop organized at the College of Islamic Studies, Hamad bin Khalifa University, February 2024."
             },
             {
               "html": "“<em>Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity</em>”, Invited Talk at the Generative AI Workshop at Dar Al-Hekma College, Jeddah, Kingdom of Saudi Arabia, February 2024.",
@@ -1592,8 +1592,8 @@
               "text": "“Islamic ethics and AI”, invited talk given at The Future of Muslim Tech: Prospects and Challenges organized by Lorentz Institute - Leiden University, January 2023."
             },
             {
-              "html": "“<em>A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity</em>”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, Boston, USA, July 2022.",
-              "text": "“A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, Boston, USA, July 2022."
+              "html": "“<em>A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity</em>”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, MA, USA, July 2022.",
+              "text": "“A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, MA, USA, July 2022."
             },
             {
               "html": "“<em>Safe and Trustworthy Artificial Intelligence</em>”, AI Week 2022, Qatar University, March, 2022.",
