@@ -3,6 +3,7 @@
 /* Palettes: Lapis (blue-tinted ivory) is the default. Saffron, Emerald and Plum are available from the footer swatches or ?palette=...
    Each is checked for WCAG contrast (text 7:1, muted and accent 4.5:1). */
 :root {
+    --logo-orange: #d4620f;
     --background: #f1eee4;
     --surface: #faf8f0;
     --foreground: #131820;
@@ -49,6 +50,7 @@ html[data-palette="plum"] {
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --logo-orange: #f08a2e;
     --background: #0f141c;
     --surface: #151b25;
     --foreground: #e9edf3;

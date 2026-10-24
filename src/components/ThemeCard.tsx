@@ -7,7 +7,7 @@ export default function ThemeCard({ theme, count, index }: { theme: ResearchThem
   return (
     <div className="card-ornate p-6">
       <div className="flex items-start gap-5">
-        {theme.art === "logo" ? <IhsanMark size={84} className="shrink-0" /> : <GeoArt kind={theme.art} size={84} className="shrink-0" />}
+        {theme.art === "logo" ? <IhsanMark size={84} round /> : <GeoArt kind={theme.art} size={84} className="shrink-0" />}
         <div>
           {index != null && <p className="font-serif text-sm text-accent">{String(index + 1).padStart(2, "0")}</p>}
           <h3 className="font-serif text-xl leading-snug text-foreground">{theme.title}</h3>

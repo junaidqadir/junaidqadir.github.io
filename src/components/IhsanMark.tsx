@@ -1,26 +1,42 @@
-import RetryImg from "./RetryImg";
-import { asset } from "@/lib/assets";
-
 /**
- * The Ihsan icon (three words in square kufic), cleaned and upscaled from the original course icon.
- * Large sizes use the framed version (cream margin, ink and gold border) so its lines are not cut at the edges;
- * small sizes (nav) use the unframed icon, where a border would eat the letters. Phone-sized files are served via srcSet.
+ * The Ihsan icon: the three words (al-Islam, al-Iman, al-Ihsan) in square kufic, redrawn as a transparent vector
+ * traced from the author's course icon. Sharp at any size; coloured by the site palette (the orange is the icon's own).
+ *  - default: the bare icon (square, transparent), used small in the nav
+ *  - `round`: the icon inside a thin circle, like the site's other symbols (theme cards, playlist badges)
+ *  - `framed`: round with a second gold ring, for page headers
  */
-export default function IhsanMark({ size = 28, className = "" }: { size?: number; className?: string }) {
-  const framed = size >= 56;
-  const small = framed ? "/ihsan-logo-framed-360.png" : "/ihsan-logo-96.png";
-  const full = framed ? "/ihsan-logo-framed.png" : "/ihsan-logo.png";
+const INK = "M81.94 -0.06h187.12v1.12h-187.12zM3.94 0.94h265.12v1.12h-265.12zM2.94 1.94h266.12v15.12h-266.12zM2.94 16.94h254.12v1.12h-254.12zM2.94 17.94h67.12v1.12h-67.12zM261.94 25.94h6.12v1.12h-6.12zM115.94 26.94h14.12v1.12h-14.12zM142.94 26.94h15.12v1.12h-15.12zM57.94 27.94h45.12v1.12h-45.12zM113.94 27.94h17.12v1.12h-17.12zM168.94 26.94h100.12v2.12h-100.12zM167.94 28.94h101.12v14.12h-101.12zM2.94 18.94h18.12v25.12h-18.12zM25.94 42.94h2.12v1.12h-2.12zM25.94 43.94h3.12v1.12h-3.12zM48.94 43.94h1.12v1.12h-1.12zM57.94 28.94h46.12v16.12h-46.12zM168.94 42.94h100.12v2.12h-100.12zM25.94 44.94h4.12v1.12h-4.12zM47.94 44.94h2.12v1.12h-2.12zM57.94 44.94h19.12v1.12h-19.12zM25.94 45.94h6.12v1.12h-6.12zM46.94 45.94h3.12v1.12h-3.12zM84.94 44.94h19.12v2.12h-19.12zM26.94 46.94h6.12v1.12h-6.12zM44.94 46.94h5.12v1.12h-5.12zM85.94 46.94h18.12v4.12h-18.12zM57.94 45.94h18.12v8.12h-18.12zM84.94 50.94h19.12v3.12h-19.12zM56.94 53.94h47.12v1.12h-47.12zM169.94 53.94h16.12v1.12h-16.12zM196.94 53.94h16.12v1.12h-16.12zM30.94 54.94h73.12v1.12h-73.12zM168.94 54.94h17.12v1.12h-17.12zM250.94 44.94h18.12v18.12h-18.12zM1.94 43.94h19.12v23.12h-19.12zM29.94 55.94h74.12v14.12h-74.12zM29.94 69.94h73.12v2.12h-73.12zM29.94 71.94h19.12v1.12h-19.12zM140.94 27.94h18.12v52.12h-18.12zM167.94 55.94h19.12v24.12h-19.12zM195.94 54.94h18.12v25.12h-18.12zM223.94 53.94h18.12v26.12h-18.12zM29.94 72.94h18.12v8.12h-18.12zM112.94 28.94h19.12v52.12h-19.12zM139.94 79.94h20.12v1.12h-20.12zM167.94 79.94h20.12v1.12h-20.12zM194.94 79.94h20.12v1.12h-20.12zM222.94 79.94h19.12v1.12h-19.12zM29.94 80.94h44.12v1.12h-44.12zM86.94 80.94h155.12v1.12h-155.12zM85.94 81.94h156.12v1.12h-156.12zM250.94 62.94h19.12v33.12h-19.12zM84.94 82.94h157.12v14.12h-157.12zM29.94 81.94h46.12v16.12h-46.12zM84.94 96.94h156.12v1.12h-156.12zM251.94 95.94h17.12v2.12h-17.12zM29.94 97.94h45.12v1.12h-45.12zM85.94 97.94h141.12v1.12h-141.12zM30.94 98.94h32.12v1.12h-32.12zM251.94 106.94h16.12v1.12h-16.12zM104.94 107.94h53.12v1.12h-53.12zM168.94 107.94h100.12v1.12h-100.12zM29.94 108.94h45.12v1.12h-45.12zM85.94 108.94h73.12v1.12h-73.12zM168.94 108.94h101.12v1.12h-101.12zM29.94 109.94h46.12v6.12h-46.12zM28.94 115.94h47.12v8.12h-47.12zM167.94 109.94h102.12v14.12h-102.12zM28.94 123.94h46.12v2.12h-46.12zM84.94 109.94h74.12v16.12h-74.12zM168.94 123.94h101.12v2.12h-101.12zM28.94 125.94h32.12v1.12h-32.12zM250.94 125.94h19.12v1.12h-19.12zM139.94 125.94h19.12v2.12h-19.12zM84.94 125.94h19.12v3.12h-19.12zM84.94 128.94h18.12v1.12h-18.12zM84.94 129.94h19.12v1.12h-19.12zM114.94 134.94h15.12v1.12h-15.12zM168.94 134.94h44.12v1.12h-44.12zM224.94 134.94h17.12v1.12h-17.12zM168.94 135.94h45.12v1.12h-45.12zM167.94 136.94h46.12v11.12h-46.12zM84.94 130.94h18.12v22.12h-18.12zM167.94 147.94h47.12v5.12h-47.12zM1.94 66.94h18.12v87.12h-18.12zM86.94 152.94h14.12v1.12h-14.12zM112.94 135.94h18.12v26.12h-18.12zM140.94 127.94h18.12v34.12h-18.12zM167.94 152.94h19.12v9.12h-19.12zM195.94 152.94h19.12v9.12h-19.12zM223.94 135.94h18.12v26.12h-18.12zM28.94 126.94h19.12v36.12h-19.12zM111.94 161.94h19.12v1.12h-19.12zM140.94 161.94h101.12v1.12h-101.12zM139.94 162.94h102.12v15.12h-102.12zM251.94 126.94h18.12v52.12h-18.12zM28.94 162.94h102.12v17.12h-102.12zM140.94 177.94h101.12v2.12h-101.12zM252.94 178.94h16.12v1.12h-16.12zM29.94 179.94h99.12v1.12h-99.12zM142.94 179.94h21.12v1.12h-21.12zM181.94 188.94h1.12v1.12h-1.12zM252.94 188.94h16.12v1.12h-16.12zM29.94 189.94h16.12v1.12h-16.12zM57.94 189.94h128.12v1.12h-128.12zM0.94 153.94h19.12v44.12h-19.12zM56.94 190.94h130.12v15.12h-130.12zM56.94 205.94h129.12v1.12h-129.12zM56.94 206.94h128.12v1.12h-128.12zM56.94 207.94h19.12v1.12h-19.12zM116.94 216.94h12.12v1.12h-12.12zM141.94 216.94h16.12v1.12h-16.12zM168.94 216.94h73.12v1.12h-73.12zM140.94 217.94h18.12v1.12h-18.12zM251.94 189.94h18.12v38.12h-18.12zM167.94 217.94h74.12v16.12h-74.12zM168.94 233.94h73.12v1.12h-73.12zM112.94 217.94h18.12v20.12h-18.12zM223.94 234.94h18.12v6.12h-18.12zM84.94 217.94h18.12v25.12h-18.12zM0.94 197.94h18.12v46.12h-18.12zM56.94 208.94h18.12v35.12h-18.12zM83.94 242.94h19.12v1.12h-19.12zM111.94 237.94h19.12v6.12h-19.12zM139.94 218.94h19.12v25.12h-19.12zM223.94 240.94h19.12v3.12h-19.12zM-0.06 243.94h19.12v1.12h-19.12zM28.94 190.94h18.12v54.12h-18.12zM56.94 243.94h19.12v1.12h-19.12zM83.94 243.94h20.12v1.12h-20.12zM110.94 243.94h132.12v1.12h-132.12zM-0.06 244.94h20.12v1.12h-20.12zM21.94 244.94h25.12v1.12h-25.12zM56.94 244.94h186.12v1.12h-186.12zM55.94 245.94h187.12v14.12h-187.12zM251.94 227.94h19.12v32.12h-19.12zM251.94 259.94h18.12v1.12h-18.12zM-0.06 245.94h47.12v16.12h-47.12zM55.94 259.94h186.12v2.12h-186.12zM252.94 260.94h16.12v1.12h-16.12zM0.94 261.94h45.12v1.12h-45.12zM56.94 261.94h121.12v1.12h-121.12zM1.94 262.94h15.12v1.12h-15.12z";
+const ACCENT = "M5.94 4.94h261.12v1.12h-261.12zM4.94 5.94h263.12v6.12h-263.12zM265.94 11.94h1.12v1.12h-1.12zM61.94 193.94h117.12v7.12h-117.12zM145.94 216.94h7.12v1.12h-7.12zM118.94 220.94h6.12v1.12h-6.12zM174.94 222.94h65.12v8.12h-65.12zM61.94 200.94h7.12v52.12h-7.12zM92.94 218.94h7.12v34.12h-7.12zM117.94 221.94h8.12v31.12h-8.12zM144.94 217.94h8.12v35.12h-8.12zM4.94 11.94h8.12v242.12h-8.12zM37.94 189.94h8.12v64.12h-8.12zM61.94 252.94h91.12v1.12h-91.12zM232.94 230.94h7.12v23.12h-7.12zM61.94 253.94h178.12v5.12h-178.12zM61.94 258.94h175.12v1.12h-175.12zM4.94 253.94h41.12v7.12h-41.12zM128.94 259.94h108.12v1.12h-108.12zM255.94 189.94h8.12v71.12h-8.12zM5.94 260.94h36.12v1.12h-36.12zM215.94 260.94h21.12v1.12h-21.12z";
+const DOTS = "M26.94 23.94h22.12v1.12h-22.12zM26.94 24.94h23.12v18.12h-23.12zM27.94 42.94h22.12v1.12h-22.12zM28.94 43.94h20.12v1.12h-20.12zM29.94 44.94h18.12v1.12h-18.12zM30.94 45.94h16.12v1.12h-16.12zM33.94 46.94h11.12v1.12h-11.12zM57.94 135.94h16.12v1.12h-16.12zM56.94 136.94h18.12v1.12h-18.12zM56.94 137.94h19.12v13.12h-19.12zM56.94 150.94h18.12v1.12h-18.12zM57.94 151.94h16.12v1.12h-16.12zM57.94 152.94h15.12v1.12h-15.12zM198.94 188.94h14.12v1.12h-14.12zM225.94 188.94h15.12v1.12h-15.12zM196.94 189.94h17.12v1.12h-17.12zM195.94 190.94h19.12v14.12h-19.12zM223.94 189.94h18.12v15.12h-18.12zM195.94 204.94h18.12v1.12h-18.12zM224.94 204.94h17.12v1.12h-17.12zM196.94 205.94h16.12v1.12h-16.12zM225.94 205.94h15.12v1.12h-15.12zM198.94 206.94h4.12v1.12h-4.12z";
+const W = 271;
+const H = 264;
+
+function Glyph() {
   return (
-    <RetryImg
-      src={asset(small)}
-      srcSet={`${asset(small)} ${framed ? 360 : 96}w, ${asset(full)} ${framed ? 900 : 1136}w`}
-      sizes={`${size}px`}
-      alt="Ihsan icon"
-      width={size}
-      height={size}
-      priority
-      fallback="إحسان"
-      className={`${framed ? "" : "rounded-[3px]"} ${className}`}
-    />
+    <>
+      <path d={INK} fill="var(--foreground)" />
+      <path d={ACCENT} fill="var(--logo-orange)" />
+      <path d={DOTS} fill="var(--gold)" />
+    </>
+  );
+}
+
+export default function IhsanMark({ size = 28, className = "", round = false, framed = false }: { size?: number; className?: string; round?: boolean; framed?: boolean }) {
+  if (round || framed) {
+    const k = 64 / W; // icon width as a share of the circle (diameter 100)
+    return (
+      <svg viewBox="-50 -50 100 100" width={size} height={size} role="img" aria-label="Ihsan icon" className={`block shrink-0 ${className}`}>
+        <circle r="47" fill="none" stroke="var(--border)" strokeWidth="1" />
+        {framed && <circle r="43.5" fill="none" stroke="var(--gold)" strokeWidth="0.8" />}
+        <g transform={`translate(${-(W * k) / 2} ${-(H * k) / 2}) scale(${k})`}>
+          <Glyph />
+        </g>
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width={size} height={Math.round((size * H) / W)} role="img" aria-label="Ihsan icon" className={`block shrink-0 ${className}`}>
+      <Glyph />
+    </svg>
   );
 }

@@ -58,7 +58,7 @@ export default function VideosPage() {
                   <span className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/35" />
                   <span className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-xs text-white">▶ {l.count} videos</span>
                   <span className="absolute left-2 top-2 flex h-12 w-12 items-center justify-center rounded-full bg-background/90">
-                    {l.themes?.[0] === "ihsan-ethics" ? <IhsanMark size={34} /> : <GeoArt kind={l.art as Art} size={38} />}
+                    {l.themes?.[0] === "ihsan-ethics" ? <IhsanMark size={40} round /> : <GeoArt kind={l.art as Art} size={38} />}
                   </span>
                 </div>
                 <div className="p-4">

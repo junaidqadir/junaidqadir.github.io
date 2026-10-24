@@ -49,7 +49,7 @@ export default function CoursesPage() {
           </div>
           <div className="flex items-center gap-6">
             <IhsanCalligraphy className="text-[6rem] sm:text-[8rem]" />
-            <IhsanMark size={64} className="hidden sm:block" />
+            <IhsanMark size={84} framed className="hidden sm:block" />
           </div>
         </Container>
       </section>
