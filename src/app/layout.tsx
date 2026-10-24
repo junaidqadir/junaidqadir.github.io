@@ -14,10 +14,15 @@ const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.com";
+
 export const metadata: Metadata = {
-  title: "Junaid Qadir",
+  metadataBase: new URL(siteUrl),
+  title: { default: "Junaid Qadir — Professor of Computer Engineering, Qatar University", template: "%s" },
   description:
-    "Academic working across artificial intelligence, engineering education, multiplexity, and Islamic ethics.",
+    "Academic working across artificial intelligence, engineering education, multiplexity, and Islamic ethics. Publications, talks, teaching and a continuously synced CV.",
+  openGraph: { type: "website", siteName: "Junaid Qadir", title: "Junaid Qadir", description: "Technology with wisdom. Education with ihsan." },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

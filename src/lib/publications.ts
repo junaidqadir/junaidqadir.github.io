@@ -18,3 +18,22 @@ export function getPublicationsByTheme(theme: Theme): Publication[] {
 export function getPublicationBySlug(slug: string): Publication | undefined {
   return publications.find((p) => p.slug === slug);
 }
+
+export function getAllTags(): string[] {
+  const set = new Set<string>();
+  publications.forEach((p) => p.tags.forEach((t) => set.add(t)));
+  return [...set].sort();
+}
+
+export function getAllVenues(): string[] {
+  const set = new Set<string>();
+  publications.forEach((p) => {
+    if (p.venue) set.add(p.venue);
+  });
+  return [...set].sort();
+}
+
+export function getYearRange(): [number, number] {
+  const years = publications.map((p) => p.year).filter((y): y is number => y != null);
+  return [Math.min(...years), Math.max(...years)];
+}

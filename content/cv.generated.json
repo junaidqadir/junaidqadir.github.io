@@ -1,0 +1,1671 @@
+{
+  "generated_at": "2026-10-24",
+  "source_sha": "c5f2aee4d94e",
+  "derived": {
+    "citations_scholar": "26,500+",
+    "h_index_scholar": "80+",
+    "i10_scholar": "230+",
+    "citation_stats_date": "September 2026",
+    "phd_main_supervisor": null,
+    "career_start_year": 2008
+  },
+  "sections": [
+    {
+      "id": "career-overview",
+      "title": "Career Overview",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "<strong>Professor of Computer Engineering</strong> Computer Science and Engineering Department September 2021 to date <em>Qatar University, Doha, Qatar</em>",
+              "text": "Professor of Computer Engineering Computer Science and Engineering Department September 2021 to date Qatar University, Doha, Qatar"
+            },
+            {
+              "html": "<strong>Professor (Electrical Engineering Department)</strong> April 2020 to 2023 <em>Information Technology University (ITU), Lahore, Pakistan</em> On leave from 2021 to 2023; the appointment ended in 2023.",
+              "text": "Professor (Electrical Engineering Department) April 2020 to 2023 Information Technology University (ITU), Lahore, Pakistan On leave from 2021 to 2023; the appointment ended in 2023."
+            },
+            {
+              "html": "<strong>Chairperson (Electrical Engineering Department)</strong> Jan. 2019 to Jan. 2021 <em>Information Technology University (ITU), Lahore, Pakistan</em>",
+              "text": "Chairperson (Electrical Engineering Department) Jan. 2019 to Jan. 2021 Information Technology University (ITU), Lahore, Pakistan"
+            },
+            {
+              "html": "<strong>Associate Professor (Electrical Engineering Department)</strong> Dec. 2015 to April 2020 <em>Information Technology University (ITU), Lahore, Pakistan</em>",
+              "text": "Associate Professor (Electrical Engineering Department) Dec. 2015 to April 2020 Information Technology University (ITU), Lahore, Pakistan"
+            },
+            {
+              "html": "<strong>Affiliate Researcher</strong> Dec. 2014 to Dec. 2017 <strong>Visiting Researcher</strong> Jan. 2016 to March 2016 <em>Network for Development (N4D) Lab, Computer Laboratory, University of Cambridge, UK</em>",
+              "text": "Affiliate Researcher Dec. 2014 to Dec. 2017 Visiting Researcher Jan. 2016 to March 2016 Network for Development (N4D) Lab, Computer Laboratory, University of Cambridge, UK"
+            },
+            {
+              "html": "<strong>Assistant Professor (Electrical Engineering Department)</strong> May 2008 to Dec. 2015 <em>School of EE and CS (SEECS), National University of Sciences and Technology (NUST)</em> I also served as the <em>Director</em> of the Cognet research lab.",
+              "text": "Assistant Professor (Electrical Engineering Department) May 2008 to Dec. 2015 School of EE and CS (SEECS), National University of Sciences and Technology (NUST) I also served as the Director of the Cognet research lab."
+            },
+            {
+              "html": "<strong>Assistant Divisional Engineer (Data Networking Division)</strong> June 2003 to July 2004 <em>National Telecommunications Corporation (NTC) HQ, Islamabad</em>",
+              "text": "Assistant Divisional Engineer (Data Networking Division) June 2003 to July 2004 National Telecommunications Corporation (NTC) HQ, Islamabad"
+            },
+            {
+              "html": "<strong>Pakistan Internet Exchange Network Support Engineer</strong> July 2001 to July 2002 <em>SYSNET Pvt. Pakistan Limited, Lahore, Pakistan</em>",
+              "text": "Pakistan Internet Exchange Network Support Engineer July 2001 to July 2002 SYSNET Pvt. Pakistan Limited, Lahore, Pakistan"
+            },
+            {
+              "html": "<strong>Assistant Manager Technical</strong> September 2000 to June 2001 <em>WorldCALL Multimedia Limited (WML)</em>",
+              "text": "Assistant Manager Technical September 2000 to June 2001 WorldCALL Multimedia Limited (WML)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technical-summary",
+      "title": "Technical Summary",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "<strong>Research Skills</strong>",
+              "text": "Research Skills",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "<strong><em>Diverse research experience and interest:</em></strong> My primary research interests are in networking, applied machine learning, and human development. My current research has a strong multi-disciplinary orientation and spans diverse areas such as <em>artificial intelligence (AI), machine learning, internet of things, ethics of technology, AI ethics, pedagogy and learning, and using ICT for development (ICT4D)</em>.",
+                      "text": "Diverse research experience and interest: My primary research interests are in networking, applied machine learning, and human development. My current research has a strong multi-disciplinary orientation and spans diverse areas such as artificial intelligence (AI), machine learning, internet of things, ethics of technology, AI ethics, pedagogy and learning, and using ICT for development (ICT4D)."
+                    },
+                    {
+                      "html": "<strong><em>Research publications:</em></strong> I have published a number of peer-reviewed papers in top-quality journals and magazines—including publications in Springer Nature Scientific Reports, IEEE Communications Surveys and Tutorials (COMST), IEEE Communications Magazine, IEEE Internet of Things Journal, IEEE Journal on Selected Areas in Communication (JSAC), IEEE Transactions on Mobile Computing (TMC), and ACM Computing Surveys (CSUR)—in addition to publications in top IEEE and ACM conferences.",
+                      "text": "Research publications: I have published a number of peer-reviewed papers in top-quality journals and magazines—including publications in Springer Nature Scientific Reports, IEEE Communications Surveys and Tutorials (COMST), IEEE Communications Magazine, IEEE Internet of Things Journal, IEEE Journal on Selected Areas in Communication (JSAC), IEEE Transactions on Mobile Computing (TMC), and ACM Computing Surveys (CSUR)—in addition to publications in top IEEE and ACM conferences."
+                    },
+                    {
+                      "html": "<strong><em>Research funding and leadership:</em></strong> I have won competitive grants from the Qatar Research, Development, and Innovation (QRDI) Council, the Qatar National Research Fund (QNRF), Qatar University, the British Embassy Doha (Gulf Strategy Fund), Facebook Research, and the Higher Education Commission (HEC) of Pakistan. I have served as an editor for various top journals including (1) <em>IEEE Communications Magazine</em>; (2) <em>Springer Nature Big Data Analytics journal</em>; (3) <em>IEEE Access</em>; and currently serve as an Associate Editor of <em>Frontiers in Communications and Networks</em>. Finally, I have extensive experience in successfully supervising research students (both post-graduate and undergraduate).",
+                      "text": "Research funding and leadership: I have won competitive grants from the Qatar Research, Development, and Innovation (QRDI) Council, the Qatar National Research Fund (QNRF), Qatar University, the British Embassy Doha (Gulf Strategy Fund), Facebook Research, and the Higher Education Commission (HEC) of Pakistan. I have served as an editor for various top journals including (1) IEEE Communications Magazine; (2) Springer Nature Big Data Analytics journal; (3) IEEE Access; and currently serve as an Associate Editor of Frontiers in Communications and Networks. Finally, I have extensive experience in successfully supervising research students (both post-graduate and undergraduate)."
+                    },
+                    {
+                      "html": "<em><strong>Citation statistics (September 2026)</strong></em>: <a href=\"https://scholar.google.com/citations?user=EdPPQToAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Google Scholar</strong></a>: <em>Citations 26,500+; h-index 80+; i10-index 230+</em>; <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per SCOPUS</strong></a>: <em>Citations 13,450+; h-index 60+</em>; <a href=\"https://www.webofscience.com/wos/author/record/847810\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Clarivate Analytics WOS</strong></a>: <em>Citations 8,000+; h-index 47+</em>.",
+                      "text": "Citation statistics (September 2026): As per Google Scholar: Citations 26,500+; h-index 80+; i10-index 230+; As per SCOPUS: Citations 13,450+; h-index 60+; As per Clarivate Analytics WOS: Citations 8,000+; h-index 47+."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong>Teaching Skills</strong>",
+              "text": "Teaching Skills",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "<strong><em>Recognized for quality teaching:</em></strong> I am committed to continuous self-improvement in my teaching and strive to create student-centered learning environments in my classroom that foster creativity, understanding, and innovation. I consistently obtained high feedback scores from students' evaluations (85% on average). <em>I have been awarded the highest national teaching award in Pakistan and the Qatar University College of Engineering Dean's Award for Excellence in Teaching (2026), in addition to being nominated for institutional teaching awards</em>.",
+                      "text": "Recognized for quality teaching: I am committed to continuous self-improvement in my teaching and strive to create student-centered learning environments in my classroom that foster creativity, understanding, and innovation. I consistently obtained high feedback scores from students' evaluations (85% on average). I have been awarded the highest national teaching award in Pakistan and the Qatar University College of Engineering Dean's Award for Excellence in Teaching (2026), in addition to being nominated for institutional teaching awards."
+                    },
+                    {
+                      "html": "<strong><em>Instructional design skills:</em></strong> I have a strong personal interest in educational psychology, pedagogy, and instructional design (especially, multimedia learning). As a sample of the quality of the instructional design of my teaching resources (including lecture slides, and associated web resources), an open online course that I created for the Virtual University of Pakistan can be seen online at <em>http://sites.google.com/site/netperfeval/</em>. Video lectures of this course are also available for viewing at VU's Youtube channel: <em>http://youtube.com/vu</em>.",
+                      "text": "Instructional design skills: I have a strong personal interest in educational psychology, pedagogy, and instructional design (especially, multimedia learning). As a sample of the quality of the instructional design of my teaching resources (including lecture slides, and associated web resources), an open online course that I created for the Virtual University of Pakistan can be seen online at http://sites.google.com/site/netperfeval/. Video lectures of this course are also available for viewing at VU's Youtube channel: http://youtube.com/vu."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong>Leadership/Administrative Experience</strong>",
+              "text": "Leadership/Administrative Experience",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Served as the <strong><em>Chairperson</em> of the Electrical Engineering department</strong> at the Information Technology University (ITU), Lahore, Pakistan from January 2019 to January 2021. I played a leading role in transforming the quality management practices in the Electrical Engineering department and ensuring compliance to Outcome-Based Education (OBE) and Continuous Quality Improvement (CQI) best practices.",
+                      "text": "Served as the Chairperson of the Electrical Engineering department at the Information Technology University (ITU), Lahore, Pakistan from January 2019 to January 2021. I played a leading role in transforming the quality management practices in the Electrical Engineering department and ensuring compliance to Outcome-Based Education (OBE) and Continuous Quality Improvement (CQI) best practices."
+                    },
+                    {
+                      "html": "Served as the <em>Knowledge Group Head</em> of the <em>Communications and Networks</em> knowledge group of the Electrical Engineering Department of SEECS, NUST during the year 2010/2011.",
+                      "text": "Served as the Knowledge Group Head of the Communications and Networks knowledge group of the Electrical Engineering Department of SEECS, NUST during the year 2010/2011."
+                    },
+                    {
+                      "html": "Served as the <em>Deputy Head of Department</em> of Electrical Engineering Department at the School of Electrical Engineering and Computer Science (SEECS), NUST, Pakistan in 2009.",
+                      "text": "Served as the Deputy Head of Department of Electrical Engineering Department at the School of Electrical Engineering and Computer Science (SEECS), NUST, Pakistan in 2009."
+                    },
+                    {
+                      "html": "Served as the <em>Director</em> of the <em>IHSAN lab</em>, established in 2016 at ITU-Punjab, Lahore. IHSAN lab is focused on research problems related to ICTD, systems, data analytics, and networking research. Served as the <em>Director</em> of the <em>Cognet lab</em>, established in 2010 at NUST, which focused on research problems related to cognitive radio networks. I also served as the <em>Director</em> of the <em>“IP technology Center of Excellence”</em> that was established jointly with Pakistan Telecommunication Corporation Limited (PTCL) and Cisco Systems in 2008.",
+                      "text": "Served as the Director of the IHSAN lab, established in 2016 at ITU-Punjab, Lahore. IHSAN lab is focused on research problems related to ICTD, systems, data analytics, and networking research. Served as the Director of the Cognet lab, established in 2010 at NUST, which focused on research problems related to cognitive radio networks. I also served as the Director of the “IP technology Center of Excellence” that was established jointly with Pakistan Telecommunication Corporation Limited (PTCL) and Cisco Systems in 2008."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong>Industry Experience</strong>",
+              "text": "Industry Experience",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Significant industrial experience of <em>3 years</em>, having worked in the data centers of National Telecom Corporation (NTC) in 2003, and participated in the design and establishment of managing <em>Pakistan Internet Exchange</em> at Pakistan Telecommunication Corporation Limited (PTCL) in 2001.",
+                      "text": "Significant industrial experience of 3 years, having worked in the data centers of National Telecom Corporation (NTC) in 2003, and participated in the design and establishment of managing Pakistan Internet Exchange at Pakistan Telecommunication Corporation Limited (PTCL) in 2001."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "<strong>PhD Computer Science and Engineering</strong> 2008 University of New South Wales, Australia.",
+              "text": "PhD Computer Science and Engineering 2008 University of New South Wales, Australia."
+            },
+            {
+              "html": "<strong>BSc Electrical Engineering</strong> 2000 University of Engineering and Technology, Lahore, Pakistan.",
+              "text": "BSc Electrical Engineering 2000 University of Engineering and Technology, Lahore, Pakistan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "awards-and-honors",
+      "title": "Awards and Honors",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "[item removed]",
+              "text": "[item removed]"
+            },
+            {
+              "html": "Winner of the <strong>Qatar University Outstanding Faculty Service Award (OFSA)</strong> for the Academic Year 2025 - 2026 (an annual award given to a single recipient from the university's more than 2000-member-strong faculty).",
+              "text": "Winner of the Qatar University Outstanding Faculty Service Award (OFSA) for the Academic Year 2025 - 2026 (an annual award given to a single recipient from the university's more than 2000-member-strong faculty)."
+            },
+            {
+              "html": "Winner of the QU College of Engineering <strong>Dean's Award for Excellence in Teaching</strong>, May 2026 (an annual award given to a single recipient from the college's more than 150-member-strong faculty).",
+              "text": "Winner of the QU College of Engineering Dean's Award for Excellence in Teaching, May 2026 (an annual award given to a single recipient from the college's more than 150-member-strong faculty)."
+            },
+            {
+              "html": "Winner of the QU College of Engineering <strong>Dean's Award for Excellence in Service</strong>, May 2025 (an annual award given to a single recipient from the college's more than 150-member-strong faculty).",
+              "text": "Winner of the QU College of Engineering Dean's Award for Excellence in Service, May 2025 (an annual award given to a single recipient from the college's more than 150-member-strong faculty)."
+            },
+            {
+              "html": "Winner of the QU College of Engineering <strong>Dean's Award for Excellence in Research</strong>, May 2024 (an annual award given to a single recipient from the college's more than 150-member-strong faculty).",
+              "text": "Winner of the QU College of Engineering Dean's Award for Excellence in Research, May 2024 (an annual award given to a single recipient from the college's more than 150-member-strong faculty)."
+            },
+            {
+              "html": "<strong>IEEE Education Society Distinguished Lecturer</strong> 2025–2026.",
+              "text": "IEEE Education Society Distinguished Lecturer 2025–2026."
+            },
+            {
+              "html": "<strong>ACM's Distinguished Speaker</strong> 2020–2026.",
+              "text": "ACM's Distinguished Speaker 2020–2026."
+            },
+            {
+              "html": "<strong>ACM Senior Member</strong>, 2020. (This membership grade recognizes those who have demonstrated performance through technical leadership, and technical or professional contributions.)",
+              "text": "ACM Senior Member, 2020. (This membership grade recognizes those who have demonstrated performance through technical leadership, and technical or professional contributions.)"
+            },
+            {
+              "html": "Awarded the <strong>Best Paper Award</strong> for the following conferences:",
+              "text": "Awarded the Best Paper Award for the following conferences:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "12th EAI International Wireless Internet Conference (WICON) 2019, TaiChung, Taiwan.",
+                      "text": "12th EAI International Wireless Internet Conference (WICON) 2019, TaiChung, Taiwan."
+                    },
+                    {
+                      "html": "2nd IEEE International Conference on Advancements in Computational Sciences (ICACS'19), Lahore, Pakistan.",
+                      "text": "2nd IEEE International Conference on Advancements in Computational Sciences (ICACS'19), Lahore, Pakistan."
+                    },
+                    {
+                      "html": "7th International Conference on Computer and Communication Engineering (ICCCE), Kuala Lumpur, Malaysia, 2018.",
+                      "text": "7th International Conference on Computer and Communication Engineering (ICCCE), Kuala Lumpur, Malaysia, 2018."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "IEEE Global Engineering Education Conference (EDUCON) <strong>Most Cited Paper</strong> granted for the paper, “Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education”, at IEEE EDUCON 2025, London, UK.",
+              "text": "IEEE Global Engineering Education Conference (EDUCON) Most Cited Paper granted for the paper, “Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education”, at IEEE EDUCON 2025, London, UK."
+            },
+            {
+              "html": "Awarded <strong>1st Prize in the 2023 IEEE Engineering in Medicine and Biology Prize Paper Award</strong> for the paper, “Secure and Robust Machine Learning for Healthcare: A Survey,” published in IEEE Reviews in Biomedical Engineering (RBME) in 2020.",
+              "text": "Awarded 1st Prize in the 2023 IEEE Engineering in Medicine and Biology Prize Paper Award for the paper, “Secure and Robust Machine Learning for Healthcare: A Survey,” published in IEEE Reviews in Biomedical Engineering (RBME) in 2020."
+            },
+            {
+              "html": "Awarded the <strong>Outstanding Paper Award</strong> in the 2023 Emerald Literati Awards for the article, “Toward accountable human-centered AI: rationale and promising directions,” published in the Emerald Journal of Information, Communication and Ethics in Society.",
+              "text": "Awarded the Outstanding Paper Award in the 2023 Emerald Literati Awards for the article, “Toward accountable human-centered AI: rationale and promising directions,” published in the Emerald Journal of Information, Communication and Ethics in Society."
+            },
+            {
+              "html": "Awarded the <strong>Best University Teacher Award</strong> by the Higher Education Commission (HEC) of Pakistan for the year 2012-2013. (<em>This is the highest national teaching award in Pakistan</em>).",
+              "text": "Awarded the Best University Teacher Award by the Higher Education Commission (HEC) of Pakistan for the year 2012-2013. (This is the highest national teaching award in Pakistan)."
+            },
+            {
+              "html": "<strong>IEEE Senior Member</strong>, 2014. (This membership grade recognizes “significant professional technical accomplishment” and is conferred to less than 8% of the IEEE's 460,000+ members.)",
+              "text": "IEEE Senior Member, 2014. (This membership grade recognizes “significant professional technical accomplishment” and is conferred to less than 8% of the IEEE's 460,000+ members.)"
+            },
+            {
+              "html": "Editor's Choice Article, MDPI Future Internet, First Half of 2023, <em>Quantum Computing for Healthcare: A Review</em> (<a href=\"https://doi.org/10.3390/fi15030094\" target=\"_blank\" rel=\"noopener noreferrer\">https://doi.org/10.3390/fi15030094</a>).",
+              "text": "Editor's Choice Article, MDPI Future Internet, First Half of 2023, Quantum Computing for Healthcare: A Review (https://doi.org/10.3390/fi15030094)."
+            },
+            {
+              "html": "Selected as the Associate Editor of the month by IEEE Access, May 2016.",
+              "text": "Selected as the Associate Editor of the month by IEEE Access, May 2016."
+            },
+            {
+              "html": "Recipient of the <strong>Australian Postgraduate Award (APA) PhD scholarship</strong>, 2006 to 2008.",
+              "text": "Recipient of the Australian Postgraduate Award (APA) PhD scholarship, 2006 to 2008."
+            },
+            {
+              "html": "Recipient of the <strong>Higher Education Commission (HEC) Split PhD scholarship</strong>, 2002.",
+              "text": "Recipient of the Higher Education Commission (HEC) Split PhD scholarship, 2002."
+            },
+            {
+              "html": "Paper shortlisted for the best paper award in IEEE WoWMoM 2008. <em>My paper was one of the three finalists shortlisted for this award.</em>",
+              "text": "Paper shortlisted for the best paper award in IEEE WoWMoM 2008. My paper was one of the three finalists shortlisted for this award."
+            },
+            {
+              "html": "Nominated for the HEC best teacher award <em>two times</em>—first for 2011 and the second for 2012-2013. <em>(In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.)</em> Nominated for the best teacher award from the `Communication and Networks' knowledge group at SEECS, NUST in 2012.",
+              "text": "Nominated for the HEC best teacher award two times—first for 2011 and the second for 2012-2013. (In both these cases, I was among the two best teacher nominations from NUST from more than 15 colleges of NUST.) Nominated for the best teacher award from the `Communication and Networks' knowledge group at SEECS, NUST in 2012."
+            },
+            {
+              "html": "Awarded the <strong>Best Poster Award</strong> for supervising the Qatar University Annual Research Forum &amp; Exhibition (QUARFE)'25 Best Poster Award in Information and Communications Technologies discipline (Undergraduate Students).",
+              "text": "Awarded the Best Poster Award for supervising the Qatar University Annual Research Forum & Exhibition (QUARFE)'25 Best Poster Award in Information and Communications Technologies discipline (Undergraduate Students)."
+            },
+            {
+              "html": "Included in the list of top scientists by researchers (<strong>Top 2% of Researchers Worldwide</strong>) from Stanford University led by Dr. John PA Ioannidis in terms of productivity and impact in the years 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, and for career-long impact.",
+              "text": "Included in the list of top scientists by researchers (Top 2% of Researchers Worldwide) from Stanford University led by Dr. John PA Ioannidis in terms of productivity and impact in the years 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, and for career-long impact."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "courses-taught",
+      "title": "Courses Taught",
+      "blocks": [
+        {
+          "heading": "<strong>Undergraduate Courses</strong>:",
+          "items": [
+            {
+              "html": "Artificial Neural Networks (Fall 2022) [Qatar University];",
+              "text": "Artificial Neural Networks (Fall 2022) [Qatar University];"
+            },
+            {
+              "html": "Computer Ethics (Fall 2024) [Qatar University];",
+              "text": "Computer Ethics (Fall 2024) [Qatar University];"
+            },
+            {
+              "html": "Computer and Communications Networks (Spring 2012, Spring 2013) [NUST], (Fall 2019) [ITU];",
+              "text": "Computer and Communications Networks (Spring 2012, Spring 2013) [NUST], (Fall 2019) [ITU];"
+            },
+            {
+              "html": "Computer Networks (Spring 2009, Fall 2014) [NUST];",
+              "text": "Computer Networks (Spring 2009, Fall 2014) [NUST];"
+            },
+            {
+              "html": "Data Communications and Computer Networks (Spring 2011; Fall 2011) [NUST], (Spring 2016) [ITU];",
+              "text": "Data Communications and Computer Networks (Spring 2011; Fall 2011) [NUST], (Spring 2016) [ITU];"
+            },
+            {
+              "html": "Data Communications and Computer Networks I (Fall 2024; Fall 2025) [Qatar University];",
+              "text": "Data Communications and Computer Networks I (Fall 2024; Fall 2025) [Qatar University];"
+            },
+            {
+              "html": "Data Communications and Computer Networks II (Spring 2022; Spring 2023) [Qatar University];",
+              "text": "Data Communications and Computer Networks II (Spring 2022; Spring 2023) [Qatar University];"
+            },
+            {
+              "html": "Electronics Workbench (Fall 2020) [ITU];",
+              "text": "Electronics Workbench (Fall 2020) [ITU];"
+            },
+            {
+              "html": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU];",
+              "text": "Ethics, Values, and Technology (Spring 2018/ 2019/ 2021) [ITU];"
+            },
+            {
+              "html": "Fundamentals of ICT (Fall 2008) [NUST];",
+              "text": "Fundamentals of ICT (Fall 2008) [NUST];"
+            },
+            {
+              "html": "Introduction to Robotics (Fall 2021/ 2023) [Qatar University];",
+              "text": "Introduction to Robotics (Fall 2021/ 2023) [Qatar University];"
+            },
+            {
+              "html": "Linear Algebra (Spring 2018) [ITU];",
+              "text": "Linear Algebra (Spring 2018) [ITU];"
+            },
+            {
+              "html": "Signals and Systems (Spring 2010/ 2014/ 2015) [NUST], (Spring 2016) [ITU];",
+              "text": "Signals and Systems (Spring 2010/ 2014/ 2015) [NUST], (Spring 2016) [ITU];"
+            }
+          ]
+        },
+        {
+          "heading": "<strong>Graduate Courses</strong>:",
+          "items": [
+            {
+              "html": "Advanced Computer Networks (Fall 2009/ 2010/ 2012/ 2013/ 2014/ 2015) [NUST], (Fall 2017) [ITU];",
+              "text": "Advanced Computer Networks (Fall 2009/ 2010/ 2012/ 2013/ 2014/ 2015) [NUST], (Fall 2017) [ITU];"
+            },
+            {
+              "html": "Advanced Mathematics: Optimization Methods (Fall 2018/ Spring 2020) [ITU];",
+              "text": "Advanced Mathematics: Optimization Methods (Fall 2018/ Spring 2020) [ITU];"
+            },
+            {
+              "html": "Advanced Robotics (Fall 2022/ Fall 2025) [Qatar University];",
+              "text": "Advanced Robotics (Fall 2022/ Fall 2025) [Qatar University];"
+            },
+            {
+              "html": "Advanced Topics in Networking (Software Defined Networks, in Summer 2013) [NUST];",
+              "text": "Advanced Topics in Networking (Software Defined Networks, in Summer 2013) [NUST];"
+            },
+            {
+              "html": "Advanced Topics in Networking (Cognitive Radio Networks (Summer 2010)) [NUST];",
+              "text": "Advanced Topics in Networking (Cognitive Radio Networks (Summer 2010)) [NUST];"
+            },
+            {
+              "html": "Algorithm Design and Modelling (Spring 2024) [Qatar University];",
+              "text": "Algorithm Design and Modelling (Spring 2024) [Qatar University];"
+            },
+            {
+              "html": "Analysis of Stochastic Systems [aka Advanced Probability and Statistics] (Fall 2017/ 2020) [ITU];",
+              "text": "Analysis of Stochastic Systems [aka Advanced Probability and Statistics] (Fall 2017/ 2020) [ITU];"
+            },
+            {
+              "html": "Embedded Computing Systems (Fall 2023; Fall 2025) [Qatar University];",
+              "text": "Embedded Computing Systems (Fall 2023; Fall 2025) [Qatar University];"
+            },
+            {
+              "html": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan]).",
+              "text": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan])."
+            },
+            {
+              "html": "Special Topics in Computer Science/Engineering [Embedded Artificial Intelligence] (Spring 2022) [Qatar University].",
+              "text": "Special Topics in Computer Science/Engineering [Embedded Artificial Intelligence] (Spring 2022) [Qatar University]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-funding",
+      "title": "Research Funding",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "Lead PI for the project <strong>Qatar Research, Development, and Innovation (QRDI) – Advancing Neuro and Mental Health Research (ANMR) Call</strong>, “<em>Integrating Generative AI with Traditional Islamically Integrated Psychotherapy (TIIP) for Religious OCD</em>” (ANMR01-0219-250044), 2025 (amount: 300,000 USD).",
+              "text": "Lead PI for the project Qatar Research, Development, and Innovation (QRDI) – Advancing Neuro and Mental Health Research (ANMR) Call, “Integrating Generative AI with Traditional Islamically Integrated Psychotherapy (TIIP) for Religious OCD” (ANMR01-0219-250044), 2025 (amount: 300,000 USD)."
+            },
+            {
+              "html": "PI for the project <strong>Gulf Strategy Fund 2024–2025</strong>, “<em>Strengthening AI Capacity for Humanitarian Organizations in Qatar</em>” (amount: 68,231 GBP), 2025. This scoping project, funded by the <strong>British Embassy Doha</strong> in collaboration with the Qatar Ministry of Foreign Affairs (MOFA), the AI Committee of the Ministry of Communications and IT, and QRDI, aims to foster Qatar–UK cooperation in AI.",
+              "text": "PI for the project Gulf Strategy Fund 2024–2025, “Strengthening AI Capacity for Humanitarian Organizations in Qatar” (amount: 68,231 GBP), 2025. This scoping project, funded by the British Embassy Doha in collaboration with the Qatar Ministry of Foreign Affairs (MOFA), the AI Committee of the Ministry of Communications and IT, and QRDI, aims to foster Qatar–UK cooperation in AI."
+            },
+            {
+              "html": "Principal Investigator (PI) for the project <strong>Qatar University High Impact Grant</strong>, “<em>SEED - Humanizing Generative AI in Higher Education: Governance Strategies for Student Empowerment and Ethical Deployment in Qatar's Universities</em>” (QUHI-CLAW-25/26-775), 2024 (amount: 600,000 QAR).",
+              "text": "Principal Investigator (PI) for the project Qatar University High Impact Grant, “SEED - Humanizing Generative AI in Higher Education: Governance Strategies for Student Empowerment and Ethical Deployment in Qatar's Universities” (QUHI-CLAW-25/26-775), 2024 (amount: 600,000 QAR)."
+            },
+            {
+              "html": "PI for the project <strong>Qatar Research, Development, and Innovation (QRDI) Institute Academic Research Grant (ARG)</strong>, “<em>Unveiling the Ethical and Safety Dimensions of AI Foundation Models: A Sandbox Approach</em>” (ARG01-0525-230348), 2023 (amount: 500,000 USD).",
+              "text": "PI for the project Qatar Research, Development, and Innovation (QRDI) Institute Academic Research Grant (ARG), “Unveiling the Ethical and Safety Dimensions of AI Foundation Models: A Sandbox Approach” (ARG01-0525-230348), 2023 (amount: 500,000 USD)."
+            },
+            {
+              "html": "Lead PI for the project <strong>Qatar University High Impact Grant</strong>, “<em>Towards Robust Ethical and Pro-Social Artificial Intelligence Enabled Extended Reality (AI-XR) Metaverse Applications</em>” (QUHI-CENG-23/24-127), 2022 (amount: 600,000 QAR).",
+              "text": "Lead PI for the project Qatar University High Impact Grant, “Towards Robust Ethical and Pro-Social Artificial Intelligence Enabled Extended Reality (AI-XR) Metaverse Applications” (QUHI-CENG-23/24-127), 2022 (amount: 600,000 QAR)."
+            },
+            {
+              "html": "PI for the project, “<em>Development of Human-Centric Robust ML-Driven IoT Smart Services</em>”, winner of award from <strong>Qatar National Research Fund (QNRF) National Priorities Research Program (NPRP)</strong> (ID: NPRP13S-0206-200273) in 2021 (amount: 339,772.00 USD).",
+              "text": "PI for the project, “Development of Human-Centric Robust ML-Driven IoT Smart Services”, winner of award from Qatar National Research Fund (QNRF) National Priorities Research Program (NPRP) (ID: NPRP13S-0206-200273) in 2021 (amount: 339,772.00 USD)."
+            },
+            {
+              "html": "LPI for the project, “<em>Culturally informed pro-social AI regulation and persuasion framework</em>”, winner of award from <strong>Facebook Research Ethics in AI for Asia-Pacific Initiative</strong> in 2020 (amount: 30,000 USD).",
+              "text": "LPI for the project, “Culturally informed pro-social AI regulation and persuasion framework”, winner of award from Facebook Research Ethics in AI for Asia-Pacific Initiative in 2020 (amount: 30,000 USD)."
+            },
+            {
+              "html": "LPI for the project, “<strong>Efficient routing in multi-radio dynamic-spectrum-access wireless mesh networks</strong>”, funded by the <strong>Higher Education Commission (HEC) of Pakistan</strong> in 2011 (amount: 3 million PKR).",
+              "text": "LPI for the project, “Efficient routing in multi-radio dynamic-spectrum-access wireless mesh networks”, funded by the Higher Education Commission (HEC) of Pakistan in 2011 (amount: 3 million PKR)."
+            },
+            {
+              "html": "Consultant, “Reinforcement Learning Model and Algorithm for Trust and Reputation Management to Counter Advanced and Complex Attacks in Wireless Networks”, funded by <strong>Malaysia's Ministry of Education's Fundamental Research Grant Scheme</strong> in 2014; PI: Dr. Yau Kok-Lim, Sunway University, Malaysia.",
+              "text": "Consultant, “Reinforcement Learning Model and Algorithm for Trust and Reputation Management to Counter Advanced and Complex Attacks in Wireless Networks”, funded by Malaysia's Ministry of Education's Fundamental Research Grant Scheme in 2014; PI: Dr. Yau Kok-Lim, Sunway University, Malaysia."
+            },
+            {
+              "html": "Supervisor (Student Grant), “Using Embedded Machine Learning in the Physical World to Detect Toxicity and Anti-Socialness in Spoken Language”, <strong>Qatar University Student Grant 2023</strong> Cycle #1 2023 (amount: 14000 QAR).",
+              "text": "Supervisor (Student Grant), “Using Embedded Machine Learning in the Physical World to Detect Toxicity and Anti-Socialness in Spoken Language”, Qatar University Student Grant 2023 Cycle #1 2023 (amount: 14000 QAR)."
+            },
+            {
+              "html": "Supervisor (Student Grant), “Secure and Robust Deep Reinforcement Controllers for Self-Driving Cars”, <strong>Qatar University Student Grant 2023</strong> Cycle #1 2023 (amount: 7000 QAR).",
+              "text": "Supervisor (Student Grant), “Secure and Robust Deep Reinforcement Controllers for Self-Driving Cars”, Qatar University Student Grant 2023 Cycle #1 2023 (amount: 7000 QAR)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "professional-services",
+      "title": "Professional Services",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "<strong><em>Standards Leadership</em>:</strong>",
+              "text": "Standards Leadership:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Chair of the Subgroup on “AI for Teaching and Learning” for the IEEE P3722 Guide for Responsible Artificial Intelligence (AI) in Higher Education Working Group, 2025–2027.",
+                      "text": "Chair of the Subgroup on “AI for Teaching and Learning” for the IEEE P3722 Guide for Responsible Artificial Intelligence (AI) in Higher Education Working Group, 2025–2027."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Advisory Board</em>:</strong>",
+              "text": "Advisory Board:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Advisory board member, AI Center, Islamic University of Madinah, Kingdom of Saudi Arabia.",
+                      "text": "Advisory board member, AI Center, Islamic University of Madinah, Kingdom of Saudi Arabia."
+                    },
+                    {
+                      "html": "Editorial Advisory Board for “Applications of Machine Learning in UAV Networks”, IGI Global (Editors: Jahan Hassan and Saeed Alsamhi).",
+                      "text": "Editorial Advisory Board for “Applications of Machine Learning in UAV Networks”, IGI Global (Editors: Jahan Hassan and Saeed Alsamhi)."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Editorial Services</em>:</strong>",
+              "text": "Editorial Services:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Associate Editor in Frontiers in Communications and Networks - IoT and Sensor Networks (2020–present)",
+                      "text": "Associate Editor in Frontiers in Communications and Networks - IoT and Sensor Networks (2020–present)"
+                    },
+                    {
+                      "html": "Associate Editor: IEEE Access (2014–2018);",
+                      "text": "Associate Editor: IEEE Access (2014–2018);"
+                    },
+                    {
+                      "html": "Associate Technical Editor: IEEE Communications Magazine (2015–2018);",
+                      "text": "Associate Technical Editor: IEEE Communications Magazine (2015–2018);"
+                    },
+                    {
+                      "html": "Editorial Board Member: Springer Nature/BMC Big Data Analytics (2015–2021);",
+                      "text": "Editorial Board Member: Springer Nature/BMC Big Data Analytics (2015–2021);"
+                    },
+                    {
+                      "html": "Associate Editor: Springer Human-Centric Computing and Information Sciences (2016–2020);",
+                      "text": "Associate Editor: Springer Human-Centric Computing and Information Sciences (2016–2020);"
+                    },
+                    {
+                      "html": "Academic Editor: Hindawi Wireless Communications and Mobile Computing (2018).",
+                      "text": "Academic Editor: Hindawi Wireless Communications and Mobile Computing (2018)."
+                    },
+                    {
+                      "html": "Guest Editorials:",
+                      "text": "Guest Editorials:",
+                      "children": [
+                        {
+                          "items": [
+                            {
+                              "html": "Guest Editor of the Special Issue “Data-Driven Analytical Approaches to Combat COVID-19” in Big Data Analytics (BMC Central), 2020.",
+                              "text": "Guest Editor of the Special Issue “Data-Driven Analytical Approaches to Combat COVID-19” in Big Data Analytics (BMC Central), 2020."
+                            },
+                            {
+                              "html": "Guest Editor of the Special Issue “<em>AI-powered IoT for Intelligent Systems and Smart Applications</em>”, Frontiers in Communications and Networks IoT and Sensor Networks, October 2020.",
+                              "text": "Guest Editor of the Special Issue “AI-powered IoT for Intelligent Systems and Smart Applications”, Frontiers in Communications and Networks IoT and Sensor Networks, October 2020."
+                            },
+                            {
+                              "html": "Guest Editor of the Special Issue “<em>Big Data and Computational Intelligence for Agile Wireless IoT</em>” in IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI), May 2019.",
+                              "text": "Guest Editor of the Special Issue “Big Data and Computational Intelligence for Agile Wireless IoT” in IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI), May 2019."
+                            },
+                            {
+                              "html": "Lead Guest Editor of Feature Topic on “<em>Computational Intelligence for Mobile Network Optimization</em>” in IEEE Computational Intelligence Magazine, February 2018.",
+                              "text": "Lead Guest Editor of Feature Topic on “Computational Intelligence for Mobile Network Optimization” in IEEE Computational Intelligence Magazine, February 2018."
+                            },
+                            {
+                              "html": "Guest Editor of the Special Issue “<em>Towards Enhancement of Communication Systems, Networks and Applications for Smart Environment</em>” in Springer Journal of Ambient Intelligent and Humanized Computing, 2018.",
+                              "text": "Guest Editor of the Special Issue “Towards Enhancement of Communication Systems, Networks and Applications for Smart Environment” in Springer Journal of Ambient Intelligent and Humanized Computing, 2018."
+                            },
+                            {
+                              "html": "Lead Guest Editor of Special Section on “<em>Health Informatics for the Developing World</em>” in IEEE Access, September 2017.",
+                              "text": "Lead Guest Editor of Special Section on “Health Informatics for the Developing World” in IEEE Access, September 2017."
+                            },
+                            {
+                              "html": "Lead Guest Editor of Feature Topic on “<em>Wireless Technologies for Development</em>” in IEEE Communications Magazine, July 2016.",
+                              "text": "Lead Guest Editor of Feature Topic on “Wireless Technologies for Development” in IEEE Communications Magazine, July 2016."
+                            },
+                            {
+                              "html": "Lead Guest Editor of Special Section on “<em>Artificial Intelligence Enabled Networking</em>” in IEEE Access, December 2015.",
+                              "text": "Lead Guest Editor of Special Section on “Artificial Intelligence Enabled Networking” in IEEE Access, December 2015."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Conference Organization</em>:</strong>",
+              "text": "Conference Organization:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Advisory Board Member, First International Conference on AI &amp; DA (CAIDA), Riyadh, April, 2021.",
+                      "text": "Advisory Board Member, First International Conference on AI & DA (CAIDA), Riyadh, April, 2021."
+                    },
+                    {
+                      "html": "Organizing Committee, ACM SIGCOMM On-line Networking Education Community Discussion, <em>Teaching and learning computer networking during the pandemic, and beyond</em>, August 2020.",
+                      "text": "Organizing Committee, ACM SIGCOMM On-line Networking Education Community Discussion, Teaching and learning computer networking during the pandemic, and beyond, August 2020."
+                    },
+                    {
+                      "html": "Emerging Technologies Track Co-Chair, First International Conference of Smart Systems and Emerging Technologies (SmartTech'20), Riyadh, Saudi Arabia, November 3-5, 2020",
+                      "text": "Emerging Technologies Track Co-Chair, First International Conference of Smart Systems and Emerging Technologies (SmartTech'20), Riyadh, Saudi Arabia, November 3-5, 2020"
+                    },
+                    {
+                      "html": "Symposium Co-Chair, Smart Cities Symposium in International Wireless Communications &amp; Mobile Computing Conference (IWCMC 2020), Limassol, Cyprus, June-July 2020.",
+                      "text": "Symposium Co-Chair, Smart Cities Symposium in International Wireless Communications & Mobile Computing Conference (IWCMC 2020), Limassol, Cyprus, June-July 2020."
+                    },
+                    {
+                      "html": "Track Co-Chair, Wireless Networks: Protocols, Security, and Services Track, IEEE 91st Vehicular Technology Conference (VTC2020-Spring) Antwerp, Belgium, May 2020.",
+                      "text": "Track Co-Chair, Wireless Networks: Protocols, Security, and Services Track, IEEE 91st Vehicular Technology Conference (VTC2020-Spring) Antwerp, Belgium, May 2020."
+                    },
+                    {
+                      "html": "Organizer, International GCRF UK Workshop on Innovative Wireless Solutions for The Developing World, organized in Information Technology University, Lahore, March 18 &amp; 19, 2019;",
+                      "text": "Organizer, International GCRF UK Workshop on Innovative Wireless Solutions for The Developing World, organized in Information Technology University, Lahore, March 18 & 19, 2019;"
+                    },
+                    {
+                      "html": "Track Co-Chair, Wireless Networks: Protocols, Security, and Services Track, 2019 IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019;",
+                      "text": "Track Co-Chair, Wireless Networks: Protocols, Security, and Services Track, 2019 IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019;"
+                    },
+                    {
+                      "html": "Co-Chair, Enabling 5G &amp; Beyond to support Vertical Industries Workshop, 14th International Wireless Communications &amp; Mobile Computing Conference (IWCMC), June 2018",
+                      "text": "Co-Chair, Enabling 5G & Beyond to support Vertical Industries Workshop, 14th International Wireless Communications & Mobile Computing Conference (IWCMC), June 2018"
+                    },
+                    {
+                      "html": "Program Co-Chair, IEEE Symposium on Computational Intelligence in Healthcare and E-Health (IEEE CICARE 2017), part of the IEEE Symposium Series on Computational Intelligence (SSCI'2017), Honolulu, Hawaii, USA from Nov. 27 to Dec 1, 2017.",
+                      "text": "Program Co-Chair, IEEE Symposium on Computational Intelligence in Healthcare and E-Health (IEEE CICARE 2017), part of the IEEE Symposium Series on Computational Intelligence (SSCI'2017), Honolulu, Hawaii, USA from Nov. 27 to Dec 1, 2017."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Technical Program Committee (TPC) member</em>:</strong>",
+              "text": "Technical Program Committee (TPC) member:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Communication Software, Services and Multimedia Applications Symposium, IEEE International Conference on Communications (ICC), Dublin, Ireland, 2020.",
+                      "text": "Communication Software, Services and Multimedia Applications Symposium, IEEE International Conference on Communications (ICC), Dublin, Ireland, 2020."
+                    },
+                    {
+                      "html": "Transportation, Vehicular Electronics and Telematics Track, IEEE 91st Vehicular Technology Conference (VTC2020-Spring) Antwerp, Belgium, 2020.",
+                      "text": "Transportation, Vehicular Electronics and Telematics Track, IEEE 91st Vehicular Technology Conference (VTC2020-Spring) Antwerp, Belgium, 2020."
+                    },
+                    {
+                      "html": "IEEE INFOCOM Workshop on Sustainable Networking through Machine Learning and Internet of Things, Paris, France, 2019;",
+                      "text": "IEEE INFOCOM Workshop on Sustainable Networking through Machine Learning and Internet of Things, Paris, France, 2019;"
+                    },
+                    {
+                      "html": "4th International UK-China Emerging Technology (UCET) Conference, Glasgow, August 2019;",
+                      "text": "4th International UK-China Emerging Technology (UCET) Conference, Glasgow, August 2019;"
+                    },
+                    {
+                      "html": "2nd IEEE International Conference on Latest Trends in Electrical Engineering and Computing Technologies (INTELLECT), Karachi, Pakistan, November 2019;",
+                      "text": "2nd IEEE International Conference on Latest Trends in Electrical Engineering and Computing Technologies (INTELLECT), Karachi, Pakistan, November 2019;"
+                    },
+                    {
+                      "html": "Wireless Networks: Protocols, Security, and Services Track, 2019 IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019;",
+                      "text": "Wireless Networks: Protocols, Security, and Services Track, 2019 IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019;"
+                    },
+                    {
+                      "html": "1st International Conference on Computational Sciences and Technologies (INCCST19), Pakistan, 2019;",
+                      "text": "1st International Conference on Computational Sciences and Technologies (INCCST19), Pakistan, 2019;"
+                    },
+                    {
+                      "html": "Big Data Track, Selected Areas in Communications Symposium, IEEE Global Communications Conference (Globecom'18) 2018;",
+                      "text": "Big Data Track, Selected Areas in Communications Symposium, IEEE Global Communications Conference (Globecom'18) 2018;"
+                    },
+                    {
+                      "html": "2nd International Conference on Healthcare Science and Engineering (Healthcare'18) 2018;",
+                      "text": "2nd International Conference on Healthcare Science and Engineering (Healthcare'18) 2018;"
+                    },
+                    {
+                      "html": "9th International Conference on Brain Inspired Cognitive Systems (BICS) 2018;",
+                      "text": "9th International Conference on Brain Inspired Cognitive Systems (BICS) 2018;"
+                    },
+                    {
+                      "html": "International Workshop on Big Data with Computational Intelligence for Wireless Networking, IEEE Wireless Communications and Networking Conference (WCNC) 2018;",
+                      "text": "International Workshop on Big Data with Computational Intelligence for Wireless Networking, IEEE Wireless Communications and Networking Conference (WCNC) 2018;"
+                    },
+                    {
+                      "html": "Cloud Communications and Networking Track, SAC Symposium, IEEE International Conference on Communications (ICC) 2018;",
+                      "text": "Cloud Communications and Networking Track, SAC Symposium, IEEE International Conference on Communications (ICC) 2018;"
+                    },
+                    {
+                      "html": "Big Data Track, IEEE Global Communications Conference (GLOBECOM) 2017;",
+                      "text": "Big Data Track, IEEE Global Communications Conference (GLOBECOM) 2017;"
+                    },
+                    {
+                      "html": "Second International Workshop on Data Intensive Computing and Communications for Sustainable Development (DICCSD), International Telecommunications Networks and Applications Conference (ITNAC), 2017.",
+                      "text": "Second International Workshop on Data Intensive Computing and Communications for Sustainable Development (DICCSD), International Telecommunications Networks and Applications Conference (ITNAC), 2017."
+                    },
+                    {
+                      "html": "IEEE International Conference on Emerging Technologies (ICET 2017), Islamabad, Pakistan, December 2017;",
+                      "text": "IEEE International Conference on Emerging Technologies (ICET 2017), Islamabad, Pakistan, December 2017;"
+                    },
+                    {
+                      "html": "International Conference on Information and Communication Technologies and Development (ICTD) 2017, Lahore, November 16-19, 2017;",
+                      "text": "International Conference on Information and Communication Technologies and Development (ICTD) 2017, Lahore, November 16-19, 2017;"
+                    },
+                    {
+                      "html": "Sustainable 5G Management, 3rd EAI International Conference on Smart Objects and Technologies for Social Good (GOODTECH), November 2017;",
+                      "text": "Sustainable 5G Management, 3rd EAI International Conference on Smart Objects and Technologies for Social Good (GOODTECH), November 2017;"
+                    },
+                    {
+                      "html": "8th International Workshop on Information Quality and Quality of Service for Pervasive Computing, 2017 (IQ2S'2017), to be held in conjunction with IEEE PerCom 2017;",
+                      "text": "8th International Workshop on Information Quality and Quality of Service for Pervasive Computing, 2017 (IQ2S'2017), to be held in conjunction with IEEE PerCom 2017;"
+                    },
+                    {
+                      "html": "1st IEEE International Conference on Latest Trends in Electrical Engineering and Computing Technologies (INTELLECT), Karachi, Pakistan, November 2017;",
+                      "text": "1st IEEE International Conference on Latest Trends in Electrical Engineering and Computing Technologies (INTELLECT), Karachi, Pakistan, November 2017;"
+                    },
+                    {
+                      "html": "2nd International Workshop on Future Internet Architecture for Developing Regions (FI4D), co-located with IEEE CCNC 2017;",
+                      "text": "2nd International Workshop on Future Internet Architecture for Developing Regions (FI4D), co-located with IEEE CCNC 2017;"
+                    },
+                    {
+                      "html": "IEEE International Conference on Communication, Computing and Digital Systems (C-CODE) 2017;",
+                      "text": "IEEE International Conference on Communication, Computing and Digital Systems (C-CODE) 2017;"
+                    },
+                    {
+                      "html": "IEEE Conference on Standards for Communications and Networking (CSCN) collocated with the IEEE 5G Summit, Berlin, Nov. 2016;",
+                      "text": "IEEE Conference on Standards for Communications and Networking (CSCN) collocated with the IEEE 5G Summit, Berlin, Nov. 2016;"
+                    },
+                    {
+                      "html": "8th International Conference on Brain-inspired Cognitive Systems (BICS2016);",
+                      "text": "8th International Conference on Brain-inspired Cognitive Systems (BICS2016);"
+                    },
+                    {
+                      "html": "41st IEEE Local Computer Networks Conference (LCN), 2016;",
+                      "text": "41st IEEE Local Computer Networks Conference (LCN), 2016;"
+                    },
+                    {
+                      "html": "1st International Workshop on Future Internet Architecture for Developing Regions (FI4D), co-located with IEEE CCNC 2016;",
+                      "text": "1st International Workshop on Future Internet Architecture for Developing Regions (FI4D), co-located with IEEE CCNC 2016;"
+                    },
+                    {
+                      "html": "1st IEEE International Conference on Computer Communication and the Internet (ICCCI), 2016.",
+                      "text": "1st IEEE International Conference on Computer Communication and the Internet (ICCCI), 2016."
+                    },
+                    {
+                      "html": "40th IEEE Local Computer Networks Conference (LCN), 2015;",
+                      "text": "40th IEEE Local Computer Networks Conference (LCN), 2015;"
+                    },
+                    {
+                      "html": "2nd International Conference on Software-Defined and Virtualized Future Wireless Networks (SDWN), co-located with the IOT360 Summit, 2015;",
+                      "text": "2nd International Conference on Software-Defined and Virtualized Future Wireless Networks (SDWN), co-located with the IOT360 Summit, 2015;"
+                    },
+                    {
+                      "html": "12th ACM Frontiers of Information Technology (FIT), 2014;",
+                      "text": "12th ACM Frontiers of Information Technology (FIT), 2014;"
+                    },
+                    {
+                      "html": "17th IEEE International Multitopic Conference (INMIC), 2014;",
+                      "text": "17th IEEE International Multitopic Conference (INMIC), 2014;"
+                    },
+                    {
+                      "html": "8th IEEE International Conference on Emerging Technologies (ICET), 2012.",
+                      "text": "8th IEEE International Conference on Emerging Technologies (ICET), 2012."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Invited Keynote Speaker</em></strong>:",
+              "text": "Invited Keynote Speaker:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "“Promise and Opportunities of Digital Twins: Multiplex Thinking in the Age of Complexity,” at the 2nd International Conference on Marine Engineering &amp; Technology (ICMET 2025), Muscat, Oman, November 2025.",
+                      "text": "“Promise and Opportunities of Digital Twins: Multiplex Thinking in the Age of Complexity,” at the 2nd International Conference on Marine Engineering & Technology (ICMET 2025), Muscat, Oman, November 2025."
+                    },
+                    {
+                      "html": "Plenary Speaker, 14th Excellence in Education and Learning Forum, Qatar University Center of Excellence in Teaching and Learning (CETL), June 2023.",
+                      "text": "Plenary Speaker, 14th Excellence in Education and Learning Forum, Qatar University Center of Excellence in Teaching and Learning (CETL), June 2023."
+                    },
+                    {
+                      "html": "Invited Keynote Speaker, AI's Governance and Ethical Dilemmas, 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2), Islamabad, Pakistan, May 2021.",
+                      "text": "Invited Keynote Speaker, AI's Governance and Ethical Dilemmas, 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2), Islamabad, Pakistan, May 2021."
+                    },
+                    {
+                      "html": "Distinguished Invited Talk, 11th IEEE International Conference on Open Source Systems and Technologies (ICOSST-2017), Lahore, December, 2017.",
+                      "text": "Distinguished Invited Talk, 11th IEEE International Conference on Open Source Systems and Technologies (ICOSST-2017), Lahore, December, 2017."
+                    },
+                    {
+                      "html": "Plenary Speaker, IEEE International Conference On Latest trends in Electrical Engineering &amp; Computing Technologies (INTELLECT), Karachi, Pakistan, November 2017.",
+                      "text": "Plenary Speaker, IEEE International Conference On Latest trends in Electrical Engineering & Computing Technologies (INTELLECT), Karachi, Pakistan, November 2017."
+                    },
+                    {
+                      "html": "Invited Keynote Speaker, International Wireless Communications &amp; Mobile Computing Conference (IWCMC) conference, Enabling 5G to support Vertical Industries Workshop, Valencia, Spain, June 2017.",
+                      "text": "Invited Keynote Speaker, International Wireless Communications & Mobile Computing Conference (IWCMC) conference, Enabling 5G to support Vertical Industries Workshop, Valencia, Spain, June 2017."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Tutorials</em>:</strong>",
+              "text": "Tutorials:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Master Class, “<em>Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management</em>,” World AI Summit, Doha Qatar, December 2025.",
+                      "text": "Master Class, “Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management,” World AI Summit, Doha Qatar, December 2025."
+                    },
+                    {
+                      "html": "“Developing Trustworthy Educational Metaverses using Open Source GenAI and Mixed Reality (MR) Technologies”, Tutorial at IEEE EDUCON 2024, Kos, Greece, May 2024.",
+                      "text": "“Developing Trustworthy Educational Metaverses using Open Source GenAI and Mixed Reality (MR) Technologies”, Tutorial at IEEE EDUCON 2024, Kos, Greece, May 2024."
+                    },
+                    {
+                      "html": "“The GUIDES Framework: Enhancing Engineering Education with GenAI”, full workshop (1.5 hours) at the Engineering Education and Instructional Technologies Conference EEITC'24 Conference organized by QU College of Engineering and College of Education, February 2024.",
+                      "text": "“The GUIDES Framework: Enhancing Engineering Education with GenAI”, full workshop (1.5 hours) at the Engineering Education and Instructional Technologies Conference EEITC'24 Conference organized by QU College of Engineering and College of Education, February 2024."
+                    },
+                    {
+                      "html": "“Augmentation Through Generative AI and ChatGPT: Hands-On Workshop for Students and Researchers”, 4-Day Hands-On Workshop for Students and Researchers, August 7 to August 10, 2023.",
+                      "text": "“Augmentation Through Generative AI and ChatGPT: Hands-On Workshop for Students and Researchers”, 4-Day Hands-On Workshop for Students and Researchers, August 7 to August 10, 2023."
+                    },
+                    {
+                      "html": "“Introduction to Neural Networks and Deep Learning: Fundamentals and Hands-On Implementation”, IEEE/ITU IHSAN LAB Summer Course, July 2022.",
+                      "text": "“Introduction to Neural Networks and Deep Learning: Fundamentals and Hands-On Implementation”, IEEE/ITU IHSAN LAB Summer Course, July 2022."
+                    },
+                    {
+                      "html": "Invited Tutorial Speaker, “Adversarial Machine Learning &amp; Cognitive Networks”, 6th International Conference on Data Science and Machine Learning Applications (CDMA 2020), March 4-5, 2020.",
+                      "text": "Invited Tutorial Speaker, “Adversarial Machine Learning & Cognitive Networks”, 6th International Conference on Data Science and Machine Learning Applications (CDMA 2020), March 4-5, 2020."
+                    },
+                    {
+                      "html": "“Adversarial Machine Learning &amp; Vehicular Networks: Strategies for Attack &amp; Robust Defense” at the IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019 (Co-presenter with Ala Al-Fuqaha and Muhammad Shafique);",
+                      "text": "“Adversarial Machine Learning & Vehicular Networks: Strategies for Attack & Robust Defense” at the IEEE 89th Vehicular Technology Conference (VTC) 2019-Spring, Kuala Lumpur, 2019 (Co-presenter with Ala Al-Fuqaha and Muhammad Shafique);"
+                    },
+                    {
+                      "html": "“Adversarial Machine Learning &amp; Cognitive Networks: Strategies for Attack &amp; Robust Defense” at 15th International Wireless Communications &amp; Mobile Computing Conference (IWCMC) 2019 (Co-presenter with Ala Al-Fuqaha);",
+                      "text": "“Adversarial Machine Learning & Cognitive Networks: Strategies for Attack & Robust Defense” at 15th International Wireless Communications & Mobile Computing Conference (IWCMC) 2019 (Co-presenter with Ala Al-Fuqaha);"
+                    },
+                    {
+                      "html": "“Building your own Cloud with OpenStack” at ACM Frontiers of Information Technology (FIT), December, 2014. (Co-presenter with Moiz Arif and Waqas Riaz of xFlow Research Inc.).",
+                      "text": "“Building your own Cloud with OpenStack” at ACM Frontiers of Information Technology (FIT), December, 2014. (Co-presenter with Moiz Arif and Waqas Riaz of xFlow Research Inc.)."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Session Chair/ Panel Member</em></strong>:",
+              "text": "Session Chair/ Panel Member:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Panel Member, “Bots, Brains, and Balance: The New Graduate Research Equation”, Research &amp; Graduate Studies Sector, Graduate Studies Office, Qatar University, September 2025.",
+                      "text": "Panel Member, “Bots, Brains, and Balance: The New Graduate Research Equation”, Research & Graduate Studies Sector, Graduate Studies Office, Qatar University, September 2025."
+                    },
+                    {
+                      "html": "Panel Member, “Let's Address the Elepha(AI)nt in the Room – Impact of Generative AI in Education and in the Workforce”, IEEE EDUCON 2025 Roundtable Discussion, April 2025.",
+                      "text": "Panel Member, “Let's Address the Elepha(AI)nt in the Room – Impact of Generative AI in Education and in the Workforce”, IEEE EDUCON 2025 Roundtable Discussion, April 2025."
+                    },
+                    {
+                      "html": "Panel Member, “Grand Debate: Bridging the Gap—Translating Pharmaceutical Research into Clinical Practice” at the International Pharmacy Education, Science and Practice Conference 2025, Doha, Qatar, April 2025.",
+                      "text": "Panel Member, “Grand Debate: Bridging the Gap—Translating Pharmaceutical Research into Clinical Practice” at the International Pharmacy Education, Science and Practice Conference 2025, Doha, Qatar, April 2025."
+                    },
+                    {
+                      "html": "Panel Member, Ethical Dimensions of AI-Mediated Healthcare: Issues of Automation, Augmentation, and Authenticity (Panel 27), 17th World Congress of Bioethics, Doha, Qatar, June 2024.",
+                      "text": "Panel Member, Ethical Dimensions of AI-Mediated Healthcare: Issues of Automation, Augmentation, and Authenticity (Panel 27), 17th World Congress of Bioethics, Doha, Qatar, June 2024."
+                    },
+                    {
+                      "html": "Panel Member, Panel on Ethics of AI in Surgery at the 9th AKU Annual Surgical Conference (9AASC) organized by the Aga Khan University.",
+                      "text": "Panel Member, Panel on Ethics of AI in Surgery at the 9th AKU Annual Surgical Conference (9AASC) organized by the Aga Khan University."
+                    },
+                    {
+                      "html": "Moderator of Panel Discussion on “Artificial Intelligence: Theoretical Foundations, Applications and Governing Policies” organized by the Research Center for Islamic Legislation and Ethics (CILE), Hamad bin Khalifa University (HBKU), Qatar, May 18-19, 2021.",
+                      "text": "Moderator of Panel Discussion on “Artificial Intelligence: Theoretical Foundations, Applications and Governing Policies” organized by the Research Center for Islamic Legislation and Ethics (CILE), Hamad bin Khalifa University (HBKU), Qatar, May 18-19, 2021."
+                    },
+                    {
+                      "html": "Panel Member, Panel on Privacy, Regulation, &amp; Surveillance Capitalism, Digital Bucket AI Summit, 30th March, 2021.",
+                      "text": "Panel Member, Panel on Privacy, Regulation, & Surveillance Capitalism, Digital Bucket AI Summit, 30th March, 2021."
+                    },
+                    {
+                      "html": "Session Chair, IEEE Global Communications Conference (GLOBECOM) 2020, “Security and Privacy in IoT II”.",
+                      "text": "Session Chair, IEEE Global Communications Conference (GLOBECOM) 2020, “Security and Privacy in IoT II”."
+                    },
+                    {
+                      "html": "Session Chair, International Wireless Communications &amp; Mobile Computing Conference (IWCMC), 2017;",
+                      "text": "Session Chair, International Wireless Communications & Mobile Computing Conference (IWCMC), 2017;"
+                    },
+                    {
+                      "html": "Panel Discussion Member, “Global Internet Access: An Operator's View”, ACM SIGCOMM Global Access to the Internet For All (GAIA), 2016;",
+                      "text": "Panel Discussion Member, “Global Internet Access: An Operator's View”, ACM SIGCOMM Global Access to the Internet For All (GAIA), 2016;"
+                    },
+                    {
+                      "html": "Session Chair, IEEE International Conference on Emerging Technologies (ICET), 2013;",
+                      "text": "Session Chair, IEEE International Conference on Emerging Technologies (ICET), 2013;"
+                    },
+                    {
+                      "html": "Session Chair, ACM Frontiers of Information Technology (FIT), 2013.",
+                      "text": "Session Chair, ACM Frontiers of Information Technology (FIT), 2013."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>Reviewer</em> (Selected):</strong> <em><strong>Journals/ Magazines</strong></em>:",
+              "text": "Reviewer (Selected): Journals/ Magazines:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "IEEE Access;",
+                      "text": "IEEE Access;"
+                    },
+                    {
+                      "html": "IEEE Computational Intelligence Magazine (CIM);",
+                      "text": "IEEE Computational Intelligence Magazine (CIM);"
+                    },
+                    {
+                      "html": "IEEE Communications Letters;",
+                      "text": "IEEE Communications Letters;"
+                    },
+                    {
+                      "html": "IEEE Communications Magazine;",
+                      "text": "IEEE Communications Magazine;"
+                    },
+                    {
+                      "html": "IEEE Communications Surveys and Tutorials (COMST);",
+                      "text": "IEEE Communications Surveys and Tutorials (COMST);"
+                    },
+                    {
+                      "html": "IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI);",
+                      "text": "IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI);"
+                    },
+                    {
+                      "html": "IEEE Transactions on Evolutionary Computation (TEVC);",
+                      "text": "IEEE Transactions on Evolutionary Computation (TEVC);"
+                    },
+                    {
+                      "html": "IEEE Transactions on Mobile Computing (TMC);",
+                      "text": "IEEE Transactions on Mobile Computing (TMC);"
+                    },
+                    {
+                      "html": "IEEE/ACM Transactions on Networking (ToN)",
+                      "text": "IEEE/ACM Transactions on Networking (ToN)"
+                    },
+                    {
+                      "html": "IEEE Transactions on Wireless Communications (TWC)",
+                      "text": "IEEE Transactions on Wireless Communications (TWC)"
+                    },
+                    {
+                      "html": "IEEE Wireless Communications Letters;",
+                      "text": "IEEE Wireless Communications Letters;"
+                    },
+                    {
+                      "html": "SAGE Big Data and Society;",
+                      "text": "SAGE Big Data and Society;"
+                    },
+                    {
+                      "html": "Springer Artificial Intelligence Review (AIRE);",
+                      "text": "Springer Artificial Intelligence Review (AIRE);"
+                    },
+                    {
+                      "html": "Springer Telecommunication Systems (TELS);",
+                      "text": "Springer Telecommunication Systems (TELS);"
+                    },
+                    {
+                      "html": "Springer Nature Sophia;",
+                      "text": "Springer Nature Sophia;"
+                    },
+                    {
+                      "html": "Springer Complex Adaptive Systems Modeling (CASM);",
+                      "text": "Springer Complex Adaptive Systems Modeling (CASM);"
+                    },
+                    {
+                      "html": "SpringerOpen SpringerPlus;",
+                      "text": "SpringerOpen SpringerPlus;"
+                    },
+                    {
+                      "html": "InderScience International Journal of Ad Hoc and Ubiquitous Computing (IJAHUC);",
+                      "text": "InderScience International Journal of Ad Hoc and Ubiquitous Computing (IJAHUC);"
+                    },
+                    {
+                      "html": "Hindawi International Journal of Distributed Sensor Networks (IJDSN);",
+                      "text": "Hindawi International Journal of Distributed Sensor Networks (IJDSN);"
+                    },
+                    {
+                      "html": "Elsevier Computer Communications (COMCOM);",
+                      "text": "Elsevier Computer Communications (COMCOM);"
+                    },
+                    {
+                      "html": "Elsevier Future Generation Computer Systems (FGCS);",
+                      "text": "Elsevier Future Generation Computer Systems (FGCS);"
+                    },
+                    {
+                      "html": "Elsevier Energy;",
+                      "text": "Elsevier Energy;"
+                    },
+                    {
+                      "html": "Elsevier Journal of Computational Science;",
+                      "text": "Elsevier Journal of Computational Science;"
+                    },
+                    {
+                      "html": "Elsevier Journal of Discrete Algorithms;",
+                      "text": "Elsevier Journal of Discrete Algorithms;"
+                    },
+                    {
+                      "html": "Frontiers in Robotics and AI",
+                      "text": "Frontiers in Robotics and AI"
+                    },
+                    {
+                      "html": "Cogent Arts &amp; Humanities",
+                      "text": "Cogent Arts & Humanities"
+                    },
+                    {
+                      "html": "PLOS ONE;",
+                      "text": "PLOS ONE;"
+                    },
+                    {
+                      "html": "Taylor &amp; Francis International Journal of Computer Mathematics (IJCM);",
+                      "text": "Taylor & Francis International Journal of Computer Mathematics (IJCM);"
+                    },
+                    {
+                      "html": "Taylor &amp; Francis European Journal of Engineering Education;",
+                      "text": "Taylor & Francis European Journal of Engineering Education;"
+                    },
+                    {
+                      "html": "Taylor &amp; Francis International Journal of Human-Computer Interaction (IJHCI).",
+                      "text": "Taylor & Francis International Journal of Human-Computer Interaction (IJHCI)."
+                    }
+                  ]
+                },
+                {
+                  "heading": "<em><strong>Book Series</strong></em>:",
+                  "items": [
+                    {
+                      "html": "Pearson Global Editions program.",
+                      "text": "Pearson Global Editions program."
+                    },
+                    {
+                      "html": "Springer Nature Advances in Science, Technology &amp; Innovation (ASTI) Book Series.",
+                      "text": "Springer Nature Advances in Science, Technology & Innovation (ASTI) Book Series."
+                    }
+                  ]
+                },
+                {
+                  "heading": "<em><strong>Conferences/ Workshops</strong></em>:",
+                  "items": [
+                    {
+                      "html": "American Society of Electrical Engineering (ASEE) Annual Conference and Exposition.",
+                      "text": "American Society of Electrical Engineering (ASEE) Annual Conference and Exposition."
+                    },
+                    {
+                      "html": "IEEE Global Communications Conference (GlobeCom);",
+                      "text": "IEEE Global Communications Conference (GlobeCom);"
+                    },
+                    {
+                      "html": "IEEE International Conference on Communications (ICC);",
+                      "text": "IEEE International Conference on Communications (ICC);"
+                    },
+                    {
+                      "html": "IEEE International Conference on Pervasive Computing (PerCom);",
+                      "text": "IEEE International Conference on Pervasive Computing (PerCom);"
+                    },
+                    {
+                      "html": "IEEE Vehicular Technology Conference (VTC);",
+                      "text": "IEEE Vehicular Technology Conference (VTC);"
+                    },
+                    {
+                      "html": "IEEE Local Computer Networks Conference (LCN);",
+                      "text": "IEEE Local Computer Networks Conference (LCN);"
+                    },
+                    {
+                      "html": "IEEE Consumer Communications and Networking Conference (CCNC);",
+                      "text": "IEEE Consumer Communications and Networking Conference (CCNC);"
+                    },
+                    {
+                      "html": "IEEE World of Wireless, Mobile and Multimedia Networks (WoWMoM);",
+                      "text": "IEEE World of Wireless, Mobile and Multimedia Networks (WoWMoM);"
+                    },
+                    {
+                      "html": "EAI Software-Defined and Virtualized Future Wireless Networks (SDWN);",
+                      "text": "EAI Software-Defined and Virtualized Future Wireless Networks (SDWN);"
+                    },
+                    {
+                      "html": "Conference on Neural Information Processing Systems (NeurIPS);",
+                      "text": "Conference on Neural Information Processing Systems (NeurIPS);"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>PhD Students (Main Supervisor)</em>:</strong>",
+              "text": "PhD Students (Main Supervisor):",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Mahdi Alkaeed, QU, “Sensitivity and Robustness Analysis of Large Language Models in Clinical Settings”, 2026 (Expected).",
+                      "text": "Mahdi Alkaeed, QU, “Sensitivity and Robustness Analysis of Large Language Models in Clinical Settings”, 2026 (Expected).",
+                      "n": 3
+                    },
+                    {
+                      "html": "Adnan Qayyum, ITU, “Secure and Robust Machine Learning for Healthcare”, 2024.",
+                      "text": "Adnan Qayyum, ITU, “Secure and Robust Machine Learning for Healthcare”, 2024.",
+                      "n": 2
+                    },
+                    {
+                      "html": "Muhammad Usama, ITU, “Adversarial Machine Learning and Networking Applications: Attacks &amp; Defences”, 2020.",
+                      "text": "Muhammad Usama, ITU, “Adversarial Machine Learning and Networking Applications: Attacks & Defences”, 2020.",
+                      "n": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>PhD Students (Examiner)</em>:</strong>",
+              "text": "PhD Students (Examiner):",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Asma El-Fadl, “Communication Styles, Misperception, and Social Well-Being in Digital Spaces across UK and Arab Contexts”, Hamad bin Khalifa University (HBKU), Qatar, June 2026.",
+                      "text": "Asma El-Fadl, “Communication Styles, Misperception, and Social Well-Being in Digital Spaces across UK and Arab Contexts”, Hamad bin Khalifa University (HBKU), Qatar, June 2026.",
+                      "n": 8
+                    },
+                    {
+                      "html": "Faria Nawshin, “Secure and Adversarially Robust Federated Learning for Mobile Security and Computer Vision.”, Qatar University, Doha, May 2026.",
+                      "text": "Faria Nawshin, “Secure and Adversarially Robust Federated Learning for Mobile Security and Computer Vision.”, Qatar University, Doha, May 2026.",
+                      "n": 7
+                    },
+                    {
+                      "html": "Jokha bint Ali Al-Adi, “A Method for Detecting Unknown Packets in Industrial Control Systems Using Machine Learning Techniques.”, Sultan Qaboos University, Oman, January 2026.",
+                      "text": "Jokha bint Ali Al-Adi, “A Method for Detecting Unknown Packets in Industrial Control Systems Using Machine Learning Techniques.”, Sultan Qaboos University, Oman, January 2026.",
+                      "n": 6
+                    },
+                    {
+                      "html": "Noora Mohammed Al-Maslamani, “Toward Secure Federated Learning for IoT using DRL-enabled Reputation Mechanism”, Hamad bin Khalifa University (HBKU), Qatar, May 2023.",
+                      "text": "Noora Mohammed Al-Maslamani, “Toward Secure Federated Learning for IoT using DRL-enabled Reputation Mechanism”, Hamad bin Khalifa University (HBKU), Qatar, May 2023.",
+                      "n": 5
+                    },
+                    {
+                      "html": "Haya Al-Thani, “Open-Domain Conversational Search: Addressing Challenges and Limitations Using Reformulation and Data Augmentation”, Hamad bin Khalifa University (HBKU), Qatar, April 2023.",
+                      "text": "Haya Al-Thani, “Open-Domain Conversational Search: Addressing Challenges and Limitations Using Reformulation and Data Augmentation”, Hamad bin Khalifa University (HBKU), Qatar, April 2023.",
+                      "n": 4
+                    },
+                    {
+                      "html": "Nida Saddaf Khan, “Face your fear: Human activity recognition for obsessive compulsive disorder”, Institute of Business Administration (IBA), Karachi, Pakistan. December 2022.",
+                      "text": "Nida Saddaf Khan, “Face your fear: Human activity recognition for obsessive compulsive disorder”, Institute of Business Administration (IBA), Karachi, Pakistan. December 2022.",
+                      "n": 3
+                    },
+                    {
+                      "html": "Anum Ali, “Energy efficiency in M2M communication”, University of Engineering and Technology (UET), Lahore, Pakistan. October 2019.",
+                      "text": "Anum Ali, “Energy efficiency in M2M communication”, University of Engineering and Technology (UET), Lahore, Pakistan. October 2019.",
+                      "n": 2
+                    },
+                    {
+                      "html": "Ghufran Ahmed, “Energy-Aware Routing in Wireless Sensor Networks”, Muhammad Ali Jinnah University (MAJU), Islamabad, Pakistan. April 2013.",
+                      "text": "Ghufran Ahmed, “Energy-Aware Routing in Wireless Sensor Networks”, Muhammad Ali Jinnah University (MAJU), Islamabad, Pakistan. April 2013.",
+                      "n": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>MS Students Graduated (Main Supervisor)</em>:</strong>",
+              "text": "MS Students Graduated (Main Supervisor):",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Mahmoud Jardali, Qatar University, “Data Poisoning Attacks in Medical LLMs: The Adversarial Risks of LoRA Fine-Tuning”, 2023.",
+                      "text": "Mahmoud Jardali, Qatar University, “Data Poisoning Attacks in Medical LLMs: The Adversarial Risks of LoRA Fine-Tuning”, 2023.",
+                      "n": 28
+                    },
+                    {
+                      "html": "Bayan Khalouf, Qatar University, “Transformer-Based Multi-Class Tooth Segmentation from Intraoral Image Frames Using Contrastive and Semi-Supervised Learning”, 2023.",
+                      "text": "Bayan Khalouf, Qatar University, “Transformer-Based Multi-Class Tooth Segmentation from Intraoral Image Frames Using Contrastive and Semi-Supervised Learning”, 2023.",
+                      "n": 27
+                    },
+                    {
+                      "html": "Ahlam Abu Nada, Qatar University, “Using Embedded Machine Learning in the Physical World to Detect Toxicity and Anti-Socialness in Spoken Language”, 2023.",
+                      "text": "Ahlam Abu Nada, Qatar University, “Using Embedded Machine Learning in the Physical World to Detect Toxicity and Anti-Socialness in Spoken Language”, 2023.",
+                      "n": 26
+                    },
+                    {
+                      "html": "Amir Sharif, ITU, “Analysis of Dark Web and Mitigation of Antisocial Activities”, 2021.",
+                      "text": "Amir Sharif, ITU, “Analysis of Dark Web and Mitigation of Antisocial Activities”, 2021.",
+                      "n": 25
+                    },
+                    {
+                      "html": "Muhammad Furqan Muzammil, ITU, “Analysis of COVID misinformation on WhatsApp in Pakistan”, 2021.",
+                      "text": "Muhammad Furqan Muzammil, ITU, “Analysis of COVID misinformation on WhatsApp in Pakistan”, 2021.",
+                      "n": 24
+                    },
+                    {
+                      "html": "Abdullah Shahid, ITU, “End-to-End Multi-Speaker Emotional Speech Synthesis System”, 2021.",
+                      "text": "Abdullah Shahid, ITU, “End-to-End Multi-Speaker Emotional Speech Synthesis System”, 2021.",
+                      "n": 23
+                    },
+                    {
+                      "html": "Saamia Muntaha, ITU, “Pedagogy of Artificial Intelligence: Systematic Review and Bibliometric Analysis”, 2021.",
+                      "text": "Saamia Muntaha, ITU, “Pedagogy of Artificial Intelligence: Systematic Review and Bibliometric Analysis”, 2021.",
+                      "n": 22
+                    },
+                    {
+                      "html": "Bilal Yousaf, ITU, “Frequency Spectrum Analysis of Deepfake Images”, 2021.",
+                      "text": "Bilal Yousaf, ITU, “Frequency Spectrum Analysis of Deepfake Images”, 2021.",
+                      "n": 21
+                    },
+                    {
+                      "html": "Mirza Elaaf Shuja, ITU, “(Mis)Information Dissemination in Pakistani Public WhatsApp Groups”, 2021.",
+                      "text": "Mirza Elaaf Shuja, ITU, “(Mis)Information Dissemination in Pakistani Public WhatsApp Groups”, 2021.",
+                      "n": 20
+                    },
+                    {
+                      "html": "Muhammad Ahtazaz Ahsan, ITU, “An Active Learning Method for Diabetic Retinopathy Classification using Bayesian Feature Descriptor”, 2020.",
+                      "text": "Muhammad Ahtazaz Ahsan, ITU, “An Active Learning Method for Diabetic Retinopathy Classification using Bayesian Feature Descriptor”, 2020.",
+                      "n": 19
+                    },
+                    {
+                      "html": "Khansa Rasheed, ITU, “Epileptic Seizure Prediction Using Machine Learning and EEG Signals”, 2020.",
+                      "text": "Khansa Rasheed, ITU, “Epileptic Seizure Prediction Using Machine Learning and EEG Signals”, 2020.",
+                      "n": 18
+                    },
+                    {
+                      "html": "Inaam Ilahi, ITU, “Adaptive PHY-Layer Transmission Parameter Selection for LORAWAN Using Deep Reinforcement Learning”, 2020.",
+                      "text": "Inaam Ilahi, ITU, “Adaptive PHY-Layer Transmission Parameter Selection for LORAWAN Using Deep Reinforcement Learning”, 2020.",
+                      "n": 17
+                    },
+                    {
+                      "html": "Salah-ud-din Farooq, ITU, “Adversarial Machine Learning for Self Organizing Cellular Networks”, 2019.",
+                      "text": "Salah-ud-din Farooq, ITU, “Adversarial Machine Learning for Self Organizing Cellular Networks”, 2019.",
+                      "n": 16
+                    },
+                    {
+                      "html": "Waleed Iqbal, ITU, “Analysis of Computer Networking Research: A Bibliometric Study”, 2019.",
+                      "text": "Waleed Iqbal, ITU, “Analysis of Computer Networking Research: A Bibliometric Study”, 2019.",
+                      "n": 15
+                    },
+                    {
+                      "html": "Umar Bin Farooq, ITU, “Utilizing Loss Tolerance and Bandwidth Expansion for Uplink Transmit Power Minimization and Energy Efficient User Association in HetNets”, 2018.",
+                      "text": "Umar Bin Farooq, ITU, “Utilizing Loss Tolerance and Bandwidth Expansion for Uplink Transmit Power Minimization and Energy Efficient User Association in HetNets”, 2018.",
+                      "n": 14
+                    },
+                    {
+                      "html": "Ali Harris, ITU, “Reducing In-Vehicle Phone Usage Using Persuasive Technology”, 2018.",
+                      "text": "Ali Harris, ITU, “Reducing In-Vehicle Phone Usage Using Persuasive Technology”, 2018.",
+                      "n": 13
+                    },
+                    {
+                      "html": "Yasir Khan, ITU, “Digital TB Notification Tool: Design of a Usable Data Collection Application for Physicians”, 2018.",
+                      "text": "Yasir Khan, ITU, “Digital TB Notification Tool: Design of a Usable Data Collection Application for Physicians”, 2018.",
+                      "n": 12
+                    },
+                    {
+                      "html": "Fahid Idrees, ITU, “Information Dissemination Techniques and Methodologies for Low-Literate Users”, 2018.",
+                      "text": "Fahid Idrees, ITU, “Information Dissemination Techniques and Methodologies for Low-Literate Users”, 2018.",
+                      "n": 11
+                    },
+                    {
+                      "html": "Saif ul Islam, ITU, “Design of Nudge Based Smartphone Application for Immunization”, 2017",
+                      "text": "Saif ul Islam, ITU, “Design of Nudge Based Smartphone Application for Immunization”, 2017",
+                      "n": 10
+                    },
+                    {
+                      "html": "Zafar Iqbal, ITU, “Student Admission Criteria and Student Grade Prediction”, 2017.",
+                      "text": "Zafar Iqbal, ITU, “Student Admission Criteria and Student Grade Prediction”, 2017.",
+                      "n": 9
+                    },
+                    {
+                      "html": "Mohsin Khalil, SEECS, NUST, “QoS Provisioning in a Cellular Network from a Multifaceted Perspective”, 2019.",
+                      "text": "Mohsin Khalil, SEECS, NUST, “QoS Provisioning in a Cellular Network from a Multifaceted Perspective”, 2019.",
+                      "n": 8
+                    },
+                    {
+                      "html": "Farrukh Pervez, SEECS, NUST, “Memory-Based User-Centric Backhaul-Aware User Cell Association Scheme”, 2017.",
+                      "text": "Farrukh Pervez, SEECS, NUST, “Memory-Based User-Centric Backhaul-Aware User Cell Association Scheme”, 2017.",
+                      "n": 7
+                    },
+                    {
+                      "html": "Siddique Latif, SEECS, NUST, “Deep Learning for Emotion Classification from Speech”, 2017",
+                      "text": "Siddique Latif, SEECS, NUST, “Deep Learning for Emotion Classification from Speech”, 2017",
+                      "n": 6
+                    },
+                    {
+                      "html": "Anwaar Ali, SEECS, NUST, “Application-Layer Multicasting With Multipathing Support”, 2015.",
+                      "text": "Anwaar Ali, SEECS, NUST, “Application-Layer Multicasting With Multipathing Support”, 2015.",
+                      "n": 5
+                    },
+                    {
+                      "html": "Muhammad Talal Hasan, SEECS, NUST, “Quantifying the Multiple Cognitive Radio Interfaces Advantage”, 2013.",
+                      "text": "Muhammad Talal Hasan, SEECS, NUST, “Quantifying the Multiple Cognitive Radio Interfaces Advantage”, 2013.",
+                      "n": 4
+                    },
+                    {
+                      "html": "Syed Ahmed Faran, SEECS, NUST, 2012, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
+                      "text": "Syed Ahmed Faran, SEECS, NUST, 2012, “Performance Analysis of 802.11 DCF with Limited Channels”, 2012.",
+                      "n": 3
+                    },
+                    {
+                      "html": "Zeeshan Asif, SEECS, NUST, “Channel Assignment in Non-Cooperative Coexisting Collocated Independent Cognitive Radio Networks”, 2012.",
+                      "text": "Zeeshan Asif, SEECS, NUST, “Channel Assignment in Non-Cooperative Coexisting Collocated Independent Cognitive Radio Networks”, 2012.",
+                      "n": 2
+                    },
+                    {
+                      "html": "Ain ul Aisha, SEECS, NUST, “Detection of Transport Layer Attacks in 802.22 WRAN through Mathematical Modeling”, 2012.",
+                      "text": "Ain ul Aisha, SEECS, NUST, “Detection of Transport Layer Attacks in 802.22 WRAN through Mathematical Modeling”, 2012.",
+                      "n": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "<strong><em>PhD Thesis Evaluator</em>:</strong> students at the National University of Sciences and Technology (Pakistan), Information Technology University (Pakistan), Institute of Business Administration (IBA), Hamad bin Khalifa University (Qatar), Qatar University (Qatar).",
+              "text": "PhD Thesis Evaluator: students at the National University of Sciences and Technology (Pakistan), Information Technology University (Pakistan), Institute of Business Administration (IBA), Hamad bin Khalifa University (Qatar), Qatar University (Qatar)."
+            },
+            {
+              "html": "<strong><em>PhD Guidance and Evaluation Committee (GEC) member</em>:</strong> various students at SEECS, NUST, ITU, Qatar University.",
+              "text": "PhD Guidance and Evaluation Committee (GEC) member: various students at SEECS, NUST, ITU, Qatar University."
+            },
+            {
+              "html": "<strong><em>MS Thesis Evaluator</em>:</strong> various students at SEECS, NUST, ITU, Qatar University, etc.",
+              "text": "MS Thesis Evaluator: various students at SEECS, NUST, ITU, Qatar University, etc."
+            },
+            {
+              "html": "<strong><em>Volunteering and Community Service</em></strong>: Section Leader, Stanford's International Code in Place 2021 Course on Programming (COVID-19 Relief).",
+              "text": "Volunteering and Community Service: Section Leader, Stanford's International Code in Place 2021 Course on Programming (COVID-19 Relief)."
+            },
+            {
+              "html": "<strong><em>Miscellaneous</em>:</strong>",
+              "text": "Miscellaneous:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "Invited Scientific Expert for the 1st <strong>World Health Organization (WHO)'s Infodemiology Conference</strong>, June-July 2020.",
+                      "text": "Invited Scientific Expert for the 1st World Health Organization (WHO)'s Infodemiology Conference, June-July 2020."
+                    },
+                    {
+                      "html": "Member of the Pakistan Engineering Council (PEC) (Registration Number: [removed]);",
+                      "text": "Member of the Pakistan Engineering Council (PEC) (Registration Number: [removed]);"
+                    },
+                    {
+                      "html": "Higher Education Commission (HEC) of Pakistan's Approved PhD Supervisor;",
+                      "text": "Higher Education Commission (HEC) of Pakistan's Approved PhD Supervisor;"
+                    },
+                    {
+                      "html": "External Evaluator, Research Proposals, Pakistan Science Foundation (PSF);",
+                      "text": "External Evaluator, Research Proposals, Pakistan Science Foundation (PSF);"
+                    },
+                    {
+                      "html": "External Evaluator, Swiss National Science Foundation;",
+                      "text": "External Evaluator, Swiss National Science Foundation;"
+                    },
+                    {
+                      "html": "External Evaluator, French National Research Agency (ANR);",
+                      "text": "External Evaluator, French National Research Agency (ANR);"
+                    },
+                    {
+                      "html": "External Evaluator, Hamad bin Khalifa University/ Qatar Foundation Internal Grants;",
+                      "text": "External Evaluator, Hamad bin Khalifa University/ Qatar Foundation Internal Grants;"
+                    },
+                    {
+                      "html": "External Evaluator, Nazarbayev University Research Review, 2026 CRP Cycle;",
+                      "text": "External Evaluator, Nazarbayev University Research Review, 2026 CRP Cycle;"
+                    },
+                    {
+                      "html": "External Evaluator, Qatar University Internal Grants;",
+                      "text": "External Evaluator, Qatar University Internal Grants;"
+                    },
+                    {
+                      "html": "ACM Senior Member (Membership number: [removed]);",
+                      "text": "ACM Senior Member (Membership number: [removed]);"
+                    },
+                    {
+                      "html": "IEEE Senior Member (Membership number: [removed]);",
+                      "text": "IEEE Senior Member (Membership number: [removed]);"
+                    },
+                    {
+                      "html": "ORCID: <a href=\"https://orcid.org/0000-0001-9466-2475\" target=\"_blank\" rel=\"noopener noreferrer\">https://orcid.org/0000-0001-9466-2475</a>",
+                      "text": "ORCID: https://orcid.org/0000-0001-9466-2475"
+                    },
+                    {
+                      "html": "Scopus Author ID: 15058218600 <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.scopus.com/authid/detail.uri?authorId=15058218600</a>",
+                      "text": "Scopus Author ID: 15058218600 https://www.scopus.com/authid/detail.uri?authorId=15058218600"
+                    },
+                    {
+                      "html": "Founding Member, IEEE Special Interest Group (SIG) on Big Data with Computational Intelligence;",
+                      "text": "Founding Member, IEEE Special Interest Group (SIG) on Big Data with Computational Intelligence;"
+                    },
+                    {
+                      "html": "Member, IEEE ComSoc; ACM SIGCOMM;",
+                      "text": "Member, IEEE ComSoc; ACM SIGCOMM;"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consultation-and-advisory",
+      "title": "Consultation and Advisory",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "International Consultant, Generative AI and AR/VR, National Democratic Institute (NDI), Washington, DC (remote), 2023–2024. Advised on generative AI and augmented/virtual reality applications for democracy, human rights, and governance, and contributed to the CivicSpace.tech resource on emerging technologies in civic space.",
+              "text": "International Consultant, Generative AI and AR/VR, National Democratic Institute (NDI), Washington, DC (remote), 2023–2024. Advised on generative AI and augmented/virtual reality applications for democracy, human rights, and governance, and contributed to the CivicSpace.tech resource on emerging technologies in civic space."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "certifications-training-workshops",
+      "title": "Certifications / Training / Workshops",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "Qatar University Teaching in Higher Education Fellowship (QUTF) 2024–2025 Higher education professional development initiative in collaboration with the Harvard Graduate School of Education (HGSE), <em>Harvard University, USA</em>. As part of the fellowship, completed the following HGSE Professional Education courses:",
+              "text": "Qatar University Teaching in Higher Education Fellowship (QUTF) 2024–2025 Higher education professional development initiative in collaboration with the Harvard Graduate School of Education (HGSE), Harvard University, USA. As part of the fellowship, completed the following HGSE Professional Education courses:",
+              "children": [
+                {
+                  "items": [
+                    {
+                      "html": "<em>How We Argue: Teaching Students to Discuss with Empathy and Evidence</em>",
+                      "text": "How We Argue: Teaching Students to Discuss with Empathy and Evidence"
+                    },
+                    {
+                      "html": "<em>Universal Design for Learning: Explore</em>",
+                      "text": "Universal Design for Learning: Explore"
+                    },
+                    {
+                      "html": "<em>The Power of Making Thinking Visible</em>",
+                      "text": "The Power of Making Thinking Visible"
+                    },
+                    {
+                      "html": "<em>Universal Design for Learning: Apply</em>",
+                      "text": "Universal Design for Learning: Apply"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "html": "Continuous Quality Improvement (CQI) Under Outcome Based Education (OBE) Paradigm March, 2019 <em>National University of Computer &amp; Emerging Sciences, Lahore</em>",
+              "text": "Continuous Quality Improvement (CQI) Under Outcome Based Education (OBE) Paradigm March, 2019 National University of Computer & Emerging Sciences, Lahore"
+            },
+            {
+              "html": "Data Science Bootcamp in Python February, 2016 <em>Cambridge Coding Academy, University of Cambridge, UK.</em>",
+              "text": "Data Science Bootcamp in Python February, 2016 Cambridge Coding Academy, University of Cambridge, UK."
+            },
+            {
+              "html": "High-Dimensional Big Data Engineering January, 2016 <em>Computer Laboratory, University of Cambridge, UK.</em>",
+              "text": "High-Dimensional Big Data Engineering January, 2016 Computer Laboratory, University of Cambridge, UK."
+            },
+            {
+              "html": "BSI (UK) Certified Security Lead Auditor June 2004 <em>British Standards Institute.</em>",
+              "text": "BSI (UK) Certified Security Lead Auditor June 2004 British Standards Institute."
+            },
+            {
+              "html": "Cisco Certified Internetworking Expert (CCIE) &amp; Cisco Certified Network Associate (CCNA) January 2001 <em>Cisco Systems.</em>",
+              "text": "Cisco Certified Internetworking Expert (CCIE) & Cisco Certified Network Associate (CCNA) January 2001 Cisco Systems."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media-coverage-selected",
+      "title": "Media Coverage (Selected)",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "WIRED UK.",
+              "text": "WIRED UK."
+            },
+            {
+              "html": "Los Angeles Times (abbreviated as LA Times).",
+              "text": "Los Angeles Times (abbreviated as LA Times)."
+            },
+            {
+              "html": "Daily Times Pakistan, The News Pakistan, MIT Technology Review Pakistan.",
+              "text": "Daily Times Pakistan, The News Pakistan, MIT Technology Review Pakistan."
+            },
+            {
+              "html": "Australian Broadcasting Corporation (ABC) Radio.",
+              "text": "Australian Broadcasting Corporation (ABC) Radio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talks-selected",
+      "title": "Talks (Selected)",
+      "blocks": [
+        {
+          "items": [
+            {
+              "html": "Instructor, training workshop at beIN Media, “Agentic AI and the Limits of Automation: Why More Automation Does Not Mean Better Media”, May 21st 2026, Doha, Qatar.",
+              "text": "Instructor, training workshop at beIN Media, “Agentic AI and the Limits of Automation: Why More Automation Does Not Mean Better Media”, May 21st 2026, Doha, Qatar."
+            },
+            {
+              "html": "Guest Lecturer, “<em>Digital Twins in Healthcare</em>”, MEDI210 Course (AI in Medicine), College of Medicine, Qatar University, April 2026.",
+              "text": "Guest Lecturer, “Digital Twins in Healthcare”, MEDI210 Course (AI in Medicine), College of Medicine, Qatar University, April 2026."
+            },
+            {
+              "html": "Guest Lecturer, “<em>Multiplex Systemics Meets Agentic AI: Critical Systems Thinking for Decision Making in a Complex World</em>”, Ph.D. Research Seminar on AI and Interdisciplinary Perspectives, College of Business and Economics, Qatar University, April 2026.",
+              "text": "Guest Lecturer, “Multiplex Systemics Meets Agentic AI: Critical Systems Thinking for Decision Making in a Complex World”, Ph.D. Research Seminar on AI and Interdisciplinary Perspectives, College of Business and Economics, Qatar University, April 2026."
+            },
+            {
+              "html": "Presenter, “<em>Towards Ethical and Effective AI-Augmented Research Writing: A Conceptual Framework and Practical Guidelines</em>”, Research Workshop Series, Research and Graduate Studies Section, Qatar University, March 2026.",
+              "text": "Presenter, “Towards Ethical and Effective AI-Augmented Research Writing: A Conceptual Framework and Practical Guidelines”, Research Workshop Series, Research and Graduate Studies Section, Qatar University, March 2026."
+            },
+            {
+              "html": "Presenter, “<em>Integrating Islamic Spirituality and Generative AI in Mental Health: Promise, Pitfalls, and Pathways Forward</em>”, 2nd International Symposium on Islamic Psychology Integrating Islamic Spirituality Across Mental Health Services in the Middle East, February 2026.",
+              "text": "Presenter, “Integrating Islamic Spirituality and Generative AI in Mental Health: Promise, Pitfalls, and Pathways Forward”, 2nd International Symposium on Islamic Psychology Integrating Islamic Spirituality Across Mental Health Services in the Middle East, February 2026."
+            },
+            {
+              "html": "Presenter, “<em>Multiplex Systemics for AI Governance and Open Civilization</em>”, Usul Talk, Usul Academy, January 2026.",
+              "text": "Presenter, “Multiplex Systemics for AI Governance and Open Civilization”, Usul Talk, Usul Academy, January 2026."
+            },
+            {
+              "html": "Presenter, “<em>Towards Ethical and Effective AI-Augmented Learning: A Multiplex Framework</em>”, QU Center for Excellence in Teaching and Learning (CETL) 17th Annual Forum on Excellence in Teaching and Learning, <em>Teaching Excellence in the Age of Intelligent Learning</em>, January 2026.",
+              "text": "Presenter, “Towards Ethical and Effective AI-Augmented Learning: A Multiplex Framework”, QU Center for Excellence in Teaching and Learning (CETL) 17th Annual Forum on Excellence in Teaching and Learning, Teaching Excellence in the Age of Intelligent Learning, January 2026."
+            },
+            {
+              "html": "Conference presentation, “<em>Multiplex Systemics: A Both-And Framework for AI Implementation in Crisis Response Settings</em>,” Driving Change: Regional Conference on Health and Emerging Fields in Implementation Science 2025, December 2025.",
+              "text": "Conference presentation, “Multiplex Systemics: A Both-And Framework for AI Implementation in Crisis Response Settings,” Driving Change: Regional Conference on Health and Emerging Fields in Implementation Science 2025, December 2025."
+            },
+            {
+              "html": "Presenter, “<em>Toward an Ummatic Vision for Advanced AI</em>”, Ummatics Institute, December 2025.",
+              "text": "Presenter, “Toward an Ummatic Vision for Advanced AI”, Ummatics Institute, December 2025."
+            },
+            {
+              "html": "Master Class Presenter, “<em>Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management</em>”, World AI Summit Qatar, Doha, December 2025.",
+              "text": "Master Class Presenter, “Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management”, World AI Summit Qatar, Doha, December 2025."
+            },
+            {
+              "html": "Invited talk titled, “<em>Ethical Considerations in the Use of AI in Healthcare</em>” at the 1st Qatar Conference on Laboratory Medicine and Pathology, organized by the Department of Laboratory Medicine and Pathology at the Hamad Medical Corporation, November 2025, Qatar.",
+              "text": "Invited talk titled, “Ethical Considerations in the Use of AI in Healthcare” at the 1st Qatar Conference on Laboratory Medicine and Pathology, organized by the Department of Laboratory Medicine and Pathology at the Hamad Medical Corporation, November 2025, Qatar."
+            },
+            {
+              "html": "Invited talk titled, “<em>Generative AI in Engineering Education: Insights from GPT Classrooms and Multi-Agent Learning Experiments</em>,” College of Engineering, Qatar University, October 2025.",
+              "text": "Invited talk titled, “Generative AI in Engineering Education: Insights from GPT Classrooms and Multi-Agent Learning Experiments,” College of Engineering, Qatar University, October 2025."
+            },
+            {
+              "html": "Invited talk titled, “<em>Generative AI in Higher Education: Lessons from GPT Classrooms and Applications in Student Projects</em>,” College of Business and Economics, Qatar University, September 2025.",
+              "text": "Invited talk titled, “Generative AI in Higher Education: Lessons from GPT Classrooms and Applications in Student Projects,” College of Business and Economics, Qatar University, September 2025."
+            },
+            {
+              "html": "Invited talk “<em>AI for social good: a critical multiplex approach</em>” at the 3rd Pakistan National School of Public Policy (NSPP) Public Policy Conference on Artificial Intelligence in Public Policy and Governance, August 26, 2025, Lahore, Pakistan.",
+              "text": "Invited talk “AI for social good: a critical multiplex approach” at the 3rd Pakistan National School of Public Policy (NSPP) Public Policy Conference on Artificial Intelligence in Public Policy and Governance, August 26, 2025, Lahore, Pakistan."
+            },
+            {
+              "html": "Plenary talk titled, “<em>Multiplex Systemics: Toward a More Holistic Philosophy of Technology</em>”, International Hybrid Symposium on Fundamentals and Advancements of Biomedical and Healthcare Circuits and Systems — jointly hosted by CISS-Global at Information Technology University and RINRO at Nanjing University of Science and Technology, Lahore, July 2025.",
+              "text": "Plenary talk titled, “Multiplex Systemics: Toward a More Holistic Philosophy of Technology”, International Hybrid Symposium on Fundamentals and Advancements of Biomedical and Healthcare Circuits and Systems — jointly hosted by CISS-Global at Information Technology University and RINRO at Nanjing University of Science and Technology, Lahore, July 2025."
+            },
+            {
+              "html": "Conference presentation titled, “<em>AI for Learning and Teaching the Arabic Language: Analytical Perspectives</em>”, Conference on Teaching Arabic to Non-Native Speakers in the Digital Space organized by the Arabic for Non-Native Speakers Center (ANNS), College of Arts and Sciences, Qatar University, April 2025.",
+              "text": "Conference presentation titled, “AI for Learning and Teaching the Arabic Language: Analytical Perspectives”, Conference on Teaching Arabic to Non-Native Speakers in the Digital Space organized by the Arabic for Non-Native Speakers Center (ANNS), College of Arts and Sciences, Qatar University, April 2025."
+            },
+            {
+              "html": "Conference presentation titled, “<em>Intelligence Amplification: A Human-Centered Approach to AI-Mediated Education and Professions</em>” in 17th World Congress of Bioethics, Doha, Qatar, June 2024.",
+              "text": "Conference presentation titled, “Intelligence Amplification: A Human-Centered Approach to AI-Mediated Education and Professions” in 17th World Congress of Bioethics, Doha, Qatar, June 2024."
+            },
+            {
+              "html": "Conference presentation titled, “<em>Ethics of Generative &amp; Virtual Experiences in Medicine</em>” in 17th World Congress of Bioethics, Doha, Qatar, June 2024.",
+              "text": "Conference presentation titled, “Ethics of Generative & Virtual Experiences in Medicine” in 17th World Congress of Bioethics, Doha, Qatar, June 2024."
+            },
+            {
+              "html": "“<em>The Ghazalian Project for the AI Era: A Multiplex Critical AI Approach</em>”, First Symposium on Comparative Education, Ghazali on Education, Contemporary Practical Applications from an Enduring Legacy, organized by College of Islamic Sciences (CIS), Hamad bin Khalifa University (HBKU), March 2024. Available online at <a href=\"https://youtu.be/Xz9sk3mj19I?t=20431\" target=\"_blank\" rel=\"noopener noreferrer\">https://youtu.be/Xz9sk3mj19I?t=20431</a>.",
+              "text": "“The Ghazalian Project for the AI Era: A Multiplex Critical AI Approach”, First Symposium on Comparative Education, Ghazali on Education, Contemporary Practical Applications from an Enduring Legacy, organized by College of Islamic Sciences (CIS), Hamad bin Khalifa University (HBKU), March 2024. Available online at https://youtu.be/Xz9sk3mj19I?t=20431."
+            },
+            {
+              "html": "“<em>Educating for the AI Revolution</em>”, Invited Talk at the <em>Bridging Frontiers–Advancements in AI and Social Sciences</em> workshop organized at the College of Islamic Studies, Hamad Bin Khalifa University, February 2024.",
+              "text": "“Educating for the AI Revolution”, Invited Talk at the Bridging Frontiers–Advancements in AI and Social Sciences workshop organized at the College of Islamic Studies, Hamad Bin Khalifa University, February 2024."
+            },
+            {
+              "html": "“<em>Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity</em>”, Invited Talk at the Generative AI Workshop at Dar Al-Hekma College, Jeddah, Kingdom of Saudi Arabia, February 2024.",
+              "text": "“Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity”, Invited Talk at the Generative AI Workshop at Dar Al-Hekma College, Jeddah, Kingdom of Saudi Arabia, February 2024."
+            },
+            {
+              "html": "“<em>Introduction to Generative AI: Tutorial and Ethical Issues</em>”, Invited Talk at Center of Islamic Legislation and Ethics (CILE), College of Islamic Studies (CIS), Hamad bin Khalifa University (HBKU), August 2023.",
+              "text": "“Introduction to Generative AI: Tutorial and Ethical Issues”, Invited Talk at Center of Islamic Legislation and Ethics (CILE), College of Islamic Studies (CIS), Hamad bin Khalifa University (HBKU), August 2023."
+            },
+            {
+              "html": "“<em>Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity</em>”, <em>Plenary Talk</em>, 14th Excellence in Education and Learning Forum, Qatar University Center of Excellence in Teaching and Learning (CETL), June 2023.",
+              "text": "“Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity”, Plenary Talk, 14th Excellence in Education and Learning Forum, Qatar University Center of Excellence in Teaching and Learning (CETL), June 2023."
+            },
+            {
+              "html": "“<em>Engineering and Computing Education for the 21st Century: A Student Primer</em>”, ACM Distinguished Speaker Program Lecture, University of Technology and Applied Sciences Ibri Oman, March 2023.",
+              "text": "“Engineering and Computing Education for the 21st Century: A Student Primer”, ACM Distinguished Speaker Program Lecture, University of Technology and Applied Sciences Ibri Oman, March 2023."
+            },
+            {
+              "html": "“<em>Education in the Era of ChatGPT and Generative AI</em>”, talk given to Qatar University (QU) faculty, organized by Center for Excellence in Teaching and Learning, Qatar University, March 2023.",
+              "text": "“Education in the Era of ChatGPT and Generative AI”, talk given to Qatar University (QU) faculty, organized by Center for Excellence in Teaching and Learning, Qatar University, March 2023."
+            },
+            {
+              "html": "“<em>Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education</em>”, talk given to Qatar University College of Engineering faculty, organized by Technology Innovation and Engineering Education (TIEE), Qatar University, Feb 2023.",
+              "text": "“Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education”, talk given to Qatar University College of Engineering faculty, organized by Technology Innovation and Engineering Education (TIEE), Qatar University, Feb 2023."
+            },
+            {
+              "html": "“<em>Engineering Education in the Age of ChatGPT and Exponential AI: A Student Primer</em>”, talk given to Qatar University students, organized by Technology Innovation and Engineering Education (TIEE), Qatar University, Feb 2023.",
+              "text": "“Engineering Education in the Age of ChatGPT and Exponential AI: A Student Primer”, talk given to Qatar University students, organized by Technology Innovation and Engineering Education (TIEE), Qatar University, Feb 2023."
+            },
+            {
+              "html": "“<em>Islamic ethics and AI</em>”, invited talk given at The Future of Muslim Tech: Prospects and Challenges organized by Lorentz Institute - Leiden University, January 2023.",
+              "text": "“Islamic ethics and AI”, invited talk given at The Future of Muslim Tech: Prospects and Challenges organized by Lorentz Institute - Leiden University, January 2023."
+            },
+            {
+              "html": "“<em>A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity</em>”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, Boston, USA, July 2022.",
+              "text": "“A Holistic Education for the 21st Century Engineer Based on Wisdom and Multiplexity”, TE 2022 The Future of Engineering Conference hosted by MIT System Design and Management, Cambridge, Boston, USA, July 2022."
+            },
+            {
+              "html": "“<em>Safe and Trustworthy Artificial Intelligence</em>”, AI Week 2022, Qatar University, March, 2022.",
+              "text": "“Safe and Trustworthy Artificial Intelligence”, AI Week 2022, Qatar University, March, 2022."
+            },
+            {
+              "html": "“<em>Effective 21st Century/Beyond 2020 Computer Scientist and Engineers: Essential Competencies</em>”, All Pakistan Tech and Art Festival'21, GCU-ACM Student Chapter, June 2021.",
+              "text": "“Effective 21st Century/Beyond 2020 Computer Scientist and Engineers: Essential Competencies”, All Pakistan Tech and Art Festival'21, GCU-ACM Student Chapter, June 2021."
+            },
+            {
+              "html": "“<em>AI's Governance and Ethical Dilemmas</em>”, 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2), Islamabad, Pakistan, May 2021.",
+              "text": "“AI's Governance and Ethical Dilemmas”, 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2), Islamabad, Pakistan, May 2021."
+            },
+            {
+              "html": "“<em>Safe and Trustworthy Artificial Intelligence</em>”, First International Conference on Artificial Intelligence &amp; Data Analytics (CAIDA), April, 2021.",
+              "text": "“Safe and Trustworthy Artificial Intelligence”, First International Conference on Artificial Intelligence & Data Analytics (CAIDA), April, 2021."
+            },
+            {
+              "html": "“<em>COVID Infodemic &amp; the AI-Driven Hype Machine</em>”, organized by Health Security Partners and Agha Khan University (AKU) Hospital, 19th December 2020.",
+              "text": "“COVID Infodemic & the AI-Driven Hype Machine”, organized by Health Security Partners and Agha Khan University (AKU) Hospital, 19th December 2020."
+            },
+            {
+              "html": "“<em>Ethics of Artificial Intelligence</em>”, Distinguished Speaker Series of AIDA Lab, Prince Sultan University, November, 2020.",
+              "text": "“Ethics of Artificial Intelligence”, Distinguished Speaker Series of AIDA Lab, Prince Sultan University, November, 2020."
+            },
+            {
+              "html": "“<em>Outcome Based Education: International Practices</em>”, Information Technology University, November, 2020.",
+              "text": "“Outcome Based Education: International Practices”, Information Technology University, November, 2020."
+            },
+            {
+              "html": "“<em>Essential Skills for Effective 21st Century Engineers and Scientists</em>”, NUST Webinar Series, June 2020. Available online at <a href=\"https://www.youtube.com/watch?v=u5uhFyuksz8\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.youtube.com/watch?v=u5uhFyuksz8</a>.",
+              "text": "“Essential Skills for Effective 21st Century Engineers and Scientists”, NUST Webinar Series, June 2020. Available online at https://www.youtube.com/watch?v=u5uhFyuksz8."
+            },
+            {
+              "html": "“<em>How to Thrive in Post-COVID19 Outcome Based Education</em>”, Information Technology University, May 2020. Available online at <a href=\"https://www.youtube.com/watch?v=1N9MS7m8tyk\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.youtube.com/watch?v=1N9MS7m8tyk</a>.",
+              "text": "“How to Thrive in Post-COVID19 Outcome Based Education”, Information Technology University, May 2020. Available online at https://www.youtube.com/watch?v=1N9MS7m8tyk."
+            },
+            {
+              "html": "“<em>On Analyzing Self-Driving Networks: A Systems Thinking Approach</em>”, IEEE ComSoc Summer School 2018, Lahore University of Management Sciences (LUMS), August 2018.",
+              "text": "“On Analyzing Self-Driving Networks: A Systems Thinking Approach”, IEEE ComSoc Summer School 2018, Lahore University of Management Sciences (LUMS), August 2018."
+            },
+            {
+              "html": "“<em>Learning 101 for the Online Era</em>” at the Virtual University (VU) 3rd e-Learning and Distance Education Conference (ELDEC) conference in Lahore, Pakistan on 15th March 2016.",
+              "text": "“Learning 101 for the Online Era” at the Virtual University (VU) 3rd e-Learning and Distance Education Conference (ELDEC) conference in Lahore, Pakistan on 15th March 2016."
+            },
+            {
+              "html": "“<em>Big Data for Development</em>”, University of Lancaster, UK, 26 February 2016.",
+              "text": "“Big Data for Development”, University of Lancaster, UK, 26 February 2016."
+            },
+            {
+              "html": "“<em>Big Data for Development</em>”, University of Stirling, UK, 12 February 2016.",
+              "text": "“Big Data for Development”, University of Stirling, UK, 12 February 2016."
+            },
+            {
+              "html": "“<em>Big Data for Development</em>”, Computer Laboratory, University of Cambridge, UK, 09 February 2016.",
+              "text": "“Big Data for Development”, Computer Laboratory, University of Cambridge, UK, 09 February 2016."
+            },
+            {
+              "html": "“<em>How To do Your Best Research</em>”, Second Workshop on “Effective Practices in Research”, SEECS, NUST, Pakistan, 18 November, 2015.",
+              "text": "“How To do Your Best Research”, Second Workshop on “Effective Practices in Research”, SEECS, NUST, Pakistan, 18 November, 2015."
+            },
+            {
+              "html": "“<em>Personal Reflections on Teaching Practices</em>”, First Workshop on “Best Practices in Teaching”, SEECS, NUST, Pakistan, 06 August, 2015.",
+              "text": "“Personal Reflections on Teaching Practices”, First Workshop on “Best Practices in Teaching”, SEECS, NUST, Pakistan, 06 August, 2015."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

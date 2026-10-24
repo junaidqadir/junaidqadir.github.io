@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import Container from "@/components/Container";
+import Link from "next/link";
 import PublicationCard from "@/components/PublicationCard";
 import { researchThemes } from "@/content/site";
 import { getPublicationsByTheme } from "@/lib/publications";
 import type { Theme } from "@/types/publication";
+
+export const metadata: Metadata = { title: "Research — Junaid Qadir" };
 
 export default function ResearchPage() {
   return (
@@ -16,9 +20,11 @@ export default function ResearchPage() {
 
       <div className="mt-12 space-y-16">
         {researchThemes.map((theme) => {
-          const pubs = getPublicationsByTheme(
-            theme.publicationTheme as Theme
-          );
+          const all = getPublicationsByTheme(theme.publicationTheme as Theme);
+          // featured first, then newest — a short, representative list; the full set is one click away
+          const pubs = [...all]
+            .sort((a, b) => Number(b.featured) - Number(a.featured) || (b.year ?? 0) - (a.year ?? 0))
+            .slice(0, 5);
           return (
             <section key={theme.slug} id={theme.slug} className="scroll-mt-24">
               <h2 className="font-serif text-2xl text-foreground">
@@ -32,6 +38,9 @@ export default function ResearchPage() {
                   {pubs.map((pub) => (
                     <PublicationCard key={pub.slug} pub={pub} />
                   ))}
+                  <Link href={`/publications?theme=${theme.publicationTheme}`} className="mt-2 inline-block text-sm text-accent hover:opacity-70">
+                    View all {all.length} publications in this theme →
+                  </Link>
                 </div>
               ) : (
                 <p className="mt-6 text-sm text-muted">

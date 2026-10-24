@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { contact, socials } from "@/content/site";
+
+export const metadata: Metadata = { title: "Contact — Junaid Qadir" };
 
 const links = [
   { label: "Email", href: `mailto:${socials.email}` },

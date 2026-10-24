@@ -1,59 +1,73 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import Container from "@/components/Container";
 import { bio, identity, socials } from "@/content/site";
+import { listUnder, cvMeta } from "@/lib/cv";
+
+export const metadata: Metadata = { title: "About — Junaid Qadir" };
+
+const Label = ({ children }: { children: React.ReactNode }) => (
+  <h2 className="text-sm font-medium uppercase tracking-widest text-muted">{children}</h2>
+);
 
 export default function AboutPage() {
+  // Research & teaching statements are written in the CV (Technical Summary); reuse them verbatim.
+  const research = listUnder("technical-summary", /^Research Skills/);
+  const teaching = listUnder("technical-summary", /^Teaching Skills/);
+  const interests = research.find((i) => /research experience and interest/i.test(i.text));
+  const funding = research.find((i) => /funding and leadership/i.test(i.text));
+  const teachingStatement = teaching.find((i) => /Recognized for quality teaching/i.test(i.text));
+
   return (
     <Container className="py-16">
       <h1 className="font-serif text-3xl text-foreground">About</h1>
-      <p className="mt-2 text-sm text-muted">{identity.affiliation}</p>
+      <p className="mt-2 text-sm text-muted">
+        {identity.role}, {identity.affiliation}
+      </p>
 
       <section className="mt-10">
-        <h2 className="text-sm font-medium uppercase tracking-widest text-muted">
-          Short bio
-        </h2>
+        <Label>Short bio</Label>
         <p className="mt-3 leading-relaxed text-foreground">{bio.short}</p>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-sm font-medium uppercase tracking-widest text-muted">
-          Full bio
-        </h2>
-        <p className="mt-3 whitespace-pre-line leading-relaxed text-foreground">
-          {bio.long}
-        </p>
-      </section>
+      {interests && (
+        <section className="mt-10">
+          <Label>Research</Label>
+          <p className="mt-3 leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: interests.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
+          <p className="mt-3 text-sm">
+            <Link href="/research" className="text-accent hover:opacity-70">Research themes →</Link>
+            <span className="mx-2 text-muted">·</span>
+            <Link href="/publications" className="text-accent hover:opacity-70">All publications →</Link>
+          </p>
+        </section>
+      )}
 
-      <section className="mt-10">
-        <h2 className="text-sm font-medium uppercase tracking-widest text-muted">
-          Working with me
-        </h2>
-        <p className="mt-3 leading-relaxed text-foreground">
-          [PLACEHOLDER — supervision interests, collaboration themes, and
-          guidance for prospective students.]
-        </p>
-      </section>
+      {teachingStatement && (
+        <section className="mt-10">
+          <Label>Teaching</Label>
+          <p className="mt-3 leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: teachingStatement.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
+          <p className="mt-3 text-sm">
+            <Link href="/teaching" className="text-accent hover:opacity-70">Courses, supervision and open materials →</Link>
+          </p>
+        </section>
+      )}
+
+      {funding && (
+        <section className="mt-10">
+          <Label>Funding &amp; service</Label>
+          <p className="mt-3 leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: funding.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
+        </section>
+      )}
 
       <section className="mt-10 border-t border-border pt-8">
-        {bio.cvUrl ? (
-          <a
-            href={bio.cvUrl}
-            className="text-sm text-accent hover:opacity-70"
-          >
-            Download full CV (PDF) →
-          </a>
-        ) : (
-          <p className="text-sm text-muted">
-            [PLACEHOLDER — CV download link once a PDF is added to /public.]
-          </p>
-        )}
+        <p className="text-sm text-muted">
+          The complete record — career, awards, funding, teaching, service, supervision and talks — is on the{" "}
+          <Link href="/cv" className="text-accent hover:opacity-70">CV page</Link>
+          {cvMeta.generatedAt ? ` (synced ${cvMeta.generatedAt})` : ""}.
+        </p>
         <p className="mt-2 text-sm text-muted">
-          Or reach out directly:{" "}
-          <a
-            href={`mailto:${socials.email}`}
-            className="text-accent hover:opacity-70"
-          >
-            {socials.email}
-          </a>
+          Contact:{" "}
+          <a href={`mailto:${socials.email}`} className="text-accent hover:opacity-70">{socials.email}</a>
         </p>
       </section>
     </Container>

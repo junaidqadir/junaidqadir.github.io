@@ -1,0 +1,8 @@
+import type { MetadataRoute } from "next";
+
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.com";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const pages = ["", "/about", "/research", "/publications", "/talks", "/teaching", "/cv", "/contact"];
+  return pages.map((p) => ({ url: `${base}${p}`, lastModified: new Date(), changeFrequency: "monthly", priority: p === "" ? 1 : 0.7 }));
+}

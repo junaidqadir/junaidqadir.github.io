@@ -1,6 +1,6 @@
-// Central site content. Anything marked [PLACEHOLDER] is a stand-in copy —
-// confirmed facts only come from what Junaid gave directly; everything else
-// waits for real material rather than being invented.
+// Central site content. Long-form facts (career, awards, funding, teaching, talks, supervision)
+// are NOT written here: they are synced from the master CV into content/cv.generated.json
+// (npm run sync-cv). This file holds only what the CV does not: navigation, links and short copy.
 
 export const nav = [
   { href: "/about", label: "About" },
@@ -8,6 +8,7 @@ export const nav = [
   { href: "/publications", label: "Publications" },
   { href: "/talks", label: "Talks & Media" },
   { href: "/teaching", label: "Teaching" },
+  { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -22,13 +23,13 @@ export const socials = {
   youtube: "https://www.youtube.com/@JunaidQadir",
   linkedin: "https://www.linkedin.com/in/junaidq/",
   orcid: "https://orcid.org/0000-0001-9466-2475",
-  email: "junaid.qadir@itu.edu.pk",
+  email: "jqadir@qu.edu.qa",
 };
 
 export const identity = {
   name: "Junaid Qadir",
-  affiliation: "Information Technology University (ITU), Lahore", // confirmed via itu.edu.pk email
-  role: "[PLACEHOLDER — confirm exact title, e.g. Professor of Computer Science]",
+  affiliation: "Qatar University, Doha, Qatar",
+  role: "Professor of Computer Engineering",
 };
 
 export const hero = {
@@ -36,13 +37,6 @@ export const hero = {
   subheading:
     "I work across artificial intelligence, engineering education, multiplexity, digital health, and Islamic ethics — developing wiser ways to design technologies and learning environments for the whole human being.",
 };
-
-export const keyNumbers = [
-  { value: "250+", label: "publications" },
-  { value: "[PLACEHOLDER]", label: "citations (h-index)" },
-  { value: "[PLACEHOLDER]", label: "years teaching & research" },
-  { value: "[PLACEHOLDER]", label: "PhD/MS students supervised" },
-];
 
 export type ResearchTheme = {
   slug: string;
@@ -98,22 +92,7 @@ export const researchThemes: ResearchTheme[] = [
 
 export const bio = {
   short:
-    "Junaid Qadir is an academic at the Information Technology University (ITU), Lahore, working across artificial intelligence, engineering education, multiplexity, and Islamic ethics. [PLACEHOLDER — replace with your own short bio, 100-150 words.]",
-  long: "[PLACEHOLDER — long narrative bio, 600-800 words, explaining the intellectual thread connecting your technical and spiritual/ethical work. Send me the text or a rough draft and I'll help shape it.]",
-  cvUrl: null as string | null, // set once a CV PDF is placed in /public
-};
-
-export const teaching = {
-  philosophy:
-    "[PLACEHOLDER — your teaching philosophy. One idea already agreed as a throughline: AI can make production easier, but education must preserve the effort through which understanding, judgment, and character are formed.]",
-  courses: [
-    {
-      title: "[PLACEHOLDER — course title]",
-      institution: "[PLACEHOLDER]",
-      year: "[PLACEHOLDER]",
-      description: "[PLACEHOLDER — short description]",
-    },
-  ],
+    "Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than 250 papers spanning artificial intelligence, computing systems, and engineering education, and is a leading voice on generative AI in engineering education, publishing in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. His paper on engineering education in the era of ChatGPT is among the most-cited works on generative AI in engineering education. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.",
 };
 
 export const contact = {

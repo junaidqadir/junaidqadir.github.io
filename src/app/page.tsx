@@ -2,11 +2,18 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import ThemeCard from "@/components/ThemeCard";
 import PublicationCard from "@/components/PublicationCard";
-import { hero, keyNumbers, researchThemes, identity } from "@/content/site";
+import { hero, researchThemes, identity } from "@/content/site";
 import { getFeaturedPublications } from "@/lib/publications";
+import { getKeyNumbers } from "@/lib/stats";
+import { getAwards, humbleHtml } from "@/lib/cv";
 
 export default function Home() {
   const featured = getFeaturedPublications().slice(0, 3);
+  const keyNumbers = getKeyNumbers();
+  // A modest selection of recent recognition, straight from the CV (full list on /cv#awards-and-honors)
+  const recognition = getAwards()
+    .filter((a) => /[removed]|Outstanding Faculty Service|Dean.s Award|Best University Teacher|Distinguished (Lecturer|Speaker)/i.test(a.text))
+    .slice(0, 6);
 
   return (
     <>
@@ -51,6 +58,22 @@ export default function Home() {
               </div>
             ))}
           </dl>
+        </Container>
+      </section>
+
+      <section className="border-b border-border">
+        <Container width="max-w-5xl" className="py-12">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="font-serif text-xl text-foreground">Recognition</h2>
+            <Link href="/cv#awards-and-honors" className="text-sm text-accent hover:opacity-70">
+              All awards &amp; honors →
+            </Link>
+          </div>
+          <ul className="mt-4 grid gap-x-10 gap-y-2 text-[15px] leading-relaxed text-muted sm:grid-cols-2">
+            {recognition.map((a, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: humbleHtml(a.html) }} />
+            ))}
+          </ul>
         </Container>
       </section>
 
