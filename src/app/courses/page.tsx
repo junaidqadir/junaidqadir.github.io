@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
-import CoursesTabs from "@/components/CoursesTabs";
 import { slideDecks } from "@/content/slides";
 import { getCourseRows, courseSummary, institutionOrder } from "@/lib/courses";
 import { statSync } from "node:fs";
 import { getAllPublications } from "@/lib/publications";
+import { listUnder } from "@/lib/cv";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
@@ -14,7 +14,7 @@ import { playlists, playlistUrl } from "@/content/playlists";
 import { ethicsCourse } from "@/content/ethicsCourse";
 
 export const metadata: Metadata = {
-  title: "Courses & Learning — Junaid Qadir",
+  title: "Courses — Junaid Qadir",
   description: "Open courses with lectures and slides: the IHSAN courses (2020 and 2025), the four-day Generative AI course, AI ethics, and more; plus how to learn well, and teaching and supervision.",
 };
 
@@ -47,6 +47,7 @@ const btn = "inline-flex items-center rounded-sm px-4 py-2.5 text-sm transition-
 
 export default function CoursesPage() {
   const rows = getCourseRows();
+  const approach = listUnder("technical-summary", /^Teaching Skills/);
   const sum = courseSummary(rows);
   const ethicsPaper = getAllPublications().find((p) => p.slug === ethicsCourse.paperSlug);
   const other = playlists.filter((p) => !["PL4AueLFeEG0AP-Qr9ZBReJRnGuMiHQd03", "PL4AueLFeEG0DAqrRgnZKQR163mvpOOkz-"].includes(p.id));
@@ -56,9 +57,8 @@ export default function CoursesPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative flex flex-wrap items-center justify-between gap-8 py-16">
           <div className="max-w-2xl">
-            <CoursesTabs current="courses" />
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Open courses</p>
-            <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">Courses &amp; Learning<span className="text-accent">.</span></h1>
+            <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">Courses<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               The courses I have taught in Pakistan and Qatar, and the ones I have opened to everyone: an ethics course, two IHSAN courses, a four-day course on generative AI and a graduate course on network performance, with lectures and slides where they exist.
             </p>
@@ -68,6 +68,7 @@ export default function CoursesPage() {
               <a href="#ihsan-2025" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>IHSAN courses</a>
               <a href="#genai-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Generative AI course</a>
               <a href="#course-slides" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>All course slides</a>
+              <a href="#how-i-teach" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>How I teach</a>
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -102,7 +103,7 @@ export default function CoursesPage() {
         <section id="courses-taught" className="scroll-mt-24">
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Teaching record</p>
           <h2 className="mt-2 font-serif text-3xl text-foreground">Courses I have taught</h2>
-          <p className="mt-3 max-w-2xl text-muted">{sum.courses} courses at {sum.institutions.length} universities: {sum.institutions.join(", ")}. This list follows my CV, most recent first. My teaching philosophy and supervision are on the <Link href="/teaching" className="text-accent hover:opacity-70">Teaching &amp; supervision</Link> page.</p>
+          <p className="mt-3 max-w-2xl text-muted">{sum.courses} courses at {sum.institutions.length} universities: {sum.institutions.join(", ")}. This list follows my CV, most recent first.</p>
           {(["Undergraduate", "Graduate"] as const).map((lvl) => (
             <div key={lvl} className="mt-8">
               <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">{levelBlurb[lvl]} <span className="ml-1">{rows.filter((r) => r.level === lvl).length}</span></h3>
@@ -133,6 +134,20 @@ export default function CoursesPage() {
               </ul>
             </div>
           ))}
+        </section>
+
+        <section id="how-i-teach" className="scroll-mt-24">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Approach</p>
+          <h2 className="mt-2 font-serif text-3xl text-foreground">How I teach</h2>
+          <div className="mt-4 max-w-2xl space-y-3">
+            {approach.map((t, i) => (
+              <p key={i} className="leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: t.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
+            ))}
+          </div>
+          <p className="mt-4 max-w-2xl text-sm text-muted">
+            A recurring theme: AI can make production easier, but education must preserve the effort through which understanding, judgment and character are formed.
+            My supervised students are on the <Link href="/students" className="text-accent hover:opacity-70">Students</Link> page, with <Link href="/students#tips" className="text-accent hover:opacity-70">tips for students</Link> and the <Link href="/learning" className="text-accent hover:opacity-70">How to learn well</Link> page.
+          </p>
         </section>
 
         <Ornament />

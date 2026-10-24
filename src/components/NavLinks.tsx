@@ -16,7 +16,9 @@ export default function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
         const on = here(item);
         return (
           <Link key={item.href} href={item.href} onClick={onNavigate} aria-current={on ? "page" : undefined}
-            className={`transition-colors hover:text-accent ${on ? "text-foreground underline decoration-accent decoration-2 underline-offset-[10px]" : "text-muted"}`}>
+            className={item.button
+              ? `rounded-sm border px-3 py-1 transition-colors hover:border-accent hover:text-accent ${on ? "border-accent text-foreground" : "border-border text-foreground"}`
+              : `transition-colors hover:text-accent ${on ? "text-foreground underline decoration-accent decoration-2 underline-offset-[10px]" : "text-muted"}`}>
             {item.label}
           </Link>
         );

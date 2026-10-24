@@ -5,15 +5,16 @@ import { getAllPublications } from "@/lib/publications";
 // (npm run sync-cv). This file holds only what the CV does not: navigation, links and short copy.
 
 export const nav = [
-  { href: "/about", label: "About", also: ["/awards", "/cv"] },
-  { href: "/research", label: "Research", also: [] },
-  { href: "/publications", label: "Publications", also: [] },
-  { href: "/multiplexity", label: "Multiplexity", also: [] },
-  { href: "/ihsan", label: "Ihsan", also: [] },
-  { href: "/courses", label: "Courses & Learning", also: ["/learning", "/teaching"] },
-  { href: "/students", label: "Students", also: [] },
-  { href: "/talks", label: "Talks & Videos", also: ["/videos"] },
-  { href: "/contact", label: "Contact", also: [] },
+  { href: "/about", label: "About", also: ["/awards", "/cv"], button: false },
+  { href: "/research", label: "Research", also: [], button: false },
+  { href: "/multiplexity", label: "Multiplexity", also: [], button: false },
+  { href: "/ihsan", label: "Ihsan", also: [], button: false },
+  { href: "/courses", label: "Courses", also: ["/learning"], button: false },
+  { href: "/talks", label: "Talks", also: [], button: false },
+  { href: "/videos", label: "Videos", also: [], button: false },
+  { href: "/publications", label: "Publications", also: [], button: false },
+  { href: "/students", label: "Students", also: [], button: false },
+  { href: "/contact", label: "Contact", also: [], button: true },
 ] as const;
 
 // The Ihsan Initiative site: leave href empty until its real domain is live (nav link is hidden while empty).

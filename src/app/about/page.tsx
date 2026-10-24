@@ -79,7 +79,7 @@ export default function AboutPage() {
           <Label>Teaching</Label>
           <p className="mt-3 leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: teachingStatement.html.replace(/^<strong><em>[^<]*<\/em><\/strong>\s*/, "") }} />
           <p className="mt-3 text-sm">
-            <Link href="/teaching" className="text-accent hover:opacity-70">Courses, supervision and open materials →</Link>
+            <Link href="/courses#how-i-teach" className="text-accent hover:opacity-70">Courses taught, how I teach and open materials →</Link>
           </p>
         </section>
       )}

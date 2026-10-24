@@ -3,7 +3,6 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import { Suspense } from "react";
 import { getTalks, listUnder } from "@/lib/cv";
-import MediaTabs from "@/components/MediaTabs";
 import TalksExplorer, { type TalkItem } from "@/components/TalksExplorer";
 import { slidesFor } from "@/content/slides";
 import { talkLabels, talkKey } from "@/content/talkLabels";
@@ -54,7 +53,6 @@ export default function TalksPage() {
   }).sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
   return (
     <Container width="max-w-4xl" className="py-16">
-      <MediaTabs current="talks" />
       <h1 className="font-serif text-3xl text-foreground">Talks &amp; Slides</h1>
       <p className="mt-3 max-w-xl text-muted">
         Invited talks, keynotes, tutorials and presentations from my CV, with slides to read or download where I have them.
