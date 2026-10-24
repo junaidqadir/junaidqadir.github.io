@@ -1,11 +1,11 @@
 {
   "generated_at": "2026-10-24",
-  "source_sha": "6029a50d634d",
+  "source_sha": "64cab48671cd",
   "derived": {
     "citations_scholar": "27,500+",
     "h_index_scholar": "81",
     "i10_scholar": "230+",
-    "citation_stats_date": "September 2026",
+    "citation_stats_date": "last updated October 2026",
     "phd_main_supervisor": null,
     "career_start_year": 2008
   },
@@ -81,8 +81,8 @@
                       "text": "Research funding and leadership: I have won competitive grants from the Qatar Research, Development, and Innovation (QRDI) Council, the Qatar National Research Fund (QNRF), Qatar University, the British Embassy Doha (Gulf Strategy Fund), Facebook Research, and the Higher Education Commission (HEC) of Pakistan. I have served as an editor for various top journals including (1) IEEE Communications Magazine; (2) Springer Nature Big Data Analytics journal; (3) IEEE Access; and currently serve as an Associate Editor of Frontiers in Communications and Networks. Finally, I have extensive experience in successfully supervising research students (both post-graduate and undergraduate)."
                     },
                     {
-                      "html": "<em><strong>Citation statistics (September 2026)</strong></em>: <a href=\"https://scholar.google.com/citations?user=EdPPQToAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Google Scholar</strong></a>: <em>Citations 27,500+; h-index 81; i10-index 230+</em>; <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per SCOPUS</strong></a>: <em>Citations 13,450+; h-index 60+</em>; <a href=\"https://www.webofscience.com/wos/author/record/847810\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Clarivate Analytics WOS</strong></a>: <em>Citations 8,000+; h-index 47+</em>.",
-                      "text": "Citation statistics (September 2026): As per Google Scholar: Citations 27,500+; h-index 81; i10-index 230+; As per SCOPUS: Citations 13,450+; h-index 60+; As per Clarivate Analytics WOS: Citations 8,000+; h-index 47+."
+                      "html": "<em><strong>Citation statistics (last updated October 2026)</strong></em>: <a href=\"https://scholar.google.com/citations?user=EdPPQToAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Google Scholar</strong></a>: <em>Citations 27,500+; h-index 81; i10-index 230+</em>; <a href=\"https://www.scopus.com/authid/detail.uri?authorId=15058218600\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per SCOPUS</strong></a>: <em>Citations 15,400+; h-index 63; 289 documents</em>; <a href=\"https://www.webofscience.com/wos/author/record/847810\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>As per Clarivate Analytics WOS</strong></a>: <em>Citations 8,800+; h-index 49; 218 Core Collection publications</em>.",
+                      "text": "Citation statistics (last updated October 2026): As per Google Scholar: Citations 27,500+; h-index 81; i10-index 230+; As per SCOPUS: Citations 15,400+; h-index 63; 289 documents; As per Clarivate Analytics WOS: Citations 8,800+; h-index 49; 218 Core Collection publications."
                     }
                   ]
                 }
@@ -563,6 +563,10 @@
                 {
                   "items": [
                     {
+                      "html": "Lead Organizer and Project PI, International Conference on Islamic Ethics and AI (IEAI), Lahore, Pakistan, December 2021. <a href=\"https://islamicaiethics.info\" target=\"_blank\" rel=\"noopener noreferrer\">https://islamicaiethics.info</a>.",
+                      "text": "Lead Organizer and Project PI, International Conference on Islamic Ethics and AI (IEAI), Lahore, Pakistan, December 2021. https://islamicaiethics.info."
+                    },
+                    {
                       "html": "Advisory Board Member, First International Conference on AI &amp; DA (CAIDA), Riyadh, April, 2021.",
                       "text": "Advisory Board Member, First International Conference on AI & DA (CAIDA), Riyadh, April, 2021."
                     },
@@ -771,8 +775,8 @@
               ]
             },
             {
-              "html": "<strong><em>Tutorials</em>:</strong>",
-              "text": "Tutorials:",
+              "html": "<strong><em>Tutorials/ Master Classes</em>:</strong>",
+              "text": "Tutorials/ Master Classes:",
               "children": [
                 {
                   "items": [
@@ -1514,10 +1518,6 @@
             {
               "html": "Presenter, “<em>Toward an Ummatic Vision for Advanced AI</em>”, Ummatics Institute, December 2025.",
               "text": "Presenter, “Toward an Ummatic Vision for Advanced AI”, Ummatics Institute, December 2025."
-            },
-            {
-              "html": "Master Class Presenter, “<em>Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management</em>”, World AI Summit Qatar, Doha, December 2025.",
-              "text": "Master Class Presenter, “Multiplex Digital Twins: AI-Driven Twins for Smarter Health Management”, World AI Summit Qatar, Doha, December 2025."
             },
             {
               "html": "Invited talk titled, “<em>Ethical Considerations in the Use of AI in Healthcare</em>” at the 1st Qatar Conference on Laboratory Medicine and Pathology, organized by the Department of Laboratory Medicine and Pathology at the Hamad Medical Corporation, November 2025, Qatar.",
