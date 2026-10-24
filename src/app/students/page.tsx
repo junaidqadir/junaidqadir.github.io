@@ -4,10 +4,6 @@ import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import { getStudents, type Student } from "@/lib/students";
-import { getPublicationBySlug } from "@/lib/publications";
-import { venueName } from "@/lib/venues";
-import { learningStartSlugs, learningGuideSlugs } from "@/content/learningPapers";
-import type { Publication } from "@/types/publication";
 
 export const metadata: Metadata = {
   title: "Students — Junaid Qadir",
@@ -36,9 +32,6 @@ function Card({ s }: { s: Student }) {
   );
 }
 
-const tips = [...learningStartSlugs, ...learningGuideSlugs].map(getPublicationBySlug).filter((p): p is Publication => !!p);
-const tipHref = (p: Publication) => (p.doi ? `https://doi.org/${p.doi}` : p.oa_url ?? (p.pdf ? `https://github.com/junaidqadir/publications/blob/main/${p.pdf}` : null));
-
 export default function StudentsPage() {
   const all = getStudents();
   const sorted = (xs: Student[]) => [...xs].sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.name.localeCompare(b.name));
@@ -64,27 +57,6 @@ export default function StudentsPage() {
       </section>
 
       <Container width="max-w-5xl" className="space-y-14 py-16">
-        <section id="tips" className="scroll-mt-24">
-          <h2 className="font-serif text-2xl text-foreground sm:text-3xl">Tips for students</h2>
-          <p className="mt-3 max-w-2xl text-muted">Articles and guides I have written on how to learn well: the untaught basics, how to thrive in engineering, and how to learn with AI. I offer them to every student I teach or supervise.</p>
-          <ul className="mt-5 divide-y divide-border border-y border-border">
-            {tips.map((p) => {
-              const href = tipHref(p);
-              return (
-                <li key={p.slug} className="py-3">
-                  <p className="font-serif text-[17px] leading-snug text-foreground">
-                    {href ? <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-accent">{p.title}</a> : p.title}
-                  </p>
-                  <p className="mt-0.5 text-sm text-muted"><em>{venueName(p.venue)}</em>{p.year ? ` (${p.year})` : ""}</p>
-                </li>
-              );
-            })}
-          </ul>
-          <p className="mt-4 text-sm"><Link href="/learning" className={linkCls}>More on how to learn well, with primers, slides and lectures →</Link></p>
-        </section>
-
-        <Ornament />
-
         {sections.filter(([, xs]) => xs.length).map(([title, xs]) => (
           <section key={title}>
             <h2 className="font-serif text-2xl text-foreground sm:text-3xl">{title} <span className="text-base text-muted">{xs.length}</span></h2>

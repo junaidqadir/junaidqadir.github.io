@@ -9,10 +9,11 @@ export const nav = [
   { href: "/research", label: "Research", also: [], button: false },
   { href: "/multiplexity", label: "Multiplexity", also: [], button: false },
   { href: "/ihsan", label: "Ihsan", also: [], button: false },
-  { href: "/courses", label: "Courses", also: ["/learning"], button: false },
+  { href: "/courses", label: "Courses", also: [], button: false },
   { href: "/talks", label: "Talks", also: [], button: false },
   { href: "/videos", label: "Videos", also: [], button: false },
   { href: "/publications", label: "Publications", also: [], button: false },
+  { href: "/learning", label: "Tips", also: [], button: false },
   { href: "/students", label: "Students", also: [], button: false },
   { href: "/contact", label: "Contact", also: [], button: true },
 ] as const;

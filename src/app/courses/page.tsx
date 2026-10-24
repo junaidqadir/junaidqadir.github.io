@@ -146,7 +146,7 @@ export default function CoursesPage() {
           </div>
           <p className="mt-4 max-w-2xl text-sm text-muted">
             A recurring theme: AI can make production easier, but education must preserve the effort through which understanding, judgment and character are formed.
-            My supervised students are on the <Link href="/students" className="text-accent hover:opacity-70">Students</Link> page, with <Link href="/students#tips" className="text-accent hover:opacity-70">tips for students</Link> and the <Link href="/learning" className="text-accent hover:opacity-70">How to learn well</Link> page.
+            My supervised students are on the <Link href="/students" className="text-accent hover:opacity-70">Students</Link> page, and advice on learning well is on the <Link href="/learning" className="text-accent hover:opacity-70">Tips</Link> page.
           </p>
         </section>
 

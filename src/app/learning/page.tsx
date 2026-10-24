@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
-import Crumb from "@/components/Crumb";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import PublicationCard from "@/components/PublicationCard";
@@ -13,7 +12,7 @@ import { ethicsCourse } from "@/content/ethicsCourse";
 import { learningStartSlugs, learningGuideSlugs } from "@/content/learningPapers";
 
 export const metadata: Metadata = {
-  title: "Learning — Junaid Qadir",
+  title: "Tips for students — Junaid Qadir",
   description: "Articles, primers, slides and lectures on how to learn well, build skills and grow as a student, researcher and professional.",
 };
 
@@ -36,8 +35,7 @@ export default function LearningPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative flex flex-wrap items-center justify-between gap-8 py-16">
           <div className="max-w-2xl">
-            <Crumb href="/courses" label="Courses" />
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Learning &amp; growth</p>
+            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Tips for students</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">How to learn well<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               Articles, primers, slides and lectures for students, researchers and professionals on learning, skills and personal development,

@@ -7,6 +7,4 @@ export const learningStartSlugs = [
 export const learningGuideSlugs = [
   "2020-qadir-student-primer-thrive-engineering",
   "2020-qadir-engineering-education-moving-2020s",
-  "2023-gull-robotics-primer-independent-learners",
-  "2026-qadir-ai-chatbots-provide-coaching",
 ];
