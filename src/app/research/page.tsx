@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import Link from "next/link";
 import PublicationCard from "@/components/PublicationCard";
 import GeoArt from "@/components/GeoArt";
+import ThemeCard from "@/components/ThemeCard";
 import IhsanMark from "@/components/IhsanMark";
 import { researchThemes } from "@/content/site";
 import { playlistsForTheme, playlistUrl } from "@/content/playlists";
@@ -13,7 +14,7 @@ export const metadata: Metadata = { title: "Research — Junaid Qadir" };
 
 export default function ResearchPage() {
   return (
-    <Container className="py-16">
+    <Container width="max-w-6xl" className="py-16">
       <h1 className="font-serif text-3xl text-foreground">Research</h1>
       <p className="mt-3 max-w-xl text-muted">
         My work is organized around nine connected themes rather than a
@@ -21,7 +22,13 @@ export default function ResearchPage() {
         projects on that topic.
       </p>
 
-      <div className="mt-12 space-y-16">
+      <div id="themes" className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {researchThemes.map((t, i) => (
+          <ThemeCard key={t.slug} theme={t} index={i} count={getPublicationsByTheme(t.publicationTheme as Theme).length} />
+        ))}
+      </div>
+
+      <div className="mt-16 max-w-4xl space-y-16">
         {researchThemes.map((theme) => {
           const all = getPublicationsByTheme(theme.publicationTheme as Theme);
           // featured first, then newest — a short, representative list; the full set is one click away
@@ -37,6 +44,7 @@ export default function ResearchPage() {
               <p className="mt-2 max-w-xl leading-relaxed text-muted">
                 {theme.blurb}
               </p>
+              <p className="mt-2 text-xs"><a href="#themes" className="text-muted hover:text-accent">↑ All nine themes</a></p>
               {playlistsForTheme(theme.slug).length > 0 && (
                 <p className="mt-4 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-sm">
                   <span className="text-xs font-medium uppercase tracking-wide text-muted">Lectures</span>
