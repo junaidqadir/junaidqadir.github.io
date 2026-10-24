@@ -13,8 +13,8 @@ export const nav = [
   { href: "/talks", label: "Talks", also: [], button: false },
   { href: "/videos", label: "Videos", also: [], button: false },
   { href: "/publications", label: "Publications", also: [], button: false },
-  { href: "/learning", label: "Tips", also: [], button: false },
   { href: "/students", label: "Students", also: [], button: false },
+  { href: "/learning", label: "Tips", also: [], button: false },
   { href: "/contact", label: "Contact", also: [], button: true },
 ] as const;
 
