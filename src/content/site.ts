@@ -11,6 +11,7 @@ export const nav = [
   { href: "/learning", label: "Learning" },
   { href: "/students", label: "Students" },
   { href: "/talks", label: "Talks" },
+  { href: "/videos", label: "Videos" },
   { href: "/awards", label: "Awards" },
   { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },

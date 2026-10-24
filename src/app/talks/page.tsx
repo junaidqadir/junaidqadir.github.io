@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Container from "@/components/Container";
 import { socials } from "@/content/site";
 import { talkCategories, talks } from "@/content/talks";
@@ -63,7 +64,8 @@ export default function TalksPage() {
       <h1 className="font-serif text-3xl text-foreground">Talks & Media</h1>
       <p className="mt-3 max-w-xl text-muted">
         Recordings of lectures, short courses, interviews and conference talks, followed by the complete
-        list of invited talks and presentations from my CV.
+        list of invited talks and presentations from my CV. For a watch-first view, see the{" "}
+        <Link href="/videos" className="text-accent hover:opacity-70">Videos page</Link>.
       </p>
 
       <div className="mt-12 space-y-14">

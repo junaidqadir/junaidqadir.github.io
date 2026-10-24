@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
+import VideoCard from "@/components/VideoCard";
+import { getVideos } from "@/lib/videos";
 import GeoArt from "@/components/GeoArt";
 import ThemeCard from "@/components/ThemeCard";
 import PublicationCard from "@/components/PublicationCard";
@@ -39,6 +41,7 @@ export default function Home() {
     ...listUnder("professional-services", /^Editorial Services/i).filter((i) => /Associate Editor.*present/i.test(i.text)),
     ...listUnder("professional-services", /^Advisory Board/i).slice(0, 1),
   ];
+  const featuredVideos = getVideos().filter((v) => v.featured).slice(0, 3);
   const supervised = keyNumbers.find((k) => /supervis/i.test(k.label))?.value ?? "many";
 
   return (
@@ -180,10 +183,26 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ───────── 04 Publications ───────── */}
+      {/* ───────── 04 Videos ───────── */}
+      <section id="videos" className="scroll-mt-20 border-b border-border">
+        <Container width="max-w-6xl" className="py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <Kicker n="04">Watch</Kicker>
+              <H2>Talks, interviews and courses on video.</H2>
+            </div>
+            <Link href="/videos" className="text-sm text-accent hover:opacity-70">All videos and playlists →</Link>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {featuredVideos.map((v) => (<VideoCard key={v.id} v={v} />))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ───────── 05 Publications ───────── */}
       <section id="publications" className="scroll-mt-20 border-b border-border">
         <Container width="max-w-6xl" className="py-20">
-          <Kicker n="04">Publications</Kicker>
+          <Kicker n="05">Publications</Kicker>
           <H2>Selected publications.</H2>
           <p className="mt-4 max-w-2xl text-muted">
             A short selection. The full, searchable list — filterable by theme, topic, co-author, venue and year, with open-access PDFs and BibTeX where available — follows.
@@ -196,7 +215,7 @@ export default function Home() {
       {/* ───────── 05 Projects ───────── */}
       <section id="projects" className="scroll-mt-20 border-b border-border">
         <Container width="max-w-6xl" className="py-20">
-          <Kicker n="05">Projects &amp; grants</Kicker>
+          <Kicker n="06">Projects &amp; grants</Kicker>
           <H2>Labs, initiatives and funded work.</H2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {projects.map((p) => {
@@ -226,7 +245,7 @@ export default function Home() {
       {/* ───────── 06 Recognition + bio ───────── */}
       <section id="about" className="scroll-mt-20 border-b border-border">
         <Container width="max-w-6xl" className="py-20">
-          <Kicker n="06">Biography &amp; service</Kicker>
+          <Kicker n="07">Biography &amp; service</Kicker>
           <H2>Research, teaching and scientific service.</H2>
           <div className="mt-10 grid gap-12 md:grid-cols-2">
             <div className="space-y-4 leading-relaxed text-muted">
@@ -254,7 +273,7 @@ export default function Home() {
       <section id="contact" className="scroll-mt-20">
         <Container width="max-w-6xl" className="py-20">
           <Ornament className="mb-14" />
-          <Kicker n="07">Contact</Kicker>
+          <Kicker n="08">Contact</Kicker>
           <H2>Let&rsquo;s talk research.</H2>
           <p className="mt-4 max-w-xl text-muted">{contact.intro}</p>
           <StudentNote className="mt-5" />

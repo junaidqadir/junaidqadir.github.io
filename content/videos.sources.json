@@ -1,0 +1,16 @@
+{
+  "_comment": "Curated videos. Add a line with the YouTube id, then run `node scripts/sync-videos.mjs` (titles and thumbnails are fetched automatically). kind: Talk | Lecture | Interview | Research presentation | Seminar. topics use the Talks-page topic keys. start = seconds.",
+  "videos": [
+    { "id": "WpOHI35eDEc", "start": 138, "kind": "Talk", "host": "Usul Academy", "year": 2026, "topics": ["multiplexity", "ai-governance", "islamic"], "featured": true },
+    { "id": "yZdIAZwkyDY", "start": 1682, "kind": "Talk", "host": "Ummatics Institute", "year": 2025, "topics": ["ai-ethics", "ai-governance", "islamic"], "featured": true },
+    { "id": "Nc_OpkiLPvo", "start": 862, "kind": "Talk", "topics": ["ai-ethics", "islamic"], "featured": true },
+    { "id": "Brz0Ey4y8R0", "start": 1986, "kind": "Interview", "host": "The Ehmad Zubair Show", "topics": ["education", "ai-ethics"] },
+    { "id": "wIPchnaGczk", "start": 3, "kind": "Lecture", "topics": ["ai-ethics"] },
+    { "id": "_UMTKSI5nmg", "kind": "Lecture", "host": "AIDA Lab, Prince Sultan University", "year": 2020, "topics": ["ai-ethics"] },
+    { "id": "fzUsTPdq3yE", "start": 33, "kind": "Research presentation", "host": "IEEE EDUCON 2026", "year": 2026, "topics": ["education", "ai-ethics"] },
+    { "id": "w0VGvxmAZ68", "start": 8, "kind": "Research presentation", "host": "IEEE EDUCON 2026", "year": 2026, "topics": ["education"] },
+    { "id": "PWO_1Lg9jgE", "start": 38, "kind": "Research presentation", "host": "EDULEARN 2024", "year": 2024, "topics": ["education", "ai-ethics"] },
+    { "id": "T4R7xVk41Jk", "start": 2, "kind": "Research presentation", "host": "EDULEARN 2024", "year": 2024, "topics": ["education"] },
+    { "id": "psRdgGazfr4", "kind": "Seminar", "host": "Qatar University Computing Seminar", "topics": ["networks", "ai-ethics"] }
+  ]
+}

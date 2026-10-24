@@ -8,10 +8,11 @@ export const metadata: Metadata = {
 };
 
 const photos = [
-  { src: "/awards/convocation-2026.jpg", alt: "Qatar University Annual Convocation Ceremony, September 2026", caption: "Qatar University Annual Convocation Ceremony, 16 September 2026 — Outstanding Faculty Service Award (2025–26)." },
+  { src: "/awards/convocation-official-2026.jpg", alt: "Award recipients at the Qatar University Annual Convocation Ceremony, 16 September 2026", caption: "Qatar University Annual Convocation Ceremony, 16 September 2026, where the Outstanding Faculty Service Award (2025–26) was presented." },
   { src: "/awards/dean-teaching-2026.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Teaching, 2026", caption: "College of Engineering Dean’s Award for Excellence in Teaching, 2026." },
   { src: "/awards/dean-service-2025.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Service, 2025", caption: "College of Engineering Dean’s Award for Excellence in Service, 2025." },
   { src: "/awards/dean-research-2024.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Research, 2024", caption: "College of Engineering Dean’s Award for Excellence in Research, 2024." },
+  { src: "/awards/convocation-closeup-2026.jpg", alt: "With fellow award recipients at the Qatar University convocation, September 2026", caption: "With fellow recipients at the convocation ceremony." },
 ];
 
 export default function AwardsPage() {

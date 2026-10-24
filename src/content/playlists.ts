@@ -18,6 +18,7 @@ export const playlists: Playlist[] = [
   { id: "PL4AueLFeEG0DJQVEKiE8KCg9Kkk6xQUum", themes: ["multiplexity", "ai-ethics-governance"], title: "Multiplex AI", videos: 2, areas: ["multiplexity", "ai-ethics"] },
   { id: "PL4AueLFeEG0AP-Qr9ZBReJRnGuMiHQd03", themes: ["ihsan-ethics", "multiplexity", "ai-education"], title: "IHSAN Course 2025: Education in the AI Era, Cultivating Multiplex Intelligence and Human Wholeness", videos: 8, blurb: "The eight lectures of the 2025 IHSAN course.", areas: ["multiplexity", "education", "ihsan"] },
   { id: "PL4AueLFeEG0DNu6Y3xjDtRivNtWn_pI_9", themes: ["ai-ethics-governance", "ihsan-ethics"], title: "International Conference on Islamic Ethics and AI, Lahore, December 2021", videos: 17, areas: ["ai-ethics", "ihsan"] },
+  { id: "PL1Xmyl4aKTRhDsx82ZKw_ucVk1cM9akk5", title: "AI Ethics: guest module (7 parts, Emerging Technologies channel)", videos: 7, themes: ["ai-ethics-governance"], areas: ["ai-ethics", "teaching"] },
   { id: "PL4AueLFeEG0Cy33n0n5N-XBhSHZaYmxFr", themes: ["ai-ethics-governance"], title: "AI Ethics — Short Course", videos: 9, areas: ["ai-ethics", "teaching"] },
   { id: "PL4AueLFeEG0BfhyJeE_owDofuRDykjzer", themes: ["ai-ethics-governance"], title: "HBKU CILE Guest Lecture on AI Ethics", videos: 3, areas: ["ai-ethics"] },
   { id: "PL4AueLFeEG0BwOZkJK7_37TPVJUm55RH_", themes: ["ai-education"], title: "Engineering Education", videos: 3, areas: ["education"] },
