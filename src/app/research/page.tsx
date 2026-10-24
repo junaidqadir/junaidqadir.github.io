@@ -22,9 +22,9 @@ export default function ResearchPage() {
         projects on that topic.
       </p>
 
-      <div id="themes" className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div id="themes" className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {researchThemes.map((t, i) => (
-          <ThemeCard key={t.slug} theme={t} index={i} count={getPublicationsByTheme(t.publicationTheme as Theme).length} />
+          <ThemeCard key={t.slug} theme={t} index={i} compact count={getPublicationsByTheme(t.publicationTheme as Theme).length} />
         ))}
       </div>
 
