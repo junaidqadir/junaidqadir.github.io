@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-10-24",
-  "source_sha": "46301f0c18a9",
+  "source_sha": "b149f4d446e2",
   "derived": {
     "citations_scholar": "27,500+",
     "h_index_scholar": "81",
@@ -308,12 +308,12 @@
               "text": "Data Communications and Computer Networks (Spring 2011; Fall 2011) [NUST], (Spring 2016) [ITU];"
             },
             {
-              "html": "Data Communications and Computer Networks I (Fall 2024; Fall 2025) [Qatar University];",
-              "text": "Data Communications and Computer Networks I (Fall 2024; Fall 2025) [Qatar University];"
+              "html": "Data Communications and Computer Networks I (Fall 2024; Fall 2025; Fall 2026) [Qatar University];",
+              "text": "Data Communications and Computer Networks I (Fall 2024; Fall 2025; Fall 2026) [Qatar University];"
             },
             {
-              "html": "Data Communications and Computer Networks II (Spring 2022; Spring 2023) [Qatar University];",
-              "text": "Data Communications and Computer Networks II (Spring 2022; Spring 2023) [Qatar University];"
+              "html": "Data Communications and Computer Networks II (Spring 2022/ 2023/ 2024/ 2025/ 2026) [Qatar University];",
+              "text": "Data Communications and Computer Networks II (Spring 2022/ 2023/ 2024/ 2025/ 2026) [Qatar University];"
             },
             {
               "html": "Electronics Workbench (Fall 2020) [ITU];",
@@ -373,16 +373,20 @@
               "text": "Analysis of Stochastic Systems [aka Advanced Probability and Statistics] (Fall 2017/ 2020) [ITU];"
             },
             {
-              "html": "Embedded Computing Systems (Fall 2023; Fall 2025) [Qatar University];",
-              "text": "Embedded Computing Systems (Fall 2023; Fall 2025) [Qatar University];"
+              "html": "Embedded Computing Systems (Fall 2023; Fall 2025; Fall 2026) [Qatar University];",
+              "text": "Embedded Computing Systems (Fall 2023; Fall 2025; Fall 2026) [Qatar University];"
             },
             {
               "html": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan], course website: <a href=\"https://sites.google.com/site/netperfeval\" target=\"_blank\" rel=\"noopener noreferrer\">https://sites.google.com/site/netperfeval</a>;",
               "text": "Network Performance and Evaluation (Summer 2012) [Virtual University of Pakistan], course website: https://sites.google.com/site/netperfeval;"
             },
             {
-              "html": "Special Topics in Computer Science/Engineering [Embedded Artificial Intelligence] (Spring 2022) [Qatar University].",
-              "text": "Special Topics in Computer Science/Engineering [Embedded Artificial Intelligence] (Spring 2022) [Qatar University]."
+              "html": "Special Topics in Computer Science/Engineering (Embedded Artificial Intelligence, in Spring 2022) [Qatar University];",
+              "text": "Special Topics in Computer Science/Engineering (Embedded Artificial Intelligence, in Spring 2022) [Qatar University];"
+            },
+            {
+              "html": "Special Topics in Computer Engineering/ Computer Science, CMPT 682/683 (Large Language Models and Foundation AI Models, in Spring 2026) [Qatar University].",
+              "text": "Special Topics in Computer Engineering/ Computer Science, CMPT 682/683 (Large Language Models and Foundation AI Models, in Spring 2026) [Qatar University]."
             }
           ]
         }
