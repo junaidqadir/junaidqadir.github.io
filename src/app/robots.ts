@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import type { MetadataRoute } from "next";
 
 const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.com";
