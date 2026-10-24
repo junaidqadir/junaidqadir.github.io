@@ -8,7 +8,6 @@ import { getPublicationBySlug } from "@/lib/publications";
 import { playlists, playlistUrl } from "@/content/playlists";
 import { slideDecks } from "@/content/slides";
 import type { Publication } from "@/types/publication";
-import { ethicsCourse } from "@/content/ethicsCourse";
 import { learningStartSlugs, learningGuideSlugs } from "@/content/learningPapers";
 
 export const metadata: Metadata = {
@@ -20,12 +19,10 @@ const pick = (slugs: string[]) => slugs.map(getPublicationBySlug).filter((p): p 
 
 const startHere = pick(learningStartSlugs);
 const guides = pick(learningGuideSlugs);
-const ethicsPaper = pick([ethicsCourse.paperSlug]);
 const writing = pick(["2026-qadir-craft-ed-framework-effective"]);
-const wholeness = pick(["2026-qadir-multiplex-systemics-wholeness-making"]);
 const deckFiles = ["engineering-and-computing-education", "essential-skills", "how-to-thrive", "research-writing"];
 const decks = deckFiles.map((k) => slideDecks.find((d) => d.file.includes(k))).filter((d): d is NonNullable<typeof d> => !!d);
-const lists = playlists.filter((l) => ["PL931370B167ED8BE7", "PL4AueLFeEG0ArS4nj1TuRqd2lUEdH1M5n", "PL4AueLFeEG0DAqrRgnZKQR163mvpOOkz-", "PL4AueLFeEG0BwOZkJK7_37TPVJUm55RH_"].includes(l.id));
+const lists = playlists.filter((l) => ["PL931370B167ED8BE7", "PL4AueLFeEG0ArS4nj1TuRqd2lUEdH1M5n", "PL4AueLFeEG0AP-Qr9ZBReJRnGuMiHQd03", "PL4AueLFeEG0DAqrRgnZKQR163mvpOOkz-", "PL4AueLFeEG0BwOZkJK7_37TPVJUm55RH_"].includes(l.id));
 
 const H2 = ({ children }: { children: React.ReactNode }) => <h2 className="font-serif text-2xl text-foreground sm:text-3xl">{children}</h2>;
 
@@ -65,45 +62,6 @@ export default function LearningPage() {
           <div className="mt-4">{guides.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
         </section>
 
-        <section id="wholeness-ihsan">
-          <H2>Wholeness and ihsan in learning</H2>
-          <p className="mt-3 max-w-2xl text-muted">
-            Learning is more than skills and grades. A chapter on educating the whole person, and the two IHSAN courses on excellence, sincerity and character.
-          </p>
-          <div className="mt-4">{wholeness.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-            <li className="card-ornate p-5">
-              <p className="text-xs uppercase tracking-wide text-gold">Course · 2025 · 8 lectures · 103 slides</p>
-              <h3 className="mt-1 font-serif text-lg leading-snug text-foreground">IHSAN Course 2025: Education in the AI Era, Cultivating Multiplex Intelligence and Human Wholeness</h3>
-              <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-                <Link href="/courses#ihsan-2025" className="text-accent hover:opacity-70">Lectures and details →</Link>
-                <a href="/courses/ihsan-course-2025-all-slides.pdf" className="text-accent hover:opacity-70">Slides (PDF) ↓</a>
-              </p>
-            </li>
-            <li className="card-ornate p-5">
-              <p className="text-xs uppercase tracking-wide text-gold">Short course · 2020 · 145 slides</p>
-              <h3 className="mt-1 font-serif text-lg leading-snug text-foreground">Spiritual Excellence (Ihsan) for Muslim Professionals</h3>
-              <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-                <Link href="/courses#ihsan-short-course" className="text-accent hover:opacity-70">Lectures and details →</Link>
-                <a href="/courses/ihsan-short-course-2020-all-slides.pdf" className="text-accent hover:opacity-70">Slides (PDF) ↓</a>
-              </p>
-            </li>
-          </ul>
-        </section>
-
-        <Ornament />
-
-        <section>
-          <H2>Ethics, (Islamic) values and technology</H2>
-          <p className="mt-3 max-w-2xl text-muted">
-            The course {ethicsCourse.code}, <em>{ethicsCourse.title}</em>, with its complete slide set and the paper describing its design and the experience of teaching it.
-          </p>
-          <p className="mt-4 flex flex-wrap gap-3 text-sm">
-            <a href={ethicsCourse.site} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-foreground px-4 py-2.5 text-background transition-opacity hover:opacity-85">Course website ↗</a>
-            <a href={ethicsCourse.slides} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-accent px-4 py-2.5 text-background transition-opacity hover:opacity-85">All the slides (Google Drive) ↗</a>
-          </p>
-          <div className="mt-4">{ethicsPaper.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div>
-        </section>
 
         <section>
           <H2>Writing with AI</H2>
