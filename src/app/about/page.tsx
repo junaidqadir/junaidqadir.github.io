@@ -23,6 +23,7 @@ export default function AboutPage() {
   const teachingStatement = teaching.find((i) => /Recognized for quality teaching/i.test(i.text));
 
   const degrees = getSection("education")?.blocks.flatMap((b) => b.items) ?? [];
+  const training = getSection("certifications-training-workshops")?.blocks.flatMap((b) => b.items) ?? [];
 
   return (
     <Container className="py-16">
@@ -50,16 +51,26 @@ export default function AboutPage() {
         <ul className="mt-3 space-y-2 leading-relaxed text-foreground">
           {degrees.map((d, i) => (<li key={i} dangerouslySetInnerHTML={{ __html: d.html }} />))}
         </ul>
-        <div className="mt-5 flex gap-5">
-          <div className="min-w-0 flex-1">
-            <p className="leading-relaxed text-foreground"><strong className="font-medium">{fellowship.title}</strong>, 2024–25</p>
-            <p className="mt-1 text-[15px] leading-relaxed text-muted">{fellowship.text}</p>
-            <p className="mt-2 text-sm"><a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">View the certificate ↗</a></p>
-          </div>
-          <a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="hidden w-24 shrink-0 self-start sm:block" aria-label={fellowship.cert.alt}>
-            <RetryImg src={asset(fellowship.cert.thumb)} alt={fellowship.cert.alt} className="w-full rounded-sm border border-border transition-opacity hover:opacity-80" />
-          </a>
-        </div>
+      </section>
+
+      <section className="mt-10" aria-labelledby="training">
+        <h2 id="training" className="text-sm font-medium uppercase tracking-widest text-muted">Training and certifications</h2>
+        <ul className="mt-3 space-y-4 leading-relaxed text-foreground">
+          {training.map((t, i) => /QUTF/.test(t.text) ? (
+            <li key={i} className="flex gap-5">
+              <div className="min-w-0 flex-1">
+                <p><strong className="font-medium">{fellowship.title}</strong>, 2024–25</p>
+                <p className="mt-1 text-[15px] leading-relaxed text-muted">{fellowship.text}</p>
+                <p className="mt-2 text-sm"><a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">View the certificate ↗</a></p>
+              </div>
+              <a href={fellowship.cert.href} target="_blank" rel="noopener noreferrer" className="hidden w-24 shrink-0 self-start sm:block" aria-label={fellowship.cert.alt}>
+                <RetryImg src={asset(fellowship.cert.thumb)} alt={fellowship.cert.alt} className="w-full rounded-sm border border-border transition-opacity hover:opacity-80" />
+              </a>
+            </li>
+          ) : (
+            <li key={i} className="text-[15px]" dangerouslySetInnerHTML={{ __html: t.html }} />
+          ))}
+        </ul>
       </section>
 
       {interests && (
