@@ -1,7 +1,7 @@
 // Slide decks published as PDF (never PPT) and matched to CV talks by title + year. Only decks for talks listed in the CV,
 // scanned for confidentiality markers; PowerPoint-only decks were converted from the latest version. To add one:
 // copy the PDF to public/slides/ and add a line here.
-export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string; aliases?: string[] };
+export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string; aliases?: string[]; match?: string[] };
 
 export const slideDecks: SlideDeck[] = [
   {
@@ -105,6 +105,7 @@ export const slideDecks: SlideDeck[] = [
     "title": "Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity",
     "year": 2023,
     "file": "2023-educating-for-the-ai-revolution-fostering-a-holistic-human-c.pdf",
+    "match": ["14th Excellence in Education and Learning Forum"],
     "pages": 24,
     "mb": 2.8,
     "date": "June 2023"
@@ -209,6 +210,7 @@ export const slideDecks: SlideDeck[] = [
     "title": "AI's Governance and Ethical Dilemmas",
     "year": 2021,
     "file": "2021-ai-s-governance-and-ethical-dilemmas.pdf",
+    "match": ["ICoDT2"],
     "pages": 17,
     "mb": 5.2,
     "date": "May 2021"
@@ -252,6 +254,86 @@ export const slideDecks: SlideDeck[] = [
     "pages": 36,
     "mb": 13.3,
     "date": "May 2024"
+  },
+  {
+    "title": "Agentic AI and the Limits of Automation: Why More Automation Does Not Mean Better Media",
+    "year": 2026,
+    "file": "2026-agentic-ai-and-the-limits-of-automation-why-more-automation-.pdf",
+    "pages": 60,
+    "mb": 3.1,
+    "date": "May 2026",
+    "match": ["beIN Media"]
+  },
+  {
+    "title": "Digital Twins in Healthcare",
+    "year": 2026,
+    "file": "2026-digital-twins-in-healthcare.pdf",
+    "pages": 34,
+    "mb": 3.2,
+    "date": "April 2026",
+    "match": ["MEDI210"]
+  },
+  {
+    "title": "Multiplex Systemics Meets Agentic AI: Critical Systems Thinking for Decision Making in a Complex World",
+    "year": 2026,
+    "file": "2026-multiplex-systemics-meets-agentic-ai-critical-systems-thinki.pdf",
+    "pages": 61,
+    "mb": 1.6,
+    "date": "April 2026",
+    "match": ["Multiplex Systemics Meets Agentic AI"]
+  },
+  {
+    "title": "A Multiplex Framework for Responsible AI-Augmented Mental Healthcare",
+    "year": 2026,
+    "file": "2026-a-multiplex-framework-for-responsible-ai-augmented-mental-he.pdf",
+    "pages": 8,
+    "mb": 0.7,
+    "date": "February 2026",
+    "match": ["Integrating Islamic Spirituality and Generative AI in Mental Health"]
+  },
+  {
+    "title": "Multiplex Systemics: A Both-And Framework for Navigating AI in Mental Health and Psychosocial Support",
+    "year": 2025,
+    "file": "2025-multiplex-systemics-a-both-and-framework-for-navigating-ai-i.pdf",
+    "pages": 25,
+    "mb": 0.6,
+    "date": "December 2025",
+    "match": ["AI Implementation in Crisis Response"]
+  },
+  {
+    "title": "Educating for the AI Revolution: Fostering a Holistic Human-Centered Approach Based on Wisdom and Multiplexity",
+    "year": 2024,
+    "file": "2024-educating-for-the-ai-revolution-fostering-a-holistic-human-c.pdf",
+    "pages": 23,
+    "mb": 5.2,
+    "date": "February 2024",
+    "match": ["Dar Al-Hekma"]
+  },
+  {
+    "title": "Essential Competencies for Highly Effective 21st Century and Beyond-2020 Engineers",
+    "year": 2021,
+    "file": "2021-essential-competencies-for-highly-effective-21st-century-and.pdf",
+    "pages": 33,
+    "mb": 35.9,
+    "date": "June 2021",
+    "match": ["All Pakistan Tech and Art Festival"]
+  },
+  {
+    "title": "On Analyzing Self-Driving Networks: A Systems Thinking Approach",
+    "year": 2018,
+    "file": "2018-on-analyzing-self-driving-networks-a-systems-thinking-approa.pdf",
+    "pages": 47,
+    "mb": 11.2,
+    "date": "August 2018"
+  },
+  {
+    "title": "GAIA: From the Operator's View",
+    "year": 2016,
+    "file": "2016-gaia-from-the-operator-s-view.pdf",
+    "pages": 6,
+    "mb": 1.1,
+    "date": "2016",
+    "match": ["Global Internet Access: An Operator"]
   }
 ];
 
@@ -270,6 +352,8 @@ export function slidesFor(cvText: string): string | null {
   const quoted = (cvText.match(/“([^”]+)”/) || [])[1] ?? cvText;
   const years = [...cvText.matchAll(/\b(?:19|20)\d{2}\b/g)].map((m) => +m[0]);
   for (const m of cvText.matchAll(/['’](\d{2})\b/g)) years.push(2000 + +m[1]); // e.g. EEITC'24
-  const hit = slideDecks.find((d) => [d.title, ...(d.aliases ?? [])].some((t) => overlap(quoted, t) >= 0.8) && years.includes(d.year));
+  const low = cvText.toLowerCase();
+  const pinned = slideDecks.find((d) => d.match?.some((m) => low.includes(m.toLowerCase())) && years.includes(d.year)); // distinctive phrase in the CV entry
+  const hit = pinned ?? slideDecks.find((d) => [d.title, ...(d.aliases ?? [])].some((t) => overlap(quoted, t) >= 0.8) && years.includes(d.year));
   return hit ? `/slides/${hit.file}` : null;
 }
