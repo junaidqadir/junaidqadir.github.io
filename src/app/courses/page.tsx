@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import CoursesTabs from "@/components/CoursesTabs";
+import { slideDecks } from "@/content/slides";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
@@ -9,8 +11,8 @@ import { playlists, playlistUrl } from "@/content/playlists";
 import { ethicsCourse } from "@/content/ethicsCourse";
 
 export const metadata: Metadata = {
-  title: "Courses — Junaid Qadir",
-  description: "The IHSAN courses (2020 and 2025) with full lectures and slides, plus CS721 Network Performance & Evaluation and other open courses.",
+  title: "Courses & Learning — Junaid Qadir",
+  description: "Open courses with lectures and slides: the IHSAN courses (2020 and 2025), the four-day Generative AI course, AI ethics, and more; plus how to learn well, and teaching and supervision.",
 };
 
 const outcomes = [
@@ -37,14 +39,16 @@ export default function CoursesPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative flex flex-wrap items-center justify-between gap-8 py-16">
           <div className="max-w-2xl">
+            <CoursesTabs current="courses" />
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Open courses</p>
-            <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">The IHSAN courses<span className="text-accent">.</span></h1>
+            <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">Courses &amp; Learning<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              Two courses on ihsan (spiritual excellence), taught in 2020 and 2025: full video lectures and the complete slide decks, free to watch and download.
+              Courses with full video lectures and complete slides, free to watch and download: two on ihsan (spiritual excellence), taught in 2020 and 2025, a four-day course on generative AI, and a course on AI ethics.
             </p>
             <p className="mt-6 flex flex-wrap gap-3">
               <a href="#ihsan-2025" className={`${btn} bg-foreground text-background`}>IHSAN Course 2025</a>
               <a href="#ihsan-short-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>IHSAN Short Course (2020)</a>
+              <a href="#genai-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Generative AI course (4 days)</a>
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -99,6 +103,23 @@ export default function CoursesPage() {
             <a href="/courses/ihsan-short-course-2020-all-slides.pdf" className={`${btn} bg-accent text-background`}>Download the slides (PDF, 145 slides) ↓</a>
             <a href="https://www.slideshare.net/slideshow/ihsan-for-muslim-professionals-short-course/234513475" target="_blank" rel="noopener noreferrer" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>SlideShare ↗</a>
           </p>
+        </section>
+
+        <Ornament />
+
+        <section id="genai-course" className="scroll-mt-24">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Course · August 2023 · four days · slides</p>
+          <h2 className="mt-2 font-serif text-3xl leading-tight text-foreground">Augmentation Through Generative AI and ChatGPT: A Hands-On Course for Students and Researchers</h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">A four-day hands-on workshop at the Information Technology University, Lahore: from how generative AI works, through prompting and AI-augmented writing, to using it effectively and ethically.</p>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            {slideDecks.filter((d) => d.file.startsWith("2023-genai-itu-course-day-")).map((d) => (
+              <li key={d.file} className="card-ornate p-4">
+                <p className="font-serif text-[17px] text-foreground">{d.part}</p>
+                <p className="mt-1 text-sm text-muted">{d.pages} slides · {d.mb} MB</p>
+                <p className="mt-2 text-sm"><a href={`/slides/${d.file}`} className="text-accent hover:opacity-70">Slides (PDF) ↓</a></p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <Ornament />

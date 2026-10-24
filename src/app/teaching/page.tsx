@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import CoursesTabs from "@/components/CoursesTabs";
 import CvBlocks from "@/components/CvBlocks";
 import { getCourses, listUnder, supervisedCount } from "@/lib/cv";
 import { socials } from "@/content/site";
@@ -19,7 +20,8 @@ export default function TeachingPage() {
 
   return (
     <Container className="py-16">
-      <h1 className="font-serif text-3xl text-foreground">Teaching</h1>
+      <CoursesTabs current="teaching" />
+      <h1 className="font-serif text-3xl text-foreground">Teaching &amp; supervision</h1>
 
       <section className="mt-8">
         <Label>Approach</Label>

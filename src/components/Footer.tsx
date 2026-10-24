@@ -21,7 +21,7 @@ export default function Footer() {
       <Container width="max-w-6xl" className="relative">
         <Ornament className="pt-6" />
         <nav aria-label="Site map" className="flex flex-wrap gap-x-5 gap-y-2 pb-2 pt-6 text-sm text-muted">
-          {[...nav.map((n) => ({ href: n.href, label: n.label })), { href: "/cv", label: "CV" }, { href: "/awards", label: "Awards" }, { href: "/videos", label: "Videos" }, { href: "/courses", label: "Courses" }].map((l) => (
+          {[...nav.map((n) => ({ href: n.href, label: n.label })), { href: "/cv", label: "CV" }, { href: "/awards", label: "Awards" }, { href: "/videos", label: "Videos" }].map((l) => (
             <Link key={l.href} href={l.href} className="transition-colors hover:text-accent">{l.label}</Link>
           ))}
         </nav>

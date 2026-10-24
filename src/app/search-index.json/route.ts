@@ -11,7 +11,7 @@ type Entry = { k: "Page" | "Research" | "Publication" | "Talk" | "Video"; t: str
 export function GET() {
   const out: Entry[] = [];
   for (const n of nav) out.push({ k: "Page", t: n.label, h: n.href });
-  out.push({ k: "Page", t: "Curriculum vitae", h: "/cv" }, { k: "Page", t: "Awards & honors", h: "/awards" }, { k: "Page", t: "Courses", h: "/courses" }, { k: "Page", t: "Videos & playlists", h: "/videos" });
+  out.push({ k: "Page", t: "Curriculum vitae", h: "/cv" }, { k: "Page", t: "Awards & honors", h: "/awards" }, { k: "Page", t: "How to learn well", h: "/learning" }, { k: "Page", t: "Teaching & supervision", h: "/teaching" }, { k: "Page", t: "Videos & playlists", h: "/videos" });
   for (const r of researchThemes) out.push({ k: "Research", t: r.title, s: r.blurb, h: `/publications?theme=${r.publicationTheme}`, x: r.keywords });
   for (const p of getAllPublications()) {
     out.push({ k: "Publication", t: p.title, s: `${p.authors.slice(0, 4).join(", ")}${p.authors.length > 4 ? " et al." : ""} · ${venueName(p.venue)}${p.year ? ` (${p.year})` : ""}`, h: `/publications#${p.slug}`, x: `${p.authors.join(" ")} ${p.tags.join(" ")}` });
