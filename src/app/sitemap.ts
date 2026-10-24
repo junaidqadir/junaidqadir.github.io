@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 
 import type { MetadataRoute } from "next";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.com";
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.github.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/about", "/research", "/publications", "/talks", "/teaching", "/cv", "/contact"];

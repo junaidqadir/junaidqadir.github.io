@@ -14,7 +14,7 @@ const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://junaidqadir.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

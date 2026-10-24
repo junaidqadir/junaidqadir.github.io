@@ -64,7 +64,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-border">
-        <Container width="max-w-5xl" className="py-20">
+        <Container width="max-w-5xl" className="py-16">
+          <div className="grid items-center gap-10 md:grid-cols-[1fr_300px]">
+          <div>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
             {identity.role} · {identity.affiliation.split(",")[0]}
           </p>
@@ -87,6 +89,13 @@ export default function Home() {
             <Link href="#research" className="rounded-full bg-foreground px-5 py-2.5 text-background transition-opacity hover:opacity-85">Explore my research ↓</Link>
             <Link href="/publications" className="rounded-full border border-border px-5 py-2.5 text-foreground transition-colors hover:border-accent hover:text-accent">All publications</Link>
             <a href={socials.scholar} target="_blank" rel="noopener noreferrer" className="px-2 py-2.5 text-accent hover:opacity-70">Google Scholar ↗</a>
+          </div>
+          </div>
+          <figure className="mx-auto w-full max-w-[300px] md:mx-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/headshot.jpg" alt="Portrait of Junaid Qadir" width={300} height={340} className="aspect-[4/4.5] w-full rounded-sm object-cover object-top" />
+            <figcaption className="mt-2 text-xs text-muted">Professor of Computer Engineering · Doha, Qatar</figcaption>
+          </figure>
           </div>
         </Container>
         <div className="border-t border-border">
