@@ -59,8 +59,8 @@ export default function Home() {
               </p>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
                 I direct the IHSAN Research Lab at Qatar University. I work on how artificial intelligence can serve people, starting with
-                communities and classrooms and reaching into healthcare, governance and security. Running through all of it is multiplexity, an
-                Islamically inspired way of keeping the one and the many in view together.
+                communities and classrooms and reaching into healthcare, governance and security. Running through all of it is multiplexity, a framework
+                grounded in Islamic ideals and offered for everyone.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
                 <Link href="/multiplexity" className="rounded-sm bg-foreground px-5 py-3 text-background transition-opacity hover:opacity-85">Explore multiplexity</Link>
@@ -70,9 +70,9 @@ export default function Home() {
               </div>
             </div>
             <figure className="mx-auto w-full max-w-[300px]">
-              <div className="arch overflow-hidden border border-gold/70 p-2">
+              <div className="overflow-hidden rounded-sm border border-gold/70 p-2">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/headshot.jpg" alt="Portrait of Junaid Qadir" width={300} height={340} className="arch aspect-[4/5] w-full object-cover object-top" />
+                <img src="/headshot.jpg" alt="Portrait of Junaid Qadir" width={300} height={340} className="aspect-[4/5] w-full rounded-sm object-cover object-top" />
               </div>
               <figcaption className="mt-3 text-center text-xs text-muted">Doha, Qatar</figcaption>
             </figure>
@@ -98,7 +98,7 @@ export default function Home() {
         <Container width="max-w-6xl" className="py-20">
           <Kicker n="01">Research</Kicker>
           <H2>Technology that serves the whole human being.</H2>
-          <p className="mt-4 max-w-2xl text-muted">Six connected themes. Each links to its papers, talks and courses.</p>
+          <p className="mt-4 max-w-2xl text-muted">{researchThemes.length} connected themes. Each links to its papers.</p>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {researchThemes.map((t, i) => (
               <ThemeCard key={t.slug} theme={t} index={i} count={getPublicationsByTheme(t.publicationTheme as Theme).length} />
@@ -117,13 +117,14 @@ export default function Home() {
               <Kicker n="02">Multiplexity</Kicker>
               <H2>The one and the many — held together.</H2>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-                Every field meets the same old problem: how one thing is also many, and many things are one. We can collapse the many into a
-                single metric, model or method (<em>uniplexity</em>), or scatter the one into disconnected camps. Multiplexity is the harder path —
-                keeping many views, ordered levels and change over time in a single frame, on a shared floor of human dignity.
+                Many fields meet the problem of the one and the many: a signal is many frequencies, a network is many networks, a person is body, mind and
+                conviction. Some problems have one right answer; others stay open however long we look. Multiplexity, developed with Recep Şentürk and
+                rooted in Islamic ideals, integrates the two. It asks either-or where a single closed answer is warranted and both-and where the question is open,
+                and it keeps many views, levels of reality and change over time in one frame.
               </p>
               <ul className="mt-6 grid gap-3 text-[15px] text-muted sm:grid-cols-3">
-                <li><strong className="font-serif text-foreground">Across.</strong> Many views and tensions held together rather than traded off.</li>
-                <li><strong className="font-serif text-foreground">Upward.</strong> Levels and ends ordered, so that dignity is not negotiable.</li>
+                <li><strong className="font-serif text-foreground">Across.</strong> Many views and tensions kept in one frame.</li>
+                <li><strong className="font-serif text-foreground">Upward.</strong> Levels of reality, with higher ends taking precedence over lower means.</li>
                 <li><strong className="font-serif text-foreground">Through time.</strong> Systems that change, learn and are shaped by history.</li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-4 text-sm">
@@ -155,10 +156,10 @@ export default function Home() {
               </p>
             </article>
             <article className="card-ornate p-7">
-              <p className="text-xs uppercase tracking-wide text-gold">IHSAN Short Course · 13 parts · 145 slides</p>
+              <p className="text-xs uppercase tracking-wide text-gold">IHSAN Short Course · 13 videos · 145 slides</p>
               <h3 className="mt-2 font-serif text-2xl text-foreground">Spiritual Excellence (Ihsan) for Muslim Professionals</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted">
-                Sincerity and intention, vision, character, doing justice and excelling in one’s work, mastery, productivity and barakah,
+                Sincerity and intention, vision, character, doing justice and excelling in one’s work, mastery, productivity and barakah (blessing),
                 and service to others — an introduction to ihsan as a way of professional life.
               </p>
               <p className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
@@ -178,7 +179,7 @@ export default function Home() {
           <Kicker n="04">Publications</Kicker>
           <H2>Selected publications.</H2>
           <p className="mt-4 max-w-2xl text-muted">
-            A short selection. The full, searchable list — filterable by theme, topic, co-author, venue and year, with open-access PDFs and BibTeX where available — is one click away.
+            A short selection. The full, searchable list — filterable by theme, topic, co-author, venue and year, with open-access PDFs and BibTeX where available — follows.
           </p>
           <div className="mt-8">{featured.map((pub) => (<PublicationCard key={pub.slug} pub={pub} />))}</div>
           <Link href="/publications" className="mt-4 inline-block text-sm text-accent hover:opacity-70">Browse all publications →</Link>
@@ -249,6 +250,11 @@ export default function Home() {
           <Kicker n="07">Contact</Kicker>
           <H2>Let&rsquo;s talk research.</H2>
           <p className="mt-4 max-w-xl text-muted">{contact.intro}</p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+            <strong className="font-serif text-foreground">Prospective graduate students:</strong> admissions at Qatar University are handled centrally, so please apply directly
+            through the published procedures. I cannot reply to every email; funded positions in my group are advertised here and on LinkedIn.{" "}
+            <Link href="/contact" className="text-accent hover:opacity-70">More →</Link>
+          </p>
           <p className="mt-6"><a href={`mailto:${socials.email}`} className="font-serif text-2xl text-accent hover:opacity-70">{socials.email} ↗</a></p>
           <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[["Google Scholar", socials.scholar], ["ORCID", socials.orcid], ["LinkedIn", socials.linkedin], ["YouTube", socials.youtube], ["ResearchGate", socials.researchgate], ["QU faculty page", "https://qufaculty.qu.edu.qa/jqadir/"]].map(([l, h]) => (

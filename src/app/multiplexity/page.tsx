@@ -19,22 +19,22 @@ const H2 = ({ id, children }: { id?: string; children: React.ReactNode }) => (
 );
 
 const dimensions = [
-  { art: "star8" as const, title: "Across — horizontal", text: "Many views, goods and tensions held in the same frame instead of being traded off against each other: speed and responsibility, individual and community, technical and normative." },
-  { art: "star16" as const, title: "Upward — vertical", text: "Levels of reality, knowledge and purpose, in order. Higher ends rank lower means, so that human dignity is a floor that efficiency cannot buy out." },
-  { art: "hex6" as const, title: "Through time — dynamic", text: "Systems are not snapshots. They change, learn, feed back on themselves and are shaped by history; a multiplex view follows that movement." },
+  { art: "star8" as const, title: "Across — horizontal", text: "Many views, goods and tensions are kept in one frame, so that each contributes what it gets right: speed and responsibility, individual and community, technical and normative. Where they conflict, the upward dimension says which gives way." },
+  { art: "star16" as const, title: "Upward — vertical", text: "Levels of reality, knowledge and purpose, each with methods adequate to it. Higher ends take precedence over lower means; on the Islamic account I work from, human dignity is a ground that efficiency may not override." },
+  { art: "hex6" as const, title: "Through time — dynamic", text: "Systems change, learn and feed back on themselves, and history shapes them. A multiplex view follows that movement." },
 ];
 
 const notThis = [
-  ["Ensembles", "Many models can outperform one. But an ensemble blends views on one plane into one score; multiplexity keeps the views distinct, places them on different levels, and asks which purpose ranks their outputs."],
-  ["Pluralism", "More than one valid view — yes. Without a shared floor and an ordering of ends, plurality drifts into relativism."],
-  ["Wisdom of crowds", "Crowds average independent guesses at one quantity. Multiplex questions are not one quantity: what is certain, what is contested, what is free, and what something is for."],
-  ["Systems thinking", "Gives the dynamic, whole-system form of the idea, but rarely a normative centre. Multiplexity adds the vertical dimension: higher ends ordering lower means."],
+  ["Ensembles", "Combining many models often beats using one. Averaging ensembles do this by blending views on one plane into one score. Multiplexity also keeps the views distinct, places them at different levels, and asks which purpose ranks their outputs."],
+  ["Pluralism", "Multiplexity is pluralistic. What it adds is a shared ground and a ranking among ends; without those, plurality has no way to call one view better and slides toward relativism."],
+  ["Wisdom of crowds", "The classic result concerns pooling independent estimates of one quantity. Many multiplex questions are of a different kind: what is settled, what is contested, what is permitted, and what something is for."],
+  ["Systems thinking", "Multiplexity aligns with systems thinking, critical complexity and cybernetics, and shares their attention to wholes and change over time. Its further emphasis, drawn from an Islamic worldview of levels of being, is a vertical dimension: higher ends over lower means."],
 ];
 
 const domains = [
-  { title: "One model, many distributions", text: "Trustworthy and robust machine learning: attacks, defences and distribution shift.", href: "/publications?tags=adversarial-ml" },
-  { title: "One model, many worldviews", text: "Foundation-model safety and plural evaluation, including WorldView-Bench for global cultural perspectives in LLMs.", href: "/publications?q=worldview" },
-  { title: "One patient, many layers", text: "Health as clinical, cultural and spiritual goods in order — multiplex health, and generative AI with traditional Islamically integrated psychotherapy.", href: "/publications?theme=health-psychology" },
+  { title: "One model, many distributions", text: "Trustworthy and robust machine learning: attacks, defenses and distribution shift across many conditions.", href: "/publications?tags=adversarial-ml" },
+  { title: "One model, many worldviews", text: "Foundation-model safety and evaluation across perspectives, including WorldView-Bench for global cultural perspectives in LLMs.", href: "/publications?q=worldview" },
+  { title: "One patient, many layers", text: "Clinical, cultural and spiritual purposes of health, each in its place under the highest: multiplex health, and generative AI with traditional Islamically integrated psychotherapy.", href: "/publications?theme=health-psychology" },
   { title: "One learner, many capacities", text: "AI-augmented learning and writing; Islamically inspired critical pedagogy; multiplex systemics for educational technology.", href: "/publications?theme=education" },
   { title: "One university, many stakeholders", text: "Responsible AI in higher education: the IEEE P3722 guide and governance work.", href: "/publications?tags=ai-governance" },
   { title: "One system, many models", text: "Multiplex digital twins: mechanistic and data-driven models at different levels, judged against explicit purposes.", href: "/publications?q=digital%20twin" },
@@ -57,9 +57,9 @@ export default function MultiplexityPage() {
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-7xl">Multiplexity<span className="text-accent">.</span></h1>
             <p className="mt-6 max-w-2xl font-serif text-2xl leading-snug text-foreground">The one and the many, held together.</p>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-              Multiplexity is a way of thinking about technology, education, health and the human being that refuses two easy escapes:
-              collapsing everything into one metric, model or method, or scattering it into camps that never meet. I develop it with
-              Prof. Recep Şentürk (Hamad Bin Khalifa University) and apply it to AI ethics, governance, healthcare and education.
+              Multiplexity is a way of thinking about technology, education, health and the human being. It rests on Islamic ideals and a
+              worldview of levels of reality (<em>marātib</em>) and unity in the many, and it is offered as a framework for everyone. I develop it
+              with Prof. Recep Şentürk (Hamad bin Khalifa University) and apply it to AI ethics, governance, healthcare and education.
             </p>
             <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
               <a href="#papers" className="text-accent hover:opacity-70">Papers &amp; chapters ↓</a>
@@ -80,11 +80,18 @@ export default function MultiplexityPage() {
               A network engineer meets it in the Internet: one network made of thousands of autonomous ones. In AI we meet it whenever one decision is built
               from many models, data sources and human labels — and each of us meets it in ourselves, as one person who is also body, mind, feeling and conviction.
             </p>
-            <p className="leading-relaxed text-muted">
-              <strong className="font-serif text-foreground">Uniplexity</strong> keeps the one and loses the many: a single metric, model, method or logic, with everything else called noise.{" "}
-              <strong className="font-serif text-foreground">Fragmentation</strong> keeps the many and loses the one: silos, camps and a relativism where nothing ranks above anything.{" "}
-              <strong className="font-serif text-foreground">Multiplexity</strong> holds both at once.
-            </p>
+            <div className="space-y-4 leading-relaxed text-muted">
+              <p>
+                These are different kinds of many: parts, perspectives and levels. Some problems are <strong className="font-serif text-foreground">convergent</strong>: they have one closed
+                answer, and either-or thinking is the right tool. Others are <strong className="font-serif text-foreground">divergent</strong>: open-ended, with several defensible answers, and they
+                call for both-and thinking.
+              </p>
+              <p>
+                <strong className="font-serif text-foreground">Multiplexity</strong> is the wisdom of integration. It tells the two kinds of problem apart, unifies analysis and synthesis,
+                and replaces the tyranny of OR (exclusivism) and the tyranny of AND (relativism) by embracing OR with AND. Treating an open problem as if it had one closed answer is
+                uniplexity; treating a problem that has a right answer as if every view were as good as any other is relativism.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -104,8 +111,8 @@ export default function MultiplexityPage() {
         </section>
 
         <section>
-          <H2>What it is not</H2>
-          <p className="mt-3 max-w-2xl text-muted">Multiplexity is easy to mistake for neighbours that share one feature with it but lack what makes it multiplex: ordered levels, and a grounded pluralism that is neither a single truth nor relativism.</p>
+          <H2>How it relates to neighboring ideas</H2>
+          <p className="mt-3 max-w-2xl text-muted">Multiplexity is related to several familiar ideas, and each contributes something. The difference lies mainly in the emphasis on ordered levels and a shared ground.</p>
           <dl className="mt-6 grid gap-x-10 gap-y-5 md:grid-cols-2">
             {notThis.map(([k, v]) => (
               <div key={k} className="border-t border-border pt-3">
@@ -118,7 +125,7 @@ export default function MultiplexityPage() {
 
         <section>
           <H2>In my research</H2>
-          <p className="mt-3 max-w-2xl text-muted">Each line of work reads as its own one-and-many problem. Follow a card to the related papers.</p>
+          <p className="mt-3 max-w-2xl text-muted">Each line of work can be read as its own one-and-many problem. Follow a card to the related papers.</p>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {domains.map((d) => (
               <Link key={d.title} href={d.href} className="card-ornate block p-5">
@@ -133,7 +140,7 @@ export default function MultiplexityPage() {
         <section>
           <H2 id="papers">Papers, book chapters &amp; preprints</H2>
           <p className="mt-3 max-w-2xl text-muted">
-            {pubs.length} items on multiplexity and the closely related systems-thinking work. Open-access PDFs are hosted where the licence allows; otherwise the title links to the publisher. This list is generated from my CV and grows with it.
+            {pubs.length} items on multiplexity and the closely related systems-thinking work. Open-access PDFs are hosted where the license allows; otherwise the title links to the publisher. This list is generated from my CV and grows with it.
           </p>
           {chapters.length > 0 && (<><h3 className="mt-8 font-serif text-xl text-foreground">Book chapters</h3><div className="mt-2">{chapters.map((p) => <PublicationCard key={p.slug} pub={p} />)}</div></>)}
           <h3 className="mt-8 font-serif text-xl text-foreground">Journal &amp; conference papers</h3>

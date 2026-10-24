@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 };
 
 const outcomes = [
-  ["Develop holistic insight", "Cultivate the integration of intellectual, ethical and spiritual dimensions to grow as balanced, whole human beings."],
+  ["Develop holistic insight", "Cultivate the integration of the intellectual, ethical and spiritual dimensions of the person."],
   ["Appreciate diversity and understand polarities", "Engage meaningfully with diverse and even opposing worldviews through polarity management and both-and thinking."],
-  ["Navigate the AI dilemma", "Recognise and reflect critically on the moral, philosophical and societal tensions that advanced AI presents."],
-  ["Synthesise the best of both worlds", "Identify and manage enduring polarities — tradition and innovation, reason and revelation, human and machine intelligence."],
+  ["Reflect on the dilemmas of AI", "Recognize and reflect critically on the moral, philosophical and societal tensions that advanced AI presents."],
+  ["Hold enduring polarities together", "Identify and manage enduring polarities such as tradition and innovation and human and machine intelligence, and hold reason and revelation each in its proper place, with revelation as the guiding anchor."],
   ["Deepen the understanding of ihsan", "Reflect on ihsan as spiritual excellence, in this world and the next, and on its relevance for ethics in the digital age."],
 ];
 
 const shortParts = [
   "Introduction", "Ihsan: what and why", "The importance of sincerity and intention", "Having a vision", "Character traits of the people of ihsan",
   "Doing justice and excelling in one’s work", "Mastery orientation", "Quality over quantity", "Leading an active, pioneering life",
-  "Productivity: seeking barakah", "Social work: being a giver",
+  "Productivity: seeking barakah (blessing)", "Social work: being a giver",
 ];
 
 const btn = "inline-flex items-center rounded-sm px-4 py-2.5 text-sm transition-opacity hover:opacity-85";
@@ -38,7 +38,7 @@ export default function CoursesPage() {
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Open courses</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">The IHSAN courses<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              Two courses on ihsan — spiritual excellence — taught in 2020 and 2025: full video lectures and the complete slide decks, free to read, share and use in your own teaching.
+              Two courses on ihsan (spiritual excellence), taught in 2020 and 2025: full video lectures and the complete slide decks, free to watch and download.
             </p>
             <p className="mt-6 flex flex-wrap gap-3">
               <a href="#ihsan-2025" className={`${btn} bg-foreground text-background`}>IHSAN Course 2025</a>
@@ -58,10 +58,10 @@ export default function CoursesPage() {
           <p className="text-xs uppercase tracking-[0.22em] text-gold">IHSAN Course 2025 · 8 lectures · 103 slides</p>
           <h2 className="mt-2 font-serif text-3xl leading-tight text-foreground">Education in the AI Era: Cultivating Multiplex Intelligence and Human Wholeness</h2>
           <blockquote className="mt-5 border-l-2 border-gold pl-4 font-serif text-lg italic text-muted">
-            “Verily, Allah Ta‘ala has prescribed ihsan in all things…” <span className="not-italic text-sm">(Sahih Muslim)</span>
+            The Prophet Muhammad (peace be upon him) said: “Verily, Allah has prescribed excellence (<em>ihsan</em>) in all things…” <span className="not-italic text-sm">(Ṣaḥīḥ Muslim 1955, narrated by Shaddād ibn Aws, may Allah be pleased with him)</span>
           </blockquote>
           <p className="mt-5 max-w-3xl leading-relaxed text-muted">
-            This course explores how to balance the <strong className="text-foreground">intellectual, ethical and spiritual</strong> dimensions of the human being to meet the challenges and dilemmas of the AI era.
+            This course explores how to balance the <strong className="text-foreground">intellectual, ethical and spiritual</strong> dimensions of the human being to meet the challenges of the AI era.
             It is a synthesis of pedagogy, Islamic spirituality, systems thinking, AI ethics and educational design. All lecture recordings and the complete slide deck are freely available.
           </p>
           <h3 className="mt-8 font-serif text-xl text-foreground">Desired learning outcomes</h3>

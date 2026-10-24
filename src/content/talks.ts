@@ -58,7 +58,7 @@ export const talks: Talk[] = [
     youtubeId: "Xz9sk3mj19I",
     slidesUrl: null,
     description:
-      "A multiplex critical-AI framework for guiding AI development, drawing on Ghazali's philosophy of education.",
+      "A multiplex critical-AI framework for guiding AI development, drawing on Imam Abū Ḥāmid al-Ghazālī’s philosophy of education.",
   },
   {
     slug: "multiplex-intelligence-part-1",

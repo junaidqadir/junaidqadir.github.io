@@ -19,6 +19,15 @@ type CvFile = {
 
 const cv = cvData as unknown as CvFile;
 
+// Display tidy-ups applied once to every CV item (see humbleHtml): no comparative boasting, consistent names.
+function tidyBlocks(blocks: CvBlock[]): CvBlock[] {
+  return blocks.map((b) => ({
+    ...b,
+    items: b.items.map((it) => ({ ...it, html: humbleHtml(it.html), children: it.children ? tidyBlocks(it.children) : it.children })),
+  }));
+}
+cv.sections = cv.sections.map((sec) => ({ ...sec, blocks: tidyBlocks(sec.blocks) }));
+
 export const cvMeta = { generatedAt: cv.generated_at, sourceSha: cv.source_sha, ...cv.derived };
 
 export function getSections(): CvSection[] {
@@ -65,6 +74,11 @@ export function humbleHtml(html: string): string {
     .replace(/\s*\(This (?:membership grade|is the highest)[^)]*\)\.?/gi, "")
     .replace(/\s*\(<em>This is the highest national teaching award in Pakistan<\/em>\)\.?/gi, "")
     .replace(/\s*\(<em>In both these cases[^)]*\)<\/em>/gi, "")
+    .replace(/\s*\(In both these cases[^)]*\)/gi, "")
+    .replace(/\s*My paper was one of the three finalists shortlisted for this award\./gi, "")
+    .replace(/\bWinner of the\b/g, "Recipient of the")
+    .replace(/awarded the highest national teaching award in Pakistan/gi, "received the Higher Education Commission of Pakistan’s Best University Teacher Award (2012–13)")
+    .replace(/\bSenturk\b/g, "Şentürk")
     .replace(/\s+\./g, ".")
     .trim();
 }

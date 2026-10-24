@@ -1,7 +1,7 @@
 import rawPublications from "../../content/publications/index.json";
 import type { Publication, Theme } from "@/types/publication";
 
-const publications = rawPublications as Publication[];
+const publications = (rawPublications as Publication[]).map((p) => ({ ...p, authors: p.authors.map((a) => a.replace(/\bSenturk\b/g, "Şentürk")) }));
 
 export function getAllPublications(): Publication[] {
   return publications;

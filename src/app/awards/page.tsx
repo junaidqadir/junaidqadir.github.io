@@ -21,7 +21,7 @@ export default function AwardsPage() {
       <h1 className="font-serif text-3xl text-foreground">Awards &amp; Honors</h1>
       <p className="mt-3 max-w-xl text-muted">
         Recognition for research, teaching and service. Most of this work is shared with students and collaborators,
-        and I am grateful to them and to my colleagues. The list below is generated from my CV.
+        and I am grateful to them and to my colleagues. The list below follows my CV.
       </p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">

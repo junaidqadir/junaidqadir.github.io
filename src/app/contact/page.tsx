@@ -21,6 +21,11 @@ export default function ContactPage() {
         {contact.intro}
       </p>
 
+      <aside className="mt-8 max-w-xl rounded border border-border bg-surface p-5">
+        <h2 className="font-serif text-lg text-foreground">{contact.studentNote.title}</h2>
+        <p className="mt-2 text-[15px] leading-relaxed text-muted">{contact.studentNote.body}</p>
+      </aside>
+
       <ul className="mt-8 space-y-3">
         {links.map((link) => (
           <li key={link.href}>
