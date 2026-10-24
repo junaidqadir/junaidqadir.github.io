@@ -48,8 +48,10 @@ html[data-palette="plum"] {
     --pattern-ink: rgba(181, 138, 60, 0.20);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+/* Dark is the default; a visitor can switch to light with the footer toggle (data-theme="light"). */
+:root { color-scheme: light; }
+:root:not([data-theme="light"]) { color-scheme: dark; }
+:root:not([data-theme="light"]) {
     --logo-orange: #f08a2e;
     --background: #0f141c;
     --surface: #151b25;
@@ -94,7 +96,6 @@ html[data-palette="plum"] {
     --border: #3b2830;
     --pattern-ink: rgba(210, 190, 120, 0.14);
   }
-}
 
 @theme inline {
   --color-background: var(--background);

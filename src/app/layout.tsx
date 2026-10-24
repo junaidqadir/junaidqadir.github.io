@@ -53,7 +53,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              '(function(){try{var P=["lapis","saffron","emerald","plum"],k="jq-palette",q=new URLSearchParams(location.search).get("palette"),p=P.indexOf(q)>=0?q:sessionStorage.getItem(k);if(P.indexOf(p)<0){p="lapis"}sessionStorage.setItem(k,p);document.documentElement.setAttribute("data-palette",p)}catch(e){}})()',
+              '(function(){try{var P=["lapis","saffron","emerald","plum"],k="jq-palette",q=new URLSearchParams(location.search).get("palette"),p=P.indexOf(q)>=0?q:sessionStorage.getItem(k);if(P.indexOf(p)<0){p="lapis"}sessionStorage.setItem(k,p);document.documentElement.setAttribute("data-palette",p)}catch(e){}try{document.documentElement.setAttribute("data-theme",localStorage.getItem("jq-theme")==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}})()',
           }}
         />
       </head>

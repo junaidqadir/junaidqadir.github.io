@@ -1,6 +1,7 @@
 import Container from "./Container";
 import Ornament from "./Ornament";
 import PaletteSwitch from "./PaletteSwitch";
+import ThemeSwitch from "./ThemeSwitch";
 import { socials, identity } from "@/content/site";
 
 const links: { label: string; href: string }[] = [
@@ -23,6 +24,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {identity.name}
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <ThemeSwitch />
             <PaletteSwitch />
             {links.map((link) => (
               <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
