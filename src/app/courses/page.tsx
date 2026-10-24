@@ -3,6 +3,9 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import CoursesTabs from "@/components/CoursesTabs";
 import { slideDecks } from "@/content/slides";
+import { getCourseRows, courseSummary, institutionOrder } from "@/lib/courses";
+import { statSync } from "node:fs";
+import { getAllPublications } from "@/lib/publications";
 import Ornament from "@/components/Ornament";
 import GeoArt from "@/components/GeoArt";
 import IhsanMark from "@/components/IhsanMark";
@@ -29,9 +32,23 @@ const shortParts = [
   "Productivity: seeking barakah (blessing)", "Social work: being a giver",
 ];
 
+const mb = (path: string) => { try { return `${(statSync(`public${path}`).size / 1048576).toFixed(1)} MB`; } catch { return null; } };
+
+// Open materials for courses in the "taught" list
+const MATERIALS: { match: RegExp; links: { label: string; href: string }[] }[] = [
+  { match: /^Network Performance and Evaluation$/, links: [
+    { label: "Full lecture series (44 videos)", href: "https://www.youtube.com/playlist?list=PL6B8E0C06A2002B1D" },
+  ] },
+];
+
+const levelBlurb: Record<string, string> = { Undergraduate: "Undergraduate courses", Graduate: "Graduate courses" };
+
 const btn = "inline-flex items-center rounded-sm px-4 py-2.5 text-sm transition-opacity hover:opacity-85";
 
 export default function CoursesPage() {
+  const rows = getCourseRows();
+  const sum = courseSummary(rows);
+  const ethicsPaper = getAllPublications().find((p) => p.slug === ethicsCourse.paperSlug);
   const other = playlists.filter((p) => !["PL4AueLFeEG0AP-Qr9ZBReJRnGuMiHQd03", "PL4AueLFeEG0DAqrRgnZKQR163mvpOOkz-"].includes(p.id));
   return (
     <>
@@ -43,12 +60,14 @@ export default function CoursesPage() {
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Open courses</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">Courses &amp; Learning<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              Courses with full video lectures and complete slides, free to watch and download: two on ihsan (spiritual excellence), taught in 2020 and 2025, a four-day course on generative AI, and a course on AI ethics.
+              The courses I have taught in Pakistan and Qatar, and the ones I have opened to everyone: an ethics course, two IHSAN courses, a four-day course on generative AI and a graduate course on network performance, with lectures and slides where they exist.
             </p>
             <p className="mt-6 flex flex-wrap gap-3">
-              <a href="#ihsan-2025" className={`${btn} bg-foreground text-background`}>IHSAN Course 2025</a>
-              <a href="#ihsan-short-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>IHSAN Short Course (2020)</a>
-              <a href="#genai-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Generative AI course (4 days)</a>
+              <a href="#ethics-course" className={`${btn} bg-foreground text-background`}>Ethics course</a>
+              <a href="#courses-taught" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Courses I have taught</a>
+              <a href="#ihsan-2025" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>IHSAN courses</a>
+              <a href="#genai-course" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>Generative AI course</a>
+              <a href="#course-slides" className={`${btn} border border-foreground/30 text-foreground hover:border-accent hover:text-accent`}>All course slides</a>
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -59,6 +78,71 @@ export default function CoursesPage() {
       </section>
 
       <Container width="max-w-5xl" className="space-y-16 py-16">
+        {/* Featured: the ethics course */}
+        <section id="ethics-course" className="scroll-mt-24 rounded border border-border bg-surface p-6 sm:p-8">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Featured course · ITU Lahore · Spring 2018, 2019 and 2021</p>
+          <h2 className="mt-2 font-serif text-3xl leading-tight text-foreground">{ethicsCourse.title}</h2>
+          <div className="mt-4 grid gap-8 md:grid-cols-[1.4fr_1fr]">
+            <div className="space-y-3 leading-relaxed text-muted">
+              <p>An undergraduate course on ethics, values and technology that draws on Islamic values.</p>
+              <p>The full slide set, the course website and a paper on the course design and my experience of teaching it are all open to everyone. Recorded lectures on AI ethics are free to watch as well.</p>
+              {ethicsPaper && <p className="text-sm"><span className="text-foreground">Paper:</span> {ethicsPaper.title}, <em>{ethicsPaper.venue}</em> ({ethicsPaper.year}).</p>}
+            </div>
+            <ul className="space-y-3 text-[15px]">
+              <li><a href={ethicsCourse.slides} target="_blank" rel="noopener noreferrer" className={`${btn} bg-foreground text-background`}>Course slides ↗</a></li>
+              <li><a href={ethicsCourse.site} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Course website ↗</a></li>
+              <li><a href={ethicsCourse.paperUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">The paper on course design ↗</a></li>
+              <li><a href={playlistUrl("PL4AueLFeEG0Cy33n0n5N-XBhSHZaYmxFr")} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">AI Ethics short course (9 videos) ↗</a></li>
+              <li><a href={playlistUrl("PL1Xmyl4aKTRhDsx82ZKw_ucVk1cM9akk5")} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">AI Ethics guest module (7 parts) ↗</a></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* All courses taught */}
+        <section id="courses-taught" className="scroll-mt-24">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Teaching record</p>
+          <h2 className="mt-2 font-serif text-3xl text-foreground">Courses I have taught</h2>
+          <p className="mt-3 max-w-2xl text-muted">{sum.courses} courses at {sum.institutions.length} universities: {sum.institutions.join(", ")}. This list follows my CV, most recent first. My teaching philosophy and supervision are on the <Link href="/teaching" className="text-accent hover:opacity-70">Teaching &amp; supervision</Link> page.</p>
+          {(["Undergraduate", "Graduate"] as const).map((lvl) => (
+            <div key={lvl} className="mt-8">
+              <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted">{levelBlurb[lvl]} <span className="ml-1">{rows.filter((r) => r.level === lvl).length}</span></h3>
+              <ul className="mt-2 divide-y divide-border border-y border-border">
+                {rows.filter((r) => r.level === lvl).map((r) => {
+                  const extra = MATERIALS.find((m) => m.match.test(r.title))?.links ?? [];
+                  const isEthics = /^Ethics, Values, and Technology$/.test(r.title);
+                  return (
+                    <li key={r.title} className="grid gap-x-6 gap-y-1 py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+                      <div>
+                        <p className="font-serif text-[17px] leading-snug text-foreground">{r.title}{r.note ? <span className="font-sans text-sm text-muted"> ({r.note})</span> : null}</p>
+                        {(r.website || extra.length > 0 || isEthics) && (
+                          <p className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-sm">
+                            {isEthics && <a href="#ethics-course" className="text-accent hover:opacity-70">Featured course ↑</a>}
+                            {r.website && !isEthics && <a href={r.website} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">Course website ↗</a>}
+                            {extra.map((l) => (<a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">{l.label} ↗</a>))}
+                          </p>
+                        )}
+                      </div>
+                      <ul className="space-y-0.5 text-sm text-muted">
+                        {institutionOrder.flatMap((inst) => r.offerings.filter((o) => o.inst === inst)).map((o, i) => (
+                          <li key={i}><span className="text-foreground">{o.inst}</span> · {o.terms}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </section>
+
+        <Ornament />
+
+        <div>
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Open courses</p>
+          <h2 className="mt-2 font-serif text-3xl text-foreground">Courses open to everyone</h2>
+          <p className="mt-3 max-w-2xl text-muted">Full video lectures and complete slide decks, free to watch and download.</p>
+        </div>
+
         {/* 2025 */}
         <section id="ihsan-2025" className="scroll-mt-24">
           <p className="text-xs uppercase tracking-[0.22em] text-gold">IHSAN Course 2025 · 8 lectures · 103 slides</p>
@@ -117,6 +201,28 @@ export default function CoursesPage() {
                 <p className="font-serif text-[17px] text-foreground">{d.part}</p>
                 <p className="mt-1 text-sm text-muted">{d.pages} slides · {d.mb} MB</p>
                 <p className="mt-2 text-sm"><a href={`/slides/${d.file}`} className="text-accent hover:opacity-70">Slides (PDF) ↓</a></p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <Ornament />
+
+        <section id="course-slides" className="scroll-mt-24">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">Slides</p>
+          <h2 className="mt-2 font-serif text-3xl text-foreground">Course slides, in one place</h2>
+          <p className="mt-3 max-w-2xl text-muted">Every course deck I have shared. Slides from individual talks are on <Link href="/talks" className="text-accent hover:opacity-70">Talks &amp; Slides</Link>.</p>
+          <ul className="mt-5 divide-y divide-border border-y border-border text-[15px]">
+            {[
+              { course: "Ethics, (Islamic) Values, and Technology (ITU)", label: "Full slide set", href: ethicsCourse.slides, ext: true, size: "Google Drive" },
+              { course: "IHSAN Course 2025", label: "All slides (8 lectures, 103 slides)", href: "/courses/ihsan-course-2025-all-slides.pdf", size: mb("/courses/ihsan-course-2025-all-slides.pdf") },
+              { course: "IHSAN Short Course (2020)", label: "All slides (11 parts, 145 slides)", href: "/courses/ihsan-short-course-2020-all-slides.pdf", size: mb("/courses/ihsan-short-course-2020-all-slides.pdf") },
+              ...slideDecks.filter((d) => d.file.startsWith("2023-genai-itu-course-day-")).map((d) => ({ course: "Generative AI course, ITU (August 2023)", label: d.part ?? "Slides", href: `/slides/${d.file}`, size: `${d.mb} MB` })),
+              { course: "Network Performance & Evaluation (CS721)", label: "Course website and lectures", href: "https://sites.google.com/site/netperfeval", ext: true, size: "website" },
+            ].map((r) => (
+              <li key={r.course + r.label} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3">
+                <span><span className="text-foreground">{r.course}</span> <span className="text-muted">· {r.label}</span></span>
+                <a href={r.href} {...(r.ext ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="whitespace-nowrap text-sm text-accent hover:opacity-70">{r.ext ? "Open ↗" : "PDF ↓"}{r.size ? <span className="ml-1.5 text-xs text-muted">{r.size}</span> : null}</a>
               </li>
             ))}
           </ul>

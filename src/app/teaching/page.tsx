@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CoursesTabs from "@/components/CoursesTabs";
-import CvBlocks from "@/components/CvBlocks";
-import { getCourses, listUnder, supervisedCount } from "@/lib/cv";
+import { listUnder, supervisedCount } from "@/lib/cv";
 import { socials } from "@/content/site";
 
-export const metadata: Metadata = { title: "Teaching — Junaid Qadir" };
+export const metadata: Metadata = { title: "Teaching & supervision — Junaid Qadir" };
 
 const Label = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-sm font-medium uppercase tracking-widest text-muted">{children}</h2>
@@ -37,18 +36,13 @@ export default function TeachingPage() {
       </section>
 
       <section className="mt-10">
-        <Label>Open courses &amp; lectures</Label>
-        <p className="mt-3 text-sm leading-relaxed text-muted">
-          Recorded short courses and lecture series are collected on{" "}
-          <Link href="/courses" className="text-accent hover:opacity-70">Courses</Link> (the two IHSAN courses with slides, the full
-          CS721 <em>Network Performance &amp; Evaluation</em> lecture series and more), and on{" "}
+        <Label>Courses</Label>
+        <p className="mt-3 text-[15px] leading-relaxed text-muted">
+          Every course I have taught, from NUST and the Virtual University of Pakistan to ITU and Qatar University, is listed on{" "}
+          <Link href="/courses#courses-taught" className="text-accent hover:opacity-70">Courses &amp; Learning</Link>, together with the open courses, lectures and slides.
+          Recorded lectures are also on{" "}
           <a href={socials.youtube} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">YouTube</a>.
         </p>
-      </section>
-
-      <section className="mt-10">
-        <Label>Courses taught</Label>
-        <CvBlocks blocks={getCourses()} />
       </section>
 
       <section className="mt-10">
