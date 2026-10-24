@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import Link from "next/link";
 import PublicationCard from "@/components/PublicationCard";
 import GeoArt from "@/components/GeoArt";
+import IhsanMark from "@/components/IhsanMark";
 import { researchThemes } from "@/content/site";
 import { playlistsForTheme, playlistUrl } from "@/content/playlists";
 import { getPublicationsByTheme } from "@/lib/publications";
@@ -30,7 +31,7 @@ export default function ResearchPage() {
           return (
             <section key={theme.slug} id={theme.slug} className="scroll-mt-24">
               <div className="flex items-center gap-5">
-                <GeoArt kind={theme.art} size={72} className="shrink-0" />
+                {theme.art === "logo" ? <IhsanMark size={72} className="shrink-0" /> : <GeoArt kind={theme.art} size={72} className="shrink-0" />}
                 <h2 className="font-serif text-2xl text-foreground">{theme.title}</h2>
               </div>
               <p className="mt-2 max-w-xl leading-relaxed text-muted">

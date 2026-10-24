@@ -48,7 +48,8 @@ export type ResearchTheme = {
   title: string;
   blurb: string;
   publicationTheme: string;
-  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "khatamLattice" | "arabesque";
+  /** "logo" = the Ihsan icon itself (three words in square kufic); the others are GeoArt figures. */
+  art: "star8" | "rosette12" | "hex6" | "star10" | "star16" | "interlace" | "khatamLattice" | "arabesque" | "logo";
   keywords: string;
 };
 
@@ -105,7 +106,7 @@ export const researchThemes: ResearchTheme[] = [
     blurb:
       "Spiritual excellence (ihsan) as a framework for professional and technological practice — doing things beautifully, sincerely and in service of others.",
     publicationTheme: "ihsan-ethics",
-    art: "kufic",
+    art: "logo",
     keywords: "Ihsan · Islamic ethics · Technology & wisdom",
   },
   {

@@ -40,7 +40,7 @@ export default function IhsanPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <IhsanCalligraphy className="text-[7.5rem] sm:text-[10rem]" />
-            <IhsanMark size={44} />
+            <IhsanMark size={96} />
           </div>
         </Container>
       </section>
@@ -125,7 +125,7 @@ export default function IhsanPage() {
         </section>
 
         <section className="flex flex-wrap items-center gap-6 rounded border border-border bg-surface p-6">
-          <GeoArt kind="kufic" size={90} />
+          <IhsanMark size={120} />
           <p className="max-w-xl text-[15px] leading-relaxed text-muted">
             The Ihsan Initiative, a non-profit foundation in formation, will carry this work further. Its website will be announced here.
           </p>

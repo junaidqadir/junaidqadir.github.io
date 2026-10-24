@@ -2,7 +2,7 @@
  * Generative Islamic-geometric ornaments (star polygons {n/k} on a circle, rosettes, lattices).
  * Pure SVG, drawn with currentColor so they follow the theme. Each research theme gets its own symmetry.
  */
-type Kind = "star8" | "rosette12" | "hex6" | "star10" | "star16" | "kufic" | "interlace" | "khatamLattice" | "arabesque";
+type Kind = "star8" | "rosette12" | "hex6" | "star10" | "star16" | "interlace" | "khatamLattice" | "arabesque";
 
 const pt = (n: number, i: number, r: number, rot = -90): [number, number] => {
   const a = ((rot + (360 / n) * i) * Math.PI) / 180;
@@ -121,17 +121,6 @@ export default function GeoArt({ kind = "star8", size = 160, className = "", tit
             </g>
           ))}
           <path d="M0 -30 C-6 -36 -4 -44 0 -46 C4 -44 6 -36 0 -30Z" stroke="var(--accent)" {...common} strokeWidth={1.2} />
-        </g>
-      )}
-      {kind === "kufic" && (
-        <g fill="none" strokeLinecap="square">
-          <path d="M44-44h-88v62" stroke="var(--accent)" strokeWidth={5} />
-          <path d="M42 8v36h-60" stroke="var(--accent)" strokeWidth={5} />
-          <g fill="var(--foreground)">
-            <rect x="-30" y="-30" width="60" height="8" /><rect x="-30" y="-30" width="8" height="34" />
-            <rect x="-10" y="-8" width="40" height="8" /><rect x="22" y="-8" width="8" height="34" />
-            <rect x="-30" y="14" width="40" height="8" />
-          </g>
         </g>
       )}
     </svg>
