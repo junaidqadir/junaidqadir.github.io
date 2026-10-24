@@ -4,6 +4,7 @@ import { getAwards, humbleHtml } from "@/lib/cv";
 import Distinctions from "@/components/Distinctions";
 import RetryImg from "@/components/RetryImg";
 import { asset } from "@/lib/assets";
+import { evidenceFor } from "@/content/awardLinks";
 
 export const metadata: Metadata = {
   title: "Awards & Honors — Junaid Qadir",
@@ -15,6 +16,7 @@ const photos = [
   { src: "/awards/dean-teaching-2026.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Teaching, 2026", caption: "College of Engineering Dean’s Award for Excellence in Teaching, 2026." },
   { src: "/awards/dean-service-2025.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Service, 2025", caption: "College of Engineering Dean’s Award for Excellence in Service, 2025." },
   { src: "/awards/dean-research-2024.jpg", alt: "Receiving the College of Engineering Dean's Award for Excellence in Research, 2024", caption: "College of Engineering Dean’s Award for Excellence in Research, 2024." },
+  { src: "/awards/educon-2025-stage.jpg", alt: "Receiving the IEEE EDUCON 2025 Most Cited Paper Award in London", caption: "IEEE EDUCON 2025, London: Most Cited Paper Award." },
   { src: "/awards/convocation-closeup-2026.jpg", alt: "With fellow award recipients at the Qatar University convocation, September 2026", caption: "With fellow recipients at the convocation ceremony." },
 ];
 
@@ -40,18 +42,32 @@ export default function AwardsPage() {
       </div>
 
       <ul className="mt-14 space-y-4 leading-relaxed text-foreground">
-        {awards.map((a, i) => (
-          <li key={i} className="border-b border-border pb-4 text-[15px]">
-            <span dangerouslySetInnerHTML={{ __html: humbleHtml(a.html) }} />
-            {a.children?.some((b) => b.items.length) && (
-              <ul className="mt-2 space-y-1.5 border-l border-border pl-4 text-muted">
-                {a.children.flatMap((b) => b.items).map((c, j) => (
-                  <li key={j} dangerouslySetInnerHTML={{ __html: humbleHtml(c.html) }} />
+        {awards.map((a, i) => {
+          const ev = evidenceFor(a.text);
+          return (
+            <li key={i} className="flex gap-4 border-b border-border pb-4 text-[15px]">
+              <div className="min-w-0 flex-1">
+                <span dangerouslySetInnerHTML={{ __html: humbleHtml(a.html) }} />
+                {ev?.links?.map((l) => (
+                  <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="ml-2 whitespace-nowrap text-sm text-accent hover:opacity-70">{l.label} ↗</a>
                 ))}
-              </ul>
-            )}
-          </li>
-        ))}
+                {a.children?.some((b) => b.items.length) && (
+                  <ul className="mt-2 space-y-1.5 border-l border-border pl-4 text-muted">
+                    {a.children.flatMap((b) => b.items).map((c, j) => (
+                      <li key={j} dangerouslySetInnerHTML={{ __html: humbleHtml(c.html) }} />
+                    ))}
+                  </ul>
+                )}
+              </div>
+              {ev?.cert && (
+                <a href={ev.cert.href} target="_blank" rel="noopener noreferrer" className="group block w-24 shrink-0 sm:w-32" aria-label={ev.cert.alt}>
+                  <RetryImg src={asset(ev.cert.thumb)} alt={ev.cert.alt} className="w-full rounded-sm border border-border object-cover transition-opacity group-hover:opacity-80" />
+                  <span className="mt-1 block text-xs text-accent">{ev.cert.label} ↗</span>
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </Container>
   );

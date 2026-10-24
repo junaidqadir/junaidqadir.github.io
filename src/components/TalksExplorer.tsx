@@ -1,9 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import RetryImg from "./RetryImg";
+import { asset } from "@/lib/assets";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export type TalkItem = { html: string; year: number | null; kind: string; topics: string[]; video: string | null; slides: string | null };
+export type TalkItem = { html: string; year: number | null; kind: string; topics: string[]; slides: string | null };
 
 export const topicLabels: Record<string, string> = {
   "ai-ethics": "AI ethics & safety",
@@ -61,13 +63,13 @@ export default function TalksExplorer({ items }: { items: TalkItem[] }) {
       if (topics.length && !topics.every((t) => i.topics.includes(t))) return false;
       if (kind.length && !kind.includes(i.kind)) return false;
       if (year && String(i.year) !== year) return false;
-      if (media && !(i.video || i.slides)) return false;
+      if (media && !i.slides) return false;
       return true;
     });
   }, [items, q, topics, kind, year, media]);
 
   const active = (q ? 1 : 0) + topics.length + kind.length + (year ? 1 : 0) + (media ? 1 : 0);
-  const nMedia = items.filter((i) => i.video || i.slides).length;
+  const nMedia = items.filter((i) => i.slides).length;
 
   return (
     <div id="all-talks" className="scroll-mt-24">
@@ -105,7 +107,7 @@ export default function TalksExplorer({ items }: { items: TalkItem[] }) {
         </div>
         <label className="flex cursor-pointer items-center gap-2 pb-1 text-sm text-muted">
           <input type="checkbox" checked={media} onChange={(e) => { setMedia(e.target.checked); sync({ media: e.target.checked }); }} className="accent-[var(--accent)]" />
-          Recording or slides available <span className="text-xs">({nMedia})</span>
+          Slides available <span className="text-xs">({nMedia})</span>
         </label>
       </div>
       <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-sm text-muted" aria-live="polite">
@@ -114,22 +116,35 @@ export default function TalksExplorer({ items }: { items: TalkItem[] }) {
       </div>
       <ul className="mt-2">
         {shown.length === 0 && <li className="py-8 text-center text-sm text-muted">No talks match these filters.</li>}
-        {shown.map((t, i) => (
-          <li key={i} className="border-b border-border py-4 text-[15px] leading-relaxed text-muted">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-              {t.year && <span className="font-serif text-sm text-accent">{t.year}</span>}
-              <span className="uppercase tracking-wide text-gold">{t.kind}</span>
-              {t.topics.map((x) => (<span key={x} className="text-muted/80">· {topicLabels[x]}</span>))}
-            </div>
-            <p className="mt-1" dangerouslySetInnerHTML={{ __html: t.html }} />
-            {(t.video || t.slides) && (
-              <p className="mt-1 flex gap-4 text-sm">
-                {t.video && <a href={t.video} target="_blank" rel="noopener noreferrer" className="text-accent hover:opacity-70">▶ Watch</a>}
-                {t.slides && <a href={t.slides} className="text-accent hover:opacity-70">Slides (PDF) ↓</a>}
-              </p>
-            )}
-          </li>
-        ))}
+        {shown.map((t, i) => {
+          const thumb = t.slides ? t.slides.replace("/slides/", "/slide-thumbs/").replace(/\.pdf$/, ".jpg") : null;
+          return (
+            <li key={i} className="flex gap-4 border-b border-border py-5 text-[15px] leading-relaxed text-muted sm:gap-5">
+              <div className="w-28 shrink-0 sm:w-44">
+                {thumb && t.slides ? (
+                  <a href={t.slides} className="group block" aria-label="Open the slides (PDF)">
+                    <RetryImg src={asset(thumb)} alt="First slide of the talk" className="aspect-video w-full rounded-sm border border-border bg-[#0e0c0a] object-contain transition-opacity group-hover:opacity-80" />
+                  </a>
+                ) : (
+                  <div className="pattern-khatam relative flex aspect-video w-full items-center justify-center rounded-sm border border-border bg-surface" aria-hidden="true">
+                    <span className="font-serif text-xl text-accent/80 sm:text-2xl">{t.year ?? ""}</span>
+                  </div>
+                )}
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                  {t.year && <span className="font-serif text-sm text-accent">{t.year}</span>}
+                  <span className="uppercase tracking-wide text-gold">{t.kind}</span>
+                  {t.topics.map((x) => (<span key={x} className="text-muted/80">· {topicLabels[x]}</span>))}
+                </div>
+                <p className="mt-1" dangerouslySetInnerHTML={{ __html: t.html }} />
+                {t.slides && (
+                  <p className="mt-1 text-sm"><a href={t.slides} className="text-accent hover:opacity-70">Slides (PDF) ↓</a></p>
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

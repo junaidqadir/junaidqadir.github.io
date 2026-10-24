@@ -182,14 +182,6 @@ export default function MultiplexityPage() {
           <Link href="/talks?topic=multiplexity" className="mt-4 inline-block text-sm text-accent hover:opacity-70">All talks, filterable by topic and year →</Link>
         </section>
 
-        <section className="border-t border-border pt-8">
-          <h2 className="text-xs font-medium uppercase tracking-[0.22em] text-muted">About the ornament</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-            The geometric figures on this site follow the Islamic tradition of ornament, in which many repeating forms grow from a single center and one shared construction, and which is often read as an image of unity in multiplicity.
-            The eight-pointed star is made from two squares, one turned through 45°. Each medallion marks its center with a small gold point. The forms are decoration and carry no
-            specific meaning per research theme.
-          </p>
-        </section>
       </Container>
     </>
   );
