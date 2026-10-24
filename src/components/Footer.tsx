@@ -19,7 +19,7 @@ export default function Footer() {
         <Ornament className="pt-6" />
         <div className="flex flex-wrap items-center justify-between gap-4 py-8 text-sm text-muted">
           <p>
-            &copy; {new Date().getFullYear()} {identity.name} · <span lang="ar" className="font-arabic text-base">إحسان</span>
+            &copy; {new Date().getFullYear()} {identity.name}
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {links.map((link) => (

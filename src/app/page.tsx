@@ -55,12 +55,12 @@ export default function Home() {
           <div className="mt-10 grid items-end gap-12 md:grid-cols-[1fr_300px]">
             <div>
               <p className="max-w-2xl font-serif text-2xl leading-snug text-foreground sm:text-3xl">
-                AI ethics &amp; governance. AI in healthcare and education. Technology with wisdom.
+                AI ethics and governance. AI in education and healthcare. Technology with wisdom.
               </p>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-                I direct the IHSAN Research Lab at Qatar University. My work asks how artificial intelligence can serve the whole human being —
-                in the clinic, the classroom and the community — and develops <em>multiplexity</em>, an Islamically inspired way of holding
-                the one and the many together, to answer that question.
+                I direct the IHSAN Research Lab at Qatar University. I work on how artificial intelligence can serve people, starting with
+                communities and classrooms and reaching into healthcare, governance and security. Running through all of it is multiplexity, an
+                Islamically inspired way of keeping the one and the many in view together.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
                 <Link href="/multiplexity" className="rounded-sm bg-foreground px-5 py-3 text-background transition-opacity hover:opacity-85">Explore multiplexity</Link>
