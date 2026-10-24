@@ -4,6 +4,7 @@ import Ornament from "@/components/Ornament";
 import StudentNote from "@/components/StudentNote";
 import IhsanCalligraphy from "@/components/IhsanCalligraphy";
 import VideoCard from "@/components/VideoCard";
+import Distinctions from "@/components/Distinctions";
 import { getVideos } from "@/lib/videos";
 import GeoArt from "@/components/GeoArt";
 import ThemeCard from "@/components/ThemeCard";
@@ -95,6 +96,9 @@ export default function Home() {
               ))}
             </dl>
           </Container>
+        </div>
+        <div className="relative border-t border-border">
+          <Container width="max-w-6xl" className="py-6"><Distinctions /></Container>
         </div>
       </section>
 

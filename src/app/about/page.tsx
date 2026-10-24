@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
+import Distinctions from "@/components/Distinctions";
 import { bio, identity, socials } from "@/content/site";
 import { listUnder, cvMeta } from "@/lib/cv";
 
@@ -24,6 +25,8 @@ export default function AboutPage() {
       <p className="mt-2 text-sm text-muted">
         {identity.role}, {identity.affiliation}
       </p>
+
+      <Distinctions className="mt-8" heading={false} />
 
       <section className="mt-10">
         <Label>Short bio</Label>

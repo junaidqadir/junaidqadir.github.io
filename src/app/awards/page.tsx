@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { getAwards, humbleHtml } from "@/lib/cv";
+import Distinctions from "@/components/Distinctions";
 
 export const metadata: Metadata = {
   title: "Awards & Honors — Junaid Qadir",
@@ -24,6 +25,8 @@ export default function AwardsPage() {
         Recognition for research, teaching and service. Most of this work is shared with students and collaborators,
         and I am grateful to them and to my colleagues. The list below follows my CV.
       </p>
+
+      <Distinctions className="mt-8" />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         {photos.map((p, i) => (
