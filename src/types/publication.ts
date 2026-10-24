@@ -36,5 +36,8 @@ export type Publication = {
   oa_status?: string;
   /** Why no PDF is hosted and how to get a copy (e.g. publisher terms). */
   access_note?: string | null;
+  /** Author-posted preprint (SSRN etc.) that is linked rather than hosted. */
+  preprint_url?: string | null;
+  preprint_host?: string | null;
   bibtex?: string;
 };

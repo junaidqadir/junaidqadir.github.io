@@ -97,6 +97,12 @@ export default function PublicationCard({
             free to read
           </a>
         )}
+        {pub.preprint_url && (
+          <a href={pub.preprint_url} target="_blank" rel="noopener noreferrer" className={pillAccent} title="Author-posted preprint">
+            {pub.preprint_host ?? "preprint"}
+            <span className="ml-1 text-[10px] opacity-70">preprint</span>
+          </a>
+        )}
         {doiUrl && (
           <a href={doiUrl} target="_blank" rel="noopener noreferrer" className={pill}>
             DOI
