@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/Container";
 import Ornament from "@/components/Ornament";
+import StudentNote from "@/components/StudentNote";
 import GeoArt from "@/components/GeoArt";
 import ThemeCard from "@/components/ThemeCard";
 import PublicationCard from "@/components/PublicationCard";
@@ -12,7 +13,7 @@ import type { Theme } from "@/types/publication";
 
 const projects = [
   { kind: "Research group", title: "IHSAN Research Lab", text: "A research lab at Qatar University working on human-beneficial AI, the ethics of technology and engineering education.", href: "/publications?theme=ai-ethics", cta: "Related publications" },
-  { kind: "Non-profit foundation (in formation)", title: "The Ihsan Initiative", text: "Courses, research and community programmes on technology, education and ethics grounded in ihsan — excellence and sincerity in service.", href: null as string | null, cta: "Website coming soon" },
+  { kind: "Non-profit foundation (in formation)", title: "The Ihsan Initiative", text: "Courses, research and community programs on technology, education and ethics grounded in ihsan — excellence and sincerity in service.", href: null as string | null, cta: "Website coming soon" },
   { kind: "Open course", title: "Multiplex Intelligence", text: "An eight-part public course on multiplex thinking — a pluralistic, systems-aware approach to intelligence, technology and the human being.", href: "https://www.youtube.com/playlist?list=PL65UDiarzsWEzx9lBPVhuBVv_YyoLclLN", cta: "Watch the course" },
 ];
 
@@ -250,11 +251,7 @@ export default function Home() {
           <Kicker n="07">Contact</Kicker>
           <H2>Let&rsquo;s talk research.</H2>
           <p className="mt-4 max-w-xl text-muted">{contact.intro}</p>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-            <strong className="font-serif text-foreground">Prospective graduate students:</strong> admissions at Qatar University are handled centrally, so please apply directly
-            through the published procedures. I cannot reply to every email; funded positions in my group are advertised here and on LinkedIn.{" "}
-            <Link href="/contact" className="text-accent hover:opacity-70">More →</Link>
-          </p>
+          <StudentNote className="mt-5" />
           <p className="mt-6"><a href={`mailto:${socials.email}`} className="font-serif text-2xl text-accent hover:opacity-70">{socials.email} ↗</a></p>
           <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[["Google Scholar", socials.scholar], ["ORCID", socials.orcid], ["LinkedIn", socials.linkedin], ["YouTube", socials.youtube], ["ResearchGate", socials.researchgate], ["QU faculty page", "https://qufaculty.qu.edu.qa/jqadir/"]].map(([l, h]) => (

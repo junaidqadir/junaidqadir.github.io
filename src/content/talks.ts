@@ -174,7 +174,7 @@ export const talks: Talk[] = [
     youtubePlaylistId: "PL4AueLFeEG0DNu6Y3xjDtRivNtWn_pI_9",
     slidesUrl: null,
     description:
-      "On Islamic perspectives on AI ethics and the need for collaboration between technical and non-technical disciplines. Note: the full conference playlist includes many other speakers' sessions, not just Junaid's — only his own talks are listed here.",
+      "On Islamic perspectives on AI ethics and the need for collaboration between technical and non-technical disciplines.",
   },
   {
     slug: "guides-framework-genai-education",
@@ -238,11 +238,11 @@ export const talks: Talk[] = [
     title: "Understand Quran, the Easy Way — A Short Course",
     category: "short-course",
     date: "2021",
-    venue: "Full playlist (15 lessons)",
+    venue: "Full playlist (17 videos)",
     youtubeId: "aGsOjnZmMLo",
     youtubePlaylistId: "PL4AueLFeEG0BhWMBqH4FKeYMgel5wUxh7",
     slidesUrl: null,
-    description: "A 15-lesson short course on understanding the Qur'an, recorded October-December 2021.",
+    description: "A short course on understanding the Qur'an, recorded October-December 2021.",
   },
   {
     slug: "security-robustness-ml-tutorial-part-1",
@@ -284,6 +284,6 @@ export const talks: Talk[] = [
     youtubeId: "psRdgGazfr4",
     slidesUrl: null,
     description:
-      "A related seminar talk on secure and robust machine learning, from the same series as the tutorial above.",
+      "A related seminar talk on secure and robust machine learning, from the same playlist as the Security and Robustness of ML tutorial.",
   },
 ];

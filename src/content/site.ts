@@ -65,7 +65,7 @@ export const researchThemes: ResearchTheme[] = [
     slug: "ai-safety-security",
     title: "AI Safety, Security & Robustness",
     blurb:
-      "Attacks on and defenses for machine-learning systems — adversarial examples, robustness and distribution shift, privacy-preserving and federated learning, LLM safety evaluation, and cybersecurity for networks, IoT and connected vehicles. A long-standing line published in computer-security and systems journals.",
+      "Attacks on and defenses for machine-learning systems — adversarial examples, robustness and distribution shift, privacy-preserving and federated learning, LLM safety evaluation, and cybersecurity for networks, IoT and connected vehicles. A long-standing line of work, published across security, networking and AI venues.",
     publicationTheme: "ai-security",
     art: "interlace",
     keywords: "Adversarial ML · LLM safety · Cybersecurity · Privacy",
@@ -137,13 +137,13 @@ export const researchThemes: ResearchTheme[] = [
 
 export const bio = {
   short:
-    "Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than 250 papers spanning artificial intelligence, computing systems, and engineering education, and has published on generative AI in engineering education in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.",
+    "Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than 280 papers spanning artificial intelligence, computing systems, and engineering education, and has published on generative AI in engineering education in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.",
 };
 
 export const contact = {
   intro: "For speaking invitations or research collaboration, email me or use the links below.",
   studentNote: {
-    title: "Prospective graduate students",
+    title: "Note to prospective graduate students and research assistants",
     body: "Thank you for your interest in working with me. I receive more emails than I can answer, and I am sorry that I cannot reply individually or advise on funding. Graduate admissions at Qatar University are handled centrally, not through a faculty advisor’s recommendation, so please apply directly and follow the published deadlines and procedures. When funded PhD or research-assistant positions open in my group, I advertise them on this website and on LinkedIn, and they are filled by open competition. Please do not read a lack of reply as a judgment of your potential. I wish you every success.",
   },
 };

@@ -14,7 +14,7 @@ export default function ResearchPage() {
     <Container className="py-16">
       <h1 className="font-serif text-3xl text-foreground">Research</h1>
       <p className="mt-3 max-w-xl text-muted">
-        My work is organized around six connected themes rather than a
+        My work is organized around nine connected themes rather than a
         chronological list — each brings together publications, talks, and
         projects on that topic.
       </p>

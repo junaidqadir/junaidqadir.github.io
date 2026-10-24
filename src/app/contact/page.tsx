@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
+import StudentNote from "@/components/StudentNote";
 import { contact, socials } from "@/content/site";
 
 export const metadata: Metadata = { title: "Contact — Junaid Qadir" };
@@ -21,10 +22,7 @@ export default function ContactPage() {
         {contact.intro}
       </p>
 
-      <aside className="mt-8 max-w-xl rounded border border-border bg-surface p-5">
-        <h2 className="font-serif text-lg text-foreground">{contact.studentNote.title}</h2>
-        <p className="mt-2 text-[15px] leading-relaxed text-muted">{contact.studentNote.body}</p>
-      </aside>
+      <StudentNote className="mt-8" />
 
       <ul className="mt-8 space-y-3">
         {links.map((link) => (

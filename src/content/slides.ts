@@ -1,11 +1,12 @@
 // Slide decks published as PDF (never PPT) and matched to CV talks by title + year. Only decks for talks listed in the CV,
 // scanned for confidentiality markers; PowerPoint-only decks were converted from the latest version. To add one:
 // copy the PDF to public/slides/ and add a line here.
-export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string };
+export type SlideDeck = { title: string; year: number; file: string; pages: number; mb: number; date: string; aliases?: string[] };
 
 export const slideDecks: SlideDeck[] = [
   {
     "title": "Towards Ethical and Effective AI-Augmented Research Writing",
+    "aliases": ["Towards Ethical and Effective AI-Augmented Research Writing: A Conceptual Framework and Practical Guidelines"],
     "year": 2026,
     "file": "2026-towards-ethical-and-effective-ai-augmented-research-writing.pdf",
     "pages": 98,
@@ -268,6 +269,7 @@ function overlap(a: string, b: string) {
 export function slidesFor(cvText: string): string | null {
   const quoted = (cvText.match(/“([^”]+)”/) || [])[1] ?? cvText;
   const years = [...cvText.matchAll(/\b(?:19|20)\d{2}\b/g)].map((m) => +m[0]);
-  const hit = slideDecks.find((d) => overlap(quoted, d.title) >= 0.8 && years.includes(d.year));
+  for (const m of cvText.matchAll(/['’](\d{2})\b/g)) years.push(2000 + +m[1]); // e.g. EEITC'24
+  const hit = slideDecks.find((d) => [d.title, ...(d.aliases ?? [])].some((t) => overlap(quoted, t) >= 0.8) && years.includes(d.year));
   return hit ? `/slides/${hit.file}` : null;
 }

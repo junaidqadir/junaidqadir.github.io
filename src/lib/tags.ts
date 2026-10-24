@@ -1,5 +1,6 @@
 /** Human-friendly labels for tag slugs (unknown slugs are title-cased automatically). */
 export const tagLabels: Record<string, string> = {
+  "ai-safety": "AI safety",
   "generative-ai": "Generative AI",
   "responsible-ai": "Responsible AI",
   "ai-ethics": "AI ethics",

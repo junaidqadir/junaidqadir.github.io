@@ -37,14 +37,18 @@ const domains = [
   { title: "One patient, many layers", text: "Clinical, cultural and spiritual purposes of health, each in its place under the highest: multiplex health, and generative AI with traditional Islamically integrated psychotherapy.", href: "/publications?theme=health-psychology" },
   { title: "One learner, many capacities", text: "AI-augmented learning and writing; Islamically inspired critical pedagogy; multiplex systemics for educational technology.", href: "/publications?theme=education" },
   { title: "One university, many stakeholders", text: "Responsible AI in higher education: the IEEE P3722 guide and governance work.", href: "/publications?tags=ai-governance" },
-  { title: "One system, many models", text: "Multiplex digital twins: mechanistic and data-driven models at different levels, judged against explicit purposes.", href: "/publications?q=digital%20twin" },
+  { title: "One system, many models", text: "Multiplex digital twins: mechanistic and data-driven models at different levels, judged against explicit purposes. Currently presented in talks and master classes.", href: "/talks?topic=digital-twins" },
 ];
 
 export default function MultiplexityPage() {
   const pubs = getPublicationsByTheme("multiplexity");
   const chapters = pubs.filter((p) => p.section === "book-chapter");
   const articles = pubs.filter((p) => p.section !== "book-chapter");
-  const talksList = findCvItems(/multiplex/i).filter((x) => x.sectionId === "talks-selected" || x.sectionId === "professional-services");
+  const normTitle = (t: string) => ((t.match(/“([^”]+)”/) || [])[1] ?? t).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const seenTalk = new Set<string>();
+  const talksList = findCvItems(/multiplex/i)
+    .filter((x) => x.sectionId === "talks-selected" || x.sectionId === "professional-services")
+    .filter((x) => { const k = normTitle(x.item.text); return seenTalk.has(k) ? false : (seenTalk.add(k), true); });
   const lists = playlistsFor("multiplexity");
 
   return (
@@ -53,7 +57,7 @@ export default function MultiplexityPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative grid items-center gap-10 py-16 md:grid-cols-[1fr_320px]">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Research programme</p>
+            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Research program</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-7xl">Multiplexity<span className="text-accent">.</span></h1>
             <p className="mt-6 max-w-2xl font-serif text-2xl leading-snug text-foreground">The one and the many, held together.</p>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
@@ -131,7 +135,7 @@ export default function MultiplexityPage() {
               <Link key={d.title} href={d.href} className="card-ornate block p-5">
                 <h3 className="font-serif text-lg text-foreground">{d.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{d.text}</p>
-                <p className="mt-3 text-sm text-accent">Related papers →</p>
+                <p className="mt-3 text-sm text-accent">{d.href.startsWith("/talks") ? "Related talks →" : "Related papers →"}</p>
               </Link>
             ))}
           </div>

@@ -163,6 +163,20 @@ function dropEmbargoed(blocks) {
   }));
 }
 if (embargoes.length) for (const s of sections) s.blocks = dropEmbargoed(s.blocks);
+// redact identifiers (registration / membership numbers) from the text that gets published
+const redactions = existsSync(embargoFile) ? (JSON.parse(readFileSync(embargoFile, "utf8")).redact || []).map((r) => new RegExp(r.pattern, "gi")) : [];
+function redactBlocks(blocks) {
+  return blocks.map((b) => ({
+    ...b,
+    items: b.items.map((it) => ({
+      ...it,
+      html: redactions.reduce((h, re) => h.replace(re, ""), it.html),
+      text: redactions.reduce((h, re) => h.replace(re, ""), it.text),
+      ...(it.children ? { children: redactBlocks(it.children) } : {}),
+    })),
+  }));
+}
+if (redactions.length) for (const s of sections) s.blocks = redactBlocks(s.blocks);
 
 // ---------- derived headline numbers (so the homepage never goes stale) ----------
 const text = toText(texToHtml(body));

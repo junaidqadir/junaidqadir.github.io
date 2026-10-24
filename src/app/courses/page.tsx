@@ -84,7 +84,7 @@ export default function CoursesPage() {
 
         {/* 2020 */}
         <section id="ihsan-short-course" className="scroll-mt-24">
-          <p className="text-xs uppercase tracking-[0.22em] text-gold">IHSAN Short Course · 2020 · 13 videos · 145 slides</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">IHSAN Short Course · 2020 · 13 videos (11 topics) · 145 slides</p>
           <h2 className="mt-2 font-serif text-3xl leading-tight text-foreground">Spiritual Excellence (Ihsan) for Muslim Professionals</h2>
           <p className="mt-5 max-w-3xl leading-relaxed text-muted">
             A short course on ihsan as a way of professional life: what it is and why it matters, sincerity and intention, vision, character, justice and excellence in one’s work, mastery, productivity and barakah, and service to others.

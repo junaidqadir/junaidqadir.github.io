@@ -36,7 +36,16 @@ export default function AwardsPage() {
 
       <ul className="mt-14 space-y-4 leading-relaxed text-foreground">
         {awards.map((a, i) => (
-          <li key={i} className="border-b border-border pb-4 text-[15px]" dangerouslySetInnerHTML={{ __html: humbleHtml(a.html) }} />
+          <li key={i} className="border-b border-border pb-4 text-[15px]">
+            <span dangerouslySetInnerHTML={{ __html: humbleHtml(a.html) }} />
+            {a.children?.some((b) => b.items.length) && (
+              <ul className="mt-2 space-y-1.5 border-l border-border pl-4 text-muted">
+                {a.children.flatMap((b) => b.items).map((c, j) => (
+                  <li key={j} dangerouslySetInnerHTML={{ __html: humbleHtml(c.html) }} />
+                ))}
+              </ul>
+            )}
+          </li>
         ))}
       </ul>
     </Container>
