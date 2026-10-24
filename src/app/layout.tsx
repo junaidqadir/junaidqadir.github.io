@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   title: { default: "Junaid Qadir — Professor of Computer Engineering, Qatar University", template: "%s" },
   description:
     "Academic working across artificial intelligence, engineering education, multiplexity, and Islamic ethics. Publications, talks, teaching and a continuously synced CV.",
-  openGraph: { type: "website", siteName: "Junaid Qadir", title: "Junaid Qadir", description: "Technology with wisdom. Education with ihsan.", images: [{ url: "/headshot.jpg", width: 781, height: 781, alt: "Junaid Qadir" }] },
-  twitter: { card: "summary", title: "Junaid Qadir", description: "Technology with wisdom. Education with ihsan.", images: ["/headshot.jpg"] },
+  openGraph: { type: "website", siteName: "Junaid Qadir", title: "Junaid Qadir", description: "Technology with wisdom. Education with ihsan.", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Junaid Qadir, Professor of Computer Engineering, Qatar University" }] },
+  twitter: { card: "summary_large_image", title: "Junaid Qadir", description: "Technology with wisdom. Education with ihsan.", images: ["/og.png"] },
   alternates: { canonical: "/" },
 };
 

@@ -21,6 +21,10 @@ export default function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
           </Link>
         );
       })}
+      <Link href="/search" onClick={onNavigate} aria-label="Search the site" aria-current={path === "/search" ? "page" : undefined} className={`transition-colors hover:text-accent ${path === "/search" ? "text-foreground" : "text-muted"}`}>
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true" className="inline-block align-[-2px]"><circle cx="8.5" cy="8.5" r="5.5" /><path d="M13 13l4.5 4.5" /></svg>
+        <span className="ml-1.5 lg:sr-only">Search</span>
+      </Link>
       {externalNav.href && (
         <Link href={externalNav.href} target="_blank" rel="noopener noreferrer" className="text-accent transition-opacity hover:opacity-70">
           {externalNav.label} ↗

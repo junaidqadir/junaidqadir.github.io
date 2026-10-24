@@ -69,6 +69,31 @@ export default function AboutPage() {
         </section>
       )}
 
+      <section className="mt-10" aria-labelledby="context">
+        <h2 id="context" className="text-sm font-medium uppercase tracking-widest text-muted">Research in context</h2>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+          A few figures from a public, Scopus-based database (the Stanford–Elsevier lists), for readers who want a sense of scale. They are a rough guide, they differ across fields,
+          and most of this work was done with students and collaborators, to whom the credit belongs.
+        </p>
+        <table className="mt-4 w-full max-w-2xl text-sm">
+          <caption className="sr-only">Citation indicators from the Stanford–Elsevier database, 2026 edition</caption>
+          <tbody className="divide-y divide-border">
+            {[
+              ["Listing", "Included in the career and 2025 lists; main subfield Networking & Telecommunications"],
+              ["Papers and citations", "265 papers; 12,584 citations (1996–2025); h-index 58"],
+              ["Self-citation", "6.6% over the career; 2.8% of 2025 citations (8.1% across all listed researchers)"],
+              ["Authorship", "First or last author on 46% of papers; middle author on 51%, reflecting team work"],
+            ].map(([k, v]) => (
+              <tr key={k}><th scope="row" className="w-40 py-2.5 pr-4 text-left align-top font-normal text-muted">{k}</th><td className="py-2.5 text-foreground">{v}</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="mt-3 max-w-2xl text-xs leading-relaxed text-muted">
+          Source: Ioannidis et al., <em>Updated science-wide author databases of standardized citation indicators</em> (Elsevier, 2026 edition; Scopus data to the end of 2025).
+          Citation counts are imperfect measures of the value of research, and are better read as context than as a verdict.
+        </p>
+      </section>
+
       <section className="mt-10 border-t border-border pt-8">
         <p className="text-sm text-muted">
           The complete record — career, awards, funding, teaching, service, supervision and talks — is on the{" "}
