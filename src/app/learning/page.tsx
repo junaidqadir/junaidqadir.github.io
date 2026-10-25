@@ -11,7 +11,7 @@ import type { Publication } from "@/types/publication";
 import { learningStartSlugs, learningGuideSlugs } from "@/content/learningPapers";
 
 export const metadata: Metadata = {
-  title: "Tips for students — Junaid Qadir",
+  title: "Learning — Junaid Qadir",
   description: "Articles, primers, slides and lectures on how to learn well, build skills and grow as a student, researcher and professional.",
 };
 
@@ -71,6 +71,7 @@ export default function LearningPage() {
           <div className="card-ornate mt-4 max-w-2xl p-5">
             <p className="text-xs uppercase tracking-wide text-gold">Essay · 8 pages</p>
             <h3 className="mt-1 font-serif text-lg leading-snug text-foreground">Shah Waliullah on The Art of Being Knowledgeable (Fann Daneshmandi)</h3>
+            <p className="mt-0.5 text-sm text-muted"><strong className="font-medium text-foreground">J. Qadir</strong></p>
             <p className="mt-3 text-sm"><a href="/learning-shah-waliullah-art-of-being-knowledgeable.pdf" className="text-accent hover:opacity-70">Read (PDF) ↓</a></p>
           </div>
         </section>
