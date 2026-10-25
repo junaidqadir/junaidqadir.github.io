@@ -63,6 +63,20 @@ export default function LearningPage() {
         </section>
 
 
+        <section id="tradition">
+          <H2>The art of being knowledgeable</H2>
+          <p className="mt-3 max-w-2xl text-muted">
+            Insights from Shah Waliullah Dehlawi&rsquo;s <em>Risala-e Daneshmandi</em> on the art of scholarship, learning and teaching, with his guidelines for educators.
+          </p>
+          <div className="card-ornate mt-4 max-w-2xl p-5">
+            <p className="text-xs uppercase tracking-wide text-gold">Essay · 8 pages</p>
+            <h3 className="mt-1 font-serif text-lg leading-snug text-foreground">Shah Waliullah on The Art of Being Knowledgeable (Fann Daneshmandi)</h3>
+            <p className="mt-3 text-sm"><a href="/learning-shah-waliullah-art-of-being-knowledgeable.pdf" className="text-accent hover:opacity-70">Read (PDF) ↓</a></p>
+          </div>
+        </section>
+
+        <Ornament />
+
         <section>
           <H2>Writing with AI</H2>
           <p className="mt-3 max-w-2xl text-muted">
