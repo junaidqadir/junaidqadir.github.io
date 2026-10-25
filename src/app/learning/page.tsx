@@ -33,7 +33,7 @@ export default function LearningPage() {
         <div className="pattern-khatam pattern-fade-b pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
         <Container width="max-w-6xl" className="relative flex flex-wrap items-center justify-between gap-8 py-16">
           <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Tips for students</p>
+            <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">Lifelong learning</p>
             <h1 className="mt-3 font-serif text-5xl font-light leading-[1.02] text-foreground sm:text-6xl">How to learn well<span className="text-accent">.</span></h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               Articles, primers, slides and lectures for students, researchers and professionals on learning, skills and personal development,
