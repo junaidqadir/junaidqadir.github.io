@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
 import Distinctions from "@/components/Distinctions";
-import { bio, identity } from "@/content/site";
+import { bios, identity, portraits } from "@/content/site";
+import BioTabs from "@/components/BioTabs";
 import { listUnder, cvMeta, getSection } from "@/lib/cv";
 import RetryImg from "@/components/RetryImg";
 import { asset } from "@/lib/assets";
@@ -41,9 +42,26 @@ export default function AboutPage() {
 
       <Distinctions className="mt-8" heading={false} />
 
-      <section className="mt-10">
-        <Label>Short bio</Label>
-        <p className="mt-3 leading-relaxed text-foreground">{bio.short}</p>
+      <section className="mt-10" aria-labelledby="biography">
+        <h2 id="biography" className="text-sm font-medium uppercase tracking-widest text-muted">Biography</h2>
+        <p className="mt-2 text-sm text-muted">Three lengths for programs, introductions and press. Each Word file includes a portrait.</p>
+        <div className="mt-4"><BioTabs bios={bios} /></div>
+      </section>
+
+      <section className="mt-10" aria-labelledby="portraits">
+        <h2 id="portraits" className="text-sm font-medium uppercase tracking-widest text-muted">Portraits</h2>
+        <p className="mt-2 text-sm text-muted">High-resolution photographs for event programs and press.</p>
+        <ul className="mt-4 flex flex-wrap gap-6">
+          {portraits.map((p) => (
+            <li key={p.src} className="w-36 sm:w-40">
+              <a href={p.src} download aria-label={`Download: ${p.alt}`}>
+                <RetryImg src={asset(p.thumb)} alt={p.alt} className="aspect-[3/4] w-full rounded-sm border border-border object-cover object-top transition-opacity hover:opacity-80" fallback="JQ" />
+              </a>
+              <a href={p.src} download className="mt-2 inline-block text-sm text-accent hover:opacity-70">Download JPEG ↓</a>
+              <span className="block text-xs text-muted">{p.size} px</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mt-10" aria-labelledby="education">

@@ -1,4 +1,3 @@
-import { getAllPublications } from "@/lib/publications";
 
 // Central site content. Long-form facts (career, awards, funding, teaching, talks, supervision)
 // are NOT written here: they are synced from the master CV into content/cv.generated.json
@@ -139,13 +138,45 @@ export const researchThemes: ResearchTheme[] = [
   },
 ];
 
-// The publication count is taken from the archive so the biography never goes stale.
-const nPublications = Math.floor(getAllPublications().length / 10) * 10;
 
-export const bio = {
-  short:
-    `Junaid Qadir is a Professor of Computer Engineering at the Department of Computer Science and Engineering, College of Engineering, Qatar University, Doha, Qatar. He has co-authored more than ${nPublications} publications spanning artificial intelligence, computing systems, and engineering education, and has published on generative AI in engineering education in venues including the Journal of Engineering Education, IEEE Frontiers in Education, IEEE EDUCON, and the ASEE Annual Conference. Beyond his technical work, he writes on multiplexity and Islamic ethics as a framework for humane, wisdom-oriented technology and education. His teaching and research have been recognized with Qatar University's Outstanding Faculty Service Award and consecutive College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026), alongside the Higher Education Commission of Pakistan's Best University Teacher Award (2012–2013). He is a Senior Member of both IEEE and ACM, and serves as an ACM Distinguished Speaker.`,
-};
+/** Biographies in three lengths for hosts, programs and press. Each has a matching Word file (with portrait) in public/bio/. */
+export const bios = [
+  {
+    id: "75",
+    label: "75 words",
+    words: 73,
+    docx: "/bio/Junaid-Qadir-bio-75-words.docx",
+    paragraphs: [
+      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, where he directs the IHSAN Research Lab. His work asks how artificial intelligence can be made safe, accountable and humane, with a focus on AI ethics and governance, health, and education. His widely cited research has won international paper awards and national honors for teaching and service. He is an ACM Distinguished Speaker and an IEEE Education Society Distinguished Lecturer.",
+    ],
+  },
+  {
+    id: "150",
+    label: "150 words",
+    words: 138,
+    docx: "/bio/Junaid-Qadir-bio-150-words.docx",
+    paragraphs: [
+      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, where he directs the IHSAN Research Lab. His work asks how artificial intelligence can be made safe, accountable and humane. He leads funded projects on testing the safety of AI foundation models, on AI for mental health, on generative AI governance in universities, and on AI capacity for humanitarian organizations. He also writes on Islamic ethics and on technology that serves human flourishing. His widely cited research has received the IEEE Engineering in Medicine and Biology Prize Paper Award. Qatar University has recognized his research, service and teaching, and he received the Higher Education Commission of Pakistan's Best University Teacher Award. He is an ACM Distinguished Speaker and an IEEE Education Society Distinguished Lecturer, and holds a PhD from the University of New South Wales.",
+    ],
+  },
+  {
+    id: "300",
+    label: "300 words",
+    words: 297,
+    docx: "/bio/Junaid-Qadir-bio-300-words.docx",
+    paragraphs: [
+      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, Qatar, where he directs the IHSAN Research Lab. His research centers on human-centered artificial intelligence, with particular interests in AI ethics and governance, the safety and robustness of AI systems, and the application of AI in education and healthcare. He also writes on Islamic ethics and on how technology can serve human flourishing. His work is widely published, with more than 250 peer-reviewed articles in leading venues such as IEEE Transactions on Pattern Analysis and Machine Intelligence, IEEE Transactions on Artificial Intelligence, the Journal of Artificial Intelligence Research, and ACM Computing Surveys, and has been cited more than 25,000 times.",
+      "His awards include the IEEE Engineering in Medicine and Biology Prize Paper Award (2023), the Emerald Literati Outstanding Paper Award (2023), and the Qatar University College of Engineering Dean's Awards for Excellence in Research (2024), Service (2025), and Teaching (2026). He also received the Qatar University Outstanding Faculty Service Award (2025–2026) and Pakistan's highest national teaching honor, the Higher Education Commission's Best University Teacher Award (2012–2013). He has secured competitive research funding from the Qatar Research, Development and Innovation Council, Facebook Research, the British Embassy Doha, and the Higher Education Commission of Pakistan.",
+      "He chairs the AI for Teaching and Learning subgroup of the IEEE P3722 standards working group and serves on the advisory board of the AI Center at the Islamic University of Madinah. He is an ACM Distinguished Speaker (2020–2026), an IEEE Education Society Distinguished Lecturer (2025–2026), and a Senior Member of both IEEE and ACM. Before joining Qatar University in 2021, he chaired the Department of Electrical Engineering at the Information Technology University, Lahore. He holds a PhD in Computer Science and Engineering from the University of New South Wales, Australia.",
+    ],
+  },
+];
+
+/** Portraits offered for download on the About page (full-size files in public/portraits/). */
+export const portraits = [
+  { src: "/portraits/junaid-qadir-portrait-standing.jpg", thumb: "/portraits/junaid-qadir-portrait-standing-480.jpg", alt: "Portrait of Junaid Qadir, standing with arms folded", size: "1931 × 2576" },
+  { src: "/portraits/junaid-qadir-portrait-desk.jpg", thumb: "/portraits/junaid-qadir-portrait-desk-480.jpg", alt: "Portrait of Junaid Qadir, seated at a desk", size: "1126 × 1316" },
+];
 
 export const contact = {
   intro: "The best way to reach me, for speaking invitations, research collaboration or student enquiries, is by email.",
