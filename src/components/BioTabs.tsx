@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Bio = { id: string; label: string; words: number; docx: string; paragraphs: string[] };
+type Bio = { id: string; label: string; docx: string; paragraphs: string[] };
 
 /** The three biography lengths as tabs, each with a copy button and a Word download (bio plus portrait). */
 export default function BioTabs({ bios }: { bios: Bio[] }) {
@@ -40,7 +40,7 @@ export default function BioTabs({ bios }: { bios: Bio[] }) {
         {bio.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
       </div>
       <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
-        <a href={bio.docx} download className="text-accent hover:opacity-70">Download Word file with photo ({bio.words} words) ↓</a>
+        <a href={bio.docx} download className="text-accent hover:opacity-70">Download Word file with photo ↓</a>
         <button type="button" onClick={copy} className="text-accent hover:opacity-70">{copied === bio.id ? "Copied" : "Copy text"}</button>
       </p>
     </div>
