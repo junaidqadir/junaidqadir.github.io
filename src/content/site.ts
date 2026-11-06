@@ -146,7 +146,7 @@ export const bios = [
     label: "100 words",
     docx: "/bio/Junaid-Qadir-bio-100-words.docx",
     paragraphs: [
-      "Junaid Qadir is a Professor of Computer Engineering at Qatar University. His research on AI safety, ethics, education and healthcare asks how AI can be made safe and accountable, and how it shapes human intelligence, agency and flourishing. He has published more than 300 articles, in venues such as IEEE Transactions on Pattern Analysis and Machine Intelligence and ACM Computing Surveys. His honors include the IEEE Engineering in Medicine and Biology Prize Paper Award, Qatar University's Outstanding Faculty Service Award, Dean's Awards and Pakistan's Best University Teacher Award. He is an ACM Distinguished Speaker and IEEE Education Society Distinguished Lecturer.",
+      "Junaid Qadir is a Professor of Computer Engineering at Qatar University. His research on AI safety, ethics, education and healthcare asks how AI can be made safe and accountable, and how it shapes human intelligence, agency and flourishing. He has published more than 300 articles with more than 27,500 citations. His honors include the IEEE Engineering in Medicine and Biology Prize Paper Award, Qatar University's Outstanding Faculty Service Award, College of Engineering Dean's Awards for Research (2024), Service (2025) and Teaching (2026), and Pakistan's Best University Teacher Award. He is an ACM Distinguished Speaker and IEEE Education Society Distinguished Lecturer.",
     ],
   },
   {
