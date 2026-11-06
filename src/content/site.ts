@@ -158,24 +158,14 @@ export const bios = [
     ],
   },
   {
-    id: "250",
-    label: "250 words",
-    docx: "/bio/Junaid-Qadir-bio-250-words.docx",
+    id: "300",
+    label: "300 words",
+    docx: "/bio/Junaid-Qadir-bio-300-words.docx",
     paragraphs: [
-      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, where he directs the IHSAN Research Lab. His research spans AI ethics and governance, human-AI interaction, and applied AI in education and healthcare. Across these areas he asks how AI can be made safe and accountable, and how it shapes the human intelligence, agency and flourishing it is meant to serve. He approaches these questions through multiplexity, a systemic framework that integrates many perspectives, sources of knowledge and levels of reality into one whole, with higher purposes guiding lower means. He also writes on Islamic ethics.",
-      "He has published more than 300 peer-reviewed articles, in venues such as IEEE Transactions on Pattern Analysis and Machine Intelligence, npj Digital Medicine and ACM Computing Surveys, and his work has been cited more than 27,500 times. His funders include the Qatar Research, Development and Innovation Council, the Qatar National Research Fund and Facebook Research. His honors include the IEEE Engineering in Medicine and Biology Prize Paper Award (2023), Qatar University's Outstanding Faculty Service Award (2025–26), the College of Engineering Dean's Awards for Research (2024), Service (2025) and Teaching (2026), and Pakistan's national Best University Teacher Award (2012–13).",
-      "He chairs the AI for Teaching and Learning subgroup of the IEEE P3722 working group on responsible AI in higher education, and speaks widely as an ACM Distinguished Speaker and an IEEE Education Society Distinguished Lecturer. He holds a PhD in Computer Science and Engineering from the University of New South Wales, Australia.",
-    ],
-  },
-  {
-    id: "350",
-    label: "350 words",
-    docx: "/bio/Junaid-Qadir-bio-350-words.docx",
-    paragraphs: [
-      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, where he directs the IHSAN Research Lab. His research spans AI ethics and governance, AI safety, human-AI interaction, and applied AI in education and healthcare. Across these areas he asks how AI can be made safe and accountable, and how it shapes the human intelligence, agency and flourishing it is meant to serve. He approaches these questions through multiplexity, a systemic framework that integrates many perspectives, sources of knowledge and levels of reality, from the physical to the spiritual, into one living whole in which higher purposes guide lower means. He also writes on Islamic ethics.",
-      "He has published more than 300 peer-reviewed articles: in artificial intelligence venues such as IEEE Transactions on Pattern Analysis and Machine Intelligence and the Journal of Artificial Intelligence Research; in health and ethics venues such as npj Digital Medicine and Bioethics; and in computing venues such as ACM Computing Surveys. His work has been cited more than 27,500 times. His funders include the Qatar Research, Development and Innovation Council, the Qatar National Research Fund and Facebook Research.",
-      "His awards include the IEEE Engineering in Medicine and Biology Prize Paper Award (2023), the Emerald Literati Outstanding Paper Award (2023) and the IEEE EDUCON 2025 Most Cited Paper award. At Qatar University he received the Outstanding Faculty Service Award (2025–26), given each year to one member of its 2,000-strong faculty, and the College of Engineering Dean's Awards for Research (2024), Service (2025) and Teaching (2026). He also received Pakistan's Higher Education Commission Best University Teacher Award (2012–13).",
-      "He chairs the AI for Teaching and Learning subgroup of the IEEE P3722 working group on responsible AI in higher education, and speaks widely as an ACM Distinguished Speaker and an IEEE Education Society Distinguished Lecturer, and is a Senior Member of IEEE and ACM. Before joining Qatar University in 2021, he taught at the National University of Sciences and Technology and chaired the Department of Electrical Engineering at the Information Technology University, Lahore. He holds a PhD from the University of New South Wales, Australia.",
+      "Junaid Qadir is a Professor of Computer Engineering at Qatar University in Doha, where he directs the IHSAN Research Lab. His research spans AI ethics and governance, human-AI interaction, and applied AI in education and healthcare. Across these areas he asks how AI can be made safe and accountable, and how it shapes the human intelligence, agency and flourishing it is meant to serve. He approaches these questions through multiplexity, a systemic framework that integrates many perspectives, sources of knowledge and levels of reality, from the physical to the spiritual, into one living whole in which higher purposes guide lower means. He writes on Islamic ethics.",
+      "He has published more than 300 peer-reviewed articles, in venues such as IEEE Transactions on Pattern Analysis and Machine Intelligence, the Journal of Artificial Intelligence Research, npj Digital Medicine and ACM Computing Surveys, and his work has been cited more than 27,500 times. Funders include the Qatar Research, Development and Innovation Council, the Qatar National Research Fund and Facebook Research.",
+      "His awards include the IEEE Engineering in Medicine and Biology Prize Paper Award (2023), the Emerald Literati Outstanding Paper Award (2023) and the IEEE EDUCON 2025 Most Cited Paper award. At Qatar University he received the Outstanding Faculty Service Award (2025–26), given each year to one member of its 2,000-strong faculty, and the College of Engineering Dean's Awards for Research (2024), Service (2025) and Teaching (2026). He received Pakistan's Higher Education Commission Best University Teacher Award (2012–13).",
+      "He chairs the AI for Teaching and Learning subgroup of the IEEE P3722 working group on responsible AI in higher education, and speaks widely as an ACM Distinguished Speaker and an IEEE Education Society Distinguished Lecturer, and is a Senior Member of IEEE and ACM. He holds a PhD from the University of New South Wales, Australia.",
     ],
   },
   {

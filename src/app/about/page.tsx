@@ -44,7 +44,7 @@ export default function AboutPage() {
 
       <section className="mt-10" aria-labelledby="biography">
         <h2 id="biography" className="text-sm font-medium uppercase tracking-widest text-muted">Biography</h2>
-        <p className="mt-2 text-sm text-muted">Five lengths for programs, introductions and press. Each Word file includes a portrait.</p>
+        <p className="mt-2 text-sm text-muted">Four lengths for programs, introductions and press. Each Word file includes a portrait.</p>
         <div className="mt-4"><BioTabs bios={bios} /></div>
       </section>
 
