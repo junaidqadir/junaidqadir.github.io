@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type Bio = { id: string; label: string; docx: string; paragraphs: string[] };
 
-/** The three biography lengths as tabs, each with a copy button and a Word download (bio plus portrait). */
+/** The biography lengths as tabs, each with a copy button and a Word download (bio plus portrait). */
 export default function BioTabs({ bios }: { bios: Bio[] }) {
   const [active, setActive] = useState(bios[0]?.id);
   const [copied, setCopied] = useState<string | null>(null);
