@@ -5,6 +5,8 @@ export type TalkLabel = { kind: string; topics: string[] };
 export const talkKey = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 200);
 
 export const talkLabels: Record<string, TalkLabel> = {
+  // Main Stage Speaker, “The AI Sovereignty Paradox: A Multiplex
+  "mainstagespeakertheaisovereigntyparadoxamultiplexaigovernanceapproachmwc26dohaqatarnovember2026": { kind: "Invited / conference talk", topics: ["ai-governance", "multiplexity"] },
   // Instructor, training workshop at beIN Media, “Agentic AI and
   "instructortrainingworkshopatbeinmediaagenticaiandthelimitsofautomationwhymoreautomationdoesnotmeanbettermediamay21st2026dohaqatar": { kind: "Tutorial / workshop", topics: [] },
   // Guest Lecturer, “Digital Twins in Healthcare”, MEDI210 Cours

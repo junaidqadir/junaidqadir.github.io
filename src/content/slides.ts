@@ -5,6 +5,14 @@ export type SlideDeck = { title: string; year: number; file: string; pages: numb
 
 export const slideDecks: SlideDeck[] = [
   {
+    "title": "The AI Sovereignty Paradox: A Multiplex AI Governance Approach",
+    "year": 2026,
+    "file": "2026-the-ai-sovereignty-paradox-a-multiplex-ai-governance-approac.pdf",
+    "pages": 19,
+    "mb": 2.2,
+    "date": "November 2026"
+  },
+  {
     "title": "Towards Ethical and Effective AI-Augmented Research Writing",
     "aliases": ["Towards Ethical and Effective AI-Augmented Research Writing: A Conceptual Framework and Practical Guidelines"],
     "year": 2026,
