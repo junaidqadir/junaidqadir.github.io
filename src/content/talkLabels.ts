@@ -5,6 +5,8 @@ export type TalkLabel = { kind: string; topics: string[] };
 export const talkKey = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 200);
 
 export const talkLabels: Record<string, TalkLabel> = {
+  // Invited Speaker, “The Iqbal Test: Can We Use AI and Still Be
+  "invitedspeakertheiqbaltestcanweuseaiandstillbecomeourselvesiqbaldayembassyofpakistandohaqatarnovember2026": { kind: "Invited / conference talk", topics: ["ai-ethics", "islamic"] },
   // Main Stage Speaker, “The AI Sovereignty Paradox: A Multiplex
   "mainstagespeakertheaisovereigntyparadoxamultiplexaigovernanceapproachmwc26dohaqatarnovember2026": { kind: "Invited / conference talk", topics: ["ai-governance", "multiplexity"] },
   // Instructor, training workshop at beIN Media, “Agentic AI and

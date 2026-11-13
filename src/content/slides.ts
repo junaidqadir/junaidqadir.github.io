@@ -13,6 +13,14 @@ export const slideDecks: SlideDeck[] = [
     "date": "November 2026"
   },
   {
+    "title": "The Iqbal Test: Can We Use AI and Still Become Ourselves?",
+    "year": 2026,
+    "file": "2026-the-iqbal-test-can-we-use-ai-and-still-become-ourselves.pdf",
+    "pages": 34,
+    "mb": 2.2,
+    "date": "November 2026"
+  },
+  {
     "title": "Towards Ethical and Effective AI-Augmented Research Writing",
     "aliases": ["Towards Ethical and Effective AI-Augmented Research Writing: A Conceptual Framework and Practical Guidelines"],
     "year": 2026,
