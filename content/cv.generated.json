@@ -175,6 +175,14 @@
         {
           "items": [
             {
+              "html": "Named a <strong>Clarivate Highly Cited Researcher</strong> in the Highly Cited Researchers 2026 list (announced 18 November 2026).",
+              "text": "Named a Clarivate Highly Cited Researcher in the Highly Cited Researchers 2026 list (announced 18 November 2026).",
+              "badge": {
+                "label": "Clarivate Highly Cited Researcher 2026",
+                "lead": true
+              }
+            },
+            {
               "html": "Winner of the <strong>Qatar University Outstanding Faculty Service Award (OFSA)</strong> for the Academic Year 2025 - 2026 (an annual award given to a single recipient from the university's more than 2000-member-strong faculty).",
               "text": "Winner of the Qatar University Outstanding Faculty Service Award (OFSA) for the Academic Year 2025 - 2026 (an annual award given to a single recipient from the university's more than 2000-member-strong faculty)."
             },

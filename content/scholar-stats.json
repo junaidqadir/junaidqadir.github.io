@@ -1,7 +1,7 @@
 {
   "_comment": "Latest Google Scholar numbers (read from the public profile). Used instead of the CV's numbers only when as_of is newer than the CV's own statistics date. Update with the CV.",
-  "citations": 27938,
+  "citations": 28006,
   "h_index": 82,
   "i10_index": 234,
-  "as_of": "2026-11-13"
+  "as_of": "2026-11-17"
 }
